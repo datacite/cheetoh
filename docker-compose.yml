@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  content-negotiation:
+    image: datacite/cheetoh
+    build: .
+    ports:
+      - "8070:80"
+    volumes:
+      - ./app:/home/app/webapp/app
+      - ./config:/home/app/webapp/config
+      - ./spec:/home/app/webapp/spec
+  memcached:
+    image: memcached:1.4.31
