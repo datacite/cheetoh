@@ -24,16 +24,14 @@ class ApplicationController < ActionController::API
                end
 
       if status == 404
-        message = "The page you are looking for doesn't exist."
+        message = "the page you are looking for doesn't exist."
       elsif status == 401
-        message = "You are not authorized to access this page."
+        message = "you are not authorized to access this page."
       else
         message = exception.message
       end
 
-      respond_to do |format|
-        format.all { render plain: message, status: status }
-      end
+      render plain: "error: " + message, status: status
     end
   end
 end
