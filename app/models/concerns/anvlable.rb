@@ -1,0 +1,132 @@
+module Anvlable
+  extend ActiveSupport::Concern
+
+  included do
+
+    # From https://github.com/duke-libraries/ezid-client/blob/master/lib/ezid/metadata.rb
+    # EZID metadata field/value separator
+    ANVL_SEPARATOR = ": "
+    # EZID metadata field value separator
+    ELEMENT_VALUE_SEPARATOR = " | "
+    # Characters to escape in element values on output to EZID
+    # @see http://ezid.cdlib.org/doc/apidoc.html#request-response-bodies
+    ESCAPE_VALUES_RE = /[%\r\n]/
+    # Characters to escape in element names on output to EZID
+    # @see http://ezid.cdlib.org/doc/apidoc.html#request-response-bodies
+    ESCAPE_NAMES_RE = /[%:\r\n]/
+    # Character sequence to unescape from EZID
+    # @see http://ezid.cdlib.org/doc/apidoc.html#request-response-bodies
+    UNESCAPE_RE = /%\h\h/
+    # A comment line
+    COMMENT_RE = /^#.*(\r?\n)?/
+    # A line continuation
+    LINE_CONTINUATION_RE = /\r?\n\s+/
+    # A line ending
+    LINE_ENDING_RE = /\r?\n/
+    # @api private
+
+    # EZID reserved metadata elements
+    #
+    # @see http://ezid.cdlib.org/doc/apidoc.html#internal-metadata
+    #
+    COOWNERS   = "_coowners".freeze
+    CREATED    = "_created".freeze
+    DATACENTER = "_datacenter".freeze
+    EXPORT     = "_export".freeze
+    OWNER      = "_owner".freeze
+    OWNERGROUP = "_ownergroup".freeze
+    PROFILE    = "_profile".freeze
+    SHADOWEDBY = "_shadowedby".freeze
+    SHADOWS    = "_shadows".freeze
+    STATUS     = "_status".freeze
+    TARGET     = "_target".freeze
+    UPDATED    = "_updated".freeze
+    RESERVED = [
+      COOWNERS, CREATED, DATACENTER, EXPORT, OWNER, OWNERGROUP,
+      PROFILE, SHADOWEDBY, SHADOWS, STATUS, TARGET, UPDATED
+    ].freeze
+    READONLY = [
+      CREATED, DATACENTER, OWNER, OWNERGROUP, SHADOWEDBY, SHADOWS, UPDATED
+    ].freeze
+
+    def hsh
+      { "success" => "doi:#{doi}",
+        "_updated" => self._updated,
+        "_target" => self._target,
+        "datacite" => self.datacite,
+        "_profile" => self._profile,
+        "_datacenter" => self._datacenter,
+        "_export" => self._export,
+        "_created" => self._created,
+        "_status" => self._status }
+    end
+
+    # Output metadata in EZID ANVL format
+    # @see http://ezid.cdlib.org/doc/apidoc.html#request-response-bodies
+    # @return [String] the ANVL output
+    def to_anvl(include_readonly = true)
+      hsh.reject! { |k, v| READONLY.include?(k) } unless include_readonly
+      lines = hsh.map do |name, value|
+        element = [escape(ESCAPE_NAMES_RE, name), escape(ESCAPE_VALUES_RE, value)]
+        element.join(ANVL_SEPARATOR)
+      end
+      lines.join("\n").force_encoding(Encoding::UTF_8)
+    end
+
+    protected
+
+    # Overrides Hashie::Mash
+    def convert_key(key)
+      converted = super
+      if RESERVED.include?("_#{converted}")
+        "_#{converted}"
+      elsif converted =~ /\A(dc|datacite|erc)_/
+        converted.sub(/_/, ".")
+      else
+        converted
+      end
+    end
+
+    # Overrides Hashie::Mash
+    def convert_value(value, duping=false)
+      if [self.class, Hash, Array].include?(value.class)
+        raise Error, "ezid-client does not support instances of #{value.class} as metadata values." \
+                     " Convert an enumerable such as an array to an appropriate string representation first."
+      end
+      value.to_s
+    end
+
+    private
+
+    def to_time(value)
+      time = value.to_i
+      (time == 0) ? nil : Time.at(time).utc
+    end
+
+    # Coerce data into a Hash of elements
+    def coerce(data)
+      data.respond_to?(:to_h) ? data.to_h : coerce_string(data)
+    end
+
+    # Escape string for sending to EZID host
+    def escape(regexp, value)
+      value.to_s.gsub(regexp) { |m| URI.encode_www_form_component(m.force_encoding(Encoding::UTF_8)) }
+    end
+
+    # Unescape value from EZID host (or other source)
+    def unescape(value)
+      value.gsub(UNESCAPE_RE) { |m| URI.decode_www_form_component(m) }
+    end
+
+    # Coerce a string of metadata (e.g., from EZID host) into a Hash
+    # @note EZID host does not send comments or line continuations.
+    def coerce_string(data)
+      data.gsub!(COMMENT_RE, "")
+      data.gsub!(LINE_CONTINUATION_RE, " ")
+      data.split(LINE_ENDING_RE).each_with_object({}) do |line, memo|
+        element, value = line.split(ANVL_SEPARATOR, 2)
+        memo[unescape(element.strip)] = unescape(value.strip)
+      end
+    end
+  end
+end

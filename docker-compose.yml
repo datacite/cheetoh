@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  content-negotiation:
+  cheetoh:
     image: datacite/cheetoh
     build: .
     ports:

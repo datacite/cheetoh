@@ -10,12 +10,16 @@ gem 'equivalent-xml', '~> 0.6.0'
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 gem 'iso8601', '~> 0.9.0'
 gem 'maremma', '~> 3.5'
-gem 'bolognese', '~> 0.9.30'
+gem 'cirneco', '~> 0.9'
+gem 'bolognese', '~> 0.9'
 gem "dalli", "~> 2.7.6"
 gem 'lograge', '~> 0.5'
 gem 'bugsnag', '~> 5.3'
+gem 'jwt', '~> 1.5', '>= 1.5.4'
+gem 'cancancan', '~> 1.9.2'
 gem 'librato-rails', '~> 1.4.2'
 gem 'gender_detector', '~> 0.1.2'
+gem 'ezid-client', '~> 1.7', '>= 1.7.1'
 
 group :development, :test do
   gem "better_errors"
@@ -37,6 +41,3 @@ group :test do
   gem 'codeclimate-test-reporter', '~> 1.0.0'
   gem 'simplecov'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
