@@ -20,7 +20,7 @@ class ApplicationController < ActionController::API
   end
 
   unless Rails.env.development?
-    rescue_from *RESCUABLE_EXCEPTIONS do |exception|
+    rescue_from *(RESCUABLE_EXCEPTIONS) do |exception|
       status = case exception.class.to_s
                when "CanCan::AccessDenied", "JWT::DecodeError" then 401
                when "AbstractController::ActionNotFound", "ActionController::RoutingError" then 404

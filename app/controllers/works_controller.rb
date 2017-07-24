@@ -115,7 +115,7 @@ class WorksController < ApplicationController
   def set_profile
     @profile = safe_params[:_profile].presence || :datacite
     fail IdentifierError, "#{safe_params[:_profile]} profile not supported by this service" unless
-      SUPPORTED_PROFILES.include?(@profile)
+      SUPPORTED_PROFILES.include?(@profile.to_sym)
   end
 
   private
