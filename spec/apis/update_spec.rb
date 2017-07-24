@@ -74,4 +74,16 @@ describe "/id/update", :type => :api, vcr: true do
     expect(response["success"]).to eq("doi:10.5438/bc11-cqw1")
     expect(response["datacite"]).to eq(datacite)
   end
+
+  it "change using citeproc" do
+    schema_org = File.read(file_fixture('schema_org.json'))
+    params = { "schema_org" => schema_org, "_profile" => "schema_org" }.to_anvl
+    doi = "10.5438/4k3m-nyvg"
+    post "/id/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(200)
+    response = last_response.body.from_anvl
+    expect(response["success"]).to eq("doi:10.5438/4k3m-nyvg")
+    expect(response["schema_org"]).to eq(schema_org)
+    expect(response["datacite"]).to start_with("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<resource")
+  end
 end

@@ -6,9 +6,10 @@ class Work < Bolognese::Metadata
   include Cirneco::Utils
   include Cirneco::Api
 
-  attr_accessor :target, :data, :export, :status
+  attr_accessor :target, :data, :export, :profile, :format, :status
 
   def initialize(input: nil, from: nil, format: nil, **options)
+    @format = format || from
     @target = options[:target]
     @data = options[:data]
 
@@ -17,12 +18,12 @@ class Work < Bolognese::Metadata
 
   def upsert(username: nil, password: nil)
     if data.present?
-      response = post_metadata(data,
+      response = post_metadata(datacite,
                                username: username,
                                password: password,
                                sandbox: ENV['SANDBOX'].present?)
 
-      return "error", response.status unless
+      return response.body.to_h.fetch("errors", "").inspect, response.status unless
         response.body.to_h.fetch("data", "").start_with?("OK")
     end
 
@@ -32,13 +33,15 @@ class Work < Bolognese::Metadata
                               password: password,
                               sandbox: ENV['SANDBOX'].present?)
 
-      return "error", response.status unless
+      return esponse.body.to_h.fetch("errors", "").inspect, response.status unless
         response.body.to_h.fetch("data", "").start_with?("OK")
     end
 
     message = { "success" => doi_with_protocol,
                 "_target" => target,
-                "datacite" => data }.to_anvl
+                "datacite" => datacite,
+                from => data,
+                "_profile" => from }.to_anvl
     message, status = message, 200
   end
 
@@ -62,9 +65,7 @@ class Work < Bolognese::Metadata
     Time.parse(date_updated).to_i
   end
 
-  def _profile
-    "datacite"
-  end
+  alias_method :_profile, :profile
 
   def _export
     "yes"
@@ -76,13 +77,14 @@ class Work < Bolognese::Metadata
 
   def hsh
     { "success" => doi_with_protocol,
-      "_updated" => self._updated,
-      "_target" => self._target,
-      "datacite" => self.datacite,
-      "_profile" => self._profile,
-      "_datacenter" => self._datacenter,
-      "_export" => self._export,
-      "_created" => self._created,
-      "_status" => self._status }
+      "_updated" => _updated,
+      "_target" => _target,
+      from => send(from.to_sym),
+      format => send(format.to_sym),
+      "_profile" => format,
+      "_datacenter" => _datacenter,
+      "_export" => _export,
+      "_created" => _created,
+      "_status" => _status }
   end
 end

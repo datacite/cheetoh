@@ -1,9 +1,12 @@
 class WorksController < ApplicationController
   before_action :load_id, except: [:mint]
+  before_action :set_profile
   before_action :authenticate_user_with_basic_auth!, except: [:show]
 
+  SUPPORTED_PROFILES = [:datacite, :crossref, :bibtex, :ris, :schema_org, :citeproc]
+
   def show
-    @work = Work.new(input: @id, from: "datacite")
+    @work = Work.new(input: @id, from: "datacite", format: @profile)
     fail AbstractController::ActionNotFound unless @work.valid?
 
     render plain: @work.hsh.to_anvl
@@ -16,12 +19,12 @@ class WorksController < ApplicationController
       safe_params[:datacite].present? &&
       safe_params[:_target].present?
 
-    @work = Work.new(input: input, from: "datacite")
+    @work = Work.new(input: input, from: @profile.to_s)
     fail IdentifierError, "#{params[:id]} has already been registered" if
 
     input = safe_params[:datacite].anvlunesc
 
-    @work = Work.new(input: input, from: "datacite")
+    @work = Work.new(input: input, from: @profile.to_s)
     fail IdentifierError, "metadata could not be validated" unless @work.valid?
 
     message, status = @work.upsert(username: @username,
@@ -34,19 +37,18 @@ class WorksController < ApplicationController
 
   def create
     fail IdentifierError, "A required parameter is missing" unless
-      safe_params[:datacite].present? &&
-      safe_params[:_target].present?
+      safe_params[@profile].present? && safe_params[:_target].present?
 
     @work = Work.new(input: @id, from: "datacite")
     fail IdentifierError, "#{params[:id]} has already been registered" if @work.exists?
 
-    input = safe_params[:datacite].anvlunesc
+    input = safe_params[@profile].anvlunesc
 
     @work = Work.new(input: input,
-                     from: "datacite",
+                     from: @profile.to_s,
                      doi: doi_from_url(@id),
                      target: safe_params[:_target],
-                     data: safe_params[:datacite])
+                     data: safe_params[@profile])
     fail IdentifierError, "metadata could not be validated" unless @work.valid?
     fail IdentifierError, "params #{params[:id]} does not match #{@work.doi_with_protocol} in metadata" unless
       params[:id] == @work.doi_with_protocol
@@ -59,19 +61,19 @@ class WorksController < ApplicationController
 
   def update
     fail IdentifierError, "A required parameter is missing" unless
-      safe_params[:datacite].present? ||
-      safe_params[:_target].present?
+      safe_params[@profile].present? || safe_params[:_target].present?
 
-    if safe_params[:datacite].present?
-      input = safe_params[:datacite].anvlunesc
+    if safe_params[@profile].present?
+      input = safe_params[@profile].anvlunesc
     else
       input = @id
     end
 
     @work = Work.new(input: input,
-                     from: "datacite",
+                     from: @profile.to_s,
                      target: safe_params[:_target],
-                     data: safe_params[:datacite])
+                     data: safe_params[@profile])
+
     fail IdentifierError, "metadata could not be validated" unless @work.valid?
     fail IdentifierError, "params #{params[:id]} does not match #{@work.doi_with_protocol} in metadata" unless
       params[:id] == @work.doi_with_protocol
@@ -94,9 +96,13 @@ class WorksController < ApplicationController
     fail AbstractController::ActionNotFound unless @id.present?
   end
 
+  def set_profile
+    @profile = safe_params[:_profile].presence || :datacite
+  end
+
   private
 
   def safe_params
-    params.permit(:id, :_target, :_export, :datacite).merge(request.raw_post.from_anvl)
+    params.permit(:id, :_target, :_export, :_profile, :datacite, :crossref, :bibtex, :ris, :schema_org, :citeproc).merge(request.raw_post.from_anvl)
   end
 end
