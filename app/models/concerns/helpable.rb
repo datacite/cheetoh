@@ -17,6 +17,10 @@ module Helpable
       encode_doi(prefix, shoulder: shoulder, number: number)
     end
 
+    def is_ark?(str)
+      str.to_s.starts_with?("ark:")
+    end
+
     def epoch_to_utc(epoch)
       Time.at(epoch).to_datetime.utc.iso8601
     end

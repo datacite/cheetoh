@@ -108,6 +108,7 @@ class WorksController < ApplicationController
   # id can be DOI or DOI expressed as URL
   def load_id
     @id = normalize_id(params[:id])
+    fail IdentifierError, "ark identifiers are not supported by this service" if is_ark?(params[:id])
     fail AbstractController::ActionNotFound unless @id.present?
   end
 

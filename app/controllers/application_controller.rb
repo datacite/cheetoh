@@ -8,6 +8,11 @@ class ApplicationController < ActionController::API
   include Cirneco::Utils
   include Cirneco::Api
 
+  # EZID functionality not supported by this service has 501 status code
+  NOT_IMPLEMENTED_MESSAGES = [
+    "ark identifiers are not supported by this service"
+  ]
+
   # check that username and password exist
   # store them in instance variables used for calling MDS API
   def authenticate_user_with_basic_auth!
@@ -27,6 +32,8 @@ class ApplicationController < ActionController::API
                when "ActiveModel::ForbiddenAttributesError", "ActionController::UnpermittedParameters", "NoMethodError" then 422
                else 400
                end
+
+      status = 501 if NOT_IMPLEMENTED_MESSAGES.include?(exception.message)
 
       if status == 404
         message = "the resource you are looking for doesn't exist."
