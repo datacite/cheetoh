@@ -13,24 +13,39 @@ class WorksController < ApplicationController
   end
 
   def mint
-    input = generate_random_doi(params[:id])
-
     fail IdentifierError, "A required parameter is missing" unless
-      safe_params[:datacite].present? &&
-      safe_params[:_target].present?
+      safe_params[@profile].present? && safe_params[:_target].present?
 
-    @work = Work.new(input: input, from: @profile.to_s)
-    fail IdentifierError, "#{params[:id]} has already been registered" if
+    # make sure we generate a random DOI that is not already used
+    # allow seed with number for deterministic minting
+    if safe_params[:_number].present?
+      @id = generate_random_doi(params[:id], number: safe_params[:_number])
+      @work = Work.new(input: @id, from: @profile.to_s)
+      fail IdentifierError, "#{@id} has already been registered" if
+        @work.exists? && !Rails.env.test?
+    else
+      duplicate = true
+      while duplicate do
+        @id = generate_random_doi(params[:id])
+        @work = Work.new(input: @id, from: @profile.to_s)
+        duplicate = @work.exists?
+      end
+    end
 
-    input = safe_params[:datacite].anvlunesc
+    input = safe_params[@profile].anvlunesc
+    doi = doi_from_url(@id)
 
-    @work = Work.new(input: input, from: @profile.to_s)
+    @work = Work.new(input: input,
+                     from: @profile.to_s,
+                     doi: doi,
+                     target: safe_params[:_target],
+                     data: safe_params[@profile])
     fail IdentifierError, "metadata could not be validated" unless @work.valid?
+    fail IdentifierError, "params doi:#{doi} does not match doi:#{@work.doi} in metadata" unless
+      doi == @work.doi
 
     message, status = @work.upsert(username: @username,
-                                   password: @password,
-                                   url: safe_params[:_target],
-                                   data: safe_params[:datacite])
+                                   password: @password)
 
     render plain: message, status: status
   end
@@ -103,6 +118,6 @@ class WorksController < ApplicationController
   private
 
   def safe_params
-    params.permit(:id, :_target, :_export, :_profile, :datacite, :crossref, :bibtex, :ris, :schema_org, :citeproc).merge(request.raw_post.from_anvl)
+    params.permit(:id, :_target, :_export, :_profile, :_number, :datacite, :crossref, :bibtex, :ris, :schema_org, :citeproc).merge(request.raw_post.from_anvl)
   end
 end

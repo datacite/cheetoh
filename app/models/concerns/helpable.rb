@@ -3,20 +3,22 @@ module Helpable
 
   require "bolognese"
   require "cirneco"
-  require "maremma"
 
   included do
-    def generate_random_doi(str)
+    include Bolognese::DoiUtils
+    include Cirneco::Utils
+
+    def generate_random_doi(str, options={})
       prefix = validate_prefix(str)
       fail IdentifierError, "No valid prefix found" unless prefix.present?
 
-      shoulder = str.split("/", 2).last
-      encode_doi(prefix, shoulder: shoulder)
+      shoulder = str.split("/", 2)[1].to_s
+      number = options[:number].to_s.scan(/\d+/).first.to_i
+      encode_doi(prefix, shoulder: shoulder, number: options[:number])
     end
 
     def epoch_to_utc(epoch)
       Time.at(epoch).to_datetime.utc.iso8601
     end
-
   end
 end

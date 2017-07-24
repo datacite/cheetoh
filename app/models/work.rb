@@ -33,7 +33,7 @@ class Work < Bolognese::Metadata
                               password: password,
                               sandbox: ENV['SANDBOX'].present?)
 
-      return esponse.body.to_h.fetch("errors", "").inspect, response.status unless
+      return response.body.to_h.fetch("errors", "").inspect, response.status unless
         response.body.to_h.fetch("data", "").start_with?("OK")
     end
 

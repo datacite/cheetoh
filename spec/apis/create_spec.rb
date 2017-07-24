@@ -57,7 +57,6 @@ describe "/id/create", :type => :api, vcr: true do
     params = { "datacite" => datacite, "_target" => url }.to_anvl
     doi = "10.5438/bc11-cqw6"
     put "/id/doi:#{doi}", params, headers
-        puts last_response.inspect
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5438/bc11-cqw6")
