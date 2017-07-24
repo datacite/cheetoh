@@ -23,8 +23,7 @@ class Work < Bolognese::Metadata
                                password: password,
                                sandbox: ENV['SANDBOX'].present?)
 
-      return response.body.to_h.fetch("errors", "").inspect, response.status unless
-        response.body.to_h.fetch("data", "").start_with?("OK")
+      error_message(response).presence && return
     end
 
     if target.present?
@@ -33,8 +32,7 @@ class Work < Bolognese::Metadata
                               password: password,
                               sandbox: ENV['SANDBOX'].present?)
 
-      return response.body.to_h.fetch("errors", "").inspect, response.status unless
-        response.body.to_h.fetch("data", "").start_with?("OK")
+      error_message(response).presence && return
     end
 
     message = { "success" => doi_with_protocol,
@@ -42,7 +40,14 @@ class Work < Bolognese::Metadata
                 "datacite" => datacite,
                 from => data,
                 "_profile" => from }.to_anvl
-    message, status = message, 200
+
+    [message, 200]
+  end
+
+  def error_message(response)
+    unless response.body.to_h.fetch("data", "").start_with?("OK")
+      [response.body.to_h.fetch("errors", "").inspect, response.status]
+    end
   end
 
   def doi_with_protocol

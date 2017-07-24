@@ -14,7 +14,7 @@ module Helpable
 
       shoulder = str.split("/", 2)[1].to_s
       number = options[:number].to_s.scan(/\d+/).first.to_i
-      encode_doi(prefix, shoulder: shoulder, number: options[:number])
+      encode_doi(prefix, shoulder: shoulder, number: number)
     end
 
     def epoch_to_utc(epoch)
