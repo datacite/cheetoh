@@ -1,14 +1,19 @@
 class ApplicationController < ActionController::API
+  include ActionController::HttpAuthentication::Basic::ControllerMethods
+
   include Helpable
 
-  RESCUABLE_EXCEPTIONS = [CanCan::AccessDenied,
-                          JWT::DecodeError,
-                          JWT::VerificationError,
-                          AbstractController::ActionNotFound,
-                          ActionController::RoutingError,
-                          ActionController::ParameterMissing,
-                          ActionController::UnpermittedParameters,
-                          NoMethodError]
+  include Bolognese::DoiUtils
+  include Bolognese::Utils
+  include Cirneco::Utils
+  include Cirneco::Api
+
+  # check that username and password exist
+  # store them in instance variables used for calling MDS API
+  def authenticate_user_with_basic_auth!
+    @username, @password = ActionController::HttpAuthentication::Basic::user_name_and_password(request)
+    raise CanCan::AccessDenied unless @username.present? && @password.present?
+  end
 
   def routing_error
     fail AbstractController::ActionNotFound
@@ -24,9 +29,9 @@ class ApplicationController < ActionController::API
                end
 
       if status == 404
-        message = "the page you are looking for doesn't exist."
+        message = "the resource you are looking for doesn't exist."
       elsif status == 401
-        message = "you are not authorized to access this page."
+        message = "you are not authorized to access this resource."
       else
         message = exception.message
       end

@@ -2,8 +2,9 @@
 
 [![Build Status](https://travis-ci.org/datacite/cheetoh.svg?branch=test)](https://travis-ci.org/datacite/cheetoh)
 
-Rails web application for providing a compatibility API layer for the MDS API, enabling [EZID API](https://ezid.cdlib.org/doc/apidoc.html)
-calls for DOI and metadata registration.
+Rails web application for providing a compatibility API layer for the MDS API,
+enabling [EZID API](https://ezid.cdlib.org/doc/apidoc.html) calls for DOI and
+metadata registration. The application does not store any data internally.
 
 ## Installation
 
@@ -14,6 +15,14 @@ docker run -p 8080:80 datacite/cheetoh
 ```
 
 You can now point your browser to `http://localhost:8080` and use the application.
+
+By default the application connects to the DataCite production infrastructure.
+Set the `SANDBOX` environment variable to connect to the DataCite test
+infrastructure, e.g.
+
+```
+SANDBOX=true
+```
 
 ## Development
 

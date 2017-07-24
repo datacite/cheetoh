@@ -5,10 +5,10 @@ class Heartbeat
 
   def initialize
     if memcached_up?
-      @string = "OK"
+      @string = "success: MDS is up"
       @status = 200
     else
-      @string = "failed"
+      @string = "error: MDS failed"
       @status = 500
     end
   end
