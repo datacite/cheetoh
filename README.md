@@ -1,6 +1,8 @@
 # Cheetoh
 
 [![Build Status](https://travis-ci.org/datacite/cheetoh.svg?branch=test)](https://travis-ci.org/datacite/cheetoh)
+[![Code Climate](https://codeclimate.com/github/datacite/cheetoh/badges/gpa.svg)](https://codeclimate.com/github/datacite/cheetoh)
+[![Test Coverage](https://codeclimate.com/github/datacite/cheetoh/badges/coverage.svg)](https://codeclimate.com/github/datacite/cheetoh/coverage)
 
 Rails web application for providing a compatibility API layer for the MDS API,
 enabling [EZID API](https://ezid.cdlib.org/doc/apidoc.html) calls for DOI and
