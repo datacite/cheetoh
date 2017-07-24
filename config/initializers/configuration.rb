@@ -15,7 +15,7 @@ end
 
 # default values for some ENV variables
 ENV['APPLICATION'] ||= "cheetoh"
-ENV['HOSTNAME'] ||= "chhetoh.local"
+ENV['HOSTNAME'] ||= "cheetoh.local"
 ENV['MEMCACHE_SERVERS'] ||= "memcached:11211"
 ENV['SITE_TITLE'] ||= "EZID-compatible API"
 ENV['LOG_LEVEL'] ||= "info"

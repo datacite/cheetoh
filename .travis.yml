@@ -6,6 +6,10 @@ cache: bundler
 services:
   - memcached
 
+addons:
+  code_climate:
+    repo_token: $CODECLIMATE_REPO_TOKEN
+
 before_script:
   - cp .env.travis .env
   - mkdir -p tmp/pids
@@ -13,3 +17,7 @@ before_script:
 
 script:
   - bundle exec rspec
+  - bundle exec codeclimate-test-reporter
+
+notifications:
+  email: false
