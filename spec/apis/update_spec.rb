@@ -21,4 +21,57 @@ describe "/id/update", :type => :api, vcr: true do
     expect(last_response.status).to eq(401)
     expect(last_response.body).to eq("error: you are not authorized to access this resource.")
   end
+
+  it "nothing to update" do
+    doi = "10.5438/bc11-cqw1"
+    post "/id/doi:#{doi}", nil, headers
+    expect(last_response.status).to eq(400)
+    response = last_response.body.from_anvl
+    expect(response["error"]).to eq("A required parameter is missing")
+  end
+
+  it "different doi in datacite xml" do
+    datacite = File.read(file_fixture('10.5438_bc11-cqw1.xml'))
+    params = { "datacite" => datacite }.to_anvl
+    doi = "10.5438/bc11-cqw3"
+    post "/id/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(400)
+    response = last_response.body.from_anvl
+    expect(response["error"]).to eq("params doi:10.5438/bc11-cqw3 does not match doi:10.5438/bc11-cqw1 in metadata")
+  end
+
+  it "change redirect url and datacite xml" do
+    datacite = File.read(file_fixture('10.5438_bc11-cqw1.xml'))
+    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
+    params = { "datacite" => datacite, "_target" => url }.to_anvl
+    doi = "10.5438/bc11-cqw1"
+    post "/id/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(200)
+    response = last_response.body.from_anvl
+    expect(response["success"]).to eq("doi:10.5438/bc11-cqw1")
+    expect(response["datacite"]).to eq(datacite)
+    expect(response["_target"]).to eq(url)
+  end
+
+  it "change redirect url" do
+    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
+    params = { "_target" => url }.to_anvl
+    doi = "10.5438/bc11-cqw1"
+    post "/id/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(200)
+    response = last_response.body.from_anvl
+    expect(response["success"]).to eq("doi:10.5438/bc11-cqw1")
+    expect(response["_target"]).to eq(url)
+  end
+
+  it "change datacite xml" do
+    datacite = File.read(file_fixture('10.5438_bc11-cqw1.xml'))
+    params = { "datacite" => datacite }.to_anvl
+    doi = "10.5438/bc11-cqw1"
+    post "/id/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(200)
+    response = last_response.body.from_anvl
+    expect(response["success"]).to eq("doi:10.5438/bc11-cqw1")
+    expect(response["datacite"]).to eq(datacite)
+  end
 end

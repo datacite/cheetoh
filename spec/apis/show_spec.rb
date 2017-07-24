@@ -19,6 +19,13 @@ describe "/id/show", :type => :api, vcr: true do
     expect(hsh["_status"]).to eq("public")
   end
 
+  it "not public" do
+    doi = "10.5072/0000-03wd"
+    get "/id/doi:#{doi}"
+    expect(last_response.status).to eq(404)
+    expect(last_response.body).to eq("error: the resource you are looking for doesn't exist.")
+  end
+
   it "missing valid doi parameter" do
     doi = "20.5072/0000-03vc"
     put "/id/doi:#{doi}"

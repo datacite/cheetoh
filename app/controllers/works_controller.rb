@@ -42,31 +42,42 @@ class WorksController < ApplicationController
 
     input = safe_params[:datacite].anvlunesc
 
-    @work = Work.new(input: input, from: "datacite")
+    @work = Work.new(input: input,
+                     from: "datacite",
+                     doi: doi_from_url(@id),
+                     target: safe_params[:_target],
+                     data: safe_params[:datacite])
     fail IdentifierError, "metadata could not be validated" unless @work.valid?
+    fail IdentifierError, "params #{params[:id]} does not match #{@work.doi_with_protocol} in metadata" unless
+      params[:id] == @work.doi_with_protocol
 
     message, status = @work.upsert(username: @username,
-                                   password: @password,
-                                   url: safe_params[:_target],
-                                   data: safe_params[:datacite])
+                                   password: @password)
 
     render plain: message, status: status
   end
 
   def update
+    fail IdentifierError, "A required parameter is missing" unless
+      safe_params[:datacite].present? ||
+      safe_params[:_target].present?
+
     if safe_params[:datacite].present?
       input = safe_params[:datacite].anvlunesc
     else
       input = @id
     end
 
-    @work = Work.new(input: input, from: "datacite")
+    @work = Work.new(input: input,
+                     from: "datacite",
+                     target: safe_params[:_target],
+                     data: safe_params[:datacite])
     fail IdentifierError, "metadata could not be validated" unless @work.valid?
+    fail IdentifierError, "params #{params[:id]} does not match #{@work.doi_with_protocol} in metadata" unless
+      params[:id] == @work.doi_with_protocol
 
     message, status = @work.upsert(username: @username,
-                                   password: @password,
-                                   url: safe_params[:_target],
-                                   data: safe_params[:datacite])
+                                   password: @password)
 
     render plain: message, status: status
   end

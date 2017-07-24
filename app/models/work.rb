@@ -6,34 +6,40 @@ class Work < Bolognese::Metadata
   include Cirneco::Utils
   include Cirneco::Api
 
-  attr_reader :username, :password
+  attr_accessor :target, :data, :export, :status
 
   def initialize(input: nil, from: nil, format: nil, **options)
-    return super(input: input, from: from, sandbox: ENV['SANDBOX'].present?)
+    @target = options[:target]
+    @data = options[:data]
+
+    return super(input: input, from: from, doi: options[:doi], sandbox: ENV['SANDBOX'].present?)
   end
 
-  def upsert(username: nil, password: nil, url: nil, data: nil)
+  def upsert(username: nil, password: nil)
     if data.present?
-      response = post_metadata(datacite,
+      response = post_metadata(data,
                                username: username,
                                password: password,
                                sandbox: ENV['SANDBOX'].present?)
+
+      return "error", response.status unless
+        response.body.to_h.fetch("data", "").start_with?("OK")
     end
 
-    if url.present?
-      response = put_doi(doi, url: url,
+    if target.present?
+      response = put_doi(doi, url: target,
                               username: username,
                               password: password,
                               sandbox: ENV['SANDBOX'].present?)
+
+      return "error", response.status unless
+        response.body.to_h.fetch("data", "").start_with?("OK")
     end
 
-    if response.body.to_h.fetch("data", "").start_with?("OK")
-      message = { "success" => doi_with_protocol,
-                  "datacite" => datacite }.to_anvl
-      message, status = message, response.status
-    else
-      message, status = "error", response.status
-    end
+    message = { "success" => doi_with_protocol,
+                "_target" => target,
+                "datacite" => data }.to_anvl
+    message, status = message, 200
   end
 
   def doi_with_protocol

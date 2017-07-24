@@ -1,0 +1,187 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://search.test.datacite.org/api?fl=doi,xml,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.5438/bc11-cqw6&wt=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://f6e32d088963
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 24 Jul 2017 12:58:58 GMT
+      Server:
+      - openresty/1.11.2.2
+      Content-Length:
+      - '88'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":0,"start":0,"docs":[]}}
+
+'
+    http_version: 
+  recorded_at: Mon, 24 Jul 2017 12:58:56 GMT
+- request:
+    method: post
+    uri: https://mds.test.datacite.org/metadata
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+          <identifier identifierType="DOI">10.5438/BC11-CQW6</identifier>
+          <creators>
+            <creator>
+              <creatorName>Fenner, Martin</creatorName>
+              <givenName>Martin</givenName>
+              <familyName>Fenner</familyName>
+              <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">0000-0003-1419-2405</nameIdentifier>
+            </creator>
+          </creators>
+          <titles>
+            <title>Differences between ORCID and DataCite Metadata</title>
+          </titles>
+          <publisher>DataCite Blog</publisher>
+          <publicationYear>2015</publicationYear>
+          <resourceType resourceTypeGeneral="Text">BlogPosting</resourceType>
+          <subjects>
+            <subject>thor</subject>
+            <subject>orcid</subject>
+            <subject>metadata</subject>
+          </subjects>
+          <contributors>
+            <contributor contributorType="HostingInstitution">
+              <contributorName>DataCite</contributorName>
+            </contributor>
+          </contributors>
+          <dates>
+            <date dateType="Issued">2015-09-18</date>
+          </dates>
+          <relatedIdentifiers>
+            <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.5281/ZENODO.30799</relatedIdentifier>
+          </relatedIdentifiers>
+          <version>1.0</version>
+          <rightsList>
+            <rights rightsURI="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</rights>
+          </rightsList>
+          <descriptions>
+            <description descriptionType="Abstract">One of the first tasks for DataCite in the European Commission-funded THOR project, which started in June, was to contribute to a comparison of the ORCID and DataCite metadata standards. Together with ORCID, CERN, the British Library and Dryad we looked...</description>
+          </descriptions>
+        </resource>
+    headers:
+      User-Agent:
+      - Maremma - http://f6e32d088963
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store
+      Content-Type:
+      - text/html;charset=UTF-8
+      Date:
+      - Mon, 24 Jul 2017 12:58:59 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Location:
+      - http://mds.test.datacite.org/metadata/10.5438/BC11-CQW6
+      Pragma:
+      - no-cache
+      Server:
+      - openresty/1.11.2.2
+      Via:
+      - kong/0.10.2
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '59'
+      Content-Length:
+      - '22'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: OK (10.5438/BC11-CQW6)
+    http_version: 
+  recorded_at: Mon, 24 Jul 2017 12:58:56 GMT
+- request:
+    method: put
+    uri: https://mds.test.datacite.org/doi/10.5438/bc11-cqw6
+    body:
+      encoding: UTF-8
+      string: |-
+        doi=10.5438/bc11-cqw6
+        url=https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/
+    headers:
+      User-Agent:
+      - Maremma - http://f6e32d088963
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store
+      Content-Type:
+      - text/html;charset=UTF-8
+      Date:
+      - Mon, 24 Jul 2017 12:58:59 GMT
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - openresty/1.11.2.2
+      Via:
+      - kong/0.10.2
+      X-Kong-Proxy-Latency:
+      - '0'
+      X-Kong-Upstream-Latency:
+      - '81'
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: OK
+    http_version: 
+  recorded_at: Mon, 24 Jul 2017 12:58:56 GMT
+recorded_with: VCR 3.0.3
