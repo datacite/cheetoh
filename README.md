@@ -10,6 +10,20 @@ metadata registration. The application does not store any data internally.
 
 ## Documentation
 
+### Contents
+
+* [API vs. UI](#api-vs-ui)
+* [Authentication](#authentication)
+* [Request & response bodies](#request--response-bodies)
+* [Error handling](#error-handling)
+* [Operation: get identifier metadata](#operation-get-identifier-metadata)
+* [Operation: create identifier](#operation-create-identifier)
+* [Operation: mint identifier](#operation-mint-identifier)
+* [Operation: modify identifier](#operation-modify-identifier)
+* [Operation: delete identifier](#operation-delete-identifier)
+* [Ownership model](#ownership-model)
+* [Identifier status](#identifier-status)
+
 The service tries to be as compatible as possible with the [EZID API](https://ezid.cdlib.org/doc/apidoc.html) as of September 2017. While we try to implement features added to the EZID service going forward, no guaranties are made doing so. Because of some fundamental differences between the services provided by EZID and DataCite, some functionalities make no sense as a DataCite service and have not been implemented, including
 
 * Registration of identifiers other than DOIs, for example ARKs
