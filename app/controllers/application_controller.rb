@@ -34,7 +34,7 @@ class ApplicationController < ActionController::API
       if status == 404
         message = "the resource you are looking for doesn't exist."
       elsif status == 401
-        message = "you are not authorized to access this resource."
+        message = "unauthorized"
       else
         message = exception.message
       end

@@ -4,9 +4,206 @@
 [![Code Climate](https://codeclimate.com/github/datacite/cheetoh/badges/gpa.svg)](https://codeclimate.com/github/datacite/cheetoh)
 [![Test Coverage](https://codeclimate.com/github/datacite/cheetoh/badges/coverage.svg)](https://codeclimate.com/github/datacite/cheetoh/coverage)
 
-Rails web application for providing a compatibility API layer for the MDS API,
+Rails web application for providing a compatibility API layer for the DataCite MDS API,
 enabling [EZID API](https://ezid.cdlib.org/doc/apidoc.html) calls for DOI and
 metadata registration. The application does not store any data internally.
+
+## Documentation
+
+The service tries to be as compatible as possible with the [EZID API](https://ezid.cdlib.org/doc/apidoc.html) as of September 2017. While we try to implement features added to the EZID service going forward, no guaranties are made doing so. Because of some fundamental differences between the services provided by EZID and DataCite, some functionalities make no sense as a DataCite service and have not been implemented, including
+
+* Registration of identifiers other than DOIs, for example ARKs
+* Crossref registration
+
+Some features have not yet been implemented as of September 2017, but are planned for Q4 2017 or Q1 2018 (see [DataCite roadmap](https://www.datacite.org/roadmap.html) for details):
+
+* Reserve a DOI
+* Registration of metadata in other formats, e.g. Dublin Core
+
+### Error handling
+
+An error is indicated by both an HTTP status code and an error status line of the form "error: reason". For example:
+
+```
+⇒ GET /id/doi:/10.5072/bogus HTTP/1.1
+⇒ Host: ezid.cdlib.org
+
+⇐ HTTP/1.1 400 BAD REQUEST
+⇐ Content-Type: text/plain; charset=UTF-8
+⇐ Content-Length: 39
+⇐
+⇐ error: bad request - no such identifier
+```
+
+Some programming libraries make it a little difficult to read the content following an error status code. For example, from Java, it is necessary to explicitly switch between the input and error streams based on the status code:
+
+```
+java.net.HttpURLConnection c;
+java.io.InputStream s;
+...
+if (c.getResponseCode() < 400) {
+  s = c.getInputStream();
+} else {
+  s = c.getErrorStream();
+}
+// read from s...
+```
+
+### Operation: get identifier metadata
+
+Metadata can be retrieved for any existing identifier; no authentication is required. Simply issue a GET request to the identifier's URL. Here is a sample interaction:
+
+```
+⇒ GET /id/doi:/99999/fk4cz3dh0 HTTP/1.1
+⇒ Host: mds.datacite.org
+
+⇐ HTTP/1.1 200 OK
+⇐ Content-Type: text/plain; charset=UTF-8
+⇐ Content-Length: 208
+⇐
+⇐ success: doi:/99999/fk4cz3dh0
+⇐ _created: 1300812337
+⇐ _updated: 1300913550
+⇐ _target: http://www.gutenberg.org/ebooks/7178
+⇐ _profile: erc
+⇐ erc.who: Proust, Marcel
+⇐ erc.what: Remembrance of Things Past
+⇐ erc.when: 1922
+```
+
+The first line of the response body is a status line. Assuming success (see Error handling above), the remainder of the status line echoes the canonical form of the requested identifier.
+
+The remaining lines are metadata element name/value pairs serialized per ANVL rules; see Request & response bodies above. The order of elements is undefined. Element names beginning with an underscore ("_", U+005F) are reserved for use by the system; their meanings are described in Internal metadata below. Some elements may be drawn from citation metadata standards; see Metadata profiles below.
+
+### Operation: create identifier
+
+An identifier can be "created" by sending a PUT request to the identifier's URL. Here, identifier creation means establishing a record of the identifier (to be successful, no such record can already exist). Authentication is required, and the user must have permission to create identifiers using the identifier's prefix. Users can view the prefixes available to them by visiting the DOI Fabrica service and navigating to the **Prefixes** tab.
+
+A request body is optional; if present, it defines the identifier's starting metadata. There are no restrictions on what metadata elements can be submitted, but a convention has been established for naming metadata elements, and the service has built-in support for certain sets of metadata elements; see Metadata profiles below. A few of the internal service metadata elements may be set; see Internal metadata below.
+
+Here's a sample interaction creating a doi identifier:
+
+```
+⇒ PUT /id/doi:/10.5072/test9999 HTTP/1.1
+⇒ Host: mds.datacite.org
+⇒ Content-Type: text/plain; charset=UTF-8
+⇒ Content-Length: 30
+⇒
+⇒ _target: http://mds.datacite.org/
+
+⇐ HTTP/1.1 201 CREATED
+⇐ Content-Type: text/plain; charset=UTF-8
+⇐ Content-Length: 27
+⇐
+⇐ success: doi:/10.5072/test9999
+```
+
+The return is a status line. If a doi identifier was created successfully, the normalized form of the identifier is returned as shown above.
+
+### Operation: mint identifier
+
+Minting an identifier is the same as creating an identifier, but instead of supplying a complete identifier, the client specifies only a namespace (or "shoulder") that forms the identifier's prefix, and the service generates an opaque, random string for the identifier's suffix. An identifier can be minted by sending a POST request to the URL https://mds.datacite.org/shoulder/myshoulder where `myshoulder` is the desired namespace. For example:
+
+```
+⇒ POST /shoulder/doi:/10.5072/test HTTP/1.1
+⇒ Host: mds.datacite.org
+⇒ Content-Type: text/plain; charset=UTF-8
+⇒ Content-Length: 30
+⇒
+⇒ _target: http://mds.datacite.org/
+
+⇐ HTTP/1.1 201 CREATED
+⇐ Content-Type: text/plain; charset=UTF-8
+⇐ Content-Length: 29
+⇐
+⇐ success: doi:/10.5072/testc9cz3dh0
+```
+
+Aside from specifying a complete identifier versus specifying a shoulder only, the create and mint operations operate identically. Authentication is required to mint an identifier; namespace permission is required; and prefixes can be viewed in the DOI Fabrica service under the **Prefixes** tab. The request and response bodies are identical.
+
+The service automatically embeds the newly-minted identifier in certain types of uploaded metadata. See Metadata profiles below for when this is performed.
+
+### Operation: modify identifier
+
+An identifier's metadata can be modified by sending a POST request to the identifier's URL. Authentication is required; only the identifier's owner and certain other users may modify the identifier (see Ownership model below).
+
+Metadata elements are operated on individually. If the identifier already has a value for a metadata element included in the request body, the value is overwritten, otherwise the element and its value are added. Only a few of the reserved metadata elements may be modified; see Internal metadata below. Here's a sample interaction:
+
+```
+⇒ POST /id/doi:/10.5072/test9999 HTTP/1.1
+⇒ Host: mds.datacite.org
+⇒ Content-Type: text/plain; charset=UTF-8
+⇒ Content-Length: 30
+⇒
+⇒ _target: http://mds.datacite.org/
+
+⇐ HTTP/1.1 200 OK
+⇐ Content-Type: text/plain; charset=UTF-8
+⇐ Content-Length: 29
+⇐
+⇐ success: doi:/10.5072/test9999
+```
+
+The return is a status line. Assuming success (see Error handling above), the remainder of the status line echoes the canonical form of the identifier in question.
+
+To delete a metadata element, set its value to the empty string.
+
+### Operation: delete identifier
+
+An identifier that has only been reserved can be deleted by sending a DELETE request to the identifier's URL. We emphasize that only reserved identifiers may be deleted; see Identifier status below. Authentication is required; only the identifier's owner and certain other users may delete the identifier (see Ownership model below).
+
+Here's a sample interaction:
+
+```
+⇒ DELETE /id/doi:/10.5072/test9999 HTTP/1.1
+⇒ Host: mds.datacite.org
+
+⇐ HTTP/1.1 200 OK
+⇐ Content-Type: text/plain; charset=UTF-8
+⇐ Content-Length: 29
+⇐
+⇐ success: doi:/10.5072/test9999
+```
+
+The return is a status line. Assuming success (see Error handling above), the remainder of the status line echoes the canonical form of the identifier just deleted.
+
+### Ownership model
+
+The service maintains ownership information about identifiers and uses that information to enforce access control.
+
+The ownership model employed by by DataCite is hierarchical: each identifier has one owner, which is an EZID user; each EZID user belongs to one group; and each group belongs to one realm. Permission to create identifiers is governed by the namespaces (or "shoulders") that have been assigned to a user by an EZID administrator. But once created, permission to subsequently modify an identifier is governed solely by the identifier's ownership. An identifier may be modified only by its owner, with two exceptions:
+
+Proxies. A user (the "proxied user") may name another EZID user as its "proxy". A user may have multiple proxies, and a user may be a proxy for multiple other users. Generally speaking, a proxy may operate on behalf of the proxied user. Specifically, a proxy may:
+create identifiers owned by the proxied user, by setting the "_owner" reserved metadata element (see Internal metadata below);
+modify existing identifiers owned by the proxied user;
+change the ownership of identifiers owned by the proxied user to itself or to any other user on whose behalf the proxy may operate, and vice versa;
+search over the proxied user's identifiers;
+view statistics regarding the proxied user's identifiers; and
+download the proxied user's identifiers (see Batch download below).
+Group administrators. An EZID user may be appointed an "administrator" of its group. A group may have zero, one, or more than one administrator. Generally speaking, a group administrator may operate on behalf of any other member of the group; equivalently, a group administrator is a proxy for the group's members, and as such its specific abilities include the list given above. In addition, a group administrator may:
+search over all the group's identifiers;
+view group-level identifier statistics; and
+download all the group's identifiers.
+In operating on behalf of other users, proxies and group administrators temporarily inherit the identity of those other users. However, that inheritance does not extend to shoulders or Crossref enablement. For any EZID user, proxy user or group administrator or not, the shoulders under which identifiers may be created, and the ability to register identifiers with Crossref (see Crossref registration below), are determined by the user's own account record.
+
+Proxies can be set up and managed in the EZID UI, Account Settings tab. Group administrators can be appointed only by an EZID administrator.
+
+Proxies and group administrators are independent concepts. A group administrator may also be a proxy, and may also have proxies.
+
+### Identifier status
+
+Each identifier in the service has a status. The status is recorded as the value of the "_status" reserved metadata element (see Internal metadata below) and may be one of:
+
+* **public**. The default value.
+* **reserved**. The identifier is known only to DataCite. This status may be used to reserve an identifier name within DataCite without advertising the identifier's existence to resolvers and other external services. A reserved identifier may be deleted.
+* **unavailable**. The identifier is public, but the object referenced by the identifier is not available. A reason for the object's unavailability may optionally follow the status separated by a pipe character ("|", U+007C), e.g., "unavailable | withdrawn by author". The identifier redirects to a "tombstone" page (an HTML page that displays the identifier's citation metadata and the reason for the object's unavailability) regardless of its target URL.
+
+An identifier's status may be changed by setting a new value for the aforementioned "_status" metadata element. DataCite permits only certain status transitions:
+
+* A status of "reserved" may be specified only at identifier creation time.
+* A reserved identifier may be made public. At this time the identifier will be registered with resolvers and other external services.
+* A public identifier may be marked as unavailable. At this time the identifier will be removed from any external services.
+* An unavailable identifier may be returned to public status. At this time the identifier will be re-registered with resolvers and other external services.
 
 ## Installation
 

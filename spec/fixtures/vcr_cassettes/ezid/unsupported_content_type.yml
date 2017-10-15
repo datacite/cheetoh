@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ezid.cdlib.org/shoulder/doi:10.5072/FK2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://a8fa91d44435
+      Accept:
+      - application/json
+      Authorization:
+      - Basic <EZID_TOKEN>
+  response:
+    status:
+      code: 403
+      message: ''
+    headers:
+      Date:
+      - Sun, 30 Jul 2017 12:02:34 GMT
+      Server:
+      - Apache/2.2.17 (Unix) mod_ssl/2.2.17 OpenSSL/1.0.1k-fips mod_wsgi/4.4.9 Python/2.7.12
+      Content-Length:
+      - '226'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+        <html><head>
+        <title>403 Forbidden</title>
+        </head><body>
+        <h1>Forbidden</h1>
+        <p>You don't have permission to access /shoulder/doi:10.5072/FK2
+        on this server.</p>
+        </body></html>
+    http_version: 
+  recorded_at: Sun, 30 Jul 2017 12:02:29 GMT
+recorded_with: VCR 3.0.3

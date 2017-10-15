@@ -5,13 +5,11 @@ gem 'rack-cors'
 gem 'dotenv'
 gem 'multi_json'
 gem 'json', '~> 1.8', '>= 1.8.5'
-gem 'oj', '~> 2.18', '>= 2.18.1'
 gem 'equivalent-xml', '~> 0.6.0'
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 gem 'iso8601', '~> 0.9.0'
-gem 'maremma', '~> 3.5'
-gem 'cirneco', '~> 0.9'
-gem 'bolognese', '~> 0.9'
+gem 'cirneco', '~> 0.9', '>= 0.9.15'
+gem 'bolognese', '~> 0.9', '>= 0.9.39'
 gem "dalli", "~> 2.7.6"
 gem 'lograge', '~> 0.5'
 gem 'bugsnag', '~> 5.3'
@@ -19,7 +17,6 @@ gem 'jwt', '~> 1.5', '>= 1.5.4'
 gem 'cancancan', '~> 1.9.2'
 gem 'librato-rails', '~> 1.4.2'
 gem 'gender_detector', '~> 0.1.2'
-gem 'ezid-client', '~> 1.7', '>= 1.7.1'
 
 group :development, :test do
   gem "better_errors"
