@@ -22,9 +22,11 @@ Some features have not yet been implemented as of September 2017, but are planne
 
 Requests for functionality of the EZID service not (yet) implemented will return appropriate error codes, e.g. a status `501 not implemented`.
 
+The base URL of the service is `https://mds.datacite.org`.
+
 ### API vs. UI
 
-The EZID-compatible API provided by DataCite is complemented by the user interface of the DOI Fabrica service available at [https://doi.datacite.org](https://doi.datacite.org).
+The EZID-compatible API provided by DataCite is complemented by the user interface of the DOI Fabrica service available at [https://doi.datacite.org](https://doi.datacite.org). The UI can be used to manage registered DOIs, and to reset the password.
 
 ### Authentication
 
@@ -255,7 +257,7 @@ Here's a sample interaction creating a doi identifier:
 ⇒ Content-Type: text/plain; charset=UTF-8
 ⇒ Content-Length: 30
 ⇒
-⇒ _target: http://mds.datacite.org/
+⇒ _target: https://mds.datacite.org/
 
 ⇐ HTTP/1.1 201 CREATED
 ⇐ Content-Type: text/plain; charset=UTF-8
@@ -276,7 +278,7 @@ Minting an identifier is the same as creating an identifier, but instead of supp
 ⇒ Content-Type: text/plain; charset=UTF-8
 ⇒ Content-Length: 30
 ⇒
-⇒ _target: http://mds.datacite.org/
+⇒ _target: https://mds.datacite.org/
 
 ⇐ HTTP/1.1 201 CREATED
 ⇐ Content-Type: text/plain; charset=UTF-8
@@ -301,7 +303,7 @@ Metadata elements are operated on individually. If the identifier already has a 
 ⇒ Content-Type: text/plain; charset=UTF-8
 ⇒ Content-Length: 30
 ⇒
-⇒ _target: http://mds.datacite.org/
+⇒ _target: https://mds.datacite.org/
 
 ⇐ HTTP/1.1 200 OK
 ⇐ Content-Type: text/plain; charset=UTF-8
@@ -337,24 +339,9 @@ The return is a status line. Assuming success (see [Error handling](#error-handl
 
 The service maintains ownership information about identifiers and uses that information to enforce access control.
 
-The ownership model employed by by DataCite is hierarchical: each identifier has one owner, which is an EZID user; each EZID user belongs to one group; and each group belongs to one realm. Permission to create identifiers is governed by the namespaces (or "shoulders") that have been assigned to a user by an EZID administrator. But once created, permission to subsequently modify an identifier is governed solely by the identifier's ownership. An identifier may be modified only by its owner, with two exceptions:
+The ownership model employed by DataCite is based on clients: each identifier is owned by one client. Permission to create identifiers is governed by the prefixes that have been assigned to a client by it's DOI Service Provider. But once created, permission to subsequently modify an identifier is governed solely by the identifier's ownership.
 
-Proxies. A user (the "proxied user") may name another EZID user as its "proxy". A user may have multiple proxies, and a user may be a proxy for multiple other users. Generally speaking, a proxy may operate on behalf of the proxied user. Specifically, a proxy may:
-create identifiers owned by the proxied user, by setting the "_owner" reserved metadata element (see Internal metadata below);
-modify existing identifiers owned by the proxied user;
-change the ownership of identifiers owned by the proxied user to itself or to any other user on whose behalf the proxy may operate, and vice versa;
-search over the proxied user's identifiers;
-view statistics regarding the proxied user's identifiers; and
-download the proxied user's identifiers (see Batch download below).
-Group administrators. An EZID user may be appointed an "administrator" of its group. A group may have zero, one, or more than one administrator. Generally speaking, a group administrator may operate on behalf of any other member of the group; equivalently, a group administrator is a proxy for the group's members, and as such its specific abilities include the list given above. In addition, a group administrator may:
-search over all the group's identifiers;
-view group-level identifier statistics; and
-download all the group's identifiers.
-In operating on behalf of other users, proxies and group administrators temporarily inherit the identity of those other users. However, that inheritance does not extend to shoulders or Crossref enablement. For any EZID user, proxy user or group administrator or not, the shoulders under which identifiers may be created, and the ability to register identifiers with Crossref (see Crossref registration below), are determined by the user's own account record.
-
-Proxies can be set up and managed in the EZID UI, Account Settings tab. Group administrators can be appointed only by an EZID administrator.
-
-Proxies and group administrators are independent concepts. A group administrator may also be a proxy, and may also have proxies.
+Clients in turn are managed DOI service providers, including the assignment of prefixes and users.
 
 ### Identifier status
 
