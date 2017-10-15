@@ -341,7 +341,7 @@ The service maintains ownership information about identifiers and uses that info
 
 The ownership model employed by DataCite is based on clients: each identifier is owned by one client. Permission to create identifiers is governed by the prefixes that have been assigned to a client by it's DOI Service Provider. But once created, permission to subsequently modify an identifier is governed solely by the identifier's ownership.
 
-Clients in turn are managed DOI service providers, including the assignment of prefixes and users.
+Clients in turn are managed by DOI service providers, including the assignment of prefixes and users to clients.
 
 ### Identifier status
 
