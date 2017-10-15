@@ -20,13 +20,179 @@ Some features have not yet been implemented as of September 2017, but are planne
 * Reserve a DOI
 * Registration of metadata in other formats, e.g. Dublin Core
 
+Requests for functionality of the EZID service not (yet) implemented will return appropriate error codes, e.g. a status `501 not implemented`.
+
+### API vs. UI
+
+The EZID-compatible API provided by DataCite is complemented by the user interface of the DOI Fabrica service available at [https://doi.datacite.org](https://doi.datacite.org).
+
+### Authentication
+
+Most requests require authentication. The API supports HTTP Basic authentication. With this method, the client supplies HTTP Basic authentication credentials on every request. For example, credentials can be added manually in Python as follows:
+
+```
+import base64, urllib2
+r = urllib2.Request("https://mds.datacite.org/...")
+r.add_header("Authorization", "Basic " + base64.b64encode("username:password"))
+```
+
+But most programming libraries provide higher-level support for authentication. For example, Python provides HTTPBasicAuthHandler:
+
+```
+import urllib2
+h = urllib2.HTTPBasicAuthHandler()
+h.add_password("EZID", "https://mds.datacite.org/", "username", "password")
+o = urllib2.build_opener(h)
+o.open("https://mds.datacite.org/...")
+```
+
+The downside of using higher-level authentication mechanisms is that they often do not supply credentials initially, but only in response to a challenge from the service, thus doubling the number of HTTP transactions.
+
+To manually provide credentials in Java, using Apache Commons Codec to do the Base64 encoding:
+
+```
+import java.net.*;
+import org.apache.commons.codec.binary.*;
+
+URL u = new URL("https://ezid.cdlib.org/...);
+URLConnection c = u.openConnection();
+c.setRequestProperty("Accept", "text/plain");
+c.setRequestProperty("Authorization", "Basic " +
+  new String(Base64.encodeBase64("username:password".getBytes())));
+c.connect();
+```
+
+Java also provides an Authenticator class:
+
+```
+import java.net.*;
+
+class MyAuthenticator extends Authenticator {
+  protected PasswordAuthentication getPasswordAuthentication () {
+    return new PasswordAuthentication("username", "password".toCharArray());
+  }
+}
+
+Authenticator.setDefault(new MyAuthenticator());
+```
+
+If authentication is required and credentials are either missing or invalid, the service returns a 401 HTTP status code and the status line "error: unauthorized" (see [Error handling](#error-handling) below). If authentication is successful but the request is still not authorized, the service returns a 403 HTTP status code and the status line "error: forbidden".
+
+### Request & response bodies
+
+Request and response bodies are used to transmit identifier metadata. The HTTP content type for all bodies is "text/plain" using UTF-8 charset encoding. In request bodies, if no charset encoding is declared in the HTTP Content-Type header, it is assumed to be UTF-8.
+
+The service's data model for metadata is a dictionary of element name/value pairs. The dictionary is single-valued: an element name may not be repeated. Names and values are strings. Leading and trailing whitespace in names and values is not significant. Neither element names nor element values may be empty. (When modifying an identifier, an uploaded empty value is treated as a command to delete the element entirely.)
+
+Metadata dictionaries are serialized using a subset of [A Name-Value Language (ANVL)](https://confluence.ucop.edu/display/Curation/Anvl) rules:
+
+* One element name/value pair per line.
+* Names separated from values by colons.
+
+For example:
+
+```
+who: Proust, Marcel
+what: Remembrance of Things Past
+when: 1922
+```
+
+In addition, two ANVL features may be used when uploading metadata to the service (but clients can safely assume that DataCite will never use these features when returning metadata):
+
+* A line beginning with a number sign ("#", U+0023) is a comment and will be ignored.
+* A line beginning with whitespace continues the previous line (the intervening line terminator and whitespace are converted to a single space).
+
+For example:
+
+```
+# The following two elements are identical:
+who: Proust,
+  Marcel
+who: Proust, Marcel
+```
+
+Care must be taken to escape structural characters that appear in element names and values, specifically, line terminators (both newlines ("\n", U+000A) and carriage returns ("\r", U+000D)) and, in element names, colons (":", U+003A). EZID employs percent-encoding as the escaping mechanism, and thus percent signs ("%", U+0025) must be escaped as well. In Python, a dictionary of Unicode metadata element names and values, metadata, is serialized into a UTF-8 encoded string, anvl, with the following code:
+
+```
+import re
+
+def escape (s):
+  return re.sub("[%:\r\n]", lambda c: "%%%02X" % ord(c.group(0)), s)
+
+anvl = "\n".join("%s: %s" % (escape(name), escape(value)) for name,
+  value in metadata.items()).encode("UTF-8")
+```
+
+Conversely, to parse a UTF-8 encoded string, anvl, producing a dictionary, metadata:
+
+```
+import re
+
+def unescape (s):
+  return re.sub("%([0-9A-Fa-f][0-9A-Fa-f])",
+    lambda m: chr(int(m.group(1), 16)), s)
+
+metadata = dict(tuple(unescape(v).strip() for v in l.split(":", 1)) \
+  for l in anvl.decode("UTF-8").splitlines())
+```
+
+In Java, to serialize a HashMap of metadata element names and values, metadata, into an ANVL-formatted Unicode string, anvl:
+
+```
+import java.util.*;
+
+String escape (String s) {
+  return s.replace("%", "%25").replace("\n", "%0A").
+    replace("\r", "%0D").replace(":", "%3A");
+}
+
+Iterator<Map.Entry<String, String>> i = metadata.entrySet().iterator();
+StringBuffer b = new StringBuffer();
+while (i.hasNext()) {
+  Map.Entry<String, String> e = i.next();
+  b.append(escape(e.getKey()) + ": " + escape(e.getValue()) + "\n");
+}
+String anvl = b.toString();
+```
+
+And conversely, to parse a Unicode ANVL-formatted string, anvl, producing a HashMap, metadata:
+
+```
+import java.util.*;
+
+String unescape (String s) {
+  StringBuffer b = new StringBuffer();
+  int i;
+  while ((i = s.indexOf("%")) >= 0) {
+    b.append(s.substring(0, i));
+    b.append((char) Integer.parseInt(s.substring(i+1, i+3), 16));
+    s = s.substring(i+3);
+  }
+  b.append(s);
+  return b.toString();
+}
+
+HashMap<String, String> metadata = new HashMap<String, String>();
+for (String l : anvl.split("[\\r\\n]+")) {
+  String[] kv = l.split(":", 2);
+  metadata.put(unescape(kv[0]).trim(), unescape(kv[1]).trim());
+}
+```
+
+The first line of an EZID response body is a status indicator consisting of "success" or "error", followed by a colon, followed by additional information. Two examples:
+
+```
+success: ark:/99999/fk4test
+error: bad request - no such identifier
+```
+
 ### Error handling
 
 An error is indicated by both an HTTP status code and an error status line of the form "error: reason". For example:
 
 ```
 ⇒ GET /id/doi:/10.5072/bogus HTTP/1.1
-⇒ Host: ezid.cdlib.org
+⇒ Host: mds.datacite.org
 
 ⇐ HTTP/1.1 400 BAD REQUEST
 ⇐ Content-Type: text/plain; charset=UTF-8
@@ -54,14 +220,14 @@ if (c.getResponseCode() < 400) {
 Metadata can be retrieved for any existing identifier; no authentication is required. Simply issue a GET request to the identifier's URL. Here is a sample interaction:
 
 ```
-⇒ GET /id/doi:/99999/fk4cz3dh0 HTTP/1.1
+⇒ GET /id/doi:10.5072/test9999 HTTP/1.1
 ⇒ Host: mds.datacite.org
 
 ⇐ HTTP/1.1 200 OK
 ⇐ Content-Type: text/plain; charset=UTF-8
 ⇐ Content-Length: 208
 ⇐
-⇐ success: doi:/99999/fk4cz3dh0
+⇐ success: doi:10.5072/test9999
 ⇐ _created: 1300812337
 ⇐ _updated: 1300913550
 ⇐ _target: http://www.gutenberg.org/ebooks/7178
@@ -71,7 +237,7 @@ Metadata can be retrieved for any existing identifier; no authentication is requ
 ⇐ erc.when: 1922
 ```
 
-The first line of the response body is a status line. Assuming success (see Error handling above), the remainder of the status line echoes the canonical form of the requested identifier.
+The first line of the response body is a status line. Assuming success (see [Error handling](#error-handling) above), the remainder of the status line echoes the canonical form of the requested identifier.
 
 The remaining lines are metadata element name/value pairs serialized per ANVL rules; see Request & response bodies above. The order of elements is undefined. Element names beginning with an underscore ("_", U+005F) are reserved for use by the system; their meanings are described in Internal metadata below. Some elements may be drawn from citation metadata standards; see Metadata profiles below.
 
@@ -144,7 +310,7 @@ Metadata elements are operated on individually. If the identifier already has a 
 ⇐ success: doi:/10.5072/test9999
 ```
 
-The return is a status line. Assuming success (see Error handling above), the remainder of the status line echoes the canonical form of the identifier in question.
+The return is a status line. Assuming success (see [Error handling](#error-handling) above), the remainder of the status line echoes the canonical form of the identifier in question.
 
 To delete a metadata element, set its value to the empty string.
 
@@ -165,7 +331,7 @@ Here's a sample interaction:
 ⇐ success: doi:/10.5072/test9999
 ```
 
-The return is a status line. Assuming success (see Error handling above), the remainder of the status line echoes the canonical form of the identifier just deleted.
+The return is a status line. Assuming success (see [Error handling](#error-handling) above), the remainder of the status line echoes the canonical form of the identifier just deleted.
 
 ### Ownership model
 
