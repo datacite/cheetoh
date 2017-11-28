@@ -8,11 +8,23 @@ class ApplicationController < ActionController::API
   include Cirneco::Utils
   include Cirneco::Api
 
+  attr_accessor :username, :password
+
+  after_action :set_consumer_header
+
   # check that username and password exist
   # store them in instance variables used for calling MDS API
   def authenticate_user_with_basic_auth!
     @username, @password = ActionController::HttpAuthentication::Basic::user_name_and_password(request)
     raise CanCan::AccessDenied unless @username.present? && @password.present?
+  end
+
+  def set_consumer_header
+    if username
+      response.headers['X-Credential-Username'] = username
+    else
+      response.headers['X-Anonymous-Consumer'] = true
+    end
   end
 
   def routing_error

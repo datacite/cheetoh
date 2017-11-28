@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Date:
-      - Tue, 28 Nov 2017 13:28:59 GMT
+      - Tue, 28 Nov 2017 18:09:01 GMT
       Etag:
       - W/"97c04bba3aad54b4aeda2bda3a5889a7"
       Server:
@@ -49,9 +49,9 @@ http_interactions:
       X-Powered-By:
       - Phusion Passenger 5.1.12
       X-Request-Id:
-      - 434628a5-4d25-438e-83f4-dfafda263a1d
+      - 9966103d-d112-4955-a959-2436d64e06fe
       X-Runtime:
-      - '0.011406'
+      - '0.011487'
       Content-Length:
       - '4808'
       Connection:
@@ -68,7 +68,7 @@ http_interactions:
         Sandbox","symbol":"SANDBOX.XH38-7HZV","year":2017,"contact-name":"Martin Fenner","contact-email":"martin.fenner@datacite.org","domains":"*","is-active":true,"password":null,"created":"2017-10-14T17:21:00Z","updated":"2017-11-07T17:13:40Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"sandbox","type":"providers","attributes":{"name":"Sandbox
         Provider","symbol":"SANDBOX","year":2017,"contact-name":"DataCite Support","contact-email":"support@datacite.org","logo-url":"https://assets.datacite.org/images/members/sandbox.png","is-active":true,"password":null,"created":"2017-10-13T20:33:43.000Z","updated":"2017-11-07T17:13:11.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Tue, 28 Nov 2017 13:29:04 GMT
+  recorded_at: Tue, 28 Nov 2017 18:09:01 GMT
 - request:
     method: put
     uri: https://mds.test.datacite.org/doi/10.5438/bc11-cqw1
@@ -98,7 +98,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=UTF-8
       Date:
-      - Tue, 28 Nov 2017 13:28:59 GMT
+      - Tue, 28 Nov 2017 18:09:02 GMT
       Server:
       - openresty/1.11.2.2
       Via:
@@ -108,7 +108,7 @@ http_interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '15'
+      - '14'
       Content-Length:
       - '15'
       Connection:
@@ -117,5 +117,5 @@ http_interactions:
       encoding: UTF-8
       string: Bad credentials
     http_version: 
-  recorded_at: Tue, 28 Nov 2017 13:29:05 GMT
+  recorded_at: Tue, 28 Nov 2017 18:09:01 GMT
 recorded_with: VCR 3.0.3

@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Date:
-      - Tue, 28 Nov 2017 13:28:57 GMT
+      - Tue, 28 Nov 2017 18:08:57 GMT
       Etag:
       - W/"97c04bba3aad54b4aeda2bda3a5889a7"
       Server:
@@ -45,13 +45,13 @@ http_interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '14'
+      - '13'
       X-Powered-By:
       - Phusion Passenger 5.1.12
       X-Request-Id:
-      - 9da5bdda-461c-4378-af20-17adac448d9a
+      - 3f538216-c23b-448e-b0f5-9aa529177e38
       X-Runtime:
-      - '0.011353'
+      - '0.011418'
       Content-Length:
       - '4808'
       Connection:
@@ -68,7 +68,7 @@ http_interactions:
         Sandbox","symbol":"SANDBOX.XH38-7HZV","year":2017,"contact-name":"Martin Fenner","contact-email":"martin.fenner@datacite.org","domains":"*","is-active":true,"password":null,"created":"2017-10-14T17:21:00Z","updated":"2017-11-07T17:13:40Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"sandbox","type":"providers","attributes":{"name":"Sandbox
         Provider","symbol":"SANDBOX","year":2017,"contact-name":"DataCite Support","contact-email":"support@datacite.org","logo-url":"https://assets.datacite.org/images/members/sandbox.png","is-active":true,"password":null,"created":"2017-10-13T20:33:43.000Z","updated":"2017-11-07T17:13:11.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Tue, 28 Nov 2017 13:29:02 GMT
+  recorded_at: Tue, 28 Nov 2017 18:08:57 GMT
 - request:
     method: post
     uri: https://mds.test.datacite.org/metadata
@@ -137,7 +137,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=UTF-8
       Date:
-      - Tue, 28 Nov 2017 13:28:57 GMT
+      - Tue, 28 Nov 2017 18:08:58 GMT
       Server:
       - openresty/1.11.2.2
       Via:
@@ -145,9 +145,9 @@ http_interactions:
       Www-Authenticate:
       - Basic realm="mds.datacite.org"
       X-Kong-Proxy-Latency:
-      - '15'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '15'
+      - '17'
       Content-Length:
       - '15'
       Connection:
@@ -156,5 +156,5 @@ http_interactions:
       encoding: UTF-8
       string: Bad credentials
     http_version: 
-  recorded_at: Tue, 28 Nov 2017 13:29:02 GMT
+  recorded_at: Tue, 28 Nov 2017 18:08:57 GMT
 recorded_with: VCR 3.0.3

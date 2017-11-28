@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Date:
-      - Tue, 28 Nov 2017 13:39:56 GMT
+      - Tue, 28 Nov 2017 18:08:59 GMT
       Etag:
       - W/"ce0c53b27f57a24b86d66f0be09d3285"
       Server:
@@ -43,15 +43,15 @@ http_interactions:
       X-Anonymous-Consumer:
       - 'true'
       X-Kong-Proxy-Latency:
-      - '2'
+      - '0'
       X-Kong-Upstream-Latency:
-      - '12'
+      - '13'
       X-Powered-By:
       - Phusion Passenger 5.1.12
       X-Request-Id:
-      - c46afd7a-373d-400d-8c33-39b781b3731a
+      - 925acd5b-2e74-4da9-92b6-da29e4f34608
       X-Runtime:
-      - '0.011056'
+      - '0.011382'
       Content-Length:
       - '4353'
       Connection:
@@ -68,5 +68,5 @@ http_interactions:
         Fenner","contact-email":"tech@datacite.org","domains":"datacite.org","is-active":true,"password":"yes","created":"2011-12-07T13:43:39Z","updated":"2017-11-22T10:50:40Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
         Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"password":"yes","created":"2011-12-07T13:41:07.000Z","updated":"2017-11-28T12:42:27.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Tue, 28 Nov 2017 13:40:02 GMT
+  recorded_at: Tue, 28 Nov 2017 18:08:58 GMT
 recorded_with: VCR 3.0.3

@@ -71,7 +71,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=UTF-8
       Date:
-      - Tue, 28 Nov 2017 13:29:00 GMT
+      - Tue, 28 Nov 2017 18:09:04 GMT
       Server:
       - openresty/1.11.2.2
       Via:
@@ -81,7 +81,7 @@ http_interactions:
       X-Kong-Proxy-Latency:
       - '0'
       X-Kong-Upstream-Latency:
-      - '15'
+      - '16'
       Content-Length:
       - '15'
       Connection:
@@ -90,5 +90,5 @@ http_interactions:
       encoding: UTF-8
       string: Bad credentials
     http_version: 
-  recorded_at: Tue, 28 Nov 2017 13:29:06 GMT
+  recorded_at: Tue, 28 Nov 2017 18:09:03 GMT
 recorded_with: VCR 3.0.3
