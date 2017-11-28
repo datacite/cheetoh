@@ -59,7 +59,7 @@ class Work < Bolognese::Metadata
   end
 
   def _datacenter
-    data_center_id
+    client_id
   end
 
   def _created
@@ -84,7 +84,6 @@ class Work < Bolognese::Metadata
     { "success" => doi_with_protocol,
       "_updated" => _updated,
       "_target" => _target,
-      from => send(from.to_sym),
       format => send(format.to_sym),
       "_profile" => format,
       "_datacenter" => _datacenter,
