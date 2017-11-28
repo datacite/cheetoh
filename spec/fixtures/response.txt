@@ -1,0 +1,9 @@
+success: doi:10.5061/dryad.kr812/1
+_updated: 1332836838
+_target: http://datadryad.org/handle/10255/dryad.34485
+datacite: <?xml version="1.0" encoding="UTF-8"?>%0A<resource xmlns="http://datacite.org/schema/kernel-2.2" xmlns:dim="http://www.dspace.org/xmlns/dspace/dim" xmlns:dspace="http://www.dspace.org/xmlns/dspace/dim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" metadataVersionNumber="1" lastMetadataUpdate="2006-05-04" xsi:schemaLocation="http://datacite.org/schema/kernel-2.2 http://schema.datacite.org/meta/kernel-2.2/metadata.xsd">%0A  <identifier identifierType="DOI">10.5061/DRYAD.KR812/1</identifier>%0A  <creators>%0A    <creator>%0A      <creatorName>Chouteau, Mathieu</creatorName>%0A    </creator>%0A    <creator>%0A      <creatorName>Angers, Bernard</creatorName>%0A    </creator>%0A  </creators>%0A  <titles>%0A    <title>Dryad data</title>%0A  </titles>%0A  <publisher>Dryad Digital Repository</publisher>%0A  <publicationYear>2011</publicationYear>%0A  <subjects>%0A    <subject>Adaptation</subject>%0A    <subject>Interactions: predation</subject>%0A    <subject>San Martin</subject>%0A    <subject>Peru</subject>%0A  </subjects>%0A  <relatedIdentifiers>%0A    <relatedIdentifier relationType="IsPartOf" relatedIdentifierType="DOI">doi:10.5061/dryad.kr812</relatedIdentifier>%0A  </relatedIdentifiers>%0A  <rights>http://creativecommons.org/publicdomain/zero/1.0/</rights>%0A</resource>
+_profile: datacite
+_datacenter: CDL.CDL
+_export: yes
+_created: 1311708249
+_status: public

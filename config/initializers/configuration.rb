@@ -15,12 +15,11 @@ end
 
 # default values for some ENV variables
 ENV['APPLICATION'] ||= "cheetoh"
-ENV['HOSTNAME'] ||= "chhetoh.local"
+ENV['HOSTNAME'] ||= "cheetoh.local"
 ENV['MEMCACHE_SERVERS'] ||= "memcached:11211"
 ENV['SITE_TITLE'] ||= "EZID-compatible API"
 ENV['LOG_LEVEL'] ||= "info"
 ENV['GITHUB_URL'] ||= "https://github.com/datacite/cheetoh"
-ENV['SEARCH_URL'] ||= "https://search.datacite.org/"
 ENV['TRUSTED_IP'] ||= "127.0.0.0/8"
 
 Rails.application.config.log_level = ENV['LOG_LEVEL'].to_sym

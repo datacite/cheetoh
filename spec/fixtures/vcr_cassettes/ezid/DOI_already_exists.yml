@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://ezid.cdlib.org/id/doi:10.5072/FK211cqw1
+    body:
+      encoding: UTF-8
+      string: |-
+        datacite: <?xml version="1.0" encoding="UTF-8"?>%0A<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">%0A  <identifier identifierType="DOI">10.5438/BC11-CQW1</identifier>%0A  <creators>%0A    <creator>%0A      <creatorName>Fenner, Martin</creatorName>%0A      <givenName>Martin</givenName>%0A      <familyName>Fenner</familyName>%0A      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">0000-0003-1419-2405</nameIdentifier>%0A    </creator>%0A  </creators>%0A  <titles>%0A    <title>Differences between ORCID and DataCite Metadata</title>%0A  </titles>%0A  <publisher>DataCite Blog</publisher>%0A  <publicationYear>2015</publicationYear>%0A  <resourceType resourceTypeGeneral="Text">BlogPosting</resourceType>%0A  <subjects>%0A    <subject>thor</subject>%0A    <subject>orcid</subject>%0A    <subject>metadata</subject>%0A  </subjects>%0A  <contributors>%0A    <contributor contributorType="HostingInstitution">%0A      <contributorName>DataCite</contributorName>%0A    </contributor>%0A  </contributors>%0A  <dates>%0A    <date dateType="Issued">2015-09-18</date>%0A  </dates>%0A  <relatedIdentifiers>%0A    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.5281/ZENODO.30799</relatedIdentifier>%0A  </relatedIdentifiers>%0A  <version>1.0</version>%0A  <rightsList>%0A    <rights rightsURI="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</rights>%0A  </rightsList>%0A  <descriptions>%0A    <description descriptionType="Abstract">One of the first tasks for DataCite in the European Commission-funded THOR project, which started in June, was to contribute to a comparison of the ORCID and DataCite metadata standards. Together with ORCID, CERN, the British Library and Dryad we looked...</description>%0A  </descriptions>%0A</resource>%0A
+        _target: https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/
+    headers:
+      User-Agent:
+      - Maremma - http://a8fa91d44435
+      Accept:
+      - text/plain
+      Authorization:
+      - Basic <EZID_TOKEN>
+  response:
+    status:
+      code: 403
+      message: ''
+    headers:
+      Date:
+      - Sun, 30 Jul 2017 12:02:36 GMT
+      Server:
+      - Apache/2.2.17 (Unix) mod_ssl/2.2.17 OpenSSL/1.0.1k-fips mod_wsgi/4.4.9 Python/2.7.12
+      Content-Length:
+      - '226'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+        <html><head>
+        <title>403 Forbidden</title>
+        </head><body>
+        <h1>Forbidden</h1>
+        <p>You don't have permission to access /id/doi:10.5072/FK211cqw1
+        on this server.</p>
+        </body></html>
+    http_version: 
+  recorded_at: Sun, 30 Jul 2017 12:02:31 GMT
+recorded_with: VCR 3.0.3

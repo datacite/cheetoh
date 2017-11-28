@@ -1,0 +1,23 @@
+language: ruby
+rvm:
+- 2.3.3
+cache: bundler
+
+services:
+  - memcached
+
+addons:
+  code_climate:
+    repo_token: $CODECLIMATE_REPO_TOKEN
+
+before_script:
+  - cp .env.travis .env
+  - mkdir -p tmp/pids
+  - mkdir -p log
+
+script:
+  - bundle exec rspec
+  - bundle exec codeclimate-test-reporter
+
+notifications:
+  email: false
