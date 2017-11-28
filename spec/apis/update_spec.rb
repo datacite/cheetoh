@@ -19,7 +19,7 @@ describe "/id/update", :type => :api, vcr: true do
   it "missing login credentials" do
     post "/id/doi:#{doi}"
     expect(last_response.status).to eq(401)
-    expect(last_response.body).to eq("error: you are not authorized to access this resource.")
+    expect(last_response.body).to eq("error: unauthorized")
   end
 
   it "nothing to update" do

@@ -22,7 +22,7 @@ describe "/id/mint", :type => :api, vcr: true do
   it "missing login credentials" do
     post "/shoulder/doi:#{doi}"
     expect(last_response.status).to eq(401)
-    expect(last_response.body).to eq("error: you are not authorized to access this resource.")
+    expect(last_response.body).to eq("error: unauthorized")
   end
 
   it "no params" do

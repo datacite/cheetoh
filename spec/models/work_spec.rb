@@ -13,7 +13,7 @@ describe Work, vcr: true do
       expect(lines[2]).to eq("_target: #{subject.url}")
       expect(lines[3].anvlunesc).to eq("datacite: #{subject.datacite}")
       expect(lines[4]).to eq("_profile: datacite")
-      expect(lines[5]).to eq("_datacenter: #{subject.data_center_id}")
+      expect(lines[5]).to eq("_datacenter: #{subject.client_id}")
       expect(lines[6]).to eq("_export: yes")
       expect(lines[7]).to eq("_created: #{subject._created}")
       expect(lines[8]).to eq("_status: public")

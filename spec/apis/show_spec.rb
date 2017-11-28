@@ -2,15 +2,15 @@ require "rails_helper"
 
 describe "/id/show", :type => :api, vcr: true do
   it "show doi and metadata" do
-    doi = "10.4124/XZ7JTC6TBB.1"
+    doi = "10.5438/mcnv-ga6n"
 
     get "/id/doi:#{doi}"
     expect(last_response.status).to eq(200)
     response = last_response.body
     hsh = response.from_anvl
-    expect(hsh["success"]).to eq("doi:10.4124/xz7jtc6tbb.1")
-    expect(hsh["_updated"]).to eq("1500649550")
-    expect(hsh["_target"]).to eq("https://staging-data.mendeley.com/datasets/xz7jtc6tbb/1")
+    expect(hsh["success"]).to eq("doi:10.5438/mcnv-ga6n")
+    expect(hsh["_updated"]).to eq("1511347819")
+    expect(hsh["_target"]).to eq("https://blog.datacite.org/re3data-webinar-and-datacite-en-avant/")
     expect(hsh["datacite"]).to start_with("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<resource xmlns=\"http://datacite.org/schema/kernel-3\"")
     expect(hsh["_profile"]).to eq("datacite")
     expect(hsh["_datacenter"]).to eq("BL.MENDELEY")
@@ -20,16 +20,16 @@ describe "/id/show", :type => :api, vcr: true do
   end
 
   it "bibtex format" do
-    doi = "10.4124/XZ7JTC6TBB.1"
+    doi = "10.5438/mcnv-ga6n"
     params = { "_profile" => "bibtex" }
 
     get "/id/doi:#{doi}", params
     expect(last_response.status).to eq(200)
     response = last_response.body
     hsh = response.from_anvl
-    expect(hsh["success"]).to eq("doi:10.4124/xz7jtc6tbb.1")
-    expect(hsh["_updated"]).to eq("1500649550")
-    expect(hsh["_target"]).to eq("https://staging-data.mendeley.com/datasets/xz7jtc6tbb/1")
+    expect(hsh["success"]).to eq("doi:10.5438/mcnv-ga6n")
+    expect(hsh["_updated"]).to eq("1511347819")
+    expect(hsh["_target"]).to eq("https://blog.datacite.org/re3data-webinar-and-datacite-en-avant/")
     expect(hsh["datacite"]).to start_with("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<resource xmlns=\"http://datacite.org/schema/kernel-3\"")
     expect(hsh["bibtex"]).to start_with("@misc{https://doi.org/10.4124/xz7jtc6tbb.1")
     expect(hsh["_profile"]).to eq("bibtex")
