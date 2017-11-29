@@ -12,8 +12,8 @@ describe "/id/delete", :type => :api, vcr: true do
   it "missing valid doi parameter" do
     doi = "20.5072/0000-03vc"
     put "/id/doi:#{doi}"
-    expect(last_response.status).to eq(404)
-    expect(last_response.body).to eq("error: the resource you are looking for doesn't exist.")
+    expect(last_response.status).to eq(400)
+    expect(last_response.body).to eq("error: bad request - no such identifier")
   end
 
   it "missing login credentials" do

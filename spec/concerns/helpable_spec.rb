@@ -7,13 +7,13 @@ describe Work, vcr: true do
 
   context "validate_prefix" do
     it 'should validate' do
-      str = "10.5438"
-      expect(subject.validate_prefix(str)).to eq("10.5438")
+      str = "10.5072"
+      expect(subject.validate_prefix(str)).to eq("10.5072")
     end
 
     it 'should validate with slash' do
-      str = "10.5438/"
-      expect(subject.validate_prefix(str)).to eq("10.5438")
+      str = "10.5072/"
+      expect(subject.validate_prefix(str)).to eq("10.5072")
     end
 
     it 'should validate with shoulder' do
@@ -29,20 +29,20 @@ describe Work, vcr: true do
 
   context "generate_random_doi" do
     it 'should generate' do
-      str = "10.5438"
+      str = "10.5072"
       expect(subject.generate_random_doi(str).length).to eq(17)
     end
 
     it 'should generate with seed' do
-      str = "10.5438"
+      str = "10.5072"
       number = 123456
-      expect(subject.generate_random_doi(str, number: number)).to eq("10.5438/0003-rj0r")
+      expect(subject.generate_random_doi(str, number: number)).to eq("10.5072/0003-rj0r")
     end
 
     it 'should generate with shoulder' do
-      str = "10.5438/FK2"
+      str = "10.5072/FK2"
       number = 123456
-      expect(subject.generate_random_doi(str, number: number)).to eq("10.5438/FK203rj0r")
+      expect(subject.generate_random_doi(str, number: number)).to eq("10.5072/FK203rj0r")
     end
 
     it 'should not generate if not DOI prefix' do

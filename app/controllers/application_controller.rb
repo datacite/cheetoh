@@ -44,7 +44,8 @@ class ApplicationController < ActionController::API
       status = 501 if exception.message.end_with?("not supported by this service")
 
       if status == 404
-        message = "the resource you are looking for doesn't exist."
+        message = "bad request - no such identifier"
+        status = 400
       elsif status == 401
         message = "unauthorized"
       else

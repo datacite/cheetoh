@@ -8,7 +8,7 @@ gem 'json', '~> 1.8', '>= 1.8.5'
 gem 'equivalent-xml', '~> 0.6.0'
 gem 'nokogiri', '~> 1.6', '>= 1.6.8'
 gem 'iso8601', '~> 0.9.0'
-gem 'cirneco', '~> 0.9', '>= 0.9.15'
+gem 'cirneco', '0.9.15'
 gem 'bolognese', '~> 0.9', '>= 0.9.39'
 gem "dalli", "~> 2.7.6"
 gem 'lograge', '~> 0.5'
