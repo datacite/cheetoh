@@ -16,6 +16,30 @@ require "action_controller/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# load ENV variables from .env file if it exists
+env_file = File.expand_path("../../.env", __FILE__)
+if File.exist?(env_file)
+  require 'dotenv'
+  Dotenv.load! env_file
+end
+
+# load ENV variables from container environment if json file exists
+# see https://github.com/phusion/baseimage-docker#envvar_dumps
+env_json_file = "/etc/container_environment.json"
+if File.exist?(env_json_file)
+  env_vars = JSON.parse(File.read(env_json_file))
+  env_vars.each { |k, v| ENV[k] = v }
+end
+
+# default values for some ENV variables
+ENV['APPLICATION'] ||= "cheetoh"
+ENV['HOSTNAME'] ||= "cheetoh.local"
+ENV['MEMCACHE_SERVERS'] ||= "memcached:11211"
+ENV['SITE_TITLE'] ||= "EZID-compatible API"
+ENV['LOG_LEVEL'] ||= "info"
+ENV['GITHUB_URL'] ||= "https://github.com/datacite/cheetoh"
+ENV['TRUSTED_IP'] ||= "127.0.0.0/8"
+
 module Cheetoh
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -33,9 +57,11 @@ module Cheetoh
     config.api_only = true
 
     # configure logging
+    # configure logging
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
+    config.log_level = ENV['LOG_LEVEL'].to_sym
     config.lograge.enabled = true
 
     # Make Ruby 2.4 preserve the timezone of the receiver when calling `to_time`.
@@ -50,5 +76,8 @@ module Cheetoh
 
     # compress responses with deflate or gzip
     config.middleware.use Rack::Deflater
+
+    # Use memcached as cache store
+    Rails.application.config.cache_store = :dalli_store, nil, { expires_in: 7.days }
   end
 end
