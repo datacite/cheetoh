@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Work, vcr: true do
-  let(:input) { "https://doi.org/10.5061/dryad.17vs2d34/1" }
+  let(:input) { "https://doi.org/10.24354/n296wz12m" }
 
   subject { Work.new(input: input, from: "datacite") }
 

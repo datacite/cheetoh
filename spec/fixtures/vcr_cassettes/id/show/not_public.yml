@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://210a994d6e66
+      - Maremma - http://16fb93b08219
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -16,42 +16,30 @@ http_interactions:
       code: 404
       message: ''
     headers:
-      Access-Control-Allow-Methods:
-      - GET, POST, PATCH, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Origin:
-      - "*"
-      Cache-Control:
-      - no-cache
+      Date:
+      - Mon, 08 Jan 2018 22:22:45 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Tue, 28 Nov 2017 18:09:00 GMT
-      Server:
-      - openresty/1.11.2.2
-      Status:
-      - 404 Not Found
-      Vary:
-      - Accept-Encoding
-      Via:
-      - kong/0.10.3
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '4'
-      X-Powered-By:
-      - Phusion Passenger 5.1.12
-      X-Request-Id:
-      - 9890af5c-02f1-4bd7-9782-3ad6a17e44a9
-      X-Runtime:
-      - '0.003259'
-      Content-Length:
-      - '87'
       Connection:
       - keep-alive
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      X-Runtime:
+      - '0.003415'
+      X-Request-Id:
+      - d0d2940e-f826-4876-84a7-b1b4f5c156c3
+      X-Powered-By:
+      - Phusion Passenger 5.1.12
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.1.12
     body:
       encoding: UTF-8
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Tue, 28 Nov 2017 18:08:59 GMT
+  recorded_at: Mon, 08 Jan 2018 22:22:48 GMT
 recorded_with: VCR 3.0.3

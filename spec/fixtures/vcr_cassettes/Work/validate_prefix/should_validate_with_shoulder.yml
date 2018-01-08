@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.test.datacite.org/dois/10.5061/dryad.17vs2d34/1?include=client,provider
+    uri: https://api.test.datacite.org/dois/10.24354/n296wz12m?include=client,provider
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://210a994d6e66
+      - Maremma - http://16fb93b08219
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -16,53 +16,44 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      Access-Control-Allow-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
-      Access-Control-Allow-Methods:
-      - GET, POST, PATCH, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Expose-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
-      Cache-Control:
-      - max-age=0, private, must-revalidate
+      Date:
+      - Mon, 08 Jan 2018 22:31:17 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
-      Date:
-      - Tue, 28 Nov 2017 18:09:06 GMT
-      Etag:
-      - W/"009c6edf200af6715e58f13253cbc6bb"
-      Server:
-      - openresty/1.11.2.2
-      Status:
-      - 200 OK
-      Vary:
-      - Accept-Encoding
-      Via:
-      - kong/0.10.3
-      X-Anonymous-Consumer:
-      - 'true'
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '13'
-      X-Powered-By:
-      - Phusion Passenger 5.1.12
-      X-Request-Id:
-      - c46fcc31-772a-4895-bdb5-3576fcccd33c
-      X-Runtime:
-      - '0.011202'
-      Content-Length:
-      - '3715'
       Connection:
       - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Etag:
+      - W/"f7c1c6f8c9b20436fbae1a2a0a467d96"
+      X-Runtime:
+      - '0.043591'
+      X-Request-Id:
+      - 74c3c650-c0e7-40cd-8d50-d203e5155c06
+      X-Powered-By:
+      - Phusion Passenger 5.1.12
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.1.12
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      Access-Control-Expose-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5061/dryad.17vs2d34/1","type":"dois","attributes":{"doi":"10.5061/dryad.17vs2d34/1","identifier":"https://handle.test.datacite.org/10.5061/dryad.17vs2d34/1","url":"http://datadryad.org/resource/doi:10.5061/dryad.17vs2d34/1","author":{"type":"Person","name":"Astrid
-        Kodric-Brown","given-name":"Astrid","family-name":"Kodric-Brown"},"title":"Dryad
-        Table","container-title":"Dryad Digital Repository","description":null,"resource-type-subtype":null,"license":null,"version":2,"related-identifier":[{"type":"CreativeWork","id":"https://doi.org/10.5061/dryad.17vs2d34","relation-type":"IsPartOf"}],"schema-version":"http://datacite.org/schema/kernel-2.2","state":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291\ncmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwt\nMi4yIiB4bWxuczpkaW09Imh0dHA6Ly93d3cuZHNwYWNlLm9yZy94bWxucy9k\nc3BhY2UvZGltIiB4bWxuczpkc3BhY2U9Imh0dHA6Ly93d3cuZHNwYWNlLm9y\nZy94bWxucy9kc3BhY2UvZGltIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMu\nb3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiBtZXRhZGF0YVZlcnNpb25O\ndW1iZXI9IjEiIGxhc3RNZXRhZGF0YVVwZGF0ZT0iMjAwNi0wNS0wNCIgeHNp\nOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9r\nZXJuZWwtMi4yIGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2Vy\nbmVsLTIuMi9tZXRhZGF0YS54c2QiPg0KICA8aWRlbnRpZmllciBpZGVudGlm\naWVyVHlwZT0iRE9JIj4xMC41MDYxL0RSWUFELjE3VlMyRDM0LzE8L2lkZW50\naWZpZXI+DQogIDxjcmVhdG9ycz4NCiAgICA8Y3JlYXRvcj4NCiAgICAgIDxj\ncmVhdG9yTmFtZT5Lb2RyaWMtQnJvd24sIEFzdHJpZDwvY3JlYXRvck5hbWU+\nDQogICAgPC9jcmVhdG9yPg0KICA8L2NyZWF0b3JzPg0KICA8dGl0bGVzPg0K\nICAgIDx0aXRsZT5EcnlhZCBUYWJsZTwvdGl0bGU+DQogIDwvdGl0bGVzPg0K\nICA8cHVibGlzaGVyPkRyeWFkIERpZ2l0YWwgUmVwb3NpdG9yeTwvcHVibGlz\naGVyPg0KICA8cHVibGljYXRpb25ZZWFyPjIwMTI8L3B1YmxpY2F0aW9uWWVh\ncj4NCiAgPHN1YmplY3RzPg0KICAgIDxzdWJqZWN0PkVjb2xvZ3k6IGJlaGF2\naW9yYWw8L3N1YmplY3Q+DQogICAgPHN1YmplY3Q+RWNvbG9neTogZXZvbHV0\naW9uYXJ5PC9zdWJqZWN0Pg0KICAgIDxzdWJqZWN0PkxpZmUgaGlzdG9yeTog\nZWNvbG9neTwvc3ViamVjdD4NCiAgICA8c3ViamVjdD5MaWZlIGhpc3Rvcnk6\nIGV2b2x1dGlvbjwvc3ViamVjdD4NCiAgICA8c3ViamVjdD5NYXRpbmcgc3lz\ndGVtczwvc3ViamVjdD4NCiAgICA8c3ViamVjdD5Nb3JwaG9sb2d5PC9zdWJq\nZWN0Pg0KICAgIDxzdWJqZWN0PlJlcHJvZHVjdGlvbjogc3RyYXRlZ2llczwv\nc3ViamVjdD4NCiAgICA8c3ViamVjdD5TZXh1YWwgZGltb3JwaGlzbTwvc3Vi\namVjdD4NCiAgICA8c3ViamVjdD5oZXJiaXZvcmVzPC9zdWJqZWN0Pg0KICA8\nL3N1YmplY3RzPg0KICA8cmVsYXRlZElkZW50aWZpZXJzPg0KICAgIDxyZWxh\ndGVkSWRlbnRpZmllciByZWxhdGlvblR5cGU9IklzUGFydE9mIiByZWxhdGVk\nSWRlbnRpZmllclR5cGU9IkRPSSI+ZG9pOjEwLjUwNjEvZHJ5YWQuMTd2czJk\nMzQ8L3JlbGF0ZWRJZGVudGlmaWVyPg0KICA8L3JlbGF0ZWRJZGVudGlmaWVy\ncz4NCiAgPHJpZ2h0cz5odHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9wdWJs\naWNkb21haW4vemVyby8xLjAvPC9yaWdodHM+DQo8L3Jlc291cmNlPg==\n","published":"2012","registered":"2011-10-26T19:08:11.000Z","updated":"2012-03-27T07:42:50.000Z"},"relationships":{"client":{"data":{"id":"cdl.cdl","type":"clients"}},"provider":{"data":{"id":"cdl","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"cdl.cdl","type":"clients","attributes":{"name":"CDL","symbol":"CDL.CDL","year":2011,"contact-name":"Greg
-        Janee","contact-email":"gjanee@ucop.edu","domains":"*","is-active":true,"password":null,"created":"2011-03-02T19:09:27Z","updated":"2017-11-07T17:13:27Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"cdl","type":"providers","attributes":{"name":"California
-        Digital Library","symbol":"CDL","year":2010,"contact-name":"Greg Janee","contact-email":"gjanee@ucop.edu","logo-url":"https://assets.datacite.org/images/members/cdl.png","is-active":true,"password":"yes","created":"2010-01-01T00:00:00.000Z","updated":"2017-11-17T05:58:04.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+      string: '{"data":{"id":"10.24354/n296wz12m","type":"dois","attributes":{"doi":"10.24354/n296wz12m","identifier":"https://handle.test.datacite.org/10.24354/n296wz12m","url":"https://www.datacite.org","author":{"type":"Person","name":"Tom
+        Johnson","given-name":"Tom","family-name":"Johnson"},"title":"DOI Test","container-title":":unav","description":null,"resource-type-subtype":"Dissertation","license":null,"version":2,"related-identifier":[],"schema-version":"http://datacite.org/schema/kernel-4","state":"findable","xml":"PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxyZXNvdXJjZSB4bWxucz0iaHR0cDov\nL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTQiIHhtbG5zOnhzaT0iaHR0\ncDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpz\nY2hlbWFMb2NhdGlvbj0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2Vy\nbmVsLTQgaHR0cDovL3NjaGVtYS5kYXRhY2l0ZS5vcmcvbWV0YS9rZXJuZWwt\nNC9tZXRhZGF0YS54c2QiPgogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBl\nPSJET0kiPjEwLjI0MzU0L24yOTZ3ejEybTwvaWRlbnRpZmllcj4KICA8dGl0\nbGVzPgogICAgPHRpdGxlPkRPSSBUZXN0PC90aXRsZT4KICA8L3RpdGxlcz4K\nICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1l\nPkpvaG5zb24sIFRvbTwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAg\nPC9jcmVhdG9ycz4KICA8cHVibGlzaGVyPjp1bmF2PC9wdWJsaXNoZXI+CiAg\nPHB1YmxpY2F0aW9uWWVhcj4yMDE3PC9wdWJsaWNhdGlvblllYXI+CiAgPHJl\nc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5EaXNzZXJ0\nYXRpb248L3Jlc291cmNlVHlwZT4KICA8dmVyc2lvbj40LjA8L3ZlcnNpb24+\nCjwvcmVzb3VyY2U+\n","published":"2017","registered":"2017-12-04T21:43:09.000Z","updated":"2017-12-04T21:43:09.000Z"},"relationships":{"client":{"data":{"id":"datacite.test","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.test","type":"clients","attributes":{"name":"DataCite
+        Test","symbol":"DATACITE.TEST","year":2017,"contact-name":"Martin Fenner","contact-email":"support@datacite.org","domains":"*","is-active":true,"password":"yes","created":"2017-07-13T15:15:33Z","updated":"2017-12-02T22:49:15Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
+        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"password":"yes","created":"2011-12-07T13:41:07.000Z","updated":"2017-12-02T22:48:26.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Tue, 28 Nov 2017 18:09:05 GMT
+  recorded_at: Mon, 08 Jan 2018 22:31:20 GMT
 recorded_with: VCR 3.0.3
