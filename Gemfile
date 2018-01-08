@@ -17,6 +17,8 @@ gem 'jwt', '~> 1.5', '>= 1.5.4'
 gem 'cancancan', '~> 1.9.2'
 gem 'librato-rails', '~> 1.4.2'
 gem 'gender_detector', '~> 0.1.2'
+gem 'tzinfo-data', '~> 1.2017', '>= 1.2017.3'
+gem 'anvl-converter', '~> 0.1'
 
 group :development, :test do
   gem "better_errors"
