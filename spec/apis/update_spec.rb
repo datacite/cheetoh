@@ -22,6 +22,16 @@ describe "/id/update", :type => :api, vcr: true do
     expect(last_response.body).to eq("error: unauthorized")
   end
 
+  it "wrong login credentials" do
+    headers = ({ "HTTP_ACCEPT" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials("name", "password") })
+    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
+    params = { "_target" => url }.to_anvl
+    doi = "10.5072/bc11-cqw1"
+    post "/id/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(401)
+    expect(last_response.body).to eq("error: unauthorized")
+  end
+
   it "nothing to update" do
     doi = "10.5072/bc11-cqw1"
     post "/id/doi:#{doi}", nil, headers

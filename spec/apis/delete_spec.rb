@@ -19,8 +19,14 @@ describe "/id/delete", :type => :api, vcr: true do
   it "missing login credentials" do
     delete "/id/doi:#{doi}"
     expect(last_response.status).to eq(401)
-    expect(last_response.body).to eq("error: unauthorized"
-)
+    expect(last_response.body).to eq("error: unauthorized")
+  end
+
+  it "missing login credentials" do
+    headers = ({ "HTTP_ACCEPT" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials("name", "password") })
+    delete "/id/doi:#{doi}", nil, headers
+    expect(last_response.status).to eq(400)
+    expect(last_response.body).to eq("error: doi:#{doi} is not a reserved DOI")
   end
 
   it "delete doi and metadata" do

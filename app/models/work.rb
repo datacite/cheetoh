@@ -23,6 +23,7 @@ class Work < Bolognese::Metadata
                                password: password,
                                sandbox: ENV['SANDBOX'].present?)
 
+      raise CanCan::AccessDenied if response.status == 401
       error_message(response).presence && return
     end
 
@@ -32,6 +33,7 @@ class Work < Bolognese::Metadata
                               password: password,
                               sandbox: ENV['SANDBOX'].present?)
 
+      raise CanCan::AccessDenied if response.status == 401
       error_message(response).presence && return
     end
 

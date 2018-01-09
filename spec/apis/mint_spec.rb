@@ -25,6 +25,16 @@ describe "/id/mint", :type => :api, vcr: true do
     expect(last_response.body).to eq("error: unauthorized")
   end
 
+  it "wrong login credentials" do
+    headers = ({ "HTTP_ACCEPT" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials("name", "password") })
+    datacite = File.read(file_fixture('10.5072_bc11-cqw6.xml'))
+    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
+    params = { "datacite" => datacite, "_target" => url }.to_anvl
+    post "/shoulder/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(401)
+    expect(last_response.body).to eq("error: unauthorized")
+  end
+
   it "no params" do
     doi = "10.5072"
     post "/shoulder/doi:#{doi}", nil, headers
