@@ -75,7 +75,7 @@ describe "/id/update", :type => :api, vcr: true do
     expect(response["datacite"]).to eq(datacite)
   end
 
-  it "change using citeproc" do
+  it "change using schema.org" do
     schema_org = File.read(file_fixture('schema_org.json'))
     params = { "schema_org" => schema_org, "_profile" => "schema_org" }.to_anvl
     doi = "10.5072/bc11-cqw6"
