@@ -23,7 +23,7 @@ describe "/id/delete", :type => :api, vcr: true do
 )
   end
 
-  it "show doi and metadata" do
+  it "delete doi and metadata" do
     delete "/id/doi:#{doi}", nil, headers
     expect(last_response.status).to eq(400)
     expect(last_response.body).to eq("error: doi:#{doi} is not a reserved DOI")

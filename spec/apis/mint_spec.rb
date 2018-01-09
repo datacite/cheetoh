@@ -34,16 +34,16 @@ describe "/id/mint", :type => :api, vcr: true do
   end
 
   # we seed with _number to avoid random numbers in tests
-  # it "create new DOI" do
-  #   datacite = File.read(file_fixture('10.5072_bc11-cqw1.xml'))
-  #   url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
-  #   params = { "datacite" => datacite, "_target" => url, "_number" => "12214907644" }.to_anvl
-  #   doi = "10.5072"
-  #   post "/shoulder/doi:#{doi}", params, headers
-  #   expect(last_response.status).to eq(200)
-  #   response = last_response.body.from_anvl
-  #   expect(response["success"]).to eq("doi:10.5072/bc11-cqw1")
-  #   expect(response["datacite"]).to eq(datacite)
-  #   expect(response["_target"]).to eq(url)
-  # end
+  it "create new DOI" do
+    datacite = File.read(file_fixture('10.5072_bc11-cqw1.xml'))
+    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
+    params = { "datacite" => datacite, "_target" => url, "_number" => "12214907644" }.to_anvl
+    doi = "10.5072"
+    post "/shoulder/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(200)
+    response = last_response.body.from_anvl
+    expect(response["success"]).to eq("doi:10.5072/bc11-cqw1")
+    expect(response["datacite"]).to eq(datacite)
+    expect(response["_target"]).to eq(url)
+  end
 end
