@@ -1,7 +1,7 @@
 class WorksController < ApplicationController
+  prepend_before_action :authenticate_user_with_basic_auth!, except: [:show]
   before_action :load_id, except: [:mint]
   before_action :set_profile
-  before_action :authenticate_user_with_basic_auth!, except: [:show]
 
   SUPPORTED_PROFILES = [:datacite, :crossref, :bibtex, :ris, :schema_org, :citeproc]
 

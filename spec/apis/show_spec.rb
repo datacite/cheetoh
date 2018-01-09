@@ -52,7 +52,7 @@ describe "/id/show", :type => :api, vcr: true do
 
   it "missing valid doi parameter" do
     doi = "20.5072/0000-03vc"
-    put "/id/doi:#{doi}"
+    get "/id/doi:#{doi}"
     expect(last_response.status).to eq(400)
     expect(last_response.body).to eq("error: bad request - no such identifier")
   end
