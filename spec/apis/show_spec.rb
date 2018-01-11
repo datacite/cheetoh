@@ -4,10 +4,6 @@ describe "/id/show", :type => :api, vcr: true do
   it "show doi and metadata" do
     doi = "10.24354/n296wz12m"
 
-    puts ActionController::HttpAuthentication::Basic.encode_credentials(ENV['MDS_USERNAME'], ENV['MDS_PASSWORD']) + "L"
-    puts Base64.strict_encode64("#{ENV['MDS_USERNAME']}:#{ENV['MDS_PASSWORD']}") + "L"
-    puts Base64.encode64("#{ENV['MDS_USERNAME']}:#{ENV['MDS_PASSWORD']}").rstrip + "L"
-
     get "/id/doi:#{doi}"
     expect(last_response.status).to eq(200)
     response = last_response.body

@@ -1,17 +1,17 @@
 {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "@id": "https://doi.org/10.5072/bc11-cqw6",
+    "@id": "https://doi.org/10.5072/bc11-cqw7",
     "name": "Eating your own Dog Food",
     "alternateName": "MS-49-3632-5083",
-    "url": "https://blog.datacite.org/eating-your-own-dog-food/",
-    "author": [{
+    "url": "https://blog.datacite.org/eating-your-own-dog-food",
+    "author": {
         "@type": "Person",
         "@id": "http://orcid.org/0000-0003-1419-2405",
         "givenName": "Martin",
         "familyName": "Fenner",
         "name": "Martin Fenner"
-    }],
+    },
     "publisher": {
         "@type": "Organization",
         "name": "DataCite"

@@ -62,7 +62,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 11 Jan 2018 09:50:38 GMT
+      - Thu, 11 Jan 2018 10:51:20 GMT
       Content-Type:
       - text/html;charset=UTF-8
       Content-Length:
@@ -83,48 +83,5 @@ http_interactions:
       encoding: UTF-8
       string: OK (10.5072/BC11-CQW1)
     http_version: 
-  recorded_at: Thu, 11 Jan 2018 09:50:39 GMT
-- request:
-    method: put
-    uri: https://mds.test.datacite.org/doi/10.5072/bc11-cqw1
-    body:
-      encoding: UTF-8
-      string: |-
-        doi=10.5072/bc11-cqw1
-        url=https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/
-    headers:
-      User-Agent:
-      - Maremma - http://0764eab97227
-      Content-Type:
-      - text/plain;charset=UTF-8
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Authorization:
-      - Basic <MDS_TOKEN>
-  response:
-    status:
-      code: 201
-      message: ''
-    headers:
-      Date:
-      - Thu, 11 Jan 2018 09:50:38 GMT
-      Content-Type:
-      - text/html;charset=UTF-8
-      Content-Length:
-      - '2'
-      Connection:
-      - keep-alive
-      Server:
-      - Apache-Coyote/1.1
-      Pragma:
-      - no-cache
-      Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Cache-Control:
-      - no-cache, no-store
-    body:
-      encoding: UTF-8
-      string: OK
-    http_version: 
-  recorded_at: Thu, 11 Jan 2018 09:50:40 GMT
+  recorded_at: Thu, 11 Jan 2018 10:51:24 GMT
 recorded_with: VCR 3.0.3

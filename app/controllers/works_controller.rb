@@ -21,8 +21,7 @@ class WorksController < ApplicationController
     if safe_params[:_number].present?
       @id = generate_random_doi(params[:id], number: safe_params[:_number])
       @work = Work.new(input: @id, from: @profile.to_s)
-      fail IdentifierError, "#{@id} has already been registered" if
-        @work.exists? && !Rails.env.test?
+      fail IdentifierError, "#{@id} has already been registered" if @work.exists?
     else
       duplicate = true
       while duplicate do
@@ -38,11 +37,8 @@ class WorksController < ApplicationController
     @work = Work.new(input: input,
                      from: @profile.to_s,
                      doi: doi,
-                     target: safe_params[:_target],
-                     data: safe_params[@profile])
+                     target: safe_params[:_target])
     fail IdentifierError, "metadata could not be validated" unless @work.valid?
-    fail IdentifierError, "params doi:#{doi} does not match doi:#{@work.doi} in metadata" unless
-      doi == @work.doi
 
     message, status = @work.upsert(username: @username,
                                    password: @password)
@@ -58,15 +54,13 @@ class WorksController < ApplicationController
     fail IdentifierError, "#{params[:id]} has already been registered" if @work.exists?
 
     input = safe_params[@profile].anvlunesc
+    doi = doi_from_url(@id)
 
     @work = Work.new(input: input,
                      from: @profile.to_s,
-                     doi: doi_from_url(@id),
-                     target: safe_params[:_target],
-                     data: safe_params[@profile])
+                     doi: doi,
+                     target: safe_params[:_target])
     fail IdentifierError, "metadata could not be validated" unless @work.valid?
-    fail IdentifierError, "params #{params[:id]} does not match #{@work.doi_with_protocol} in metadata" unless
-      params[:id] == @work.doi_with_protocol
 
     message, status = @work.upsert(username: @username,
                                    password: @password)
@@ -80,18 +74,18 @@ class WorksController < ApplicationController
 
     if safe_params[@profile].present?
       input = safe_params[@profile].anvlunesc
+      data = "update"
     else
       input = @id
+      data = "ignore"
     end
 
     @work = Work.new(input: input,
                      from: @profile.to_s,
                      target: safe_params[:_target],
-                     data: safe_params[@profile])
+                     data: data)
 
     fail IdentifierError, "metadata could not be validated" unless @work.valid?
-    fail IdentifierError, "params #{params[:id]} does not match #{@work.doi_with_protocol} in metadata" unless
-      params[:id] == @work.doi_with_protocol
 
     message, status = @work.upsert(username: @username,
                                    password: @password)

@@ -27,7 +27,7 @@ describe "/id/mint", :type => :api, vcr: true do
 
   it "wrong login credentials" do
     headers = ({ "HTTP_ACCEPT" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials("name", "password") })
-    datacite = File.read(file_fixture('10.5072_bc11-cqw6.xml'))
+    datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
     url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
     params = { "datacite" => datacite, "_target" => url, "_number" => "12214907644" }.to_anvl
     post "/shoulder/doi:#{doi}", params, headers
@@ -45,7 +45,7 @@ describe "/id/mint", :type => :api, vcr: true do
 
   # we seed with _number to avoid random numbers in tests
   it "create new DOI" do
-    datacite = File.read(file_fixture('10.5072_bc11-cqw1.xml'))
+    datacite = File.read(file_fixture('10.5072_tba.xml'))
     url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
     params = { "datacite" => datacite, "_target" => url, "_number" => "12214907644" }.to_anvl
     doi = "10.5072"
@@ -53,7 +53,9 @@ describe "/id/mint", :type => :api, vcr: true do
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw1")
-    expect(response["datacite"]).to eq(datacite)
     expect(response["_target"]).to eq(url)
+
+    doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+    expect(doc.at_css("identifier").content).to eq("10.5072/BC11-CQW1")
   end
 end

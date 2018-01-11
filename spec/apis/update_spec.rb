@@ -45,9 +45,12 @@ describe "/id/update", :type => :api, vcr: true do
     params = { "datacite" => datacite }.to_anvl
     doi = "10.5072/bc11-cqw3"
     post "/id/doi:#{doi}", params, headers
-    expect(last_response.status).to eq(400)
+    expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
-    expect(response["error"]).to eq("params doi:10.5072/bc11-cqw3 does not match doi:10.5072/bc11-cqw1 in metadata")
+
+    #expect(response["success"]).to eq("doi:10.5072/bc11-cqw3")
+    #doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+    #expect(doc.at_css("identifier").content).to eq("10.5072/BC11-CQW3")
   end
 
   it "change redirect url and datacite xml" do
@@ -59,7 +62,7 @@ describe "/id/update", :type => :api, vcr: true do
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw1")
-    expect(response["datacite"]).to eq(datacite)
+    expect(response["datacite"]).to eq(datacite.strip)
     expect(response["_target"]).to eq(url)
   end
 
@@ -82,18 +85,20 @@ describe "/id/update", :type => :api, vcr: true do
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw1")
-    expect(response["datacite"]).to eq(datacite)
+    expect(response["datacite"]).to eq(datacite.strip)
   end
 
   it "change using schema.org" do
     schema_org = File.read(file_fixture('schema_org.json'))
     params = { "schema_org" => schema_org, "_profile" => "schema_org" }.to_anvl
-    doi = "10.5072/bc11-cqw6"
+    doi = "10.5072/bc11-cqw7"
     post "/id/doi:#{doi}", params, headers
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
-    expect(response["success"]).to eq("doi:10.5072/bc11-cqw6")
-    expect(response["schema_org"]).to eq(schema_org)
-    expect(response["datacite"]).to start_with("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<resource")
+    input = JSON.parse(schema_org)
+    output = JSON.parse(response["schema_org"])
+    expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
+    expect(output["author"]).to eq(input["author"])
+    expect(response["datacite"]).to be_nil
   end
 end

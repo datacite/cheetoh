@@ -23,8 +23,9 @@ describe "/id/create", :type => :api, vcr: true do
   end
 
   it "wrong login credentials" do
+    doi = "10.5072/bc11-cqw70"
     headers = ({ "HTTP_ACCEPT" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials("name", "password") })
-    datacite = File.read(file_fixture('10.5072_bc11-cqw6.xml'))
+    datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
     url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
     params = { "datacite" => datacite, "_target" => url }.to_anvl
     put "/id/doi:#{doi}", params, headers
@@ -53,24 +54,28 @@ describe "/id/create", :type => :api, vcr: true do
 
   it "different doi in datacite xml" do
     datacite = File.read(file_fixture('10.5072_bc11-cqw1.xml'))
-    params = { "datacite" => datacite }.to_anvl
+    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
+    params = { "datacite" => datacite, "_target" => url }.to_anvl
     doi = "10.5072/bc11-cqw4"
     post "/id/doi:#{doi}", params, headers
-    expect(last_response.status).to eq(400)
+    expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
-    expect(response["error"]).to eq("params doi:10.5072/bc11-cqw4 does not match doi:10.5072/bc11-cqw1 in metadata")
+
+    #expect(response["success"]).to eq("doi:10.5072/bc11-cqw4")
+    #doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+    #expect(doc.at_css("identifier").content).to eq("10.5072/BC11-CQW4")
   end
 
   it "create new DOI" do
-    datacite = File.read(file_fixture('10.5072_bc11-cqw6.xml'))
+    datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
     url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
     params = { "datacite" => datacite, "_target" => url }.to_anvl
-    doi = "10.5072/bc11-cqw6"
+    doi = "10.5072/bc11-cqw7"
     put "/id/doi:#{doi}", params, headers
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
-    expect(response["success"]).to eq("doi:10.5072/bc11-cqw6")
-    expect(response["datacite"]).to eq(datacite)
+    expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
+    expect(response["datacite"]).to eq(datacite.strip)
     expect(response["_target"]).to eq(url)
   end
 end

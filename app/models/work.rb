@@ -11,13 +11,13 @@ class Work < Bolognese::Metadata
   def initialize(input: nil, from: nil, format: nil, **options)
     @format = format || from
     @target = options[:target]
-    @data = options[:data]
+    @data = options[:data].presence || "update"
 
     return super(input: input, from: from, doi: options[:doi], sandbox: ENV['SANDBOX'].present?)
   end
 
   def upsert(username: nil, password: nil)
-    if data.present?
+    if data == "update"
       response = post_metadata(datacite,
                                username: username,
                                password: password,
@@ -39,8 +39,7 @@ class Work < Bolognese::Metadata
 
     message = { "success" => doi_with_protocol,
                 "_target" => target,
-                "datacite" => datacite,
-                from => data,
+                format => send(format.to_sym),
                 "_profile" => from }.to_anvl
 
     [message, 200]
