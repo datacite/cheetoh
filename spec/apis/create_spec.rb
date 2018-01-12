@@ -41,6 +41,15 @@ describe "/id/create", :type => :api, vcr: true do
     expect(response["error"]).to eq("A required parameter is missing")
   end
 
+  it "reserved status" do
+    doi = "10.5072/bc11-cqw1"
+    params = { "_status" => "reserved" }.to_anvl
+    put "/id/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(501)
+    response = last_response.body.from_anvl
+    expect(response["error"]).to eq("A reserved status is not supported by this service")
+  end
+
   it "DOI already exists" do
     datacite = File.read(file_fixture('10.5072_bc11-cqw1.xml'))
     url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"

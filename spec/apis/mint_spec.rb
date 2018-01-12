@@ -43,6 +43,15 @@ describe "/id/mint", :type => :api, vcr: true do
     expect(response["error"]).to eq("A required parameter is missing")
   end
 
+  it "reserved status" do
+    doi = "10.5072"
+    params = { "_status" => "reserved" }.to_anvl
+    post "/shoulder/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(501)
+    response = last_response.body.from_anvl
+    expect(response["error"]).to eq("A reserved status is not supported by this service")
+  end
+
   # we seed with _number to avoid random numbers in tests
   it "create new DOI" do
     datacite = File.read(file_fixture('10.5072_tba.xml'))

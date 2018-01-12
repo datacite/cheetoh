@@ -13,6 +13,9 @@ class WorksController < ApplicationController
   end
 
   def mint
+    fail IdentifierError, "A reserved status is not supported by this service" if
+      safe_params[:_status] == "reserved"
+
     fail IdentifierError, "A required parameter is missing" unless
       safe_params[@profile].present? && safe_params[:_target].present?
 
@@ -47,6 +50,9 @@ class WorksController < ApplicationController
   end
 
   def create
+    fail IdentifierError, "A reserved status is not supported by this service" if
+      safe_params[:_status] == "reserved"
+
     fail IdentifierError, "A required parameter is missing" unless
       safe_params[@profile].present? && safe_params[:_target].present?
 
@@ -115,6 +121,6 @@ class WorksController < ApplicationController
   private
 
   def safe_params
-    params.permit(:id, :_target, :_export, :_profile, :_number, :datacite, :crossref, :bibtex, :ris, :schema_org, :citeproc).merge(request.raw_post.from_anvl)
+    params.permit(:id, :_target, :_export, :_profile, :_status, :_number, :datacite, :crossref, :bibtex, :ris, :schema_org, :citeproc).merge(request.raw_post.from_anvl)
   end
 end
