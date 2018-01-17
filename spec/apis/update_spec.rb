@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "/id/update", :type => :api, vcr: true do
+describe "update", :type => :api, vcr: true, :order => :defined do
   let(:doi) { "10.5072/0000-03vc" }
   let(:username) { ENV['MDS_USERNAME'] }
   let(:password) { ENV['MDS_PASSWORD'] }
@@ -19,7 +19,8 @@ describe "/id/update", :type => :api, vcr: true do
   it "missing login credentials" do
     post "/id/doi:#{doi}"
     expect(last_response.status).to eq(401)
-    expect(last_response.body).to eq("error: unauthorized")
+    expect(last_response.headers["WWW-Authenticate"]).to eq("Basic realm=\"ez.test.datacite.org\"")
+    expect(last_response.body).to eq("HTTP Basic: Access denied.\n")
   end
 
   it "wrong login credentials" do
@@ -64,6 +65,7 @@ describe "/id/update", :type => :api, vcr: true do
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw1")
     expect(response["datacite"]).to eq(datacite.strip)
     expect(response["_target"]).to eq(url)
+    expect(response["_status"]).to eq("reserved")
   end
 
   it "change redirect url" do
@@ -75,6 +77,7 @@ describe "/id/update", :type => :api, vcr: true do
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw1")
     expect(response["_target"]).to eq(url)
+    expect(response["_status"]).to eq("reserved")
   end
 
   it "change datacite xml" do
@@ -86,6 +89,31 @@ describe "/id/update", :type => :api, vcr: true do
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw1")
     expect(response["datacite"]).to eq(datacite.strip)
+    expect(response["_status"]).to eq("reserved")
+  end
+
+  # it "status unavailable" do
+  #   datacite = File.read(file_fixture('10.5072_bc11-cqw1.xml'))
+  #   params = { "_status" => "unavailable" }.to_anvl
+  #   doi = "10.5072/bc11-cqw1"
+  #   post "/id/doi:#{doi}", params, headers
+  #   expect(last_response.status).to eq(200)
+  #   response = last_response.body.from_anvl
+  #   expect(response["success"]).to eq("doi:10.5072/bc11-cqw1")
+  #   expect(response["datacite"]).to eq(datacite.strip)
+  #   expect(response["_status"]).to eq("unavailable")
+  # end
+
+  it "status draft" do
+    datacite = File.read(file_fixture('10.5072_bc11-cqw1.xml'))
+    params = { "_status" => "public" }.to_anvl
+    doi = "10.5072/bc11-cqw1"
+    post "/id/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(200)
+    response = last_response.body.from_anvl
+    expect(response["success"]).to eq("doi:10.5072/bc11-cqw1")
+    expect(response["datacite"]).to eq(datacite.strip)
+    expect(response["_status"]).to eq("reserved")
   end
 
   it "change using schema.org" do
@@ -98,6 +126,7 @@ describe "/id/update", :type => :api, vcr: true do
     input = JSON.parse(schema_org)
     output = JSON.parse(response["schema_org"])
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
+    expect(response["_status"]).to eq("reserved")
     expect(output["author"]).to eq(input["author"])
     expect(response["datacite"]).to be_nil
   end

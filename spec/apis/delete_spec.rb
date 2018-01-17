@@ -1,7 +1,7 @@
 require "rails_helper"
 
-describe "/id/delete", :type => :api, vcr: true do
-  let(:doi) { "10.5072/0000-03vc" }
+describe "delete", :type => :api, vcr: true, :order => :defined do
+  let(:doi) { "10.5072/bc11-cqw7" }
   let(:username) { ENV['MDS_USERNAME'] }
   let(:password) { ENV['MDS_PASSWORD'] }
   let(:headers) do
@@ -19,19 +19,14 @@ describe "/id/delete", :type => :api, vcr: true do
   it "missing login credentials" do
     delete "/id/doi:#{doi}"
     expect(last_response.status).to eq(401)
-    expect(last_response.body).to eq("error: unauthorized")
+    expect(last_response.headers["WWW-Authenticate"]).to eq("Basic realm=\"ez.test.datacite.org\"")
+    expect(last_response.body).to eq("HTTP Basic: Access denied.\n")
   end
 
-  it "missing login credentials" do
-    headers = ({ "HTTP_ACCEPT" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials("name", "password") })
+  it "not a reserved doi" do
+    doi = "10.5438/mcnv-ga6n"
     delete "/id/doi:#{doi}", nil, headers
     expect(last_response.status).to eq(400)
-    expect(last_response.body).to eq("error: doi:#{doi} is not a reserved DOI")
-  end
-
-  it "delete doi and metadata" do
-    delete "/id/doi:#{doi}", nil, headers
-    expect(last_response.status).to eq(400)
-    expect(last_response.body).to eq("error: doi:#{doi} is not a reserved DOI")
+    expect(last_response.body).to eq("error: doi:10.5438/mcnv-ga6n is not a reserved DOI")
   end
 end
