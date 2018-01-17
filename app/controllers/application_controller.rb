@@ -16,7 +16,8 @@ class ApplicationController < ActionController::API
   # store them in instance variables used for calling MDS API
   def authenticate_user_with_basic_auth!
     @username, @password = ActionController::HttpAuthentication::Basic::user_name_and_password(request)
-    raise CanCan::AccessDenied unless @username.present? && @password.present?
+
+    request_http_basic_authentication(realm = ENV['REALM']) unless @username.present? && @password.present?
   end
 
   def set_consumer_header
