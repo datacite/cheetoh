@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://63158fde88d4
+      - Maremma - http://18814b0b22ed
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 15 Jan 2018 21:43:33 GMT
+      - Wed, 17 Jan 2018 11:38:19 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,11 +31,11 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Etag:
-      - W/"b7124d720294fe0a40eb47b41b30388e"
+      - W/"0e66f207ed600172a07d791e56677ccc"
       X-Runtime:
-      - '0.019707'
+      - '0.016127'
       X-Request-Id:
-      - 39e366d6-1618-4d2c-bd55-fff88c8e49f3
+      - 61fe85b7-8940-49e6-b934-636d5b70283e
       X-Powered-By:
       - Phusion Passenger 5.1.12
       Server:
@@ -50,11 +50,11 @@ http_interactions:
       - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":null,"related-identifier":null,"schema-version":null,"state":"draft","xml":null,"published":null,"registered":null,"updated":"2018-01-15T21:43:32.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":null,"related-identifier":null,"schema-version":null,"state":"draft","xml":null,"published":null,"registered":null,"updated":"2018-01-17T11:38:19.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
         Fenner","contact-email":"tech@datacite.org","domains":"datacite.org","is-active":true,"password":"yes","created":"2011-12-07T13:43:39Z","updated":"2018-01-11T09:29:56Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
         Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"password":"yes","created":"2011-12-07T13:41:07.000Z","updated":"2018-01-12T10:24:30.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Mon, 15 Jan 2018 21:43:34 GMT
+  recorded_at: Wed, 17 Jan 2018 11:38:21 GMT
 - request:
     method: delete
     uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw9
@@ -63,7 +63,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://63158fde88d4
+      - Maremma - http://18814b0b22ed
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -76,7 +76,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 15 Jan 2018 21:43:33 GMT
+      - Wed, 17 Jan 2018 11:38:20 GMT
       Connection:
       - keep-alive
       Status:
@@ -84,11 +84,11 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Runtime:
-      - '0.014657'
+      - '0.014427'
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 6ad57642-f7f5-4858-82cf-e1ac4615de99
+      - 0a1e139d-6603-40d0-9c3b-b28d614bb6f1
       X-Powered-By:
       - Phusion Passenger 5.1.12
       Server:
@@ -105,5 +105,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 15 Jan 2018 21:43:34 GMT
+  recorded_at: Wed, 17 Jan 2018 11:38:21 GMT
 recorded_with: VCR 3.0.3

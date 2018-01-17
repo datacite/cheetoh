@@ -67,6 +67,13 @@ describe "show", :type => :api, vcr: true do
     expect(last_response.body).to eq("error: bad request - no such identifier")
   end
 
+  it "doi not found" do
+    doi = "10.5072/bc11-cqw7"
+    get "/id/doi:#{doi}"
+    expect(last_response.status).to eq(400)
+    expect(last_response.body).to eq("error: bad request - no such identifier")
+  end
+
   it "not found" do
     get "/id/x"
     expect(last_response.status).to eq(400)

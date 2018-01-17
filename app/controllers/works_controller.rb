@@ -7,7 +7,7 @@ class WorksController < ApplicationController
 
   def show
     @work = Work.new(input: @id, from: "datacite", format: @profile)
-    fail AbstractController::ActionNotFound unless @work.exists?
+    fail AbstractController::ActionNotFound if @work.state == "not_found"
 
     render plain: @work.hsh.to_anvl
   end

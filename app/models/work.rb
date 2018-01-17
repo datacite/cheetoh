@@ -119,7 +119,7 @@ class Work < Bolognese::Metadata
   end
 
   def status
-    STATES[state]
+    STATES[state] || "public"
   end
 
   def reserved?

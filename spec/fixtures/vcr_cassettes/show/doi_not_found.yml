@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw7?include=client,provider
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://18814b0b22ed
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Date:
+      - Wed, 17 Jan 2018 11:31:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      X-Runtime:
+      - '0.003501'
+      X-Request-Id:
+      - df8bc956-a6f8-46ce-8d6b-8e52949bd122
+      X-Powered-By:
+      - Phusion Passenger 5.1.12
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.1.12
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"status":"404","title":"The resource you are looking for
+        doesn''t exist."}]}'
+    http_version: 
+  recorded_at: Wed, 17 Jan 2018 11:31:12 GMT
+recorded_with: VCR 3.0.3
