@@ -67,6 +67,33 @@ describe "create", :type => :api, vcr: true, :order => :defined do
     expect(response["error"]).to eq("doi:10.5072/bc11-cqw7 has already been registered")
   end
 
+  it "change using schema.org" do
+    schema_org = File.read(file_fixture('schema_org.json'))
+    params = { "schema_org" => schema_org, "_profile" => "schema_org" }.to_anvl
+    doi = "10.5072/bc11-cqw7"
+    post "/id/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(200)
+    response = last_response.body.from_anvl
+    input = JSON.parse(schema_org)
+    output = JSON.parse(response["schema_org"])
+    expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
+    expect(response["_status"]).to eq("reserved")
+    expect(output["author"]).to eq(input["author"])
+    expect(response["datacite"]).to be_nil
+  end
+
+  it "change datacite xml" do
+    datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
+    params = { "datacite" => datacite }.to_anvl
+    doi = "10.5072/bc11-cqw7"
+    post "/id/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(200)
+    response = last_response.body.from_anvl
+    expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
+    expect(response["datacite"]).to eq(datacite.strip)
+    expect(response["_status"]).to eq("reserved")
+  end
+
   it "delete new doi" do
     datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
     url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"

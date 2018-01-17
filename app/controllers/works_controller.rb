@@ -24,7 +24,7 @@ class WorksController < ApplicationController
     if safe_params[:_number].present?
       @id = generate_random_doi(params[:id], number: safe_params[:_number])
       @work = Work.new(input: @id, from: @profile.to_s)
-      fail IdentifierError, "#{@id} has already been registered" if @work.exists?
+      fail IdentifierError, "#{@id} has already been registered" if @work.valid?
     else
       duplicate = true
       while duplicate do
