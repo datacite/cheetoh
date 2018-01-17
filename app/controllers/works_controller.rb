@@ -7,7 +7,7 @@ class WorksController < ApplicationController
 
   def show
     @work = Work.new(input: @id, from: "datacite", format: @profile)
-    fail AbstractController::ActionNotFound unless @work.valid?
+    fail AbstractController::ActionNotFound unless @work.exists?
 
     render plain: @work.hsh.to_anvl
   end
@@ -50,33 +50,39 @@ class WorksController < ApplicationController
   end
 
   def create
-    fail IdentifierError, "A reserved status is not supported by this service" if
+    fail IdentifierError, "A required parameter is missing" unless
+      (safe_params[@profile].present? && safe_params[:_target].present?) ||
       safe_params[:_status] == "reserved"
 
-    fail IdentifierError, "A required parameter is missing" unless
-      safe_params[@profile].present? && safe_params[:_target].present?
-
     @work = Work.new(input: @id, from: "datacite")
-    fail IdentifierError, "#{params[:id]} has already been registered" if @work.exists?
+    fail IdentifierError, "#{params[:id]} has already been registered" if @work.valid?
 
-    input = safe_params[@profile].anvlunesc
-    doi = doi_from_url(@id)
+    if safe_params[@profile].present?
+      input = safe_params[@profile].anvlunesc
+      @work = Work.new(input: input,
+                       from: @profile.to_s,
+                       doi: doi_from_url(@id),
+                       target: safe_params[:_target])
+    else
+      input = @id
+    end
 
-    @work = Work.new(input: input,
-                     from: @profile.to_s,
-                     doi: doi,
-                     target: safe_params[:_target])
-    fail IdentifierError, "metadata could not be validated" unless @work.valid?
-
-    message, status = @work.upsert(username: @username,
-                                   password: @password)
+    if @work.valid?
+      message, status = @work.upsert(username: @username,
+                                     password: @password)
+    else
+      message, status = @work.draft(username: @username,
+                                    password: @password)
+    end
 
     render plain: message, status: status
   end
 
   def update
     fail IdentifierError, "A required parameter is missing" unless
-      safe_params[@profile].present? || safe_params[:_target].present?
+      safe_params[@profile].present? ||
+      safe_params[:_target].present? ||
+      safe_params[:_status].present?
 
     if safe_params[@profile].present?
       input = safe_params[@profile].anvlunesc
@@ -89,9 +95,10 @@ class WorksController < ApplicationController
     @work = Work.new(input: input,
                      from: @profile.to_s,
                      target: safe_params[:_target],
+                     status: safe_params[:_status],
                      data: data)
 
-    fail IdentifierError, "metadata could not be validated" unless @work.valid?
+    fail IdentifierError, "metadata could not be validated" unless @work.exists?
 
     message, status = @work.upsert(username: @username,
                                    password: @password)
@@ -100,7 +107,14 @@ class WorksController < ApplicationController
   end
 
   def delete
-    render plain: "error: " + "#{params[:id]} is not a reserved DOI", status: 400
+    @work = Work.new(input: @id, from: "datacite")
+    fail AbstractController::ActionNotFound unless @work.exists?
+    fail IdentifierError, "#{params[:id]} is not a reserved DOI" unless @work.reserved?
+
+    message, status = @work.delete(username: @username,
+                                   password: @password)
+
+    render plain: message, status: status
   end
 
   protected

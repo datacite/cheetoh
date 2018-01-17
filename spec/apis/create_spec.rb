@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "/id/create", :type => :api, vcr: true do
+describe "create", :type => :api, vcr: true, :order => :defined do
   let(:doi) { "10.5072/0000-03vc" }
   let(:username) { ENV['MDS_USERNAME'] }
   let(:password) { ENV['MDS_PASSWORD'] }
@@ -19,7 +19,8 @@ describe "/id/create", :type => :api, vcr: true do
   it "missing login credentials" do
     put "/id/doi:#{doi}"
     expect(last_response.status).to eq(401)
-    expect(last_response.body).to eq("error: unauthorized")
+    expect(last_response.headers["WWW-Authenticate"]).to eq("Basic realm=\"ez.test.datacite.org\"")
+    expect(last_response.body).to eq("HTTP Basic: Access denied.\n")
   end
 
   it "wrong login credentials" do
@@ -41,41 +42,7 @@ describe "/id/create", :type => :api, vcr: true do
     expect(response["error"]).to eq("A required parameter is missing")
   end
 
-  it "reserved status" do
-    doi = "10.5072/bc11-cqw1"
-    params = { "_status" => "reserved" }.to_anvl
-    put "/id/doi:#{doi}", params, headers
-    expect(last_response.status).to eq(501)
-    response = last_response.body.from_anvl
-    expect(response["error"]).to eq("A reserved status is not supported by this service")
-  end
-
-  it "DOI already exists" do
-    datacite = File.read(file_fixture('10.5072_bc11-cqw1.xml'))
-    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
-    params = { "datacite" => datacite, "_target" => url }.to_anvl
-    doi = "10.5072/bc11-cqw1"
-    put "/id/doi:#{doi}", params, headers
-    expect(last_response.status).to eq(400)
-    response = last_response.body.from_anvl
-    expect(response["error"]).to eq("doi:10.5072/bc11-cqw1 has already been registered")
-  end
-
-  it "different doi in datacite xml" do
-    datacite = File.read(file_fixture('10.5072_bc11-cqw1.xml'))
-    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
-    params = { "datacite" => datacite, "_target" => url }.to_anvl
-    doi = "10.5072/bc11-cqw4"
-    post "/id/doi:#{doi}", params, headers
-    expect(last_response.status).to eq(200)
-    response = last_response.body.from_anvl
-
-    #expect(response["success"]).to eq("doi:10.5072/bc11-cqw4")
-    #doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-    #expect(doc.at_css("identifier").content).to eq("10.5072/BC11-CQW4")
-  end
-
-  it "create new DOI" do
+  it "create new doi" do
     datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
     url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
     params = { "datacite" => datacite, "_target" => url }.to_anvl
@@ -86,5 +53,30 @@ describe "/id/create", :type => :api, vcr: true do
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
     expect(response["datacite"]).to eq(datacite.strip)
     expect(response["_target"]).to eq(url)
+    expect(response["_status"]).to eq("reserved")
+  end
+
+  it "doi already exists" do
+    datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
+    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
+    params = { "datacite" => datacite, "_target" => url }.to_anvl
+    doi = "10.5072/bc11-cqw7"
+    put "/id/doi:#{doi}", params, headers
+    expect(last_response.status).to eq(400)
+    response = last_response.body.from_anvl
+    expect(response["error"]).to eq("doi:10.5072/bc11-cqw7 has already been registered")
+  end
+
+  it "delete new doi" do
+    datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
+    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
+    doi = "10.5072/bc11-cqw7"
+    delete "/id/doi:#{doi}", nil, headers
+    expect(last_response.status).to eq(200)
+    response = last_response.body.from_anvl
+    expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
+    expect(response["datacite"]).to eq(datacite.strip)
+    expect(response["_target"]).to eq(url)
+    expect(response["_status"]).to eq("reserved")
   end
 end

@@ -8,6 +8,64 @@ module Helpable
     include Bolognese::DoiUtils
     include Cirneco::Utils
 
+    def draft_doi(options={})
+      return OpenStruct.new(body: { "errors" => [{ "title" => "Username or password missing" }] }) unless options[:username].present? && options[:password].present?
+
+      data = {
+        "data" => {
+          "type" => "dois",
+          "attributes" => {
+            "doi" => options[:doi],
+            "event" => options[:event]
+          },
+          "relationships"=> {
+            "client"=>  {
+              "data"=> {
+                "type"=> "clients",
+                "id"=> options[:username]
+              }
+            }
+          }
+        }
+      }
+
+      api_url = options[:sandbox] ? 'https://api.test.datacite.org' : 'https://api.datacite.org'
+
+      url = "#{api_url}/dois"
+      Maremma.post(url, content_type: 'application/vnd.api+json', data: data.to_json, username: options[:username], password: options[:password])
+    end
+
+    def update_doi(doi, options={})
+      return OpenStruct.new(body: { "errors" => [{ "title" => "Username or password missing" }] }) unless options[:username].present? && options[:password].present?
+
+      attributes = {
+        "doi" => doi,
+        "url" => options[:url],
+        "event" => options[:event]
+      }.compact
+      
+      data = {
+        "data" => {
+          "type" => "dois",
+          "attributes" => attributes
+        }
+      }
+
+      api_url = options[:sandbox] ? 'https://api.test.datacite.org' : 'https://api.datacite.org'
+
+      url = "#{api_url}/dois/#{doi}"
+      Maremma.patch(url, content_type: 'application/vnd.api+json', data: data.to_json, username: options[:username], password: options[:password])
+    end
+
+    def delete_doi(options={})
+      return OpenStruct.new(body: { "errors" => [{ "title" => "Username or password missing" }] }) unless options[:username].present? && options[:password].present?
+
+      api_url = options[:sandbox] ? 'https://api.test.datacite.org' : 'https://api.datacite.org'
+
+      url = "#{api_url}/dois/#{doi}"
+      Maremma.delete(url, content_type: 'application/vnd.api+json', username: options[:username], password: options[:password])
+    end
+
     def generate_random_doi(str, options={})
       prefix = validate_prefix(str)
       fail IdentifierError, "No valid prefix found" unless prefix.present?
