@@ -45,15 +45,6 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
     expect(response["error"]).to eq("A required parameter is missing")
   end
 
-  it "reserved status" do
-    doi = "10.5072"
-    params = { "_status" => "reserved" }.to_anvl
-    post "/shoulder/doi:#{doi}", params, headers
-    expect(last_response.status).to eq(501)
-    response = last_response.body.from_anvl
-    expect(response["error"]).to eq("A reserved status is not supported by this service")
-  end
-
   # we seed with _number to avoid random numbers in tests
   it "create new doi" do
     datacite = File.read(file_fixture('10.5072_tba.xml'))
@@ -163,16 +154,17 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
 
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
-    expect(response["success"]).to eq("doi:10.5072/bc11-cqw11")
+    expect(response["success"]).to eq("doi:10.5072/bc11-cqw1")
     expect(response["_status"]).to eq("reserved")
   end
 
   it "delete reserved doi" do
+    doi = "10.5072/bc11-cqw1"
     delete "/id/doi:#{doi}", nil, headers
     expect(last_response.status).to eq(200)
     response = last_response.body
     hsh = response.from_anvl
-    expect(hsh["success"]).to eq("doi:10.5072/bc11-cqw11")
+    expect(hsh["success"]).to eq("doi:10.5072/bc11-cqw1")
     expect(hsh["datacite"]).to be_blank
     expect(hsh["_target"]).to be_blank
   end
