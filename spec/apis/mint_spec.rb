@@ -155,4 +155,25 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
     doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
     expect(doc.at_css("identifier").content).to eq("10.5072/BC11-CQW1")
   end
+
+  it "create new reserved doi" do
+    params = { "_status" => "reserved", "_number" => "12214907644" }.to_anvl
+    doi = "10.5072"
+    post "/shoulder/doi:#{doi}", params, headers
+
+    expect(last_response.status).to eq(200)
+    response = last_response.body.from_anvl
+    expect(response["success"]).to eq("doi:10.5072/bc11-cqw11")
+    expect(response["_status"]).to eq("reserved")
+  end
+
+  it "delete reserved doi" do
+    delete "/id/doi:#{doi}", nil, headers
+    expect(last_response.status).to eq(200)
+    response = last_response.body
+    hsh = response.from_anvl
+    expect(hsh["success"]).to eq("doi:10.5072/bc11-cqw11")
+    expect(hsh["datacite"]).to be_blank
+    expect(hsh["_target"]).to be_blank
+  end
 end

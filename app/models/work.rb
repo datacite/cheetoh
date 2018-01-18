@@ -37,8 +37,7 @@ class Work < Bolognese::Metadata
       event = "publish"
     end
 
-    # don't register DOIs with test prefix in handle system
-    if target.present? && !doi.start_with?("10.5072")
+    if target.present?
       response = put_doi(doi, url: target,
                               username: username,
                               password: password,

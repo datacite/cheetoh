@@ -13,11 +13,9 @@ class WorksController < ApplicationController
   end
 
   def mint
-    fail IdentifierError, "A reserved status is not supported by this service" if
-      safe_params[:_status] == "reserved"
-
     fail IdentifierError, "A required parameter is missing" unless
-      safe_params[@profile].present? && safe_params[:_target].present?
+      (safe_params[@profile].present? && safe_params[:_target].present?) ||
+      safe_params[:_status] == "reserved"
 
     # make sure we generate a random DOI that is not already used
     # allow seed with number for deterministic minting
@@ -34,17 +32,23 @@ class WorksController < ApplicationController
       end
     end
 
-    input = safe_params[@profile].anvlunesc
-    doi = doi_from_url(@id)
+    if safe_params[@profile].present?
+      input = safe_params[@profile].anvlunesc
+      @work = Work.new(input: input,
+                       from: @profile.to_s,
+                       doi: doi_from_url(@id),
+                       target: safe_params[:_target])
+    else
+      input = @id
+    end
 
-    @work = Work.new(input: input,
-                     from: @profile.to_s,
-                     doi: doi,
-                     target: safe_params[:_target])
-    fail IdentifierError, "metadata could not be validated" unless @work.valid?
-
-    message, status = @work.upsert(username: @username,
-                                   password: @password)
+    if @work.valid?
+      message, status = @work.upsert(username: @username,
+                                     password: @password)
+    else
+      message, status = @work.draft(username: @username,
+                                    password: @password)
+    end
 
     render plain: message, status: status
   end
