@@ -12,7 +12,7 @@ gem 'cirneco', '~> 0.9', '>= 0.9.17'
 gem 'bolognese', '~> 0.9', '>= 0.9.39'
 gem "dalli", "~> 2.7.6"
 gem 'lograge', '~> 0.5'
-gem 'bugsnag', '~> 5.3'
+gem 'bugsnag', '~> 6.6', '>= 6.6.2'
 gem 'jwt', '~> 1.5', '>= 1.5.4'
 gem 'cancancan', '~> 1.9.2'
 gem 'librato-rails', '~> 1.4.2'
