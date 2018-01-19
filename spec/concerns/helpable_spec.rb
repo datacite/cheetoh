@@ -39,6 +39,30 @@ describe Work, vcr: true do
       expect(subject.generate_random_doi(str, number: number)).to eq("10.5072/0003-rj0r")
     end
 
+    it 'should generate with seed checksum asterix' do
+      str = "10.5072"
+      number = 1234575
+      expect(subject.generate_random_doi(str, number: number)).to eq("10.5072/0015-nmf*")
+    end
+
+    it 'should generate with seed checksum tilde' do
+      str = "10.5072"
+      number = 1234576
+      expect(subject.generate_random_doi(str, number: number)).to eq("10.5072/0015-nmg~")
+    end
+
+    it 'should generate with seed checksum underscore' do
+      str = "10.5072"
+      number = 1234577
+      expect(subject.generate_random_doi(str, number: number)).to eq("10.5072/0015-nmh_")
+    end
+
+    it 'should generate with seed checksum caret' do
+      str = "10.5072"
+      number = 1234578
+      expect(subject.generate_random_doi(str, number: number)).to eq("10.5072/0015-nmj^")
+    end
+
     it 'should generate with shoulder' do
       str = "10.5072/FK2"
       number = 123456

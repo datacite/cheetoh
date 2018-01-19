@@ -43,7 +43,7 @@ module Helpable
         "url" => options[:url],
         "event" => options[:event]
       }.compact
-      
+
       data = {
         "data" => {
           "type" => "dois",
@@ -71,8 +71,7 @@ module Helpable
       fail IdentifierError, "No valid prefix found" unless prefix.present?
 
       shoulder = str.split("/", 2)[1].to_s
-      number = options[:number].to_s.scan(/\d+/).first.to_i
-      encode_doi(prefix, shoulder: shoulder, number: number)
+      encode_doi(prefix, shoulder: shoulder, number: options[:number])
     end
 
     def is_ark?(str)
