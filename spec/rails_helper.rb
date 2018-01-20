@@ -28,6 +28,7 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.ignore_localhost = true
   c.ignore_hosts "codeclimate.com"
+  # c.ignore_request { |request| URI(request.uri).path.start_with("shoulder") }
   c.filter_sensitive_data("<MDS_TOKEN>") { mds_token }
   c.configure_rspec_metadata!
 end

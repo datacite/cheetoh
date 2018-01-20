@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://18814b0b22ed
+      - Maremma - http://5f622d8035b7
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 17 Jan 2018 09:20:47 GMT
+      - Sat, 20 Jan 2018 09:59:09 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -33,9 +33,9 @@ http_interactions:
       Etag:
       - W/"8277a925be07e1d953601485602e4774"
       X-Runtime:
-      - '0.038707'
+      - '0.041119'
       X-Request-Id:
-      - 970403a2-dd89-4a1c-8927-92546dfa9cd7
+      - 4f126ca6-9d3e-462b-8c79-2f8829efe910
       X-Powered-By:
       - Phusion Passenger 5.1.12
       Server:
@@ -55,5 +55,5 @@ http_interactions:
         Test","symbol":"DATACITE.TEST","year":2017,"contact-name":"Martin Fenner","contact-email":"support@datacite.org","domains":"*","is-active":true,"password":"yes","created":"2017-07-13T15:15:33Z","updated":"2017-12-02T22:49:15Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
         Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"password":"yes","created":"2011-12-07T13:41:07.000Z","updated":"2018-01-12T10:24:30.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Wed, 17 Jan 2018 09:20:51 GMT
+  recorded_at: Sat, 20 Jan 2018 09:59:10 GMT
 recorded_with: VCR 3.0.3

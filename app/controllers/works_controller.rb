@@ -8,7 +8,7 @@ class WorksController < ApplicationController
   def show
     @work = Work.new(input: @id, from: "datacite", format: @profile)
     fail AbstractController::ActionNotFound if @work.state == "not_found"
-    
+
     render plain: @work.hsh.to_anvl
   end
 
@@ -22,13 +22,14 @@ class WorksController < ApplicationController
     if safe_params[:_number].present?
       @id = generate_random_doi(params[:id], number: safe_params[:_number])
       @work = Work.new(input: @id, from: @profile.to_s)
-      fail IdentifierError, "#{@id} has already been registered" if @work.valid?
+      fail IdentifierError, "#{@id} has already been registered" unless
+        @work.state == "not_found"
     else
       duplicate = true
       while duplicate do
         @id = generate_random_doi(params[:id])
         @work = Work.new(input: @id, from: @profile.to_s)
-        duplicate = @work.exists?
+        duplicate = @work.state != "not_found"
       end
     end
 
@@ -59,7 +60,8 @@ class WorksController < ApplicationController
       safe_params[:_status] == "reserved"
 
     @work = Work.new(input: @id, from: "datacite")
-    fail IdentifierError, "#{params[:id]} has already been registered" if @work.valid?
+    fail IdentifierError, "#{params[:id]} has already been registered" unless
+      @work.state == "not_found"
 
     if safe_params[@profile].present?
       input = safe_params[@profile].anvlunesc
@@ -112,7 +114,9 @@ class WorksController < ApplicationController
 
   def delete
     @work = Work.new(input: @id, from: "datacite")
-    fail AbstractController::ActionNotFound unless @work.exists?
+    fail AbstractController::ActionNotFound if
+      @work.state == "not_found"
+
     fail IdentifierError, "#{params[:id]} is not a reserved DOI" unless @work.reserved?
 
     message, status = @work.delete(username: @username,
