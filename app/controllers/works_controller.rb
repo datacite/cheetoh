@@ -21,14 +21,18 @@ class WorksController < ApplicationController
     # allow seed with number for deterministic minting
     if safe_params[:_number].present?
       @id = generate_random_doi(params[:id], number: safe_params[:_number])
-      @work = Work.new(input: @id, from: @profile.to_s)
+      @work = Work.new(input: @id,
+                       from: @profile.to_s,
+                       target_status: safe_params[:_status])
       fail IdentifierError, "#{@id} has already been registered" unless
         @work.state == "not_found"
     else
       duplicate = true
       while duplicate do
         @id = generate_random_doi(params[:id])
-        @work = Work.new(input: @id, from: @profile.to_s)
+        @work = Work.new(input: @id,
+                         from: @profile.to_s,
+                         target_status: safe_params[:_status])
         duplicate = @work.state != "not_found"
       end
     end
@@ -38,7 +42,8 @@ class WorksController < ApplicationController
       @work = Work.new(input: input,
                        from: @profile.to_s,
                        doi: doi_from_url(@id),
-                       target: safe_params[:_target])
+                       target: safe_params[:_target],
+                       target_status: safe_params[:_status])
     else
       input = @id
     end
@@ -68,7 +73,8 @@ class WorksController < ApplicationController
       @work = Work.new(input: input,
                        from: @profile.to_s,
                        doi: doi_from_url(@id),
-                       target: safe_params[:_target])
+                       target: safe_params[:_target],
+                       target_status: safe_params[:_status])
     else
       input = @id
     end
@@ -101,7 +107,7 @@ class WorksController < ApplicationController
     @work = Work.new(input: input,
                      from: @profile.to_s,
                      target: safe_params[:_target],
-                     status: safe_params[:_status],
+                     target_status: safe_params[:_status],
                      data: data)
 
     fail IdentifierError, "metadata could not be validated" unless @work.exists?

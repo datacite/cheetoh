@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://5f622d8035b7
+      - Maremma - http://8fbb84aad7f7
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 20 Jan 2018 09:59:04 GMT
+      - Wed, 31 Jan 2018 09:32:48 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -29,32 +29,24 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Vary:
-      - Accept-Encoding
-      Etag:
-      - W/"3817e276b56301d5f8f3f1c176916199"
-      X-Runtime:
-      - '0.017293'
+      - Accept-Encoding, Origin
       X-Request-Id:
-      - 61023734-8e8a-4ef0-8309-8c6ce19b0885
+      - 90bf72d1-4b26-4473-a35f-4cd7268fa61a
+      Etag:
+      - W/"98f849a76fedf86cd83e87144332a153"
+      X-Runtime:
+      - '0.017415'
       X-Powered-By:
-      - Phusion Passenger 5.1.12
+      - Phusion Passenger 5.2.0
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.1.12
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PATCH, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
-      Access-Control-Expose-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":null,"related-identifier":null,"schema-version":null,"state":"draft","xml":null,"published":null,"registered":null,"updated":"2018-01-20T09:59:03.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
-        Fenner","contact-email":"tech@datacite.org","domains":"datacite.org","is-active":true,"password":"yes","created":"2011-12-07T13:43:39Z","updated":"2018-01-11T09:29:56Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
-        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"password":"yes","created":"2011-12-07T13:41:07.000Z","updated":"2018-01-12T10:24:30.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":null,"related-identifier":null,"schema-version":null,"state":"draft","xml":null,"published":null,"registered":null,"updated":"2018-01-31T09:32:48.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Fenner","contact-email":"tech@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-01-11T09:29:56Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
+        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"has-password":true,"created":"2011-12-07T13:41:07.000Z","updated":"2018-01-29T15:50:04.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Sat, 20 Jan 2018 09:59:06 GMT
+  recorded_at: Wed, 31 Jan 2018 09:32:54 GMT
 - request:
     method: delete
     uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw9
@@ -63,7 +55,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://5f622d8035b7
+      - Maremma - http://8fbb84aad7f7
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -76,34 +68,28 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 20 Jan 2018 09:59:04 GMT
+      - Wed, 31 Jan 2018 09:32:48 GMT
       Connection:
       - keep-alive
       Status:
       - 204 No Content
       Cache-Control:
       - no-cache
-      X-Runtime:
-      - '0.013558'
+      Vary:
+      - Origin
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - '01830ba7-60e8-48d1-a83c-55e9a8346937'
+      - c3cf563a-b1ba-4517-b44d-a45e2becca75
+      X-Runtime:
+      - '0.014965'
       X-Powered-By:
-      - Phusion Passenger 5.1.12
+      - Phusion Passenger 5.2.0
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.1.12
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PATCH, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
-      Access-Control-Expose-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Sat, 20 Jan 2018 09:59:06 GMT
+  recorded_at: Wed, 31 Jan 2018 09:32:54 GMT
 recorded_with: VCR 3.0.3

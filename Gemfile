@@ -18,7 +18,7 @@ gem 'cancancan', '~> 1.9.2'
 gem 'librato-rails', '~> 1.4.2'
 gem 'gender_detector', '~> 0.1.2'
 gem 'tzinfo-data', '~> 1.2017', '>= 1.2017.3'
-gem 'anvl-converter', '~> 0.1'
+gem 'anvl-converter', '~> 0.2'
 
 group :development, :test do
   gem "better_errors"

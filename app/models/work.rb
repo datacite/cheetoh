@@ -6,11 +6,12 @@ class Work < Bolognese::Metadata
   include Cirneco::Utils
   include Cirneco::Api
 
-  attr_accessor :target, :data, :export, :profile, :format, :status
+  attr_accessor :target, :data, :export, :profile, :format, :status, :target_status
 
   def initialize(input: nil, from: nil, format: nil, **options)
     @format = format || from
     @target = options[:target]
+    @target_status = options[:target_status]
     @data = options[:data].presence || "update"
 
     return super(input: input, from: from, doi: options[:doi], sandbox: ENV['SANDBOX'].present?)
@@ -23,8 +24,6 @@ class Work < Bolognese::Metadata
   }
 
   def upsert(username: nil, password: nil)
-    event = "start"
-
     if data == "update"
       response = post_metadata(datacite,
                                username: username,
@@ -33,8 +32,6 @@ class Work < Bolognese::Metadata
 
       raise CanCan::AccessDenied if response.status == 401
       error_message(response).presence && return
-
-      event = "publish"
     end
 
     if target.present?
@@ -45,11 +42,17 @@ class Work < Bolognese::Metadata
 
       raise CanCan::AccessDenied if response.status == 401
       error_message(response).presence && return
-
-      event = "register" if event == "start"
     end
 
     # update doi status
+    if target_status == "reserved" then
+      event = "start"
+    elsif target_status == "unavailable" then
+      event = "register"
+    else
+      event = "publish"
+    end
+
     response = update_doi(doi, event: event,
                                url: target,
                                username: username,
