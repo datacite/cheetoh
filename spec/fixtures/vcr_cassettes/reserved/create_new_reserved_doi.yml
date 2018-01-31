@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 31 Jan 2018 09:32:47 GMT
+      - Wed, 31 Jan 2018 09:36:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -29,9 +29,9 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - da557e23-b5df-46c0-a737-84684d8dfee7
+      - edd963b3-d6f9-4776-8f3c-8a776e7ff1d2
       X-Runtime:
-      - '0.003304'
+      - '0.006125'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
@@ -41,7 +41,7 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 09:32:53 GMT
+  recorded_at: Wed, 31 Jan 2018 09:36:49 GMT
 - request:
     method: post
     uri: https://api.test.datacite.org/dois
@@ -63,7 +63,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 31 Jan 2018 09:32:48 GMT
+      - Wed, 31 Jan 2018 09:36:44 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -77,20 +77,20 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 8080831e-9af5-4989-9421-abef42f6dbe7
+      - bb9856da-51cf-4d4a-a32e-30d8f71c92cb
       Location:
-      - https://api.test.datacite.org/dois/2178975
+      - https://api.test.datacite.org/dois/2178983
       Etag:
-      - W/"db2e0c1f01bfa74fb89214136d5905ca"
+      - W/"f24e7d039ac5ad2c6a0d4b54bd7d9500"
       X-Runtime:
-      - '0.027412'
+      - '0.025585'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
       - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":null,"related-identifier":null,"schema-version":null,"state":"draft","xml":null,"published":null,"registered":null,"updated":"2018-01-31T09:32:48.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":null,"related-identifier":null,"schema-version":null,"state":"draft","xml":null,"published":null,"registered":null,"updated":"2018-01-31T09:36:44.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 09:32:53 GMT
+  recorded_at: Wed, 31 Jan 2018 09:36:50 GMT
 recorded_with: VCR 3.0.3

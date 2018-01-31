@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 31 Jan 2018 09:32:48 GMT
+      - Wed, 31 Jan 2018 09:36:45 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,22 +31,22 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 90bf72d1-4b26-4473-a35f-4cd7268fa61a
+      - 1ad542a1-caa3-403d-bc10-d36255edae10
       Etag:
-      - W/"98f849a76fedf86cd83e87144332a153"
+      - W/"2ef8e9c10bedf8ff56a59c8da2327d87"
       X-Runtime:
-      - '0.017415'
+      - '0.017681'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
       - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":null,"related-identifier":null,"schema-version":null,"state":"draft","xml":null,"published":null,"registered":null,"updated":"2018-01-31T09:32:48.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":null,"related-identifier":null,"schema-version":null,"state":"draft","xml":null,"published":null,"registered":null,"updated":"2018-01-31T09:36:44.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
         Fenner","contact-email":"tech@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-01-11T09:29:56Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
         Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"has-password":true,"created":"2011-12-07T13:41:07.000Z","updated":"2018-01-29T15:50:04.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 09:32:54 GMT
+  recorded_at: Wed, 31 Jan 2018 09:36:50 GMT
 - request:
     method: delete
     uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw9
@@ -68,7 +68,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 31 Jan 2018 09:32:48 GMT
+      - Wed, 31 Jan 2018 09:36:45 GMT
       Connection:
       - keep-alive
       Status:
@@ -80,9 +80,9 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - c3cf563a-b1ba-4517-b44d-a45e2becca75
+      - '08b2c00c-d884-4a62-8457-0984fb66ede8'
       X-Runtime:
-      - '0.014965'
+      - '0.015585'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
@@ -91,5 +91,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 09:32:54 GMT
+  recorded_at: Wed, 31 Jan 2018 09:36:51 GMT
 recorded_with: VCR 3.0.3

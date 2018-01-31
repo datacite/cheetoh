@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw1?include=client,provider
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://8fbb84aad7f7
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Wed, 31 Jan 2018 09:36:42 GMT
+      Content-Type:
+      - application/vnd.api+json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - 475bd98c-d804-4e2b-88ca-9c0be86e8473
+      Etag:
+      - W/"0ef54e44fbaafcfaf26af061337805a0"
+      X-Runtime:
+      - '0.084137'
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.5072/bc11-cqw1","type":"dois","attributes":{"doi":"10.5072/bc11-cqw1","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw1","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","author":{"type":"Person","id":"https://orcid.org/0000-0003-1419-2405","name":"Fenner,
+        Martin","given-name":"Martin","family-name":"Fenner"},"title":"Differences
+        between ORCID and DataCite Metadata","container-title":"DataCite Blog","description":{"type":"Abstract","text":"One
+        of the first tasks for DataCite in the European Commission-funded THOR project,
+        which started in June, was to contribute to a comparison of the ORCID and
+        DataCite metadata standards. Together with ORCID, CERN, the British Library
+        and Dryad we looked..."},"resource-type-subtype":"BlogPosting","license":"https://creativecommons.org/licenses/by/4.0","version":5,"related-identifier":[{"type":"CreativeWork","id":"https://doi.org/10.5281/zenodo.30799","relation-type":"References"}],"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291\ncmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hl\nbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVt\nYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNp\ndGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRl\nLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZp\nZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9CQzExLUNRVzE8L2lk\nZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxj\ncmVhdG9yTmFtZT5GZW5uZXIsIE1hcnRpbjwvY3JlYXRvck5hbWU+CiAgICAg\nIDxnaXZlbk5hbWU+TWFydGluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlO\nYW1lPkZlbm5lcjwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVy\nIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVy\nU2NoZW1lPSJPUkNJRCI+MDAwMC0wMDAzLTE0MTktMjQwNTwvbmFtZUlkZW50\naWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVz\nPgogICAgPHRpdGxlPkRpZmZlcmVuY2VzIGJldHdlZW4gT1JDSUQgYW5kIERh\ndGFDaXRlIE1ldGFkYXRhPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlz\naGVyPkRhdGFDaXRlIEJsb2c8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25Z\nZWFyPjIwMTU8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJl\nc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPkJsb2dQb3N0aW5nPC9yZXNvdXJj\nZVR5cGU+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+dGhvcjwvc3ViamVj\ndD4KICAgIDxzdWJqZWN0Pm9yY2lkPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+\nbWV0YWRhdGE8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0\nb3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iSG9zdGlu\nZ0luc3RpdHV0aW9uIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZT5EYXRhQ2l0\nZTwvY29udHJpYnV0b3JOYW1lPgogICAgPC9jb250cmlidXRvcj4KICA8L2Nv\nbnRyaWJ1dG9ycz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNz\ndWVkIj4yMDE1LTA5LTE4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJ\nZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRl\nbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4x\nMC41MjgxL1pFTk9ETy4zMDc5OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9y\nZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24+MS4wPC92ZXJzaW9uPgog\nIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8v\nY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAvIj5DcmVhdGl2\nZSBDb21tb25zIEF0dHJpYnV0aW9uPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0\nPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRp\nb25UeXBlPSJBYnN0cmFjdCI+T25lIG9mIHRoZSBmaXJzdCB0YXNrcyBmb3Ig\nRGF0YUNpdGUgaW4gdGhlIEV1cm9wZWFuIENvbW1pc3Npb24tZnVuZGVkIFRI\nT1IgcHJvamVjdCwgd2hpY2ggc3RhcnRlZCBpbiBKdW5lLCB3YXMgdG8gY29u\ndHJpYnV0ZSB0byBhIGNvbXBhcmlzb24gb2YgdGhlIE9SQ0lEIGFuZCBEYXRh\nQ2l0ZSBtZXRhZGF0YSBzdGFuZGFyZHMuIFRvZ2V0aGVyIHdpdGggT1JDSUQs\nIENFUk4sIHRoZSBCcml0aXNoIExpYnJhcnkgYW5kIERyeWFkIHdlIGxvb2tl\nZC4uLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3Vy\nY2U+\n","published":"2015-09-18","registered":null,"updated":"2018-01-31T09:36:41.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Fenner","contact-email":"tech@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-01-11T09:29:56Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
+        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"has-password":true,"created":"2011-12-07T13:41:07.000Z","updated":"2018-01-29T15:50:04.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+    http_version: 
+  recorded_at: Wed, 31 Jan 2018 09:36:48 GMT
+- request:
+    method: delete
+    uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://8fbb84aad7f7
+      Content-Type:
+      - application/vnd.api+json
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
+  response:
+    status:
+      code: 204
+      message: ''
+    headers:
+      Date:
+      - Wed, 31 Jan 2018 09:36:42 GMT
+      Connection:
+      - keep-alive
+      Status:
+      - 204 No Content
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Credential-Username:
+      - datacite.datacite
+      X-Request-Id:
+      - 36b4f6bb-3738-43c2-bb4d-ff845ab4577f
+      X-Runtime:
+      - '0.017063'
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 31 Jan 2018 09:36:48 GMT
+recorded_with: VCR 3.0.3
