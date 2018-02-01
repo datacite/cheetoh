@@ -30,7 +30,7 @@ describe Work, vcr: true do
   context "generate_random_doi" do
     it 'should generate' do
       str = "10.5072"
-      expect(subject.generate_random_doi(str).length).to eq(19)
+      expect(subject.generate_random_doi(str).length).to eq(17)
     end
 
     it 'should generate with seed' do
