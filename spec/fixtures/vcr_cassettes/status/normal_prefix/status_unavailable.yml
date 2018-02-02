@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.test.datacite.org/dois/10.23725/bc11-cqw8?include=client,provider
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://cd68ce431930
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 02 Feb 2018 19:29:55 GMT
+      Content-Type:
+      - application/vnd.api+json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"74825f548ad01759850d8ddbe43d4968"
+      X-Runtime:
+      - '0.082509'
+      X-Request-Id:
+      - e90df4f8-1a93-47b1-b797-01f6d9b6b7b2
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.23725/bc11-cqw8","type":"dois","attributes":{"doi":"10.23725/bc11-cqw8","identifier":"https://handle.test.datacite.org/10.23725/bc11-cqw8","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","author":{"type":"Person","id":"https://orcid.org/0000-0003-1419-2405","name":"Fenner,
+        Martin","given-name":"Martin","family-name":"Fenner"},"title":"Differences
+        between ORCID and DataCite Metadata","container-title":"DataCite Blog","description":{"type":"Abstract","text":"One
+        of the first tasks for DataCite in the European Commission-funded THOR project,
+        which started in June, was to contribute to a comparison of the ORCID and
+        DataCite metadata standards. Together with ORCID, CERN, the British Library
+        and Dryad we looked..."},"resource-type-subtype":"BlogPosting","license":"https://creativecommons.org/licenses/by/4.0","version":1,"related-identifier":[{"type":"CreativeWork","id":"https://doi.org/10.5281/zenodo.30799","relation-type":"References"}],"schema-version":"http://datacite.org/schema/kernel-4","state":"findable","reason":"withdrawn
+        by author","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291\ncmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hl\nbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVt\nYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNp\ndGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRl\nLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZp\nZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMjM3MjUvQkMxMS1DUVc4PC9p\nZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8\nY3JlYXRvck5hbWU+RmVubmVyLCBNYXJ0aW48L2NyZWF0b3JOYW1lPgogICAg\nICA8Z2l2ZW5OYW1lPk1hcnRpbjwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5\nTmFtZT5GZW5uZXI8L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmll\nciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmll\nclNjaGVtZT0iT1JDSUQiPjAwMDAtMDAwMy0xNDE5LTI0MDU8L25hbWVJZGVu\ndGlmaWVyPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxl\ncz4KICAgIDx0aXRsZT5EaWZmZXJlbmNlcyBiZXR3ZWVuIE9SQ0lEIGFuZCBE\nYXRhQ2l0ZSBNZXRhZGF0YTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxp\nc2hlcj5EYXRhQ2l0ZSBCbG9nPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9u\nWWVhcj4yMDE1PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSBy\nZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5CbG9nUG9zdGluZzwvcmVzb3Vy\nY2VUeXBlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PnRob3I8L3N1Ympl\nY3Q+CiAgICA8c3ViamVjdD5vcmNpZDwvc3ViamVjdD4KICAgIDxzdWJqZWN0\nPm1ldGFkYXRhPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGNvbnRyaWJ1\ndG9ycz4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9Ikhvc3Rp\nbmdJbnN0aXR1dGlvbiI+CiAgICAgIDxjb250cmlidXRvck5hbWU+RGF0YUNp\ndGU8L2NvbnRyaWJ1dG9yTmFtZT4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9j\nb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklz\nc3VlZCI+MjAxNS0wOS0xODwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZWxhdGVk\nSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElk\nZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+\nMTAuNTI4MS9aRU5PRE8uMzA3OTk8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwv\ncmVsYXRlZElkZW50aWZpZXJzPgogIDx2ZXJzaW9uPjEuMDwvdmVyc2lvbj4K\nICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJodHRwczov\nL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnkvNC4wLyI+Q3JlYXRp\ndmUgQ29tbW9ucyBBdHRyaWJ1dGlvbjwvcmlnaHRzPgogIDwvcmlnaHRzTGlz\ndD4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0\naW9uVHlwZT0iQWJzdHJhY3QiPk9uZSBvZiB0aGUgZmlyc3QgdGFza3MgZm9y\nIERhdGFDaXRlIGluIHRoZSBFdXJvcGVhbiBDb21taXNzaW9uLWZ1bmRlZCBU\nSE9SIHByb2plY3QsIHdoaWNoIHN0YXJ0ZWQgaW4gSnVuZSwgd2FzIHRvIGNv\nbnRyaWJ1dGUgdG8gYSBjb21wYXJpc29uIG9mIHRoZSBPUkNJRCBhbmQgRGF0\nYUNpdGUgbWV0YWRhdGEgc3RhbmRhcmRzLiBUb2dldGhlciB3aXRoIE9SQ0lE\nLCBDRVJOLCB0aGUgQnJpdGlzaCBMaWJyYXJ5IGFuZCBEcnlhZCB3ZSBsb29r\nZWQuLi48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291\ncmNlPg==\n","published":"2015-09-18","registered":null,"updated":"2018-02-02T19:29:55.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Fenner","contact-email":"tech@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-01-11T09:29:56Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
+        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"has-password":true,"created":"2011-12-07T13:41:07.000Z","updated":"2018-02-01T11:07:41.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+    http_version: 
+  recorded_at: Fri, 02 Feb 2018 19:30:25 GMT
+- request:
+    method: patch
+    uri: https://api.test.datacite.org/dois/10.23725/bc11-cqw8
+    body:
+      encoding: UTF-8
+      string: '{"data":{"type":"dois","attributes":{"doi":"10.23725/bc11-cqw8","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","event":"hide","reason":"withdrawn
+        by author"}}}'
+    headers:
+      User-Agent:
+      - Maremma - http://cd68ce431930
+      Content-Type:
+      - application/vnd.api+json
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 02 Feb 2018 19:29:55 GMT
+      Content-Type:
+      - application/vnd.api+json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"06bad06c6e7ced6bb851ef250356a720"
+      X-Runtime:
+      - '0.092461'
+      X-Credential-Username:
+      - datacite.datacite
+      X-Request-Id:
+      - a44dae62-2f08-41dc-93da-67026d51ce4e
+      X-Powered-By:
+      - Phusion Passenger 5.2.0
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.0
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.23725/bc11-cqw8","type":"dois","attributes":{"doi":"10.23725/bc11-cqw8","identifier":"https://handle.test.datacite.org/10.23725/bc11-cqw8","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","author":{"type":"Person","id":"https://orcid.org/0000-0003-1419-2405","name":"Fenner,
+        Martin","given-name":"Martin","family-name":"Fenner"},"title":"Differences
+        between ORCID and DataCite Metadata","container-title":"DataCite Blog","description":{"type":"Abstract","text":"One
+        of the first tasks for DataCite in the European Commission-funded THOR project,
+        which started in June, was to contribute to a comparison of the ORCID and
+        DataCite metadata standards. Together with ORCID, CERN, the British Library
+        and Dryad we looked..."},"resource-type-subtype":"BlogPosting","license":"https://creativecommons.org/licenses/by/4.0","version":1,"related-identifier":[{"type":"CreativeWork","id":"https://doi.org/10.5281/zenodo.30799","relation-type":"References"}],"schema-version":"http://datacite.org/schema/kernel-4","state":"registered","reason":"withdrawn
+        by author","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291\ncmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hl\nbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVt\nYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNp\ndGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRl\nLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZp\nZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMjM3MjUvQkMxMS1DUVc4PC9p\nZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8\nY3JlYXRvck5hbWU+RmVubmVyLCBNYXJ0aW48L2NyZWF0b3JOYW1lPgogICAg\nICA8Z2l2ZW5OYW1lPk1hcnRpbjwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5\nTmFtZT5GZW5uZXI8L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmll\nciBzY2hlbWVVUkk9Imh0dHA6Ly9vcmNpZC5vcmcvIiBuYW1lSWRlbnRpZmll\nclNjaGVtZT0iT1JDSUQiPjAwMDAtMDAwMy0xNDE5LTI0MDU8L25hbWVJZGVu\ndGlmaWVyPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxl\ncz4KICAgIDx0aXRsZT5EaWZmZXJlbmNlcyBiZXR3ZWVuIE9SQ0lEIGFuZCBE\nYXRhQ2l0ZSBNZXRhZGF0YTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxp\nc2hlcj5EYXRhQ2l0ZSBCbG9nPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9u\nWWVhcj4yMDE1PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSBy\nZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5CbG9nUG9zdGluZzwvcmVzb3Vy\nY2VUeXBlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PnRob3I8L3N1Ympl\nY3Q+CiAgICA8c3ViamVjdD5vcmNpZDwvc3ViamVjdD4KICAgIDxzdWJqZWN0\nPm1ldGFkYXRhPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGNvbnRyaWJ1\ndG9ycz4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9Ikhvc3Rp\nbmdJbnN0aXR1dGlvbiI+CiAgICAgIDxjb250cmlidXRvck5hbWU+RGF0YUNp\ndGU8L2NvbnRyaWJ1dG9yTmFtZT4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9j\nb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklz\nc3VlZCI+MjAxNS0wOS0xODwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZWxhdGVk\nSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElk\nZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+\nMTAuNTI4MS9aRU5PRE8uMzA3OTk8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwv\ncmVsYXRlZElkZW50aWZpZXJzPgogIDx2ZXJzaW9uPjEuMDwvdmVyc2lvbj4K\nICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJodHRwczov\nL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnkvNC4wLyI+Q3JlYXRp\ndmUgQ29tbW9ucyBBdHRyaWJ1dGlvbjwvcmlnaHRzPgogIDwvcmlnaHRzTGlz\ndD4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0\naW9uVHlwZT0iQWJzdHJhY3QiPk9uZSBvZiB0aGUgZmlyc3QgdGFza3MgZm9y\nIERhdGFDaXRlIGluIHRoZSBFdXJvcGVhbiBDb21taXNzaW9uLWZ1bmRlZCBU\nSE9SIHByb2plY3QsIHdoaWNoIHN0YXJ0ZWQgaW4gSnVuZSwgd2FzIHRvIGNv\nbnRyaWJ1dGUgdG8gYSBjb21wYXJpc29uIG9mIHRoZSBPUkNJRCBhbmQgRGF0\nYUNpdGUgbWV0YWRhdGEgc3RhbmRhcmRzLiBUb2dldGhlciB3aXRoIE9SQ0lE\nLCBDRVJOLCB0aGUgQnJpdGlzaCBMaWJyYXJ5IGFuZCBEcnlhZCB3ZSBsb29r\nZWQuLi48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291\ncmNlPg==\n","published":"2015-09-18","registered":null,"updated":"2018-02-02T19:29:55.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+    http_version: 
+  recorded_at: Fri, 02 Feb 2018 19:30:25 GMT
+recorded_with: VCR 3.0.3

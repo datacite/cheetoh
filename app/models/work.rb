@@ -6,12 +6,13 @@ class Work < Bolognese::Metadata
   include Cirneco::Utils
   include Cirneco::Api
 
-  attr_accessor :target, :data, :export, :profile, :format, :status, :target_status
+  attr_accessor :target, :data, :export, :profile, :format, :status, :target_status, :reason
 
   def initialize(input: nil, from: nil, format: nil, **options)
     @format = format || from
     @target = options[:target]
-    @target_status = options[:target_status]
+    @target_status, @reason = options[:target_status].split("|", 2).map(&:strip) if
+      options[:target_status].present?
     @data = options[:data].presence || "update"
 
     return super(input: input, from: from, doi: options[:doi], sandbox: ENV['SANDBOX'].present?)
@@ -47,14 +48,15 @@ class Work < Bolognese::Metadata
     # update doi status
     if target_status == "reserved" then
       event = "start"
-    elsif target_status == "unavailable" then
-      event = "register"
+    elsif target_status == "unavailable"
+      event = "hide"
     else
       event = "publish"
     end
 
     response = update_doi(doi, event: event,
-                               url: target,
+                               reason: reason,
+                               url: target || url,
                                username: username,
                                password: password,
                                sandbox: ENV['SANDBOX'].present?)
@@ -64,6 +66,7 @@ class Work < Bolognese::Metadata
     attributes = response.body.to_h.dig("data", "attributes").to_h
     self.state = attributes.fetch("state", "findable")
     self.url = attributes.fetch("url", nil)
+    self.reason = attributes.fetch("reason", nil)
 
     message = { "success" => doi_with_protocol,
                 "_status" => status,
@@ -121,7 +124,9 @@ class Work < Bolognese::Metadata
   end
 
   def status
-    STATES[state] || "public"
+    s = STATES[state] || "public"
+    s = [s, reason].join(" | ") if s == "unavailable" && reason.present?
+    s
   end
 
   def reserved?

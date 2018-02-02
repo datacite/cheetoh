@@ -45,4 +45,21 @@ describe "reserved", :type => :api, vcr: true, :order => :defined do
     expect(hsh["datacite"]).to be_blank
     expect(hsh["_target"]).to be_blank
   end
+
+  it "create new reserved doi normal prefix" do
+    doi = "10.23725/bc11-cqw8"
+    datacite = File.read(file_fixture('10.5072_bc11-cqw8.xml'))
+    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
+    params = { "datacite" => datacite, "_target" => url, "_status" => "reserved" }.to_anvl
+    put "/id/doi:#{doi}", params, headers
+
+    expect(last_response.status).to eq(200)
+    response = last_response.body.from_anvl
+    expect(response["success"]).to eq("doi:10.23725/bc11-cqw8")
+    expect(response["_target"]).to eq(url)
+    expect(response["_status"]).to eq("reserved")
+
+    doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+    expect(doc.at_css("identifier").content).to eq("10.23725/BC11-CQW8")
+  end
 end

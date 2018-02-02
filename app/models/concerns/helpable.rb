@@ -41,7 +41,8 @@ module Helpable
       attributes = {
         "doi" => doi,
         "url" => options[:url],
-        "event" => options[:event]
+        "event" => options[:event],
+        "reason" => options[:reason]
       }.compact
 
       data = {
