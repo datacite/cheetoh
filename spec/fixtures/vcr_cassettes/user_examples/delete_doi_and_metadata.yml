@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://8fbb84aad7f7
+      - Maremma - http://cd68ce431930
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 31 Jan 2018 09:36:47 GMT
+      - Sat, 03 Feb 2018 19:24:14 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,11 +31,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - d25f3c85-1d77-4eca-aab1-527c02819f83
+      - 9e01cfc1-ac78-4869-a2a5-b3dcba1a02b0
       Etag:
-      - W/"89e45b5305a2c6fbf139247a0ba82127"
+      - W/"7a3f243a32aa8d892a505bc21ad3ae45"
       X-Runtime:
-      - '0.069770'
+      - '0.078578'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
@@ -46,12 +46,12 @@ http_interactions:
         Meyer","given-name":"Pete","family-name":"Meyer"},"title":"X-Ray Diffraction
         data from demoglobin, source of 193L structure","container-title":" \n\t\tSBGrid
         Data Bank\n\t","description":{"type":"Abstract","text":"anomalous"},"resource-type-subtype":"X-Ray
-        Diffraction","license":null,"version":1,"related-identifier":[],"schema-version":"http://datacite.org/schema/kernel-3","state":"draft","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291\ncmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwt\nMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVt\nYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNp\ndGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRl\nLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZp\nZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzIvU0JEVEVTVC81\nMDE8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAg\nICAgIDxjcmVhdG9yTmFtZT5NZXllciwgUGV0ZTwvY3JlYXRvck5hbWU+CiAg\nICAgIDxhZmZpbGlhdGlvbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVh\ndG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5YLVJh\neSBEaWZmcmFjdGlvbiBkYXRhIGZyb20gZGVtb2dsb2Jpbiwgc291cmNlIG9m\nIDE5M0wgc3RydWN0dXJlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlz\naGVyPiAKCQlTQkdyaWQgRGF0YSBCYW5rCgk8L3B1Ymxpc2hlcj4KICA8cHVi\nbGljYXRpb25ZZWFyPiAKCQkyMDE3Cgk8L3B1YmxpY2F0aW9uWWVhcj4KICA8\nc3ViamVjdHM+CiAgICA8c3ViamVjdD4gCgkJCWRlbW9nbG9iaW4KCQk8L3N1\nYmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNv\nbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGF0YUNvbGxlY3RvciI+CiAg\nICAgIDxjb250cmlidXRvck5hbWU+TWV5ZXIsIFBldGU8L2NvbnRyaWJ1dG9y\nTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkhNUzwvYWZmaWxpYXRpb24+CiAg\nICA8L2NvbnRyaWJ1dG9yPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9y\nVHlwZT0iRGlzdHJpYnV0b3IiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPk1l\neWVyLCBQZXRlPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlv\nbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jb250cmlidXRvcj4KICAgIDxj\nb250cmlidXRvciBjb250cmlidXRvclR5cGU9IlByb2plY3RMZWFkZXIiPgog\nICAgICA8Y29udHJpYnV0b3JOYW1lPlNsaXosIFBpb3RyPC9jb250cmlidXRv\nck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5IYXJ2YXJkIE1lZGljYWwgU2No\nb29sPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250\ncmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkNvbGxl\nY3RlZCI+ICAKCQkJMjAxNy0xMS0yNgoJCTwvZGF0ZT4KICAgIDxkYXRlIGRh\ndGVUeXBlPSJTdWJtaXR0ZWQiPgoJCQkyMDE3LTExLTI3CgkJPC9kYXRlPgog\nIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFs\nPSJEYXRhc2V0Ij5YLVJheSBEaWZmcmFjdGlvbjwvcmVzb3VyY2VUeXBlPgog\nIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIg\ncmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNT\nb3VyY2VPZiI+IAoJCQkxMC4yMjEwL3BkYjE5M0wvcGRiCgkJPC9yZWxhdGVk\nSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3Jp\ncHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJz\ndHJhY3QiPiAKCQkJYW5vbWFsb3VzCgkJPC9kZXNjcmlwdGlvbj4KICA8L2Rl\nc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=\n","published":"
-        \n\t\t2017\n\t","registered":null,"updated":"2018-01-31T09:36:47.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Diffraction","license":null,"version":0,"related-identifier":[],"schema-version":"http://datacite.org/schema/kernel-3","state":"draft","reason":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzIvU0JEVEVTVC81MDE8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5NZXllciwgUGV0ZTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5YLVJheSBEaWZmcmFjdGlvbiBkYXRhIGZyb20gZGVtb2dsb2Jpbiwgc291cmNlIG9mIDE5M0wgc3RydWN0dXJlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPiAKCQlTQkdyaWQgRGF0YSBCYW5rCgk8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPiAKCQkyMDE3Cgk8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD4gCgkJCWRlbW9nbG9iaW4KCQk8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGF0YUNvbGxlY3RvciI+CiAgICAgIDxjb250cmlidXRvck5hbWU+TWV5ZXIsIFBldGU8L2NvbnRyaWJ1dG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkhNUzwvYWZmaWxpYXRpb24+CiAgICA8L2NvbnRyaWJ1dG9yPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGlzdHJpYnV0b3IiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPk1leWVyLCBQZXRlPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jb250cmlidXRvcj4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IlByb2plY3RMZWFkZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPlNsaXosIFBpb3RyPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5IYXJ2YXJkIE1lZGljYWwgU2Nob29sPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkNvbGxlY3RlZCI+ICAKCQkJMjAxNy0xMS0yNgoJCTwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJTdWJtaXR0ZWQiPgoJCQkyMDE3LTExLTI3CgkJPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5YLVJheSBEaWZmcmFjdGlvbjwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNTb3VyY2VPZiI+IAoJCQkxMC4yMjEwL3BkYjE5M0wvcGRiCgkJPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPiAKCQkJYW5vbWFsb3VzCgkJPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=","published":"
+        \n\t\t2017\n\t","registered":null,"updated":"2018-02-03T19:24:13.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
         Fenner","contact-email":"tech@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-01-11T09:29:56Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
-        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"has-password":true,"created":"2011-12-07T13:41:07.000Z","updated":"2018-01-29T15:50:04.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"has-password":true,"created":"2011-12-07T13:41:07.000Z","updated":"2018-02-01T11:07:41.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 09:36:53 GMT
+  recorded_at: Sat, 03 Feb 2018 19:25:45 GMT
 - request:
     method: delete
     uri: https://api.test.datacite.org/dois/10.5072/fk2/sbdtest/501
@@ -60,7 +60,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://8fbb84aad7f7
+      - Maremma - http://cd68ce431930
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -73,7 +73,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 31 Jan 2018 09:36:48 GMT
+      - Sat, 03 Feb 2018 19:24:14 GMT
       Connection:
       - keep-alive
       Status:
@@ -82,12 +82,12 @@ http_interactions:
       - no-cache
       Vary:
       - Origin
+      X-Runtime:
+      - '0.018951'
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 35c66a48-93cb-4711-af60-6e8b572aec61
-      X-Runtime:
-      - '0.016239'
+      - 48c862d9-bb53-4c82-8d05-9f7a54099050
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
@@ -96,5 +96,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 09:36:53 GMT
+  recorded_at: Sat, 03 Feb 2018 19:25:45 GMT
 recorded_with: VCR 3.0.3

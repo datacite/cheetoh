@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "random", :type => :api, :order => :defined do
+describe "random", :type => :api, vcr: true, :order => :defined do
   let(:doi) { "10.5072/0000-03vc" }
   let(:username) { ENV['MDS_USERNAME'] }
   let(:password) { ENV['MDS_PASSWORD'] }

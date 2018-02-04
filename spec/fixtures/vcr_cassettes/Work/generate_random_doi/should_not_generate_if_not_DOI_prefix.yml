@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://8fbb84aad7f7
+      - Maremma - http://cd68ce431930
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 31 Jan 2018 09:36:50 GMT
+      - Sat, 03 Feb 2018 19:24:16 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,11 +31,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - df92c9e2-7426-4cf3-9267-898d98af0027
+      - 487fd28d-e7f3-4f85-b939-0c0edd1b15bb
       Etag:
-      - W/"d1b1cbfdc18d136cb12ff708069d3ad7"
+      - W/"c7992de659b1c52f00260168cff09ee6"
       X-Runtime:
-      - '0.045676'
+      - '0.049494'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
@@ -43,10 +43,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"10.24354/n296wz12m","type":"dois","attributes":{"doi":"10.24354/n296wz12m","identifier":"https://handle.test.datacite.org/10.24354/n296wz12m","url":"https://www.datacite.org","author":{"type":"Person","name":"Tom
-        Johnson","given-name":"Tom","family-name":"Johnson"},"title":"DOI Test","container-title":":unav","description":null,"resource-type-subtype":"Dissertation","license":null,"version":2,"related-identifier":[],"schema-version":"http://datacite.org/schema/kernel-4","state":"findable","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291\ncmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwt\nNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVt\nYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNp\ndGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRl\nLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZp\nZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMjQzNTQvTjI5NldaMTJNPC9p\nZGVudGlmaWVyPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RE9JIFRlc3Q8L3Rp\ndGxlPgogIDwvdGl0bGVzPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgog\nICAgICA8Y3JlYXRvck5hbWU+Sm9obnNvbiwgVG9tPC9jcmVhdG9yTmFtZT4K\nICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDxwdWJsaXNoZXI+OnVu\nYXY8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTc8L3B1Ymxp\nY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVy\nYWw9IlRleHQiPkRpc3NlcnRhdGlvbjwvcmVzb3VyY2VUeXBlPgogIDx2ZXJz\naW9uPjQuMDwvdmVyc2lvbj4KPC9yZXNvdXJjZT4=\n","published":"2017","registered":"2017-12-04T21:43:09.000Z","updated":"2017-12-04T21:43:09.000Z"},"relationships":{"client":{"data":{"id":"datacite.test","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.test","type":"clients","attributes":{"name":"DataCite
+        Johnson","given-name":"Tom","family-name":"Johnson"},"title":"DOI Test","container-title":":unav","description":null,"resource-type-subtype":"Dissertation","license":null,"version":2,"related-identifier":[],"schema-version":"http://datacite.org/schema/kernel-4","state":"findable","reason":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxyZXNvdXJjZSB4bWxucz0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTQiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTQgaHR0cDovL3NjaGVtYS5kYXRhY2l0ZS5vcmcvbWV0YS9rZXJuZWwtNC9tZXRhZGF0YS54c2QiPgogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPjEwLjI0MzU0L24yOTZ3ejEybTwvaWRlbnRpZmllcj4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRPSSBUZXN0PC90aXRsZT4KICA8L3RpdGxlcz4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkpvaG5zb24sIFRvbTwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8cHVibGlzaGVyPjp1bmF2PC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE3PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5EaXNzZXJ0YXRpb248L3Jlc291cmNlVHlwZT4KICA8dmVyc2lvbj40LjA8L3ZlcnNpb24+CjwvcmVzb3VyY2U+Cg==","published":"2017","registered":"2017-12-04T21:43:09.000Z","updated":"2017-12-04T21:43:09.000Z"},"relationships":{"client":{"data":{"id":"datacite.test","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.test","type":"clients","attributes":{"name":"DataCite
         Test Ra Ra Ra","symbol":"DATACITE.TEST","year":2017,"contact-name":"Martin
         Fenner","contact-email":"support@datacite.org","domains":"*","url":null,"is-active":true,"has-password":true,"created":"2017-07-13T15:15:33Z","updated":"2018-01-30T12:33:29Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
-        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"has-password":true,"created":"2011-12-07T13:41:07.000Z","updated":"2018-01-29T15:50:04.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"has-password":true,"created":"2011-12-07T13:41:07.000Z","updated":"2018-02-01T11:07:41.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 09:36:56 GMT
+  recorded_at: Sat, 03 Feb 2018 19:25:47 GMT
 recorded_with: VCR 3.0.3

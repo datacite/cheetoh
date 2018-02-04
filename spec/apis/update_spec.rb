@@ -22,14 +22,4 @@ describe "update", :type => :api, vcr: true, :order => :defined do
     expect(last_response.headers["WWW-Authenticate"]).to eq("Basic realm=\"ez.test.datacite.org\"")
     expect(last_response.body).to eq("HTTP Basic: Access denied.\n")
   end
-
-  it "wrong login credentials" do
-    headers = ({ "HTTP_ACCEPT" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials("name", "password") })
-    url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
-    params = { "_target" => url }.to_anvl
-    doi = "10.5072/bc11-cqw1"
-    post "/id/doi:#{doi}", params, headers
-    expect(last_response.status).to eq(401)
-    expect(last_response.body).to eq("error: unauthorized")
-  end
 end

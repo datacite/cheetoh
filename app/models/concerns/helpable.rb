@@ -8,16 +8,25 @@ module Helpable
     include Bolognese::DoiUtils
     include Cirneco::Utils
 
-    def draft_doi(options={})
+    def upsert_doi(options={})
       return OpenStruct.new(body: { "errors" => [{ "title" => "Username or password missing" }] }) unless options[:username].present? && options[:password].present?
+
+      xml = options[:xml].present? ? Base64.strict_encode64(options[:xml]) : nil
+
+      attributes = {
+        "doi" => doi,
+        "url" => options[:url],
+        "xml" => xml,
+        "event" => options[:event],
+        "reason" => options[:reason]
+      }.compact
+
+      attributes.except!("doi") if options[:action] == "update"
 
       data = {
         "data" => {
           "type" => "dois",
-          "attributes" => {
-            "doi" => options[:doi],
-            "event" => options[:event]
-          },
+          "attributes" => attributes,
           "relationships"=> {
             "client"=>  {
               "data"=> {
@@ -31,31 +40,13 @@ module Helpable
 
       api_url = options[:sandbox] ? 'https://api.test.datacite.org' : 'https://api.datacite.org'
 
-      url = "#{api_url}/dois"
-      Maremma.post(url, content_type: 'application/vnd.api+json', data: data.to_json, username: options[:username], password: options[:password])
-    end
-
-    def update_doi(doi, options={})
-      return OpenStruct.new(body: { "errors" => [{ "title" => "Username or password missing" }] }) unless options[:username].present? && options[:password].present?
-
-      attributes = {
-        "doi" => doi,
-        "url" => options[:url],
-        "event" => options[:event],
-        "reason" => options[:reason]
-      }.compact
-
-      data = {
-        "data" => {
-          "type" => "dois",
-          "attributes" => attributes
-        }
-      }
-
-      api_url = options[:sandbox] ? 'https://api.test.datacite.org' : 'https://api.datacite.org'
-
-      url = "#{api_url}/dois/#{doi}"
-      Maremma.patch(url, content_type: 'application/vnd.api+json', data: data.to_json, username: options[:username], password: options[:password])
+      if options[:action] == "create"
+        url = "#{api_url}/dois"
+        Maremma.post(url, content_type: 'application/vnd.api+json', data: data.to_json, username: options[:username], password: options[:password])
+      else
+        url = "#{api_url}/dois/#{doi}"
+        Maremma.put(url, content_type: 'application/vnd.api+json', data: data.to_json, username: options[:username], password: options[:password])
+      end
     end
 
     def delete_doi(options={})

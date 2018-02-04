@@ -48,13 +48,8 @@ class WorksController < ApplicationController
       input = @id
     end
 
-    if @work.valid?
-      message, status = @work.upsert(username: @username,
-                                     password: @password)
-    else
-      message, status = @work.draft(username: @username,
-                                    password: @password)
-    end
+    message, status = @work.create_record(username: @username,
+                                          password: @password)
 
     render plain: message, status: status
   end
@@ -75,17 +70,10 @@ class WorksController < ApplicationController
                        doi: doi_from_url(@id),
                        target: safe_params[:_target],
                        target_status: safe_params[:_status])
-    else
-      input = @id
     end
 
-    if @work.valid?
-      message, status = @work.upsert(username: @username,
-                                     password: @password)
-    else
-      message, status = @work.draft(username: @username,
-                                    password: @password)
-    end
+    message, status = @work.create_record(username: @username,
+                                          password: @password)
 
     render plain: message, status: status
   end
@@ -98,22 +86,19 @@ class WorksController < ApplicationController
 
     if safe_params[@profile].present?
       input = safe_params[@profile].anvlunesc
-      data = "update"
     else
       input = @id
-      data = "ignore"
     end
 
     @work = Work.new(input: input,
                      from: @profile.to_s,
                      target: safe_params[:_target],
-                     target_status: safe_params[:_status],
-                     data: data)
+                     target_status: safe_params[:_status])
 
     fail IdentifierError, "metadata could not be validated" unless @work.exists?
 
-    message, status = @work.upsert(username: @username,
-                                   password: @password)
+    message, status = @work.update_record(username: @username,
+                                          password: @password)
 
     render plain: message, status: status
   end
@@ -125,8 +110,8 @@ class WorksController < ApplicationController
 
     fail IdentifierError, "#{params[:id]} is not a reserved DOI" unless @work.reserved?
 
-    message, status = @work.delete(username: @username,
-                                   password: @password)
+    message, status = @work.delete_record(username: @username,
+                                          password: @password)
 
     render plain: message, status: status
   end

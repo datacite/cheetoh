@@ -103,9 +103,8 @@ describe "create", :type => :api, vcr: true, :order => :defined do
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
     expect(response["_target"]).to eq(url)
-    expect(response["_status"]).to eq("reserved")
 
     doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-    expect(doc.at_css("identifier").content).to eq("10.5072/BC11-CQW7")
+    expect(doc.at_css("identifier").content.upcase).to eq("10.5072/BC11-CQW7")
   end
 end

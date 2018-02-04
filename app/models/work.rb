@@ -6,14 +6,13 @@ class Work < Bolognese::Metadata
   include Cirneco::Utils
   include Cirneco::Api
 
-  attr_accessor :target, :data, :export, :profile, :format, :status, :target_status, :reason
+  attr_accessor :target, :export, :profile, :format, :status, :target_status, :reason
 
   def initialize(input: nil, from: nil, format: nil, **options)
     @format = format || from
     @target = options[:target]
     @target_status, @reason = options[:target_status].split("|", 2).map(&:strip) if
       options[:target_status].present?
-    @data = options[:data].presence || "update"
 
     return super(input: input, from: from, doi: options[:doi], sandbox: ENV['SANDBOX'].present?)
   end
@@ -24,27 +23,15 @@ class Work < Bolognese::Metadata
     "findable" => "public"
   }
 
-  def upsert(username: nil, password: nil)
-    if data == "update"
-      response = post_metadata(datacite,
-                               username: username,
-                               password: password,
-                               sandbox: ENV['SANDBOX'].present?)
+  def create_record(username: nil, password: nil)
+    upsert_record(username: username, password: password, action: "create")
+  end
 
-      raise CanCan::AccessDenied if response.status == 401
-      error_message(response).presence && return
-    end
+  def update_record(username: nil, password: nil)
+    upsert_record(username: username, password: password, action: "update")
+  end
 
-    if target.present?
-      response = put_doi(doi, url: target,
-                              username: username,
-                              password: password,
-                              sandbox: ENV['SANDBOX'].present?)
-
-      raise CanCan::AccessDenied if response.status == 401
-      error_message(response).presence && return
-    end
-
+  def upsert_record(username: nil, password: nil, action: nil)
     # update doi status
     if target_status == "reserved" then
       event = "start"
@@ -54,19 +41,36 @@ class Work < Bolognese::Metadata
       event = "publish"
     end
 
-    response = update_doi(doi, event: event,
-                               reason: reason,
-                               url: target || url,
-                               username: username,
-                               password: password,
-                               sandbox: ENV['SANDBOX'].present?)
+    attributes = {
+      doi: doi,
+      url: target,
+      xml: datacite,
+      event: event,
+      reason: reason,
+      action: action,
+      username: username,
+      password: password,
+      sandbox: ENV['SANDBOX'].present? }
+
+    response = upsert_doi(attributes)
 
     raise CanCan::AccessDenied if response.status == 401
+    error_message(response).presence && return
 
     attributes = response.body.to_h.dig("data", "attributes").to_h
     self.state = attributes.fetch("state", "findable")
     self.url = attributes.fetch("url", nil)
     self.reason = attributes.fetch("reason", nil)
+
+    if target.present? && event == "publish"
+      response = put_doi(doi, url: target,
+                              username: username,
+                              password: password,
+                              sandbox: ENV['SANDBOX'].present?)
+
+      raise CanCan::AccessDenied if response.status == 401
+      error_message(response).presence && return
+    end
 
     message = { "success" => doi_with_protocol,
                 "_status" => status,
@@ -83,7 +87,7 @@ class Work < Bolognese::Metadata
     end
   end
 
-  def delete(username: nil, password: nil)
+  def delete_record(username: nil, password: nil)
     response = delete_doi(username: username,
                           password: password,
                           sandbox: ENV['SANDBOX'].present?)
@@ -92,28 +96,8 @@ class Work < Bolognese::Metadata
     error_message(response).presence && return
 
     message = { "success" => doi_with_protocol,
-                "_status" => status,
                 "_target" => url,
                 format => send(format.to_sym),
-                "_profile" => from }.to_anvl
-
-    [message, 200]
-  end
-
-  def draft(username: nil, password: nil)
-    response = draft_doi(doi: doi,
-                         event: "start",
-                         username: username,
-                         password: password,
-                         sandbox: ENV['SANDBOX'].present?)
-
-    raise CanCan::AccessDenied if response.status == 401
-    error_message(response).presence && return
-
-    self.state = "draft"
-
-    message = { "success" => doi_with_protocol,
-                "_status" => status,
                 "_profile" => from }.to_anvl
 
     [message, 200]

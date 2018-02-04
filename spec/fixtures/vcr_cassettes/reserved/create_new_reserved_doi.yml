@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://8fbb84aad7f7
+      - Maremma - http://cd68ce431930
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 31 Jan 2018 09:36:44 GMT
+      - Sat, 03 Feb 2018 20:22:41 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -28,10 +28,10 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - edd963b3-d6f9-4776-8f3c-8a776e7ff1d2
       X-Runtime:
-      - '0.006125'
+      - '0.003220'
+      X-Request-Id:
+      - c19ad397-9f23-41eb-a075-2b08672c7135
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
@@ -41,16 +41,16 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 09:36:49 GMT
+  recorded_at: Sat, 03 Feb 2018 20:24:14 GMT
 - request:
     method: post
     uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","event":"start"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
+      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","event":"publish"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
-      - Maremma - http://8fbb84aad7f7
+      - Maremma - http://cd68ce431930
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -63,7 +63,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 31 Jan 2018 09:36:44 GMT
+      - Sat, 03 Feb 2018 20:22:41 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -77,20 +77,20 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - bb9856da-51cf-4d4a-a32e-30d8f71c92cb
+      - 5eaa2ca5-a7f3-48b4-8d38-f26dfce7ffcc
       Location:
-      - https://api.test.datacite.org/dois/2178983
+      - https://api.test.datacite.org/dois/2182010
       Etag:
-      - W/"f24e7d039ac5ad2c6a0d4b54bd7d9500"
+      - W/"5874ba1056b98b598bb8058055350311"
       X-Runtime:
-      - '0.025585'
+      - '0.026236'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
       - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":null,"related-identifier":null,"schema-version":null,"state":"draft","xml":null,"published":null,"registered":null,"updated":"2018-01-31T09:36:44.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":0,"related-identifier":null,"schema-version":null,"state":"draft","reason":null,"xml":null,"published":null,"registered":null,"updated":"2018-02-03T20:22:41.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 09:36:50 GMT
+  recorded_at: Sat, 03 Feb 2018 20:24:15 GMT
 recorded_with: VCR 3.0.3
