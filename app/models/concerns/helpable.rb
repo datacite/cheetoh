@@ -38,7 +38,7 @@ module Helpable
         }
       }
 
-      api_url = options[:sandbox] ? 'https://api.test.datacite.org' : 'https://api.datacite.org'
+      api_url = options[:sandbox] ? 'https://app.test.datacite.org' : 'https://app.datacite.org'
 
       if options[:action] == "create"
         url = "#{api_url}/dois"
@@ -52,7 +52,7 @@ module Helpable
     def delete_doi(options={})
       return OpenStruct.new(body: { "errors" => [{ "title" => "Username or password missing" }] }) unless options[:username].present? && options[:password].present?
 
-      api_url = options[:sandbox] ? 'https://api.test.datacite.org' : 'https://api.datacite.org'
+      api_url = options[:sandbox] ? 'https://app.test.datacite.org' : 'https://app.datacite.org'
 
       url = "#{api_url}/dois/#{doi}"
       Maremma.delete(url, content_type: 'application/vnd.api+json', username: options[:username], password: options[:password])

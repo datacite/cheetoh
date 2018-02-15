@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw7?include=client,provider
+    uri: https://app.test.datacite.org/dois/10.5072/bc11-cqw7?include=client,provider
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://cd68ce431930
+      - Maremma - http://61ca321e8a06
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 03 Feb 2018 19:24:09 GMT
+      - Thu, 15 Feb 2018 07:39:18 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -28,10 +28,10 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
-      X-Runtime:
-      - '0.005633'
       X-Request-Id:
-      - b24efcc6-779a-44ea-af09-57655702ba5b
+      - 740a68f2-e005-48a6-9924-051ccd189038
+      X-Runtime:
+      - '0.003579'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
@@ -41,5 +41,5 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Sat, 03 Feb 2018 19:25:40 GMT
+  recorded_at: Thu, 15 Feb 2018 07:39:23 GMT
 recorded_with: VCR 3.0.3

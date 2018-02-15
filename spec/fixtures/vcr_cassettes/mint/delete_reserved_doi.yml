@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.test.datacite.org/dois/10.5072/3mfp-6m52?include=client,provider
+    uri: https://app.test.datacite.org/dois/10.5072/3mfp-6m52?include=client,provider
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://cd68ce431930
+      - Maremma - http://61ca321e8a06
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 03 Feb 2018 19:24:06 GMT
+      - Thu, 15 Feb 2018 07:39:15 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,31 +31,31 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 0b3dbeb3-ee34-4b9b-b216-61c3661b3b88
+      - c9083798-7eeb-4538-90da-5c6c5b508221
       Etag:
-      - W/"530e0678297f41ca1c89da2d0a51859d"
+      - W/"b9c00db758ca2a992d17eb48168e293c"
       X-Runtime:
-      - '0.017786'
+      - '0.017869'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
       - nginx/1.12.2 + Phusion Passenger 5.2.0
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5072/3mfp-6m52","type":"dois","attributes":{"doi":"10.5072/3mfp-6m52","identifier":"https://handle.test.datacite.org/10.5072/3mfp-6m52","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":0,"related-identifier":null,"schema-version":null,"state":"draft","reason":null,"xml":null,"published":null,"registered":null,"updated":"2018-02-03T19:24:06.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
-        Fenner","contact-email":"tech@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-01-11T09:29:56Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
-        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"has-password":true,"created":"2011-12-07T13:41:07.000Z","updated":"2018-02-01T11:07:41.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+      string: '{"data":{"id":"10.5072/3mfp-6m52","type":"dois","attributes":{"doi":"10.5072/3mfp-6m52","identifier":"https://handle.test.datacite.org/10.5072/3mfp-6m52","url":null,"author":null,"title":null,"container-title":null,"description":null,"resource-type-subtype":null,"license":null,"version":0,"related-identifier":null,"schema-version":null,"state":"draft","reason":null,"xml":null,"published":null,"registered":null,"updated":"2018-02-15T07:39:14.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Fenner","contact-email":"tech@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-02-15T06:11:55Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
+        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"has-password":true,"created":"2011-12-07T13:41:07.000Z","updated":"2018-02-15T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Sat, 03 Feb 2018 19:25:37 GMT
+  recorded_at: Thu, 15 Feb 2018 07:39:20 GMT
 - request:
     method: delete
-    uri: https://api.test.datacite.org/dois/10.5072/3mfp-6m52
+    uri: https://app.test.datacite.org/dois/10.5072/3mfp-6m52
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://cd68ce431930
+      - Maremma - http://61ca321e8a06
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -68,7 +68,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 03 Feb 2018 19:24:06 GMT
+      - Thu, 15 Feb 2018 07:39:15 GMT
       Connection:
       - keep-alive
       Status:
@@ -77,12 +77,12 @@ http_interactions:
       - no-cache
       Vary:
       - Origin
-      X-Runtime:
-      - '0.015014'
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 939b6c62-9ed0-4624-8f5d-17ef13d01188
+      - eb30ce16-cfe1-4981-9f19-3c6d2ab0e81c
+      X-Runtime:
+      - '0.015080'
       X-Powered-By:
       - Phusion Passenger 5.2.0
       Server:
@@ -91,5 +91,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Sat, 03 Feb 2018 19:25:37 GMT
+  recorded_at: Thu, 15 Feb 2018 07:39:20 GMT
 recorded_with: VCR 3.0.3
