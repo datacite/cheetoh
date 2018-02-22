@@ -45,7 +45,7 @@ describe "create", :type => :api, vcr: true, :order => :defined do
   it "create new doi" do
     datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
     url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
-    params = { "datacite" => datacite, "_target" => url, "_status" => "reserved" }.to_anvl
+    params = { "datacite" => datacite, "_target" => url }.to_anvl
     doi = "10.5072/bc11-cqw7"
     put "/id/doi:#{doi}", params, headers
     expect(last_response.status).to eq(200)
@@ -69,7 +69,7 @@ describe "create", :type => :api, vcr: true, :order => :defined do
 
   it "change using schema.org" do
     schema_org = File.read(file_fixture('schema_org.json'))
-    params = { "schema_org" => schema_org, "_profile" => "schema_org", "_status" => "reserved" }.to_anvl
+    params = { "schema_org" => schema_org, "_profile" => "schema_org" }.to_anvl
     doi = "10.5072/bc11-cqw7"
     post "/id/doi:#{doi}", params, headers
     expect(last_response.status).to eq(200)
@@ -84,7 +84,7 @@ describe "create", :type => :api, vcr: true, :order => :defined do
 
   it "change datacite xml" do
     datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
-    params = { "datacite" => datacite, "_status" => "reserved" }.to_anvl
+    params = { "datacite" => datacite }.to_anvl
     doi = "10.5072/bc11-cqw7"
     post "/id/doi:#{doi}", params, headers
     expect(last_response.status).to eq(200)

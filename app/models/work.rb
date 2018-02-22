@@ -33,7 +33,7 @@ class Work < Bolognese::Metadata
 
   def upsert_record(username: nil, password: nil, action: nil)
     # update doi status
-    if target_status == "reserved" then
+    if target_status == "reserved" || doi.start_with?("10.5072") then
       event = "start"
     elsif target_status == "unavailable"
       event = "hide"
