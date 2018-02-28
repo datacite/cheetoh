@@ -62,16 +62,6 @@ class Work < Bolognese::Metadata
     self.url = attributes.fetch("url", nil)
     self.reason = attributes.fetch("reason", nil)
 
-    if target.present? && event == "publish"
-      response = put_doi(doi, url: target,
-                              username: username,
-                              password: password,
-                              sandbox: ENV['SANDBOX'].present?)
-
-      raise CanCan::AccessDenied if response.status == 401
-      error_message(response).presence && return
-    end
-
     message = { "success" => doi_with_protocol,
                 "_status" => status,
                 "_target" => target,
