@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 11:49:47 GMT
+      - Mon, 02 Apr 2018 12:56:13 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -33,22 +33,22 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - a1902d18-039a-4347-9e12-4c25bce4de40
+      - db938d90-bdd7-47ac-a7c5-b9c30c16918f
       Etag:
-      - W/"c3a76d01ee27a92cf3142f3ca171975a"
+      - W/"34fda924ae2d0c4cec7a65b56b5d30e4"
       X-Runtime:
-      - '0.015957'
+      - '0.016011'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
       - nginx/1.12.2 + Phusion Passenger 5.2.2
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","prefix":"10.5072","suffix":"bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"creator":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9CQzExLUNRVzk8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzLz4KICA8dGl0bGVzPgogICAgPHRpdGxlLz4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyLz4KICA8cHVibGljYXRpb25ZZWFyLz4KICA8ZGF0ZXMvPgogIDx2ZXJzaW9uLz4KPC9yZXNvdXJjZT4K","published":null,"registered":null,"updated":"2018-04-02T04:39:26.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":null},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","prefix":"10.5072","suffix":"bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"creator":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9CQzExLUNRVzk8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzLz4KICA8dGl0bGVzPgogICAgPHRpdGxlLz4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyLz4KICA8cHVibGljYXRpb25ZZWFyLz4KICA8ZGF0ZXMvPgogIDx2ZXJzaW9uLz4KPC9yZXNvdXJjZT4K","published":null,"registered":null,"updated":"2018-04-02T12:35:07.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":null},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
         Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-04-02T01:30:25Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
         Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-04-02T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 11:52:03 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:31 GMT
 - request:
     method: get
     uri: https://app.test.datacite.org/10.5072/bc11-cqw9
@@ -66,7 +66,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 11:49:47 GMT
+      - Mon, 02 Apr 2018 12:56:13 GMT
       Content-Type:
       - application/vnd.datacite.datacite+xml
       Connection:
@@ -80,7 +80,7 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 9f2b4c2e-b824-49f4-9f4f-86d4891ce62d
+      - c70e89c6-e1af-46b5-9573-06f655c6857a
       Content-Disposition:
       - attachment; filename=_10.5072_bc11-cqw9.xml
       Content-Transfer-Encoding:
@@ -88,7 +88,7 @@ http_interactions:
       Etag:
       - W/"f802a50dc1a4beaadec8ac159f7d545e"
       X-Runtime:
-      - '0.007379'
+      - '0.007211'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -109,7 +109,7 @@ http_interactions:
           <version/>
         </resource>
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 11:52:03 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:31 GMT
 - request:
     method: delete
     uri: https://app.test.datacite.org/dois/10.5072/bc11-cqw9
@@ -131,7 +131,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 11:49:47 GMT
+      - Mon, 02 Apr 2018 12:56:13 GMT
       Connection:
       - keep-alive
       Status:
@@ -143,9 +143,9 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 2224b4dd-61d7-42a1-91b9-49478ab2f9c8
+      - fd99c4ff-e748-4830-9d75-5dddc0a82350
       X-Runtime:
-      - '0.017717'
+      - '0.017056'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -154,5 +154,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 11:52:03 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:32 GMT
 recorded_with: VCR 3.0.3

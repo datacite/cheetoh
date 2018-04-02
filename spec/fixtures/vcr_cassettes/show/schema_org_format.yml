@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 09:46:01 GMT
+      - Mon, 02 Apr 2018 12:56:14 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -33,11 +33,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - cfecc18f-f04f-4d75-9e25-66d5874d0fc7
+      - 86320fe0-b761-4cbe-b021-d60e91c1d294
       Etag:
       - W/"e1878b44525391c6dee1cfb82893993e"
       X-Runtime:
-      - '0.015035'
+      - '0.019463'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -50,7 +50,7 @@ http_interactions:
         Fenner","contact-email":"support@datacite.org","domains":"*","url":null,"is-active":true,"has-password":true,"created":"2017-07-13T15:15:33Z","updated":"2018-04-02T01:30:54Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
         Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-04-02T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}},{"id":"text","type":"resource-types","attributes":{"title":"Text","updated":"2016-09-21T00:00:00Z"}}]}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 09:48:12 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:33 GMT
 - request:
     method: get
     uri: https://app.test.datacite.org/10.24354/n296wz12m
@@ -68,7 +68,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 09:46:02 GMT
+      - Mon, 02 Apr 2018 12:56:14 GMT
       Content-Type:
       - application/vnd.schemaorg.ld+json; charset=utf-8
       Connection:
@@ -82,11 +82,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - '08311ba3-8c5b-4ae2-b4da-f87a481f17a5'
+      - a55e1bd3-0aba-449c-9fcd-d8092e7f9a57
       Etag:
       - W/"5f4a26030dd698fef770419ea9d045e3"
       X-Runtime:
-      - '0.007191'
+      - '0.008272'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -115,5 +115,5 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 09:48:12 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:33 GMT
 recorded_with: VCR 3.0.3

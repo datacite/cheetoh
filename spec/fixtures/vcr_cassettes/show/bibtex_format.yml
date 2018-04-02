@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 09:46:01 GMT
+      - Mon, 02 Apr 2018 12:56:14 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -33,11 +33,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - caab0394-8964-48ce-9b1c-8c8ee40a31cf
+      - ef977cc5-4910-42df-85d2-d9df8b7b29d8
       Etag:
       - W/"e1878b44525391c6dee1cfb82893993e"
       X-Runtime:
-      - '0.014541'
+      - '0.013913'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -50,7 +50,7 @@ http_interactions:
         Fenner","contact-email":"support@datacite.org","domains":"*","url":null,"is-active":true,"has-password":true,"created":"2017-07-13T15:15:33Z","updated":"2018-04-02T01:30:54Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
         Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-04-02T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}},{"id":"text","type":"resource-types","attributes":{"title":"Text","updated":"2016-09-21T00:00:00Z"}}]}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 09:48:11 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:32 GMT
 - request:
     method: get
     uri: https://app.test.datacite.org/10.24354/n296wz12m
@@ -68,7 +68,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 09:46:01 GMT
+      - Mon, 02 Apr 2018 12:56:14 GMT
       Content-Type:
       - application/x-bibtex
       Connection:
@@ -82,7 +82,7 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 4f6922f3-6eb1-47af-a76c-09810968ff06
+      - 0113e2f9-57d9-4ff5-9628-263b82c8d93d
       Content-Disposition:
       - attachment; filename=_10.24354_n296wz12m.bib
       Content-Transfer-Encoding:
@@ -90,7 +90,7 @@ http_interactions:
       Etag:
       - W/"063d32f7e8935872d39e72f3fea37a99"
       X-Runtime:
-      - '0.009546'
+      - '0.009486'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -107,5 +107,5 @@ http_interactions:
           year = {2017}
         }
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 09:48:12 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:32 GMT
 recorded_with: VCR 3.0.3

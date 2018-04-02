@@ -35,13 +35,7 @@ describe "random", :type => :api, vcr: true, :order => :defined do
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
 
-    puts response["datacite"]
-
-    doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-    doi = doc.at_css("identifier").content.downcase
-
-    expect(doi).to start_with(prefix)
-    expect(response["success"]).to eq("doi:#{doi}")
+    expect(response["success"]).to start_with("doi:#{prefix}")
     expect(response["_target"]).to eq(url)
     expect(response["_status"]).to eq("reserved")
   end

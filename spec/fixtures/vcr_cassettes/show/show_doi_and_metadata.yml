@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 09:46:01 GMT
+      - Mon, 02 Apr 2018 12:56:13 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -33,11 +33,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - a5fb0126-6b28-4dc9-85b6-7c7411f857b2
+      - 1402367e-3db3-479f-abf5-c44cff18e0f2
       Etag:
       - W/"e1878b44525391c6dee1cfb82893993e"
       X-Runtime:
-      - '0.021145'
+      - '0.014245'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -50,7 +50,7 @@ http_interactions:
         Fenner","contact-email":"support@datacite.org","domains":"*","url":null,"is-active":true,"has-password":true,"created":"2017-07-13T15:15:33Z","updated":"2018-04-02T01:30:54Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
         Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-04-02T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}},{"id":"text","type":"resource-types","attributes":{"title":"Text","updated":"2016-09-21T00:00:00Z"}}]}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 09:48:11 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:32 GMT
 - request:
     method: get
     uri: https://app.test.datacite.org/10.24354/n296wz12m
@@ -68,7 +68,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 09:46:01 GMT
+      - Mon, 02 Apr 2018 12:56:14 GMT
       Content-Type:
       - application/vnd.datacite.datacite+xml
       Connection:
@@ -82,7 +82,7 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - ac552827-bce7-4ccd-b138-379363a53b87
+      - fac3fcb3-dfb8-4e7d-ad0e-30c16f7b3fb9
       Content-Disposition:
       - attachment; filename=_10.24354_n296wz12m.xml
       Content-Transfer-Encoding:
@@ -90,7 +90,7 @@ http_interactions:
       Etag:
       - W/"3c0dfc94dc06fba7eb6529e4042c72c3"
       X-Runtime:
-      - '0.006303'
+      - '0.014754'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -115,5 +115,5 @@ http_interactions:
           <version>4.0</version>
         </resource>
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 09:48:11 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:32 GMT
 recorded_with: VCR 3.0.3

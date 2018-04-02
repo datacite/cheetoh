@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 12:31:57 GMT
+      - Mon, 02 Apr 2018 12:56:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -31,9 +31,9 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - f0e6e55f-a243-4005-93d8-85aa8e665df5
+      - 0bef7ae3-9e3f-4805-8cc7-8bca468c47db
       X-Runtime:
-      - '0.003279'
+      - '0.003294'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -43,7 +43,7 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 12:34:14 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:39 GMT
 - request:
     method: post
     uri: https://app.test.datacite.org/dois
@@ -65,7 +65,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 12:31:57 GMT
+      - Mon, 02 Apr 2018 12:56:20 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -79,13 +79,13 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 309d3ac3-8f1c-4c4e-97f5-438c557a439b
+      - 46ec3510-875e-4e79-91f0-c6c0318271ac
       Location:
-      - https://app.test.datacite.org/dois/2201025
+      - https://app.test.datacite.org/dois/2201035
       Etag:
-      - W/"1f51a10cbaac121cb1f51456e6fe6c1e"
+      - W/"bcc81a28875240c1653493f79c759a7d"
       X-Runtime:
-      - '0.042657'
+      - '0.043795'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -94,7 +94,92 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"10.5072/fk2-1-4gvq-zw33","type":"dois","attributes":{"doi":"10.5072/fk2-1-4gvq-zw33","prefix":"10.5072","suffix":"fk2-1-4gvq-zw33","identifier":"https://handle.test.datacite.org/10.5072/fk2-1-4gvq-zw33","url":"http://google.com","creator":[{"type":"Person","name":"Smith,
         John","given-name":"John","family-name":"Smith"}],"title":"my datacite title","publisher":"UVa
-        Press","resource-type-subtype":"Audio","description":"my interesting abstract","version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzItMS00R1ZRLVpXMzM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5TbWl0aCwgSm9objwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Sm9objwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5TbWl0aDwvZmFtaWx5TmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkJpb2xvZ3ksIFVWYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPm15IGRhdGFjaXRlIHRpdGxlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlVWYSBQcmVzczwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAwMjwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PmtleXdvcmQxPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+a2V5d29yZDI8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iT3RoZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPkJsb3csIEpvZTwvY29udHJpYnV0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkpvZTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5CbG93PC9mYW1pbHlOYW1lPgogICAgICA8YWZmaWxpYXRpb24+VVZhPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAwMi0wMi0wMjwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU291bmQiPkF1ZGlvPC9yZXNvdXJjZVR5cGU+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzPkFsbCByaWdodHMgcmVzZXJ2ZWQ8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5teSBpbnRlcmVzdGluZyBhYnN0cmFjdDwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CiAgPGZ1bmRpbmdSZWZlcmVuY2VzPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IxPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IyPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogIDwvZnVuZGluZ1JlZmVyZW5jZXM+CjwvcmVzb3VyY2U+","published":"2002-02-02","registered":null,"updated":"2018-04-02T12:31:57.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+        Press","resource-type-subtype":"Audio","description":"my interesting abstract","version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzItMS00R1ZRLVpXMzM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5TbWl0aCwgSm9objwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Sm9objwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5TbWl0aDwvZmFtaWx5TmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkJpb2xvZ3ksIFVWYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPm15IGRhdGFjaXRlIHRpdGxlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlVWYSBQcmVzczwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAwMjwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PmtleXdvcmQxPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+a2V5d29yZDI8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iT3RoZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPkJsb3csIEpvZTwvY29udHJpYnV0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkpvZTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5CbG93PC9mYW1pbHlOYW1lPgogICAgICA8YWZmaWxpYXRpb24+VVZhPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAwMi0wMi0wMjwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU291bmQiPkF1ZGlvPC9yZXNvdXJjZVR5cGU+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzPkFsbCByaWdodHMgcmVzZXJ2ZWQ8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5teSBpbnRlcmVzdGluZyBhYnN0cmFjdDwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CiAgPGZ1bmRpbmdSZWZlcmVuY2VzPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IxPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IyPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogIDwvZnVuZGluZ1JlZmVyZW5jZXM+CjwvcmVzb3VyY2U+","published":"2002-02-02","registered":null,"updated":"2018-04-02T12:56:20.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 12:34:14 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:39 GMT
+- request:
+    method: get
+    uri: https://app.test.datacite.org/10.5072/fk2-1-4gvq-zw33
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://6f80fe9e4de4
+      Accept:
+      - application/vnd.datacite.datacite+xml
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 02 Apr 2018 12:56:21 GMT
+      Content-Type:
+      - application/vnd.datacite.datacite+xml
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - 2d9113b2-e105-4714-bad1-745a9c92364d
+      Content-Disposition:
+      - attachment; filename=_10.5072_fk2-1-4gvq-zw33.xml
+      Content-Transfer-Encoding:
+      - binary
+      Etag:
+      - W/"d997b5cc041d955a060c2613c7c78239"
+      X-Runtime:
+      - '0.004814'
+      X-Powered-By:
+      - Phusion Passenger 5.2.2
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.2
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+          <identifier identifierType="DOI">10.5072/FK2-1-4GVQ-ZW33</identifier>
+          <creators>
+            <creator>
+              <creatorName>Smith, John</creatorName>
+              <givenName>John</givenName>
+              <familyName>Smith</familyName>
+            </creator>
+          </creators>
+          <titles>
+            <title>my datacite title</title>
+          </titles>
+          <publisher>UVa Press</publisher>
+          <publicationYear>2002</publicationYear>
+          <resourceType resourceTypeGeneral="Sound">Audio</resourceType>
+          <subjects>
+            <subject>keyword1</subject>
+            <subject>keyword2</subject>
+          </subjects>
+          <fundingReferences>
+            <fundingReference>
+              <funderName>sponsor1</funderName>
+            </fundingReference>
+            <fundingReference>
+              <funderName>sponsor2</funderName>
+            </fundingReference>
+          </fundingReferences>
+          <dates>
+            <date dateType="Issued">2002-02-02</date>
+          </dates>
+          <version/>
+          <descriptions>
+            <description descriptionType="Abstract">my interesting abstract</description>
+          </descriptions>
+        </resource>
+    http_version: 
+  recorded_at: Mon, 02 Apr 2018 12:58:39 GMT
 recorded_with: VCR 3.0.3

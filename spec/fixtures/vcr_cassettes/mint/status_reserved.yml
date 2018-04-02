@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 11:49:43 GMT
+      - Mon, 02 Apr 2018 12:56:08 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -33,11 +33,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 12e72f9b-792e-4c73-b967-3c0d3fb0f365
+      - 4116e7f2-5080-431d-97e5-30718396c6a0
       Etag:
-      - W/"9af6db203818b0e434a23ac466268ce7"
+      - W/"c2568824d79e5e08acb73e9fd8ad61e9"
       X-Runtime:
-      - '0.013351'
+      - '0.019593'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -50,11 +50,11 @@ http_interactions:
         of the first tasks for DataCite in the European Commission-funded THOR project,
         which started in June, was to contribute to a comparison of the ORCID and
         DataCite metadata standards. Together with ORCID, CERN, the British Library
-        and Dryad we looked...","version":null,"metadata-version":4,"schema-version":null,"state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":200,"content-type":"text/html","checked":"2018-03-14T15:00:59.000Z"},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUZQLTZNNTI8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5GZW5uZXIsIE1hcnRpbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWFydGluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkZlbm5lcjwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTE0MTktMjQwNTwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRpZmZlcmVuY2VzIGJldHdlZW4gT1JDSUQgYW5kIERhdGFDaXRlIE1ldGFkYXRhPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlIEJsb2c8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTU8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPkJsb2dQb3N0aW5nPC9yZXNvdXJjZVR5cGU+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+dGhvcjwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pm9yY2lkPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE1LTA5LTE4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC41MjgxL3plbm9kby4zMDc5OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24vPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAiPkNyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb248L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5PbmUgb2YgdGhlIGZpcnN0IHRhc2tzIGZvciBEYXRhQ2l0ZSBpbiB0aGUgRXVyb3BlYW4gQ29tbWlzc2lvbi1mdW5kZWQgVEhPUiBwcm9qZWN0LCB3aGljaCBzdGFydGVkIGluIEp1bmUsIHdhcyB0byBjb250cmlidXRlIHRvIGEgY29tcGFyaXNvbiBvZiB0aGUgT1JDSUQgYW5kIERhdGFDaXRlIG1ldGFkYXRhIHN0YW5kYXJkcy4gVG9nZXRoZXIgd2l0aCBPUkNJRCwgQ0VSTiwgdGhlIEJyaXRpc2ggTGlicmFyeSBhbmQgRHJ5YWQgd2UgbG9va2VkLi4uPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4K","published":"2015-09-18","registered":null,"updated":"2018-04-02T11:49:43.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":{"id":"text","type":"resource-types"}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        and Dryad we looked...","version":null,"metadata-version":3,"schema-version":null,"state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUZQLTZNNTI8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5GZW5uZXIsIE1hcnRpbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWFydGluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkZlbm5lcjwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTE0MTktMjQwNTwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRpZmZlcmVuY2VzIGJldHdlZW4gT1JDSUQgYW5kIERhdGFDaXRlIE1ldGFkYXRhPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlIEJsb2c8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTU8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPkJsb2dQb3N0aW5nPC9yZXNvdXJjZVR5cGU+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+dGhvcjwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pm9yY2lkPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE1LTA5LTE4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC41MjgxL3plbm9kby4zMDc5OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24vPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAiPkNyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb248L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5PbmUgb2YgdGhlIGZpcnN0IHRhc2tzIGZvciBEYXRhQ2l0ZSBpbiB0aGUgRXVyb3BlYW4gQ29tbWlzc2lvbi1mdW5kZWQgVEhPUiBwcm9qZWN0LCB3aGljaCBzdGFydGVkIGluIEp1bmUsIHdhcyB0byBjb250cmlidXRlIHRvIGEgY29tcGFyaXNvbiBvZiB0aGUgT1JDSUQgYW5kIERhdGFDaXRlIG1ldGFkYXRhIHN0YW5kYXJkcy4gVG9nZXRoZXIgd2l0aCBPUkNJRCwgQ0VSTiwgdGhlIEJyaXRpc2ggTGlicmFyeSBhbmQgRHJ5YWQgd2UgbG9va2VkLi4uPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4K","published":"2015-09-18","registered":null,"updated":"2018-04-02T12:56:08.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":{"id":"text","type":"resource-types"}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
         Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-04-02T01:30:25Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
         Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-04-02T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}},{"id":"text","type":"resource-types","attributes":{"title":"Text","updated":"2016-09-21T00:00:00Z"}}]}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 11:51:58 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:27 GMT
 - request:
     method: get
     uri: https://app.test.datacite.org/10.5072/3mfp-6m52
@@ -72,7 +72,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 11:49:43 GMT
+      - Mon, 02 Apr 2018 12:56:08 GMT
       Content-Type:
       - application/vnd.datacite.datacite+xml
       Connection:
@@ -86,7 +86,7 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 725da0f6-e1d9-4b78-95aa-5e0e885aff7f
+      - 55fee1df-6d41-460c-b8cd-899c3c882352
       Content-Disposition:
       - attachment; filename=_10.5072_3mfp-6m52.xml
       Content-Transfer-Encoding:
@@ -94,7 +94,7 @@ http_interactions:
       Etag:
       - W/"734e2690fa2b243c531923c2edcd1c75"
       X-Runtime:
-      - '0.004878'
+      - '0.004969'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -139,7 +139,7 @@ http_interactions:
           </descriptions>
         </resource>
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 11:51:59 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:27 GMT
 - request:
     method: put
     uri: https://app.test.datacite.org/dois/10.5072/3mfp-6m52
@@ -161,7 +161,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 11:49:43 GMT
+      - Mon, 02 Apr 2018 12:56:09 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -175,11 +175,11 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 67d73f76-0a30-4ea4-a6b1-70c5d334741b
+      - b97ba39e-5bfd-4f90-8bf0-cd133e5d2395
       Etag:
-      - W/"803a2b44c3df6a6a8ffc3477546a2969"
+      - W/"c81ed5c65dae3d6b801a28668ce26c26"
       X-Runtime:
-      - '0.040339'
+      - '0.045034'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -192,7 +192,92 @@ http_interactions:
         of the first tasks for DataCite in the European Commission-funded THOR project,
         which started in June, was to contribute to a comparison of the ORCID and
         DataCite metadata standards. Together with ORCID, CERN, the British Library
-        and Dryad we looked...","version":null,"metadata-version":4,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":200,"content-type":"text/html","checked":"2018-03-14T15:00:59.000Z"},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUZQLTZNNTI8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5GZW5uZXIsIE1hcnRpbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWFydGluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkZlbm5lcjwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTE0MTktMjQwNTwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRpZmZlcmVuY2VzIGJldHdlZW4gT1JDSUQgYW5kIERhdGFDaXRlIE1ldGFkYXRhPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlIEJsb2c8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTU8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPkJsb2dQb3N0aW5nPC9yZXNvdXJjZVR5cGU+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+dGhvcjwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pm9yY2lkPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE1LTA5LTE4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC41MjgxL3plbm9kby4zMDc5OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24vPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAiPkNyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb248L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5PbmUgb2YgdGhlIGZpcnN0IHRhc2tzIGZvciBEYXRhQ2l0ZSBpbiB0aGUgRXVyb3BlYW4gQ29tbWlzc2lvbi1mdW5kZWQgVEhPUiBwcm9qZWN0LCB3aGljaCBzdGFydGVkIGluIEp1bmUsIHdhcyB0byBjb250cmlidXRlIHRvIGEgY29tcGFyaXNvbiBvZiB0aGUgT1JDSUQgYW5kIERhdGFDaXRlIG1ldGFkYXRhIHN0YW5kYXJkcy4gVG9nZXRoZXIgd2l0aCBPUkNJRCwgQ0VSTiwgdGhlIEJyaXRpc2ggTGlicmFyeSBhbmQgRHJ5YWQgd2UgbG9va2VkLi4uPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=","published":"2015-09-18","registered":null,"updated":"2018-04-02T11:49:43.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+        and Dryad we looked...","version":null,"metadata-version":4,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUZQLTZNNTI8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5GZW5uZXIsIE1hcnRpbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWFydGluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkZlbm5lcjwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTE0MTktMjQwNTwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRpZmZlcmVuY2VzIGJldHdlZW4gT1JDSUQgYW5kIERhdGFDaXRlIE1ldGFkYXRhPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlIEJsb2c8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTU8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPkJsb2dQb3N0aW5nPC9yZXNvdXJjZVR5cGU+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+dGhvcjwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pm9yY2lkPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE1LTA5LTE4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC41MjgxL3plbm9kby4zMDc5OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24vPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAiPkNyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb248L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5PbmUgb2YgdGhlIGZpcnN0IHRhc2tzIGZvciBEYXRhQ2l0ZSBpbiB0aGUgRXVyb3BlYW4gQ29tbWlzc2lvbi1mdW5kZWQgVEhPUiBwcm9qZWN0LCB3aGljaCBzdGFydGVkIGluIEp1bmUsIHdhcyB0byBjb250cmlidXRlIHRvIGEgY29tcGFyaXNvbiBvZiB0aGUgT1JDSUQgYW5kIERhdGFDaXRlIG1ldGFkYXRhIHN0YW5kYXJkcy4gVG9nZXRoZXIgd2l0aCBPUkNJRCwgQ0VSTiwgdGhlIEJyaXRpc2ggTGlicmFyeSBhbmQgRHJ5YWQgd2UgbG9va2VkLi4uPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=","published":"2015-09-18","registered":null,"updated":"2018-04-02T12:56:09.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 11:51:59 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:27 GMT
+- request:
+    method: get
+    uri: https://app.test.datacite.org/10.5072/3mfp-6m52
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://6f80fe9e4de4
+      Accept:
+      - application/vnd.datacite.datacite+xml
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 02 Apr 2018 12:56:09 GMT
+      Content-Type:
+      - application/vnd.datacite.datacite+xml
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - 294a6e2d-5fd2-40ef-981f-9e0393d67e47
+      Content-Disposition:
+      - attachment; filename=_10.5072_3mfp-6m52.xml
+      Content-Transfer-Encoding:
+      - binary
+      Etag:
+      - W/"734e2690fa2b243c531923c2edcd1c75"
+      X-Runtime:
+      - '0.004985'
+      X-Powered-By:
+      - Phusion Passenger 5.2.2
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.2
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+          <identifier identifierType="DOI">10.5072/3MFP-6M52</identifier>
+          <creators>
+            <creator>
+              <creatorName>Fenner, Martin</creatorName>
+              <givenName>Martin</givenName>
+              <familyName>Fenner</familyName>
+              <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">https://orcid.org/0000-0003-1419-2405</nameIdentifier>
+            </creator>
+          </creators>
+          <titles>
+            <title>Differences between ORCID and DataCite Metadata</title>
+          </titles>
+          <publisher>DataCite Blog</publisher>
+          <publicationYear>2015</publicationYear>
+          <resourceType resourceTypeGeneral="Text">BlogPosting</resourceType>
+          <subjects>
+            <subject>thor</subject>
+            <subject>orcid</subject>
+            <subject>metadata</subject>
+          </subjects>
+          <dates>
+            <date dateType="Issued">2015-09-18</date>
+          </dates>
+          <relatedIdentifiers>
+            <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.5281/zenodo.30799</relatedIdentifier>
+          </relatedIdentifiers>
+          <version/>
+          <rightsList>
+            <rights rightsURI="https://creativecommons.org/licenses/by/4.0">Creative Commons Attribution</rights>
+          </rightsList>
+          <descriptions>
+            <description descriptionType="Abstract">One of the first tasks for DataCite in the European Commission-funded THOR project, which started in June, was to contribute to a comparison of the ORCID and DataCite metadata standards. Together with ORCID, CERN, the British Library and Dryad we looked...</description>
+          </descriptions>
+        </resource>
+    http_version: 
+  recorded_at: Mon, 02 Apr 2018 12:58:27 GMT
 recorded_with: VCR 3.0.3

@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 12:31:56 GMT
+      - Mon, 02 Apr 2018 12:56:19 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -31,9 +31,9 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - a78b695c-f7d8-4d18-adec-3ccba7b970a6
+      - b3b5a2e6-69a1-49d3-8fea-3e1870898962
       X-Runtime:
-      - '0.003467'
+      - '0.003711'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -43,7 +43,7 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 12:34:13 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:38 GMT
 - request:
     method: post
     uri: https://app.test.datacite.org/dois
@@ -65,7 +65,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 12:31:56 GMT
+      - Mon, 02 Apr 2018 12:56:19 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -79,13 +79,13 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - f1b16f94-e2de-49c8-8dd9-b4f5ffaf71fe
+      - 5e8ad321-fd4f-4a2a-871f-3b08f48dd14e
       Location:
-      - https://app.test.datacite.org/dois/2201024
+      - https://app.test.datacite.org/dois/2201034
       Etag:
-      - W/"70f677d543e0cc15c3a7429e9e7d25f2"
+      - W/"9e645bca5b22bbe491844588ae38200d"
       X-Runtime:
-      - '0.042447'
+      - '0.044497'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -96,7 +96,68 @@ http_interactions:
         Meyer","given-name":"Pete","family-name":"Meyer"}],"title":"X-Ray Diffraction
         data from demoglobin, source of 193L structure","publisher":" \n\t\tSBGrid
         Data Bank\n\t","resource-type-subtype":"X-Ray Diffraction","description":"anomalous","version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-3","state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzIvU0JEVEVTVC81MDE8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5NZXllciwgUGV0ZTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5YLVJheSBEaWZmcmFjdGlvbiBkYXRhIGZyb20gZGVtb2dsb2Jpbiwgc291cmNlIG9mIDE5M0wgc3RydWN0dXJlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPiAKCQlTQkdyaWQgRGF0YSBCYW5rCgk8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPiAKCQkyMDE3Cgk8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD4gCgkJCWRlbW9nbG9iaW4KCQk8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGF0YUNvbGxlY3RvciI+CiAgICAgIDxjb250cmlidXRvck5hbWU+TWV5ZXIsIFBldGU8L2NvbnRyaWJ1dG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkhNUzwvYWZmaWxpYXRpb24+CiAgICA8L2NvbnRyaWJ1dG9yPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGlzdHJpYnV0b3IiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPk1leWVyLCBQZXRlPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jb250cmlidXRvcj4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IlByb2plY3RMZWFkZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPlNsaXosIFBpb3RyPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5IYXJ2YXJkIE1lZGljYWwgU2Nob29sPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkNvbGxlY3RlZCI+ICAKCQkJMjAxNy0xMS0yNgoJCTwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJTdWJtaXR0ZWQiPgoJCQkyMDE3LTExLTI3CgkJPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5YLVJheSBEaWZmcmFjdGlvbjwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNTb3VyY2VPZiI+IAoJCQkxMC4yMjEwL3BkYjE5M0wvcGRiCgkJPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPiAKCQkJYW5vbWFsb3VzCgkJPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=","published":"
-        \n\t\t2017\n\t","registered":null,"updated":"2018-04-02T12:31:56.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+        \n\t\t2017\n\t","registered":null,"updated":"2018-04-02T12:56:19.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 12:34:13 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:38 GMT
+- request:
+    method: get
+    uri: https://app.test.datacite.org/10.5072/fk2/sbdtest/501
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://6f80fe9e4de4
+      Accept:
+      - application/vnd.datacite.datacite+xml
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 02 Apr 2018 12:56:19 GMT
+      Content-Type:
+      - application/vnd.datacite.datacite+xml
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - 146d4bd4-7658-409d-a1ee-8d453a9deebe
+      Content-Disposition:
+      - attachment; filename=_10.5072_fk2_sbdtest_501.xml
+      Content-Transfer-Encoding:
+      - binary
+      Etag:
+      - W/"2913003378ab1e5da271ba52903d398b"
+      X-Runtime:
+      - '0.004960'
+      X-Powered-By:
+      - Phusion Passenger 5.2.2
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.2
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<resource xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns=\"http://datacite.org/schema/kernel-4\" xsi:schemaLocation=\"http://datacite.org/schema/kernel-4
+        http://schema.datacite.org/meta/kernel-4/metadata.xsd\">\n  <identifier identifierType=\"DOI\">10.5072/FK2/SBDTEST/501</identifier>\n
+        \ <creators>\n    <creator>\n      <creatorName>Meyer, Pete</creatorName>\n
+        \     <givenName>Pete</givenName>\n      <familyName>Meyer</familyName>\n
+        \   </creator>\n  </creators>\n  <titles>\n    <title>X-Ray Diffraction data
+        from demoglobin, source of 193L structure</title>\n  </titles>\n  <publisher>
+        \n\t\tSBGrid Data Bank\n\t</publisher>\n  <publicationYear>0</publicationYear>\n
+        \ <resourceType resourceTypeGeneral=\"Dataset\">X-Ray Diffraction</resourceType>\n
+        \ <subjects>\n    <subject>demoglobin</subject>\n  </subjects>\n  <dates>\n
+        \   <date dateType=\"Issued\"> \n\t\t2017\n\t</date>\n  </dates>\n  <version/>\n
+        \ <descriptions>\n    <description descriptionType=\"Abstract\">anomalous</description>\n
+        \ </descriptions>\n</resource>\n"
+    http_version: 
+  recorded_at: Mon, 02 Apr 2018 12:58:38 GMT
 recorded_with: VCR 3.0.3

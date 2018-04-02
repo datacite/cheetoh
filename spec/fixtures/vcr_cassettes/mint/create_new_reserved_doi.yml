@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 11:49:44 GMT
+      - Mon, 02 Apr 2018 12:56:09 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -31,9 +31,9 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - c5ca75e3-7dbb-4689-93b5-377db42267f8
+      - c2ee2373-4350-49bf-9875-2c6635dbea65
       X-Runtime:
-      - '0.003060'
+      - '0.003187'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -43,7 +43,7 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 11:52:00 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:28 GMT
 - request:
     method: post
     uri: https://app.test.datacite.org/dois
@@ -65,7 +65,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 11:49:44 GMT
+      - Mon, 02 Apr 2018 12:56:10 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -79,20 +79,81 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 6b809b4d-4e25-4a21-8a7a-dab44e9d664e
+      - 0aeae3d7-9e1a-4b23-9c1c-7d8d4a1d24e3
       Location:
-      - https://app.test.datacite.org/dois/2201017
+      - https://app.test.datacite.org/dois/2201031
       Etag:
-      - W/"43d59419d6b11c10169dc676b6cd5407"
+      - W/"ff82dc24303aa4deda06a94d8662fe8a"
       X-Runtime:
-      - '0.022871'
+      - '0.029712'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
       - nginx/1.12.2 + Phusion Passenger 5.2.2
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5072/3mfp-6m52","type":"dois","attributes":{"doi":"10.5072/3mfp-6m52","prefix":"10.5072","suffix":"3mfp-6m52","identifier":"https://handle.test.datacite.org/10.5072/3mfp-6m52","url":null,"creator":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUZQLTZNNTI8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzLz4KICA8dGl0bGVzPgogICAgPHRpdGxlLz4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyLz4KICA8cHVibGljYXRpb25ZZWFyLz4KICA8ZGF0ZXMvPgogIDx2ZXJzaW9uLz4KPC9yZXNvdXJjZT4K","published":null,"registered":null,"updated":"2018-04-02T11:49:44.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+      string: '{"data":{"id":"10.5072/3mfp-6m52","type":"dois","attributes":{"doi":"10.5072/3mfp-6m52","prefix":"10.5072","suffix":"3mfp-6m52","identifier":"https://handle.test.datacite.org/10.5072/3mfp-6m52","url":null,"creator":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUZQLTZNNTI8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzLz4KICA8dGl0bGVzPgogICAgPHRpdGxlLz4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyLz4KICA8cHVibGljYXRpb25ZZWFyLz4KICA8ZGF0ZXMvPgogIDx2ZXJzaW9uLz4KPC9yZXNvdXJjZT4K","published":null,"registered":null,"updated":"2018-04-02T12:56:10.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 11:52:00 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:28 GMT
+- request:
+    method: get
+    uri: https://app.test.datacite.org/10.5072/3mfp-6m52
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://6f80fe9e4de4
+      Accept:
+      - application/vnd.datacite.datacite+xml
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 02 Apr 2018 12:56:10 GMT
+      Content-Type:
+      - application/vnd.datacite.datacite+xml
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - 531fc119-af46-4e48-ba14-dff1f481e739
+      Content-Disposition:
+      - attachment; filename=_10.5072_3mfp-6m52.xml
+      Content-Transfer-Encoding:
+      - binary
+      Etag:
+      - W/"ccda99c291a899298a23cab9209dacc9"
+      X-Runtime:
+      - '0.007199'
+      X-Powered-By:
+      - Phusion Passenger 5.2.2
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.2
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+          <identifier identifierType="DOI">10.5072/3MFP-6M52</identifier>
+          <creators/>
+          <titles>
+            <title/>
+          </titles>
+          <publisher/>
+          <publicationYear/>
+          <dates/>
+          <version/>
+        </resource>
+    http_version: 
+  recorded_at: Mon, 02 Apr 2018 12:58:28 GMT
 recorded_with: VCR 3.0.3

@@ -71,6 +71,10 @@ module Updateable
       self.updated = attributes.fetch("updated", nil)
       self.target = attributes.fetch("url", nil)
       self.reason = attributes.fetch("reason", nil)
+
+      # fetch updated input from content negotiation
+      response = Work.get_doi_by_content_type(doi: doi, profile: format)
+      self.input = response.body["data"]
   
       message = { "success" => doi_with_protocol,
                   "_status" => status,

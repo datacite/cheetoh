@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 09:33:59 GMT
+      - Mon, 02 Apr 2018 12:56:23 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Connection:
@@ -31,11 +31,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - '0868f58c-58b7-4c07-a441-ad290175a4bd'
+      - 5701e508-7374-4f7d-8103-0ab57056f6b6
       Etag:
       - W/"8d074df57bb1c271ae12d5c0360f134e"
       X-Runtime:
-      - '0.003893'
+      - '0.004476'
       X-Powered-By:
       - Phusion Passenger 5.2.2
       Server:
@@ -45,5 +45,5 @@ http_interactions:
       string: !binary |-
         ewogICJ0eXBlIjogInJlcG9ydCIsCiAgImlkIjogImh0dHBzOi8vaGFuZGxlLnRlc3QuZGF0YWNpdGUub3JnLzEwLjU0MzgvbWNudi1nYTZuIiwKICAiY2F0ZWdvcmllcyI6ICJNZXhpY28sIExpZmUgV3JpdGluZywgQXV0b2Jpb2dyYXBoeSwgQmlvZ3JhcGh5LCBNZXhpY2FuIFJldm9sdXRpb24sIFNwYWluIiwKICAibGFuZ3VhZ2UiOiAiZW4iLAogICJhdXRob3IiOiBbCiAgICB7CiAgICAgICJmYW1pbHkiOiAiQ2lmdWVudGVzLUdvb2Rib2R5IiwKICAgICAgImdpdmVuIjogIk5pY2hvbGFzIgogICAgfQogIF0sCiAgImlzc3VlZCI6IHsKICAgICJkYXRlLXBhcnRzIjogWwogICAgICBbCiAgICAgICAgMjAxNiwKICAgICAgICAyLAogICAgICAgIDIyCiAgICAgIF0KICAgIF0KICB9LAogICJzdWJtaXR0ZWQiOiB7CiAgICAiZGF0ZV9wYXJ0cyI6IFsKICAgICAgWwoKICAgICAgXQogICAgXQogIH0sCiAgImFic3RyYWN0IjogIk1hcnRpbiBMdWlzIEd1em1hbiB3YXMgbWFueSB0aGluZ3MgdGhyb3VnaG91dCBoaXMgY2FyZWVyIGluIHR3ZW50aWV0aC1jZW50dXJ5IE1leGljbzogYSBzb2xkaWVyIGluIFBhbmNobyBWaWxsYSdzIHJldm9sdXRpb25hcnkgYXJteSwgYSBqb3VybmFsaXN0LWluLWV4aWxlLCBvbmUgb2YgdGhlIG1vc3QgZXN0ZWVtZWQgbm92ZWxpc3RzIGFuZCBzY2hvbGFycyBvZiB0aGUgcmV2b2x1dGlvbmFyeSBlcmEsIGFuZCBhbiBlbGRlciBzdGF0ZXNtYW4gYW5kIHBvbGl0aWNpYW4uIEluIDxlbT5UaGUgTWFuIFdobyBXcm90ZSBQYW5jaG8gVmlsbGE8L2VtPiwgd2Ugc2VlIHRoZSBmYW1vdXMgYXV0aG9yIGFzIGhlIHJlYWxseSB3YXM6IGEgY2FyZWZ1bCBjcmFmdHNtYW4gb2YgaGlzIG93biBpbWFnZSBhbmQgbGVnYWN5LiBIaXMgZml2ZS12b2x1bWUgYmlvZ3JhcGh5IG9mIFZpbGxhIHByb3BlbGxlZCBoaW0gdG8gdGhlIGhlaWdodHMgb2YgTWV4aWNhbiBjdWx0dXJhbCBsaWZlLCBhbmQgdGh1cyBiZWdhbiBoaXMgdHJ1ZSBsaWZlJ3Mgd29yay4gTmljaG9sYXMgQ2lmdWVudGVzLUdvb2Rib2R5IHNoYXBlcyB0aGlzIHN0dWR5IG9mIEd1em1hbiB0aHJvdWdoIHRoZSBsZW5zIG9mIFwibGlmZSB3cml0aW5nXCIgYW5kIHVuY292ZXJzIGEgdGlyZWxlc3MgZWZmb3J0IGJ5IEd1em1hbiB0byBzaGFwZSBoaXMgcHVibGljIGltYWdlLjxicj5cbjxicj5cbjxlbT5UaGUgTWFuIFdobyBXcm90ZSBQYW5jaG8gVmlsbGE8L2VtPiBwbGFjZXMgR3V6bWFuJ3Mgd29yayBpbiBhIGJpb2dyYXBoaWNhbCBjb250ZXh0LCBzaGVkZGluZyBsaWdodCBvbiB0aGUgaW1tZWRpYXRlIG1vdGl2YXRpb25zIGJlaGluZCBoaXMgd3JpdGluZyBpbiBhIGdpdmVuIG1vbWVudCBhbmQgdGhlIHN1YnNlcXVlbnQgd2F5cyBpbiB3aGljaCBoZSByZXdyb3RlIG9yIHJlcGFja2FnZWQgdGhlIG1hdGVyaWFsLiBEZXNwaXRlIGhpcyBlZmZvcnRzIHRvIGVzdGFibGlzaCBhIGRlZmluaXRpdmUgcmVhZGluZyBvZiBoaXMgbGlmZSBhbmQgbGl0ZXJhdHVyZSwgR3V6bWFuIHdhcyB1bmFibGUgdG8gY29udHJvbCB0aGF0IGludGVycHJldGF0aW9uIGFzIGF1ZGllbmNlcyBiZWNhbWUgbGVzcyB0b2xlcmFudCBvZiB0aGUgZ2xhcmluZyBvbWlzc2lvbnMgaW4gaGlzIHNlbGYtcG9ydHJhaXQuIiwKICAiRE9JIjogIjEwLjU0MzgvTUNOVi1HQTZOIiwKICAicHVibGlzaGVyIjogIlplbm9kbyIsCiAgInRpdGxlIjogIlRoZSBNYW4gV2hvIFdyb3RlIFBhbmNobyBWaWxsYTogTWFydMOtbiBMdWlzIEd1em3DoW4gQW5kIFRoZSBQb2xpdGljcyBPZiBMaWZlIFdyaXRpbmciCn0=
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 09:36:08 GMT
+  recorded_at: Mon, 02 Apr 2018 12:58:41 GMT
 recorded_with: VCR 3.0.3
