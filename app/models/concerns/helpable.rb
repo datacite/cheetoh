@@ -12,7 +12,7 @@ module Helpable
       prefix = validate_prefix(str)
       fail IdentifierError, "No valid prefix found" unless prefix.present?
 
-      shoulder = str.split("/", 2)[1].to_s
+      shoulder = str.split("/", 2)[1].to_s.downcase
       encode_doi(prefix, shoulder: shoulder, number: options[:number])
     end
 

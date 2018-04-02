@@ -57,6 +57,12 @@ describe Work, vcr: true do
       expect(subject.generate_random_doi(str, number: number)).to eq("10.5072/fk2-003r-j076")
     end
 
+    it 'should generate with shoulder uppercase' do
+      str = "10.5072/FK2"
+      number = 123456
+      expect(subject.generate_random_doi(str, number: number)).to eq("10.5072/fk2-003r-j076")
+    end
+
     it 'should not generate if not DOI prefix' do
       str = "20.5438"
       expect { subject.generate_random_doi(str) }.to raise_error(IdentifierError, "No valid prefix found")
