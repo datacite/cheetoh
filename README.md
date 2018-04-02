@@ -18,12 +18,12 @@ docker run -p 8080:80 datacite/cheetoh
 
 You can now point your browser to `http://localhost:8080` and use the application.
 
-By default the application connects to the DataCite production infrastructure.
-Set the `SANDBOX` environment variable to connect to the DataCite test
-infrastructure, e.g.
+By default the application connects to the DataCite test infrastructure.
+Set the `APP_URL` environment variable to connect to the DataCite production
+infrastructure:
 
 ```
-SANDBOX=true
+APP_URL=https://app.datacite.org
 ```
 
 ## Development

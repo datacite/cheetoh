@@ -34,9 +34,7 @@ module Findable
     end
 
     def get_doi(doi)
-      api_url = ENV['SANDBOX'].present? ? 'https://app.test.datacite.org' : 'https://app.datacite.org'
-
-      url = "#{api_url}/dois/#{doi}"
+      url = "#{ENV['APP_URL']}/dois/#{doi}"
       Maremma.get(url, content_type: 'application/vnd.api+json')
     end
 
@@ -45,9 +43,7 @@ module Findable
       profile ||= "datacite"
       accept = SUPPORTED_PROFILES[profile.to_sym]
 
-      api_url = ENV['SANDBOX'].present? ? 'https://app.test.datacite.org' : 'https://app.datacite.org'
-
-      url = "#{api_url}/#{doi}"
+      url = "#{ENV['APP_URL']}/#{doi}"
       Maremma.get(url, accept: accept, raw: true)
     end
   end
