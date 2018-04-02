@@ -5,8 +5,6 @@ class ApplicationController < ActionController::API
 
   include Bolognese::DoiUtils
   include Bolognese::Utils
-  include Cirneco::Utils
-  include Cirneco::Api
 
   attr_accessor :username, :password
 

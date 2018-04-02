@@ -14,7 +14,6 @@ require "capybara/rails"
 require "webmock/rspec"
 require "rack/test"
 require "maremma"
-require "maremma"
 
 WebMock.disable_net_connect!(
   allow: ['codeclimate.com:443', ENV['PRIVATE_IP'], ENV['HOSTNAME']],

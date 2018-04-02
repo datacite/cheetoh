@@ -2,13 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.5072/fk2/sbdtest/501?include=client,provider
+    uri: https://app.test.datacite.org/dois/10.5072/fk2/sbdtest/501
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://61ca321e8a06
+      - Maremma - http://6f80fe9e4de4
+      Content-Type:
+      - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 15 Feb 2018 07:42:18 GMT
+      - Mon, 02 Apr 2018 12:31:56 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,27 +33,87 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 8279f50d-0117-4721-bdca-0d5b4db0ec12
+      - 1932429d-9781-41e2-8710-241d022d9c3e
       Etag:
-      - W/"2302f1515a89bf37cafef718c94a07fe"
+      - W/"1b242019b973defb523fc3d2bd2e8ada"
       X-Runtime:
-      - '0.077626'
+      - '0.013269'
       X-Powered-By:
-      - Phusion Passenger 5.2.0
+      - Phusion Passenger 5.2.2
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.0
+      - nginx/1.12.2 + Phusion Passenger 5.2.2
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5072/fk2/sbdtest/501","type":"dois","attributes":{"doi":"10.5072/fk2/sbdtest/501","identifier":"https://handle.test.datacite.org/10.5072/fk2/sbdtest/501","url":"http://data.sbgrid.org/dataset/501","author":{"type":"Person","name":"Pete
-        Meyer","given-name":"Pete","family-name":"Meyer"},"title":"X-Ray Diffraction
-        data from demoglobin, source of 193L structure","container-title":" \n\t\tSBGrid
-        Data Bank\n\t","description":{"type":"Abstract","text":"anomalous"},"resource-type-subtype":"X-Ray
-        Diffraction","license":null,"version":0,"related-identifier":[],"schema-version":"http://datacite.org/schema/kernel-3","state":"draft","reason":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzIvU0JEVEVTVC81MDE8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5NZXllciwgUGV0ZTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5YLVJheSBEaWZmcmFjdGlvbiBkYXRhIGZyb20gZGVtb2dsb2Jpbiwgc291cmNlIG9mIDE5M0wgc3RydWN0dXJlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPiAKCQlTQkdyaWQgRGF0YSBCYW5rCgk8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPiAKCQkyMDE3Cgk8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD4gCgkJCWRlbW9nbG9iaW4KCQk8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGF0YUNvbGxlY3RvciI+CiAgICAgIDxjb250cmlidXRvck5hbWU+TWV5ZXIsIFBldGU8L2NvbnRyaWJ1dG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkhNUzwvYWZmaWxpYXRpb24+CiAgICA8L2NvbnRyaWJ1dG9yPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGlzdHJpYnV0b3IiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPk1leWVyLCBQZXRlPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jb250cmlidXRvcj4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IlByb2plY3RMZWFkZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPlNsaXosIFBpb3RyPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5IYXJ2YXJkIE1lZGljYWwgU2Nob29sPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkNvbGxlY3RlZCI+ICAKCQkJMjAxNy0xMS0yNgoJCTwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJTdWJtaXR0ZWQiPgoJCQkyMDE3LTExLTI3CgkJPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5YLVJheSBEaWZmcmFjdGlvbjwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNTb3VyY2VPZiI+IAoJCQkxMC4yMjEwL3BkYjE5M0wvcGRiCgkJPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPiAKCQkJYW5vbWFsb3VzCgkJPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=","published":"
-        \n\t\t2017\n\t","registered":null,"updated":"2018-02-15T07:42:03.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"meta":{}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
-        Fenner","contact-email":"tech@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-02-15T06:11:55Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","year":2011,"contact-name":"Britta
-        Dreyer","contact-email":"britta.dreyer@datacite.org","logo-url":"https://assets.datacite.org/images/members/datacite.png","is-active":true,"has-password":true,"created":"2011-12-07T13:41:07.000Z","updated":"2018-02-15T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+      string: '{"data":{"id":"10.5072/fk2/sbdtest/501","type":"dois","attributes":{"doi":"10.5072/fk2/sbdtest/501","prefix":"10.5072","suffix":"fk2/sbdtest/501","identifier":"https://handle.test.datacite.org/10.5072/fk2/sbdtest/501","url":"http://data.sbgrid.org/dataset/501","creator":[{"type":"Person","name":"Pete
+        Meyer","given-name":"Pete","family-name":"Meyer"}],"title":"X-Ray Diffraction
+        data from demoglobin, source of 193L structure","publisher":" \n\t\tSBGrid
+        Data Bank\n\t","resource-type-subtype":"X-Ray Diffraction","description":"anomalous","version":null,"metadata-version":0,"schema-version":null,"state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzIvU0JEVEVTVC81MDE8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5NZXllciwgUGV0ZTwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+UGV0ZTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5NZXllcjwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+WC1SYXkgRGlmZnJhY3Rpb24gZGF0YSBmcm9tIGRlbW9nbG9iaW4sIHNvdXJjZSBvZiAxOTNMIHN0cnVjdHVyZTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj4gCgkJU0JHcmlkIERhdGEgQmFuawoJPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4wPC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5YLVJheSBEaWZmcmFjdGlvbjwvcmVzb3VyY2VUeXBlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PmRlbW9nbG9iaW48L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4gCgkJMjAxNwoJPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHZlcnNpb24vPgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+YW5vbWFsb3VzPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4K","published":"
+        \n\t\t2017\n\t","registered":null,"updated":"2018-04-02T12:31:56.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":{"id":"dataset","type":"resource-types"}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-04-02T01:30:25Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
+        Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-04-02T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}},{"id":"dataset","type":"resource-types","attributes":{"title":"Dataset","updated":"2016-09-21T00:00:00Z"}}]}'
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 07:42:24 GMT
+  recorded_at: Mon, 02 Apr 2018 12:34:14 GMT
+- request:
+    method: get
+    uri: https://app.test.datacite.org/10.5072/fk2/sbdtest/501
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - http://6f80fe9e4de4
+      Accept:
+      - application/vnd.datacite.datacite+xml
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 02 Apr 2018 12:31:56 GMT
+      Content-Type:
+      - application/vnd.datacite.datacite+xml
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - b741e0b1-69a9-4dfa-848e-b6bc5f9a3c3c
+      Content-Disposition:
+      - attachment; filename=_10.5072_fk2_sbdtest_501.xml
+      Content-Transfer-Encoding:
+      - binary
+      Etag:
+      - W/"2913003378ab1e5da271ba52903d398b"
+      X-Runtime:
+      - '0.004555'
+      X-Powered-By:
+      - Phusion Passenger 5.2.2
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.2
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<resource xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns=\"http://datacite.org/schema/kernel-4\" xsi:schemaLocation=\"http://datacite.org/schema/kernel-4
+        http://schema.datacite.org/meta/kernel-4/metadata.xsd\">\n  <identifier identifierType=\"DOI\">10.5072/FK2/SBDTEST/501</identifier>\n
+        \ <creators>\n    <creator>\n      <creatorName>Meyer, Pete</creatorName>\n
+        \     <givenName>Pete</givenName>\n      <familyName>Meyer</familyName>\n
+        \   </creator>\n  </creators>\n  <titles>\n    <title>X-Ray Diffraction data
+        from demoglobin, source of 193L structure</title>\n  </titles>\n  <publisher>
+        \n\t\tSBGrid Data Bank\n\t</publisher>\n  <publicationYear>0</publicationYear>\n
+        \ <resourceType resourceTypeGeneral=\"Dataset\">X-Ray Diffraction</resourceType>\n
+        \ <subjects>\n    <subject>demoglobin</subject>\n  </subjects>\n  <dates>\n
+        \   <date dateType=\"Issued\"> \n\t\t2017\n\t</date>\n  </dates>\n  <version/>\n
+        \ <descriptions>\n    <description descriptionType=\"Abstract\">anomalous</description>\n
+        \ </descriptions>\n</resource>\n"
+    http_version: 
+  recorded_at: Mon, 02 Apr 2018 12:34:14 GMT
 - request:
     method: delete
     uri: https://app.test.datacite.org/dois/10.5072/fk2/sbdtest/501
@@ -60,7 +122,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://61ca321e8a06
+      - Maremma - http://6f80fe9e4de4
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -73,7 +135,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 15 Feb 2018 07:42:18 GMT
+      - Mon, 02 Apr 2018 12:31:57 GMT
       Connection:
       - keep-alive
       Status:
@@ -85,16 +147,16 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 971637d0-8a38-442a-9541-72673c971c44
+      - 21e98ef1-732f-49f7-94d7-5f075429105f
       X-Runtime:
-      - '0.017389'
+      - '0.019928'
       X-Powered-By:
-      - Phusion Passenger 5.2.0
+      - Phusion Passenger 5.2.2
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.0
+      - nginx/1.12.2 + Phusion Passenger 5.2.2
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 07:42:24 GMT
+  recorded_at: Mon, 02 Apr 2018 12:34:14 GMT
 recorded_with: VCR 3.0.3

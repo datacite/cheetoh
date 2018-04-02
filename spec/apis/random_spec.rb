@@ -35,6 +35,8 @@ describe "random", :type => :api, vcr: true, :order => :defined do
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
 
+    puts response["datacite"]
+
     doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
     doi = doc.at_css("identifier").content.downcase
 

@@ -11,7 +11,7 @@ describe "show", :type => :api, vcr: true do
     expect(hsh["success"]).to eq("doi:10.24354/n296wz12m")
     expect(hsh["_updated"]).to eq("1512423789")
     expect(hsh["_target"]).to eq("https://www.datacite.org")
-    expect(hsh["datacite"]).to start_with("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<resource xmlns=\"http://datacite.org/schema/kernel-4\"")
+    expect(hsh["datacite"]).to start_with("<?xml version=\"1.0\"?>\n<resource xmlns=\"http://datacite.org/schema/kernel-4\"")
     expect(hsh["_profile"]).to eq("datacite")
     expect(hsh["_datacenter"]).to eq("DATACITE.TEST")
     expect(hsh["_export"]).to eq("yes")

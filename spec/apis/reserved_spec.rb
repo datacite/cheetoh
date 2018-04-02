@@ -35,7 +35,6 @@ describe "reserved", :type => :api, vcr: true, :order => :defined do
     response = last_response.body
     hsh = response.from_anvl
     expect(hsh["success"]).to eq("doi:10.5072/bc11-cqw9")
-    expect(hsh["datacite"]).to be_blank
-    expect(hsh["_target"]).to be_blank
+    expect(hsh["_profile"]).to eq("datacite")
   end
 end

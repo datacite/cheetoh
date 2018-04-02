@@ -13,7 +13,7 @@ describe "create", :type => :api, vcr: true, :order => :defined do
     doi = "20.5072/0000-03vc"
     put "/id/doi:#{doi}", nil, headers
     expect(last_response.status).to eq(400)
-    expect(last_response.body).to eq("error: bad request - no such identifier")
+    expect(last_response.body).to eq("error: no doi provided")
   end
 
   it "missing login credentials" do
@@ -39,7 +39,7 @@ describe "create", :type => :api, vcr: true, :order => :defined do
     put "/id/doi:#{doi}", nil, headers
     expect(last_response.status).to eq(400)
     response = last_response.body.from_anvl
-    expect(response["error"]).to eq("A required parameter is missing")
+    expect(response["error"]).to eq("no _profile provided")
   end
 
   it "create new doi" do
@@ -51,7 +51,7 @@ describe "create", :type => :api, vcr: true, :order => :defined do
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
-    expect(response["datacite"]).to eq(datacite.strip)
+    expect(response["datacite"]).to eq(datacite)
     expect(response["_target"]).to eq(url)
     expect(response["_status"]).to eq("reserved")
   end
@@ -90,7 +90,7 @@ describe "create", :type => :api, vcr: true, :order => :defined do
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
-    expect(response["datacite"]).to eq(datacite.strip)
+    expect(response["datacite"]).to eq(datacite)
     expect(response["_status"]).to eq("reserved")
   end
 

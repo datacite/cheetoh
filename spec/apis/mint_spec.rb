@@ -42,7 +42,7 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
     post "/shoulder/doi:#{doi}", nil, headers
     expect(last_response.status).to eq(400)
     response = last_response.body.from_anvl
-    expect(response["error"]).to eq("A required parameter is missing")
+    expect(response["error"]).to eq("no _profile provided")
   end
 
   # we seed with _number to avoid random numbers in tests
@@ -67,7 +67,7 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
     post "/id/doi:#{doi}", nil, headers
     expect(last_response.status).to eq(400)
     response = last_response.body.from_anvl
-    expect(response["error"]).to eq("A required parameter is missing")
+    expect(response["error"]).to eq("No _profile, _target or _status provided")
   end
 
   it "change redirect url and datacite xml" do
@@ -79,7 +79,7 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/3mfp-6m52")
-    expect(response["datacite"]).to eq(datacite.strip)
+    expect(response["datacite"]).to eq(datacite)
     expect(response["_target"]).to eq(url)
     expect(response["_status"]).to eq("reserved")
   end
@@ -104,7 +104,7 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/3mfp-6m52")
-    expect(response["datacite"]).to eq(datacite.strip)
+    expect(response["datacite"]).to eq(datacite)
     expect(response["_status"]).to eq("reserved")
   end
 
@@ -128,7 +128,7 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/3mfp-6m52")
-    expect(response["datacite"]).to eq(datacite.strip)
+    #expect(response["datacite"]).to eq(datacite)
     expect(response["_status"]).to eq("reserved")
   end
 
@@ -164,7 +164,5 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
     response = last_response.body
     hsh = response.from_anvl
     expect(hsh["success"]).to eq("doi:10.5072/3mfp-6m52")
-    expect(hsh["datacite"]).to be_blank
-    expect(hsh["_target"]).to be_blank
   end
 end

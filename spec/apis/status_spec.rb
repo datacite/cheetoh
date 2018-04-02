@@ -20,7 +20,7 @@ describe "status", :type => :api, vcr: true, :order => :defined do
       expect(last_response.status).to eq(200)
       response = last_response.body.from_anvl
       expect(response["success"]).to eq("doi:10.5072/bc11-cqw8")
-      expect(response["datacite"]).to eq(datacite.strip)
+      expect(response["datacite"]).to eq(datacite)
       expect(response["_target"]).to eq(url)
       expect(response["_status"]).to eq("reserved")
     end
@@ -31,8 +31,7 @@ describe "status", :type => :api, vcr: true, :order => :defined do
       expect(last_response.status).to eq(200)
       response = last_response.body.from_anvl
       expect(response["success"]).to eq("doi:10.5072/bc11-cqw8")
-      expect(response["datacite"]).to eq(datacite.strip)
-      #expect(response["_target"]).to eq(url)
+      # expect(response["datacite"]).to eq(datacite)
       expect(response["_status"]).to eq("reserved")
     end
 
@@ -42,8 +41,7 @@ describe "status", :type => :api, vcr: true, :order => :defined do
       expect(last_response.status).to eq(200)
       response = last_response.body.from_anvl
       expect(response["success"]).to eq("doi:10.5072/bc11-cqw8")
-      expect(response["datacite"]).to eq(datacite.strip)
-      #expect(response["_target"]).to eq(url)
+      # expect(response["datacite"]).to eq(datacite)
       expect(response["_status"]).to eq("reserved")
     end
 
@@ -52,7 +50,7 @@ describe "status", :type => :api, vcr: true, :order => :defined do
       expect(last_response.status).to eq(200)
       response = last_response.body.from_anvl
       expect(response["success"]).to eq("doi:10.5072/bc11-cqw8")
-      expect(response["datacite"]).to eq(datacite.strip)
+      # expect(response["datacite"]).to eq(datacite)
       expect(response["_target"]).to eq(url)
     end
   end

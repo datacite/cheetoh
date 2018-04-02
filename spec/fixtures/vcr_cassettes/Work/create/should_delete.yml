@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://61ca321e8a06
+      - Maremma - http://6f80fe9e4de4
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 15 Feb 2018 07:39:27 GMT
+      - Mon, 02 Apr 2018 12:10:43 GMT
       Connection:
       - keep-alive
       Status:
@@ -33,16 +33,16 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - dcda8f12-3770-4ca3-8be3-cbfeb4814cf3
+      - cdf2fc9f-7012-4ad1-a763-4c10974cbeb8
       X-Runtime:
-      - '0.019027'
+      - '0.016651'
       X-Powered-By:
-      - Phusion Passenger 5.2.0
+      - Phusion Passenger 5.2.2
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.0
+      - nginx/1.12.2 + Phusion Passenger 5.2.2
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 07:39:33 GMT
+  recorded_at: Mon, 02 Apr 2018 12:13:00 GMT
 recorded_with: VCR 3.0.3
