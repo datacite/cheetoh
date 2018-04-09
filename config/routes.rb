@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :heartbeat, only: [:index]
 
+  # support login path
+  get 'login', :to => 'index#login'
+
   resources :index, path: '/', only: [:index]
   resources :works, path: '/id', only: [:show], constraints: { :id => /.+/ }
 
