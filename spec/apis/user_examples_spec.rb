@@ -67,4 +67,33 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(doc.at_css("identifier").content).to eq("10.5072/FK2-1-4GVQ-ZW33")
     end
   end
+
+  context "dryad" do
+    it "create doi" do
+      str = File.read(file_fixture('10.5072_DRYAD.B3B0T7S_1.txt')).from_anvl
+      params = { "datacite" => str[:datacite], "_target" => str[:_target], "_status" => "reserved" }.to_anvl
+      doi = "10.5072/DRYAD.B3B0T7S/1"
+      put "/id/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.5072/dryad.b3b0t7s/1")
+      expect(response["_target"]).to eq(str[:_target])
+      expect(response["_status"]).to eq("reserved")
+
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/DRYAD.B3B0T7S/1")
+    end
+
+    it "delete doi" do
+      doi = "10.5072/DRYAD.B3B0T7S/1"
+      delete "/id/doi:#{doi}", nil, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.5072/dryad.b3b0t7s/1")
+      expect(response["_target"]).to eq("http://ryan-vm.datadryad.org/resource/doi:10.5072/dryad.b3b0t7s/1")
+
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/DRYAD.B3B0T7S/1")
+    end
+  end
 end
