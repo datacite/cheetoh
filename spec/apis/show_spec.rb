@@ -29,7 +29,7 @@ describe "show", :type => :api, vcr: true do
     expect(response["success"]).to eq("doi:10.24354/n296wz12m")
     expect(response["_updated"]).to eq("1512423789")
     expect(response["_target"]).to eq("https://www.datacite.org")
-    expect(response["bibtex"]).to start_with("@article{https://handle.test.datacite.org/10.24354/n296wz12m")
+    expect(response["bibtex"]).to start_with("@phdthesis{https://handle.test.datacite.org/10.24354/n296wz12m")
     expect(response["_profile"]).to eq("bibtex")
     expect(response["datacite"]).to be_nil
     expect(response["_datacenter"]).to eq("DATACITE.TEST")

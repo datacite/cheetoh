@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://6f80fe9e4de4
+      - Maremma - http://c9e23352b318
       Accept:
       - application/vnd.datacite.datacite+xml
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 12:56:23 GMT
+      - Wed, 30 May 2018 08:01:06 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -29,17 +29,17 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 51953d19-b46f-48a2-9c52-53900ba35ee2
+      - ffde2cad-265f-4d96-9def-62f409c94099
       X-Runtime:
-      - '0.002961'
+      - '0.003200'
       X-Powered-By:
-      - Phusion Passenger 5.2.2
+      - Phusion Passenger 5.3.1
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.1
     body:
       encoding: UTF-8
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 12:58:41 GMT
+  recorded_at: Wed, 30 May 2018 08:01:12 GMT
 recorded_with: VCR 3.0.3

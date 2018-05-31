@@ -28,8 +28,8 @@ describe "regular prefix", :type => :api, vcr: true, :order => :defined do
   it "wrong login credentials delete" do
     headers = ({ "HTTP_ACCEPT" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials("name", "password") })
     delete "/id/doi:#{doi}", nil, headers
-    expect(last_response.status).to eq(401)
-    expect(last_response.body).to eq("error: unauthorized")
+    expect(last_response.status).to eq(400)
+    expect(last_response.body).to eq("error: doi:#{doi} is not a reserved DOI")
   end
 
   it "wrong login credentials post" do

@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://6f80fe9e4de4
+      - Maremma - http://c9e23352b318
       Accept:
       - application/x-bibtex
   response:
@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 12:56:22 GMT
+      - Wed, 30 May 2018 08:01:05 GMT
       Content-Type:
       - application/x-bibtex
       Connection:
@@ -31,7 +31,7 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - aa02ec40-e101-466b-ab29-14034a5da124
+      - d254d35b-230a-491c-b67a-b9e4f795e15c
       Content-Disposition:
       - attachment; filename=_10.5438_mcnv-ga6n.bib
       Content-Transfer-Encoding:
@@ -39,15 +39,15 @@ http_interactions:
       Etag:
       - W/"a349277a986f9b29dce18dbc3bbc80f6"
       X-Runtime:
-      - '0.006793'
+      - '0.008214'
       X-Powered-By:
-      - Phusion Passenger 5.2.2
+      - Phusion Passenger 5.3.1
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.1
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         QGFydGljbGV7aHR0cHM6Ly9oYW5kbGUudGVzdC5kYXRhY2l0ZS5vcmcvMTAuNTQzOC9tY252LWdhNm4sCiAgZG9pID0gezEwLjU0MzgvTUNOVi1HQTZOfSwKICBhdXRob3IgPSB7Q2lmdWVudGVzLUdvb2Rib2R5LCBOaWNob2xhc30sCiAga2V5d29yZHMgPSB7TWV4aWNvLCBMaWZlIFdyaXRpbmcsIEF1dG9iaW9ncmFwaHksIEJpb2dyYXBoeSwgTWV4aWNhbiBSZXZvbHV0aW9uLCBTcGFpbn0sCiAgbGFuZ3VhZ2UgPSB7ZW59LAogIHRpdGxlID0ge1RoZSBNYW4gV2hvIFdyb3RlIFBhbmNobyBWaWxsYTogTWFydMOtbiBMdWlzIEd1em3DoW4gQW5kIFRoZSBQb2xpdGljcyBPZiBMaWZlIFdyaXRpbmd9LAogIHB1Ymxpc2hlciA9IHtaZW5vZG99LAogIHllYXIgPSB7MjAxNn0KfQo=
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 12:58:41 GMT
+  recorded_at: Wed, 30 May 2018 08:01:11 GMT
 recorded_with: VCR 3.0.3

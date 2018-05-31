@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://6f80fe9e4de4
+      - Maremma - http://c9e23352b318
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 12:56:19 GMT
+      - Thu, 31 May 2018 05:33:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -30,20 +30,20 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - b3b5a2e6-69a1-49d3-8fea-3e1870898962
       X-Runtime:
-      - '0.003711'
+      - '0.003289'
+      X-Request-Id:
+      - 228d5b56-5d1c-47f8-b7c0-027774214138
       X-Powered-By:
-      - Phusion Passenger 5.2.2
+      - Phusion Passenger 5.3.1
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.1
     body:
       encoding: UTF-8
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 12:58:38 GMT
+  recorded_at: Thu, 31 May 2018 05:33:27 GMT
 - request:
     method: post
     uri: https://app.test.datacite.org/dois
@@ -52,7 +52,7 @@ http_interactions:
       string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/fk2/sbdtest/501","url":"http://data.sbgrid.org/dataset/501","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+Cgk8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC41MDcyL0ZLMi9zYmRidGVzdC81MDE8L2lkZW50aWZpZXI+IAoJPGNyZWF0b3JzPgoJCQoJCgkJCgkJCQoJCTxjcmVhdG9yPiAKCQkJPGNyZWF0b3JOYW1lPk1leWVyLCBQZXRlPC9jcmVhdG9yTmFtZT4gIAoJCQk8YWZmaWxpYXRpb24+SE1TPC9hZmZpbGlhdGlvbj4gCgkJPC9jcmVhdG9yPgoJCQkKCQkKCQkJCgkJCgkKCQkKCQkJCgkJCgkKCTwvY3JlYXRvcnM+Cgk8dGl0bGVzPgoJCTx0aXRsZT5YLVJheSBEaWZmcmFjdGlvbiBkYXRhIGZyb20gZGVtb2dsb2Jpbiwgc291cmNlIG9mIDE5M0wgc3RydWN0dXJlPC90aXRsZT4gCgk8L3RpdGxlcz4KCTxwdWJsaXNoZXI+IAoJCVNCR3JpZCBEYXRhIEJhbmsKCTwvcHVibGlzaGVyPgoJPHB1YmxpY2F0aW9uWWVhcj4gCgkJMjAxNwoJPC9wdWJsaWNhdGlvblllYXI+Cgk8c3ViamVjdHM+CgkJPHN1YmplY3Q+IAoJCQlkZW1vZ2xvYmluCgkJPC9zdWJqZWN0PgoJPC9zdWJqZWN0cz4KCTxjb250cmlidXRvcnM+CgkKCQkKCQkJCgkJPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGF0YUNvbGxlY3RvciI+CgkJCQoJCQk8Y29udHJpYnV0b3JOYW1lPk1leWVyLCBQZXRlPC9jb250cmlidXRvck5hbWU+IAoJCQk8YWZmaWxpYXRpb24+SE1TPC9hZmZpbGlhdGlvbj4gCgkJPC9jb250cmlidXRvcj4KCQkKCQkJCgkJPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGlzdHJpYnV0b3IiPgoJCQkKCQkJPGNvbnRyaWJ1dG9yTmFtZT5NZXllciwgUGV0ZTwvY29udHJpYnV0b3JOYW1lPiAKCQkJPGFmZmlsaWF0aW9uPkhNUzwvYWZmaWxpYXRpb24+IAoJCTwvY29udHJpYnV0b3I+CgkJCgkKCQkKCQkJCgkJPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iUHJvamVjdExlYWRlciI+IAoJCQkKCQkJPGNvbnRyaWJ1dG9yTmFtZT5TbGl6LCBQaW90cjwvY29udHJpYnV0b3JOYW1lPiAKCQkJPGFmZmlsaWF0aW9uPkhhcnZhcmQgTWVkaWNhbCBTY2hvb2w8L2FmZmlsaWF0aW9uPiAKCQk8L2NvbnRyaWJ1dG9yPgoJCQoJCgk8L2NvbnRyaWJ1dG9ycz4KCTxkYXRlcz4gCgkJPGRhdGUgZGF0ZVR5cGU9IkNvbGxlY3RlZCI+ICAKCQkJMjAxNy0xMS0yNgoJCTwvZGF0ZT4KCQk8ZGF0ZSBkYXRlVHlwZT0iU3VibWl0dGVkIj4KCQkJMjAxNy0xMS0yNwoJCTwvZGF0ZT4KCTwvZGF0ZXM+Cgk8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPlgtUmF5IERpZmZyYWN0aW9uPC9yZXNvdXJjZVR5cGU+IAoJPHJlbGF0ZWRJZGVudGlmaWVycz4KCQkKCQk8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNTb3VyY2VPZiIgPiAKCQkJMTAuMjIxMC9wZGIxOTNML3BkYgoJCTwvcmVsYXRlZElkZW50aWZpZXI+IAoJCQoJCQoJPC9yZWxhdGVkSWRlbnRpZmllcnM+Cgk8ZGVzY3JpcHRpb25zPgoJCTxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij4gCgkJCWFub21hbG91cwoJCTwvZGVzY3JpcHRpb24+CgkJCgk8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4K","event":"start","reason":null},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
-      - Maremma - http://6f80fe9e4de4
+      - Maremma - http://c9e23352b318
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -65,40 +65,40 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 12:56:19 GMT
+      - Thu, 31 May 2018 05:33:22 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
       - keep-alive
       Status:
       - 201 Created
+      Location:
+      - https://app.test.datacite.org/dois/2219035
       Cache-Control:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
+      Etag:
+      - W/"dce63ecff433dfe1b288738332659832"
+      X-Runtime:
+      - '0.052553'
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 5e8ad321-fd4f-4a2a-871f-3b08f48dd14e
-      Location:
-      - https://app.test.datacite.org/dois/2201034
-      Etag:
-      - W/"9e645bca5b22bbe491844588ae38200d"
-      X-Runtime:
-      - '0.044497'
+      - b1dbf813-f073-48e2-9f2b-4a4afdafee3b
       X-Powered-By:
-      - Phusion Passenger 5.2.2
+      - Phusion Passenger 5.3.1
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.1
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10.5072/fk2/sbdtest/501","type":"dois","attributes":{"doi":"10.5072/fk2/sbdtest/501","prefix":"10.5072","suffix":"fk2/sbdtest/501","identifier":"https://handle.test.datacite.org/10.5072/fk2/sbdtest/501","url":"http://data.sbgrid.org/dataset/501","creator":[{"type":"Person","name":"Pete
+      string: '{"data":{"id":"10.5072/fk2/sbdtest/501","type":"dois","attributes":{"doi":"10.5072/fk2/sbdtest/501","prefix":"10.5072","suffix":"fk2/sbdtest/501","identifier":"https://handle.test.datacite.org/10.5072/fk2/sbdtest/501","url":"http://data.sbgrid.org/dataset/501","author":[{"type":"Person","name":"Pete
         Meyer","given-name":"Pete","family-name":"Meyer"}],"title":"X-Ray Diffraction
         data from demoglobin, source of 193L structure","publisher":" \n\t\tSBGrid
-        Data Bank\n\t","resource-type-subtype":"X-Ray Diffraction","description":"anomalous","version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-3","state":"draft","is-active":true,"reason":null,"landing-page":{"url":null,"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzIvU0JEVEVTVC81MDE8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5NZXllciwgUGV0ZTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5YLVJheSBEaWZmcmFjdGlvbiBkYXRhIGZyb20gZGVtb2dsb2Jpbiwgc291cmNlIG9mIDE5M0wgc3RydWN0dXJlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPiAKCQlTQkdyaWQgRGF0YSBCYW5rCgk8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPiAKCQkyMDE3Cgk8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD4gCgkJCWRlbW9nbG9iaW4KCQk8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGF0YUNvbGxlY3RvciI+CiAgICAgIDxjb250cmlidXRvck5hbWU+TWV5ZXIsIFBldGU8L2NvbnRyaWJ1dG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkhNUzwvYWZmaWxpYXRpb24+CiAgICA8L2NvbnRyaWJ1dG9yPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGlzdHJpYnV0b3IiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPk1leWVyLCBQZXRlPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jb250cmlidXRvcj4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IlByb2plY3RMZWFkZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPlNsaXosIFBpb3RyPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5IYXJ2YXJkIE1lZGljYWwgU2Nob29sPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkNvbGxlY3RlZCI+ICAKCQkJMjAxNy0xMS0yNgoJCTwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJTdWJtaXR0ZWQiPgoJCQkyMDE3LTExLTI3CgkJPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5YLVJheSBEaWZmcmFjdGlvbjwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNTb3VyY2VPZiI+IAoJCQkxMC4yMjEwL3BkYjE5M0wvcGRiCgkJPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPiAKCQkJYW5vbWFsb3VzCgkJPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=","published":"
-        \n\t\t2017\n\t","registered":null,"updated":"2018-04-02T12:56:19.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+        Data Bank\n\t","resource-type-subtype":"X-Ray Diffraction","description":"anomalous","version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-3","state":"draft","is-active":true,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzIvU0JEVEVTVC81MDE8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5NZXllciwgUGV0ZTwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5YLVJheSBEaWZmcmFjdGlvbiBkYXRhIGZyb20gZGVtb2dsb2Jpbiwgc291cmNlIG9mIDE5M0wgc3RydWN0dXJlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPiAKCQlTQkdyaWQgRGF0YSBCYW5rCgk8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPiAKCQkyMDE3Cgk8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD4gCgkJCWRlbW9nbG9iaW4KCQk8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGF0YUNvbGxlY3RvciI+CiAgICAgIDxjb250cmlidXRvck5hbWU+TWV5ZXIsIFBldGU8L2NvbnRyaWJ1dG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkhNUzwvYWZmaWxpYXRpb24+CiAgICA8L2NvbnRyaWJ1dG9yPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iRGlzdHJpYnV0b3IiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPk1leWVyLCBQZXRlPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5ITVM8L2FmZmlsaWF0aW9uPgogICAgPC9jb250cmlidXRvcj4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IlByb2plY3RMZWFkZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPlNsaXosIFBpb3RyPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5IYXJ2YXJkIE1lZGljYWwgU2Nob29sPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkNvbGxlY3RlZCI+ICAKCQkJMjAxNy0xMS0yNgoJCTwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJTdWJtaXR0ZWQiPgoJCQkyMDE3LTExLTI3CgkJPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5YLVJheSBEaWZmcmFjdGlvbjwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNTb3VyY2VPZiI+IAoJCQkxMC4yMjEwL3BkYjE5M0wvcGRiCgkJPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPiAKCQkJYW5vbWFsb3VzCgkJPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=","published":"
+        \n\t\t2017\n\t","registered":null,"updated":"2018-05-31T05:33:22.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 12:58:38 GMT
+  recorded_at: Thu, 31 May 2018 05:33:28 GMT
 - request:
     method: get
     uri: https://app.test.datacite.org/10.5072/fk2/sbdtest/501
@@ -107,7 +107,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://6f80fe9e4de4
+      - Maremma - http://c9e23352b318
       Accept:
       - application/vnd.datacite.datacite+xml
   response:
@@ -116,48 +116,56 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 02 Apr 2018 12:56:19 GMT
+      - Thu, 31 May 2018 05:33:23 GMT
       Content-Type:
       - application/vnd.datacite.datacite+xml
       Connection:
       - keep-alive
       Status:
       - 200 OK
+      Content-Disposition:
+      - attachment; filename=_10.5072_fk2_sbdtest_501.xml
       X-Anonymous-Consumer:
       - 'true'
       Cache-Control:
       - private
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - 146d4bd4-7658-409d-a1ee-8d453a9deebe
-      Content-Disposition:
-      - attachment; filename=_10.5072_fk2_sbdtest_501.xml
       Content-Transfer-Encoding:
       - binary
       Etag:
-      - W/"2913003378ab1e5da271ba52903d398b"
+      - W/"f51ca1398d160d2a202b2b579b3831da"
       X-Runtime:
-      - '0.004960'
+      - '0.007194'
+      X-Request-Id:
+      - 2ad6ad6b-c40d-4659-b669-f52954699c80
       X-Powered-By:
-      - Phusion Passenger 5.2.2
+      - Phusion Passenger 5.3.1
       Server:
-      - nginx/1.12.2 + Phusion Passenger 5.2.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.1
     body:
       encoding: UTF-8
-      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<resource xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xmlns=\"http://datacite.org/schema/kernel-4\" xsi:schemaLocation=\"http://datacite.org/schema/kernel-4
-        http://schema.datacite.org/meta/kernel-4/metadata.xsd\">\n  <identifier identifierType=\"DOI\">10.5072/FK2/SBDTEST/501</identifier>\n
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<resource xmlns=\"http://datacite.org/schema/kernel-3\"
+        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://datacite.org/schema/kernel-3
+        http://schema.datacite.org/meta/kernel-3/metadata.xsd\">\n  <identifier identifierType=\"DOI\">10.5072/FK2/SBDTEST/501</identifier>\n
         \ <creators>\n    <creator>\n      <creatorName>Meyer, Pete</creatorName>\n
-        \     <givenName>Pete</givenName>\n      <familyName>Meyer</familyName>\n
-        \   </creator>\n  </creators>\n  <titles>\n    <title>X-Ray Diffraction data
-        from demoglobin, source of 193L structure</title>\n  </titles>\n  <publisher>
-        \n\t\tSBGrid Data Bank\n\t</publisher>\n  <publicationYear>0</publicationYear>\n
-        \ <resourceType resourceTypeGeneral=\"Dataset\">X-Ray Diffraction</resourceType>\n
-        \ <subjects>\n    <subject>demoglobin</subject>\n  </subjects>\n  <dates>\n
-        \   <date dateType=\"Issued\"> \n\t\t2017\n\t</date>\n  </dates>\n  <version/>\n
-        \ <descriptions>\n    <description descriptionType=\"Abstract\">anomalous</description>\n
-        \ </descriptions>\n</resource>\n"
+        \     <affiliation>HMS</affiliation>\n    </creator>\n  </creators>\n  <titles>\n
+        \   <title>X-Ray Diffraction data from demoglobin, source of 193L structure</title>\n
+        \ </titles>\n  <publisher> \n\t\tSBGrid Data Bank\n\t</publisher>\n  <publicationYear>
+        \n\t\t2017\n\t</publicationYear>\n  <subjects>\n    <subject> \n\t\t\tdemoglobin\n\t\t</subject>\n
+        \ </subjects>\n  <contributors>\n    <contributor contributorType=\"DataCollector\">\n
+        \     <contributorName>Meyer, Pete</contributorName>\n      <affiliation>HMS</affiliation>\n
+        \   </contributor>\n    <contributor contributorType=\"Distributor\">\n      <contributorName>Meyer,
+        Pete</contributorName>\n      <affiliation>HMS</affiliation>\n    </contributor>\n
+        \   <contributor contributorType=\"ProjectLeader\">\n      <contributorName>Sliz,
+        Piotr</contributorName>\n      <affiliation>Harvard Medical School</affiliation>\n
+        \   </contributor>\n  </contributors>\n  <dates>\n    <date dateType=\"Collected\">
+        \ \n\t\t\t2017-11-26\n\t\t</date>\n    <date dateType=\"Submitted\">\n\t\t\t2017-11-27\n\t\t</date>\n
+        \ </dates>\n  <resourceType resourceTypeGeneral=\"Dataset\">X-Ray Diffraction</resourceType>\n
+        \ <relatedIdentifiers>\n    <relatedIdentifier relatedIdentifierType=\"DOI\"
+        relationType=\"IsSourceOf\"> \n\t\t\t10.2210/pdb193L/pdb\n\t\t</relatedIdentifier>\n
+        \ </relatedIdentifiers>\n  <descriptions>\n    <description descriptionType=\"Abstract\">
+        \n\t\t\tanomalous\n\t\t</description>\n  </descriptions>\n</resource>"
     http_version: 
-  recorded_at: Mon, 02 Apr 2018 12:58:38 GMT
+  recorded_at: Thu, 31 May 2018 05:33:28 GMT
 recorded_with: VCR 3.0.3

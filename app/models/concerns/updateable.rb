@@ -88,7 +88,7 @@ module Updateable
 
       url = "#{ENV['APP_URL']}/dois/#{doi}"
       response = Maremma.delete(url, content_type: 'application/vnd.api+json', username: username, password: password)
-  
+
       raise CanCan::AccessDenied if response.status == 401
       error_message(response).presence && return
   

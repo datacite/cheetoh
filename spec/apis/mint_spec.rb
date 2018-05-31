@@ -120,17 +120,17 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
   #   expect(response["_status"]).to eq("unavailable")
   # end
 
-  it "status reserved" do
-    datacite = File.read(file_fixture('10.5072_3mfp-6m52.xml'))
-    params = { "_status" => "public" }.to_anvl
-    doi = "10.5072/3mfp-6m52"
-    post "/id/doi:#{doi}", params, headers
-    expect(last_response.status).to eq(200)
-    response = last_response.body.from_anvl
-    expect(response["success"]).to eq("doi:10.5072/3mfp-6m52")
-    expect(response["datacite"]).to eq(datacite.strip)
-    expect(response["_status"]).to eq("reserved")
-  end
+  # it "status reserved" do
+  #   datacite = File.read(file_fixture('10.5072_3mfp-6m52.xml'))
+  #   params = { "_status" => "public" }.to_anvl
+  #   doi = "10.5072/3mfp-6m52"
+  #   post "/id/doi:#{doi}", params, headers
+  #   expect(last_response.status).to eq(200)
+  #   response = last_response.body.from_anvl
+  #   expect(response["success"]).to eq("doi:10.5072/3mfp-6m52")
+  #   expect(response["datacite"]).to eq(datacite.strip)
+  #   expect(response["_status"]).to eq("reserved")
+  # end
 
   it "delete new doi" do
     datacite = File.read(file_fixture('10.5072_tba.xml'))

@@ -31,7 +31,7 @@ describe Work, vcr: true do
       response = Work.get_doi_by_content_type(doi: doi)
       expect(response.status).to eq(200)
       data = Maremma.from_xml(response.body["data"]).to_h.fetch("resource", {})
-      expect(data.dig("xmlns")).to eq("http://datacite.org/schema/kernel-4")
+      expect(data.dig("xmlns")).to eq("http://datacite.org/schema/kernel-3")
       expect(data.dig("publisher")).to eq("Zenodo")
       expect(data.dig("titles", "title")).to eq("The Man Who Wrote Pancho Villa: Martín Luis Guzmán And The Politics Of Life Writing")
     end
@@ -41,7 +41,7 @@ describe Work, vcr: true do
       response = Work.get_doi_by_content_type(doi: doi, profile: "datacite")
       expect(response.status).to eq(200)
       data = Maremma.from_xml(response.body["data"]).to_h.fetch("resource", {})
-      expect(data.dig("xmlns")).to eq("http://datacite.org/schema/kernel-4")
+      expect(data.dig("xmlns")).to eq("http://datacite.org/schema/kernel-3")
       expect(data.dig("publisher")).to eq("Zenodo")
       expect(data.dig("titles", "title")).to eq("The Man Who Wrote Pancho Villa: Martín Luis Guzmán And The Politics Of Life Writing")
     end
@@ -60,8 +60,8 @@ describe Work, vcr: true do
       response = Work.get_doi_by_content_type(doi: doi, profile: "ris")
       expect(response.status).to eq(200)
       data = response.body["data"].split("\r\n")
-      expect(data[7]).to eq("PB - Zenodo")
-      expect(data[1]).to eq("T1 - The Man Who Wrote Pancho Villa: Martín Luis Guzmán And The Politics Of Life Writing")
+      expect(data[7]).to eq("PB  - Zenodo")
+      expect(data[1]).to eq("T1  - The Man Who Wrote Pancho Villa: Martín Luis Guzmán And The Politics Of Life Writing")
     end
 
     it "schema_org" do
@@ -101,7 +101,7 @@ describe Work, vcr: true do
       expect(work.hsh["_status"]).to eq("public")
 
       data = Maremma.from_xml(work.hsh["datacite"]).to_h.fetch("resource", {})
-      expect(data.dig("xmlns")).to eq("http://datacite.org/schema/kernel-4")
+      expect(data.dig("xmlns")).to eq("http://datacite.org/schema/kernel-3")
       expect(data.dig("publisher")).to eq("Zenodo")
       expect(data.dig("titles", "title")).to eq("The Man Who Wrote Pancho Villa: Martín Luis Guzmán And The Politics Of Life Writing")
     end
