@@ -58,14 +58,6 @@ module Cheetoh
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
-    # configure logging
-    # configure logging
-    logger           = ActiveSupport::Logger.new(STDOUT)
-    logger.formatter = config.log_formatter
-    config.logger = ActiveSupport::TaggedLogging.new(logger)
-    config.log_level = ENV['LOG_LEVEL'].to_sym
-    config.lograge.enabled = true
-
     # Make Ruby 2.4 preserve the timezone of the receiver when calling `to_time`.
     # Previous versions had false.
     config.active_support.to_time_preserves_timezone = true
