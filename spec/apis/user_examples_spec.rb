@@ -96,4 +96,16 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(doc.at_css("identifier").content).to eq("10.5072/DRYAD.B3B0T7S/1")
     end
   end
+
+  context "ieee" do
+    it "fail minting  doi with wrong formatted metadata" do
+      params = File.read(file_fixture('wrong_metadata.txt'))
+      doi = "10.5072/fk23-sp60-2954"
+      post "/shoulder/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(501)
+      
+      response = last_response.body
+      expect(response).to eq('error: "datacite" profile not supported by this service')
+    end
+  end
 end
