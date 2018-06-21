@@ -51,7 +51,7 @@ class ApplicationController < ActionController::API
         message = exception.message
       end
 
-      Rails.logger.debug "[#{status}]: " + message
+      Rails.logger.error "[#{status}]: " + message
 
       render plain: "error: " + message, status: status
     end

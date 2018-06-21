@@ -52,6 +52,11 @@ class WorksController < ApplicationController
 
     message, status = @work.create_record(username: @username,
                                           password: @password)
+    if status >= 400
+      Rails.logger.error "[#{status}]: " + message
+    else
+      Rails.logger.info "[#{status}]: " + message
+    end
 
     render plain: message, status: status
   end
@@ -90,6 +95,12 @@ class WorksController < ApplicationController
     message, status = @work.create_record(username: @username,
                                           password: @password)
 
+    if status >= 400
+      Rails.logger.error "[#{status}]: " + message
+    else
+      Rails.logger.info "[#{status}]: " + message
+    end
+
     render plain: message, status: status
   end
 
@@ -110,6 +121,12 @@ class WorksController < ApplicationController
     message, status = @work.update_record(username: @username,
                                           password: @password)
 
+    if status >= 400
+      Rails.logger.error "[#{status}]: " + message
+    else
+      Rails.logger.info "[#{status}]: " + message
+    end
+
     render plain: message, status: status
   end
 
@@ -118,6 +135,11 @@ class WorksController < ApplicationController
 
     message, status = @work.delete_record(username: @username,
                                           password: @password)
+    if status >= 400
+      Rails.logger.error "[#{status}]: " + message
+    else
+      Rails.logger.info "[#{status}]: " + message
+    end
 
     render plain: message, status: status
   end
