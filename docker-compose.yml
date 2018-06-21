@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  cheetoh:
+  web:
     env_file: .env
     image: datacite/cheetoh
     build: .

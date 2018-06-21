@@ -28,6 +28,11 @@ describe String do
         str = "name: Josiah%0ACarberry"
         expect(str.from_anvl).to eq("name"=>"Josiah\nCarberry")
       end
+
+      it "anvl file" do
+        str = File.read(file_fixture('ieee.txt'))
+        expect(str.from_anvl["datacite.resourcetype"]).to eq("Dataset")
+      end
     end
   end
 end

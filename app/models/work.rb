@@ -3,7 +3,7 @@ class Work
   include Updateable
   include Findable
 
-  attr_accessor :doi, :input, :from, :target, :export, :profile, :format, :state, :status, :target_status, :reason, :datacenter, :reason, :created, :updated, :username, :password
+  attr_accessor :doi, :input, :from, :target, :export, :profile, :format, :state, :status, :target_status, :reason, :datacenter, :reason, :created, :updated, :username, :password, :author, :title, :publisher, :published, :resource_type_general
 
   def initialize(doi: nil, input: nil, from: nil, format: nil, **options)
     @doi = doi
@@ -16,6 +16,12 @@ class Work
     @state = options[:state]
     @created = Time.parse(options[:created]).to_i if options[:created].present?
     @updated = Time.parse(options[:updated]).to_i if options[:updated].present?
+
+    @author = options[:author].split(";").map { |a| { name: a.strip }} if options[:author].present?
+    @title = options[:title]
+    @publisher = options[:publisher]
+    @published = options[:published]
+    @resource_type_general = options[:resource_type_general]
   end
 
   STATES = {

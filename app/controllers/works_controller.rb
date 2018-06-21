@@ -33,11 +33,22 @@ class WorksController < ApplicationController
 
     input = safe_params[@profile].present? ? safe_params[@profile].anvlunesc : nil
 
-    @work = Work.new(input: input,
-                     from: @profile.to_s,
-                     doi: doi,
-                     target: safe_params[:_target],
-                     target_status: safe_params[:_status])
+    options = {
+      input: input,
+      from: @profile.to_s,
+      doi: doi,
+      target: safe_params[:_target],
+      target_status: safe_params[:_status]
+    }
+
+    options = options.merge(
+      author: safe_params["datacite.creator"],
+      title: safe_params["datacite.title"],
+      publisher: safe_params["datacite.publisher"],
+      published: safe_params["datacite.publicationyear"],
+      resource_type_general: safe_params["datacite.resourcetype"]) if @profile == "datacite"
+
+    @work = Work.new(options)
 
     message, status = @work.create_record(username: @username,
                                           password: @password)
@@ -59,11 +70,22 @@ class WorksController < ApplicationController
 
     input = safe_params[@profile].present? ? safe_params[@profile].anvlunesc : nil
 
-    @work = Work.new(input: input,
-                     from: @profile.to_s,
-                     doi: doi,
-                     target: safe_params[:_target],
-                     target_status: safe_params[:_status])
+    options = {
+      input: input,
+      from: @profile.to_s,
+      doi: doi,
+      target: safe_params[:_target],
+      target_status: safe_params[:_status]
+    }
+
+    options = options.merge(
+      author: safe_params["datacite.creator"],
+      title: safe_params["datacite.title"],
+      publisher: safe_params["datacite.publisher"],
+      published: safe_params["datacite.publicationyear"],
+      resource_type_general: safe_params["datacite.resourcetype"]) if @profile == "datacite"
+
+    @work = Work.new(options)
 
     message, status = @work.create_record(username: @username,
                                           password: @password)

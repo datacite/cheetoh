@@ -27,13 +27,17 @@ module Updateable
       end
   
       xml = input.present? ? Base64.strict_encode64(input) : nil
-  
+      
       attributes = {
         doi: doi,
         url: target,
         xml: xml,
+        author: author,
+        title: title,
+        publisher: publisher,
+        published: published,
         event: event,
-        reason: reason }
+        reason: reason }.compact
 
       attributes.except!("doi") if action == "update"
 
@@ -52,12 +56,14 @@ module Updateable
         }
       }
 
+      data["data"]["relationships"]["resource-type"] = { "data"=> { "type"=> "resource-types", "id"=> resource_type_general.underscore.dasherize } } if resource_type_general.present?
+
       if action == "create"
         url = "#{ENV['APP_URL']}/dois"
-        response = Maremma.post(url, content_type: 'application/vnd.api+json', data: data.to_json, username: username, password: password)
+        response = Maremma.post(url, content_type: 'application/vnd.api+json;charset=UTF-8', data: data.to_json, username: username, password: password)
       else
         url = "#{ENV['APP_URL']}/dois/#{doi}"
-        response = Maremma.put(url, content_type: 'application/vnd.api+json', data: data.to_json, username: username, password: password)
+        response = Maremma.put(url, content_type: 'application/vnd.api+json;charset=UTF-8', data: data.to_json, username: username, password: password)
       end
   
       raise CanCan::AccessDenied if response.status == 401
