@@ -1,5 +1,4 @@
 _target: https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients
-_profile: datacite
 datacite.creator: 'Naylor, Peter; Lae, Marick; Reyal, Fabien; Walter, Thomas'
 datacite.title: 'A dataset for nuclei segmentation based on Tripple Negative Breast Cancer patients'
 datacite.publisher: 'IEEE Dataport'

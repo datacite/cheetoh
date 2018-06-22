@@ -149,5 +149,31 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
       expect(doc.at_css("identifier").content).to eq(doi.upcase)
     end
+
+    it "mint doi no status" do
+      str = File.read(file_fixture('ieee_no_status.txt')).from_anvl
+      params = str.merge("_number" => "122165076").to_anvl
+      doi = "10.5072"
+      post "/shoulder/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.5072/3mg5-tm67")
+      expect(response["_target"]).to eq(str[:_target])
+      expect(response["_status"]).to eq("reserved")
+
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/3MG5-TM67")
+    end
+
+    it "delete doi no status" do
+      delete "/id/doi:#{doi}", nil, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.5072/3mg5-tm67")
+      expect(response["_target"]).to eq("https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients")
+
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq(doi.upcase)
+    end
   end
 end

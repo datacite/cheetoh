@@ -10,8 +10,9 @@ class WorksController < ApplicationController
   end
 
   def mint
-    fail IdentifierError, "no _profile provided" if
-      (safe_params[@profile].blank? && safe_params[:_status] != "reserved")
+    # Rails.logger.info safe_params.inspect
+    fail IdentifierError, "no _profile provided" unless
+      profile_present?(safe_params)
     fail IdentifierError, "no _target provided" if
       (safe_params[:_target].blank? && safe_params[:_status] != "reserved")
 
@@ -46,18 +47,12 @@ class WorksController < ApplicationController
       title: safe_params["datacite.title"],
       publisher: safe_params["datacite.publisher"],
       published: safe_params["datacite.publicationyear"],
-      resource_type_general: safe_params["datacite.resourcetype"]) if @profile == "datacite"
+      resource_type_general: safe_params["datacite.resourcetype"]) if @profile.to_s == "datacite"
 
     @work = Work.new(options)
 
     message, status = @work.create_record(username: @username,
                                           password: @password)
-    if status >= 400
-      Rails.logger.error "[#{status}]: " + message
-    else
-      Rails.logger.info "[#{status}]: " + message
-    end
-
     render plain: message, status: status
   end
 
@@ -65,8 +60,8 @@ class WorksController < ApplicationController
     doi = validate_doi(params[:id])
     fail IdentifierError, "ark identifiers are not supported by this service" if is_ark?(params[:id])
     fail IdentifierError, "no doi provided" unless doi.present?
-    fail IdentifierError, "no _profile provided" if
-      (safe_params[@profile].blank? && safe_params[:_status] != "reserved")
+    fail IdentifierError, "no _profile provided" unless
+      profile_present?(safe_params)
     fail IdentifierError, "no _target provided" if
       (safe_params[:_target].blank? && safe_params[:_status] != "reserved")
     
@@ -88,19 +83,12 @@ class WorksController < ApplicationController
       title: safe_params["datacite.title"],
       publisher: safe_params["datacite.publisher"],
       published: safe_params["datacite.publicationyear"],
-      resource_type_general: safe_params["datacite.resourcetype"]) if @profile == "datacite"
+      resource_type_general: safe_params["datacite.resourcetype"]) if @profile.to_s == "datacite"
 
     @work = Work.new(options)
 
     message, status = @work.create_record(username: @username,
                                           password: @password)
-
-    if status >= 400
-      Rails.logger.error "[#{status}]: " + message
-    else
-      Rails.logger.info "[#{status}]: " + message
-    end
-
     render plain: message, status: status
   end
 
@@ -113,6 +101,14 @@ class WorksController < ApplicationController
     if safe_params[@profile].present?
       @work.input = safe_params[@profile].anvlunesc 
       @work.from = @profile.to_s
+
+      if @profile.to_s == "datacite"
+        @work.author = safe_params["datacite.creator"]
+        @work.title = safe_params["datacite.title"]
+        @work.publisher = safe_params["datacite.publisher"]
+        @work.published = safe_params["datacite.publicationyear"]
+        @work.resource_type_general = safe_params["datacite.resourcetype"]
+      end 
     end
 
     @work.target = safe_params[:_target] if safe_params[:_target].present?
@@ -120,13 +116,6 @@ class WorksController < ApplicationController
 
     message, status = @work.update_record(username: @username,
                                           password: @password)
-
-    if status >= 400
-      Rails.logger.error "[#{status}]: " + message
-    else
-      Rails.logger.info "[#{status}]: " + message
-    end
-
     render plain: message, status: status
   end
 
@@ -135,16 +124,20 @@ class WorksController < ApplicationController
 
     message, status = @work.delete_record(username: @username,
                                           password: @password)
-    if status >= 400
-      Rails.logger.error "[#{status}]: " + message
-    else
-      Rails.logger.info "[#{status}]: " + message
-    end
-
     render plain: message, status: status
   end
 
   protected
+
+  def profile_present?(safe_params)
+    safe_params[:_status] == "reserved" ||
+    safe_params[@profile].present? ||
+    safe_params["datacite.creator"].present? &&
+    safe_params["datacite.title"].present? &&
+    safe_params["datacite.publisher"].present? &&
+    safe_params["datacite.publicationyear"].present? &&
+    safe_params["datacite.resourcetype"].present? 
+  end
 
   def set_profile
     @profile = safe_params[:_profile].presence || :datacite
