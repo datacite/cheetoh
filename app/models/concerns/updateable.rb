@@ -67,7 +67,7 @@ module Updateable
       end
   
       raise CanCan::AccessDenied if response.status == 401
-      error_message(response).presence && return
+      return error_message(response) if error_message(response).present?
   
       attributes = response.body.to_h.dig("data", "attributes").to_h
       self.state = attributes.fetch("state", "findable")
@@ -96,7 +96,7 @@ module Updateable
       response = Maremma.delete(url, content_type: 'application/vnd.api+json', username: username, password: password)
 
       raise CanCan::AccessDenied if response.status == 401
-      error_message(response).presence && return
+      return error_message(response) if error_message(response).present?
   
       message = { "success" => doi_with_protocol,
                   "_target" => target,
@@ -108,7 +108,7 @@ module Updateable
 
     def error_message(response)
       unless [200, 201, 204].include?(response.status)
-        [response.body.to_h.fetch("errors", "").inspect, response.status]
+        ["error: #{response.body.to_h.dig("errors", 0, "title") || "unknown"}", response.status]
       end
     end
   end

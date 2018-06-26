@@ -176,4 +176,28 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(doc.at_css("identifier").content).to eq(doi.upcase)
     end
   end
+
+  context "nd" do
+    let(:doi) { "10.23725/fk2-3mg5-tm67" }
+
+    it "mint doi" do
+      str = File.read(file_fixture('nd.txt')).from_anvl
+      params = str.merge("_number" => "122165076").to_anvl
+      doi = "10.23725/FK2"
+      post "/shoulder/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(422)
+      response = last_response.body.from_anvl
+      expect(response["error"]).to eq("[facet 'enumeration'] the value 'invalidresourcetype' is not an element of the set {'audiovisual', 'collection', 'datapaper', 'dataset', 'event', 'image', 'interactiveresource', 'model', 'physicalobject', 'service', 'software', 'sound', 'text', 'workflow', 'other'}. at line 4, column 0")
+    end
+
+    it "mint doi newlines" do
+      str = File.read(file_fixture('nd_newlines.txt'))
+      params = str + "\n_number: 122165076"
+      doi = "10.23725/FK2"
+      post "/shoulder/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(422)
+      response = last_response.body.from_anvl
+      expect(response["error"]).to eq("Missing child element(s). expected is ( {http://datacite.org/schema/kernel-4}creator ). at line 4, column 0")
+    end
+  end
 end
