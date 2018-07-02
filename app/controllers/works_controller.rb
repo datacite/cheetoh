@@ -3,6 +3,8 @@ class WorksController < ApplicationController
   before_action :set_profile
   before_action :set_work, except: [:mint, :create]
 
+  before_bugsnag_notify :add_metadata_to_bugsnag
+
   def show
     fail AbstractController::ActionNotFound unless @work.present?
 
@@ -158,5 +160,13 @@ class WorksController < ApplicationController
 
   def safe_params
     params.permit(:id, :_target, :_export, :_profile, :_status, :_number, :datacite, :bibtex, :ris, :schema_org, :citeproc).merge(request.raw_post.from_anvl)
+  end
+
+  def add_metadata_to_bugsnag(report)
+    return nil unless safe_params[@profile].present?
+
+    report.add_tab(:metadata, {
+      metadata: safe_params[@profile]
+    })
   end
 end
