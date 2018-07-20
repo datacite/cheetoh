@@ -2,109 +2,113 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.5072/bc11-cqw9
+    uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw9
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Thu, 31 May 2018 05:31:15 GMT
+      - Thu, 19 Jul 2018 21:29:24 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
       - keep-alive
       Status:
       - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      Etag:
-      - W/"928f436803046794c111611544dfc848"
-      X-Runtime:
-      - '0.012468'
+      X-Credential-Username:
+      - datacite.datacite
       X-Request-Id:
-      - 99da1e29-d8e0-483f-b7a3-c62b69f4a959
+      - 070d5672-516f-4f85-8f49-d5e32dd88dab
+      Etag:
+      - W/"60d84f9e04c5d9e0040676e94fa08f4c"
+      X-Runtime:
+      - '0.015108'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
-      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","prefix":"10.5072","suffix":"bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":null,"published":null,"registered":null,"updated":"2018-05-31T04:43:14.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":null},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
-        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-05-31T01:30:26Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
-        Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-05-31T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","prefix":"10.5072","suffix":"bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":false,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":null,"published":null,"created":"2018-07-19T21:29:23.000Z","registered":null,"updated":"2018-07-19T21:29:23.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":null},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-07-19T01:30:26Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
+        Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-07-19T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Thu, 31 May 2018 05:31:20 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:30 GMT
 - request:
     method: get
-    uri: https://app.test.datacite.org/10.5072/bc11-cqw9
+    uri: https://api.test.datacite.org/10.5072/bc11-cqw9
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Accept:
       - application/vnd.datacite.datacite+xml
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Thu, 31 May 2018 05:31:15 GMT
+      - Thu, 19 Jul 2018 21:29:24 GMT
       Content-Type:
       - application/vnd.datacite.datacite+xml
       Connection:
       - keep-alive
       Status:
       - 200 OK
-      Content-Disposition:
-      - attachment; filename=_10.5072_bc11-cqw9.xml
-      X-Anonymous-Consumer:
-      - 'true'
       Cache-Control:
       - private
       Vary:
       - Accept-Encoding, Origin
+      X-Credential-Username:
+      - datacite.datacite
+      X-Request-Id:
+      - 0f3113a6-1dec-45a6-8859-5d38e532f6f9
+      Content-Disposition:
+      - attachment; filename=_10.5072_bc11-cqw9.xml
       Content-Transfer-Encoding:
       - binary
       X-Runtime:
-      - '0.004688'
-      X-Request-Id:
-      - 5ad8c31c-abf6-4439-9428-5a5f230f10d2
+      - '0.008839'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Thu, 31 May 2018 05:31:21 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:30 GMT
 - request:
     method: delete
-    uri: https://app.test.datacite.org/dois/10.5072/bc11-cqw9
+    uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw9
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -117,7 +121,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 31 May 2018 05:31:16 GMT
+      - Thu, 19 Jul 2018 21:29:24 GMT
       Connection:
       - keep-alive
       Status:
@@ -126,19 +130,19 @@ http_interactions:
       - no-cache
       Vary:
       - Origin
-      X-Runtime:
-      - '0.017343'
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - '08aa0ddc-0222-4574-a0d4-34bb78760de8'
+      - 1234b76a-a409-4098-82c2-486bf43d8471
+      X-Runtime:
+      - '0.022981'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Thu, 31 May 2018 05:31:21 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:30 GMT
 recorded_with: VCR 3.0.3

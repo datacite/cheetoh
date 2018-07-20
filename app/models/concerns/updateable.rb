@@ -59,10 +59,10 @@ module Updateable
       data["data"]["relationships"]["resource-type"] = { "data"=> { "type"=> "resource-types", "id"=> resource_type_general.underscore.dasherize } } if resource_type_general.present?
 
       if action == "create"
-        url = "#{ENV['APP_URL']}/dois"
+        url = "#{ENV['API_URL']}/dois"
         response = Maremma.post(url, content_type: 'application/vnd.api+json;charset=UTF-8', data: data.to_json, username: username, password: password)
       else
-        url = "#{ENV['APP_URL']}/dois/#{doi}"
+        url = "#{ENV['API_URL']}/dois/#{doi}"
         response = Maremma.put(url, content_type: 'application/vnd.api+json;charset=UTF-8', data: data.to_json, username: username, password: password)
       end
   
@@ -92,7 +92,7 @@ module Updateable
     def delete_record(username: nil, password: nil)
       return OpenStruct.new(body: { "errors" => [{ "title" => "Username or password missing" }] }) unless username.present? && password.present?
 
-      url = "#{ENV['APP_URL']}/dois/#{doi}"
+      url = "#{ENV['API_URL']}/dois/#{doi}"
       response = Maremma.delete(url, content_type: 'application/vnd.api+json', username: username, password: password)
 
       raise CanCan::AccessDenied if response.status == 401

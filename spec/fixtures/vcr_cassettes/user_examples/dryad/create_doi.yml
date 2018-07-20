@@ -2,24 +2,26 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.5072/dryad.b3b0t7s/1
+    uri: https://api.test.datacite.org/dois/10.5072/dryad.b3b0t7s/1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 404
       message: ''
     headers:
       Date:
-      - Thu, 31 May 2018 15:47:39 GMT
+      - Thu, 19 Jul 2018 21:29:34 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -31,30 +33,30 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 36218f05-a7c5-4a9e-9af3-6b45ba7b4a86
+      - 50f59747-a60c-49f4-b4a0-a064572338a0
       X-Runtime:
-      - '0.034291'
+      - '0.005691'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Thu, 31 May 2018 15:47:44 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:40 GMT
 - request:
     method: post
-    uri: https://app.test.datacite.org/dois
+    uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/dryad.b3b0t7s/1","url":"http://ryan-vm.datadryad.org/resource/doi:10.5072/dryad.b3b0t7s/1","xml":"PHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6ZHJ5YWQ9Imh0dHA6Ly9wdXJsLm9yZy9kcnlhZC90ZXJtcy8iIHhtbG5zOmRpbT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOmRzcGFjZT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOm1ldHM9Imh0dHA6Ly93d3cubG9jLmdvdi9NRVRTLyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+DQogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3Uy8xPC9pZGVudGlmaWVyPg0KICA8dmVyc2lvbj4xPC92ZXJzaW9uPg0KICA8Y3JlYXRvcnM+DQogICAgPGNyZWF0b3I+DQogICAgICA8Y3JlYXRvck5hbWU+U2NoZXJsZSwgUnlhbnl5eTwvY3JlYXRvck5hbWU+DQogICAgPC9jcmVhdG9yPg0KICA8L2NyZWF0b3JzPg0KICA8dGl0bGVzPg0KICAgIDx0aXRsZT5hYWFUZXh0RmlsZSAoMyk8L3RpdGxlPg0KICA8L3RpdGxlcz4NCiAgPHB1Ymxpc2hlcj5EcnlhZCBEaWdpdGFsIFJlcG9zaXRvcnk8L3B1Ymxpc2hlcj4NCiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE4PC9wdWJsaWNhdGlvblllYXI+DQogIDxkYXRlcz4NCiAgICA8ZGF0ZSBkYXRlVHlwZT0iQWNjZXB0ZWQiPjIwMTgtMDUtMzA8L2RhdGU+DQogIDwvZGF0ZXM+DQogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YUZpbGU8L3Jlc291cmNlVHlwZT4NCiAgPHJlbGF0ZWRJZGVudGlmaWVycz4NCiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3UzwvcmVsYXRlZElkZW50aWZpZXI+DQogIDwvcmVsYXRlZElkZW50aWZpZXJzPg0KICA8c2l6ZXM+DQogICAgPHNpemU+MTggYnl0ZXM8L3NpemU+DQogIDwvc2l6ZXM+DQogIDxyaWdodHNMaXN0Pg0KICAgIDxyaWdodHM+QXQgdGhlIHJlcXVlc3Qgb2YgdGhlIGF1dGhvciwgdGhpcyBpdGVtIGlzIGVtYmFyZ29lZCB1bnRpbCB0aGUgYXNzb2NpYXRlZCBhcnRpY2xlIGlzIHB1Ymxpc2hlZC48L3JpZ2h0cz4NCiAgPC9yaWdodHNMaXN0Pg0KICA8ZGVzY3JpcHRpb25zPg0KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIiAvPg0KICA8L2Rlc2NyaXB0aW9ucz4NCjwvcmVzb3VyY2U+","event":"start","reason":null},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
+      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/dryad.b3b0t7s/1","url":"http://ryan-vm.datadryad.org/resource/doi:10.5072/dryad.b3b0t7s/1","xml":"PHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6ZHJ5YWQ9Imh0dHA6Ly9wdXJsLm9yZy9kcnlhZC90ZXJtcy8iIHhtbG5zOmRpbT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOmRzcGFjZT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOm1ldHM9Imh0dHA6Ly93d3cubG9jLmdvdi9NRVRTLyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+DQogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3Uy8xPC9pZGVudGlmaWVyPg0KICA8dmVyc2lvbj4xPC92ZXJzaW9uPg0KICA8Y3JlYXRvcnM+DQogICAgPGNyZWF0b3I+DQogICAgICA8Y3JlYXRvck5hbWU+U2NoZXJsZSwgUnlhbnl5eTwvY3JlYXRvck5hbWU+DQogICAgPC9jcmVhdG9yPg0KICA8L2NyZWF0b3JzPg0KICA8dGl0bGVzPg0KICAgIDx0aXRsZT5hYWFUZXh0RmlsZSAoMyk8L3RpdGxlPg0KICA8L3RpdGxlcz4NCiAgPHB1Ymxpc2hlcj5EcnlhZCBEaWdpdGFsIFJlcG9zaXRvcnk8L3B1Ymxpc2hlcj4NCiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE4PC9wdWJsaWNhdGlvblllYXI+DQogIDxkYXRlcz4NCiAgICA8ZGF0ZSBkYXRlVHlwZT0iQWNjZXB0ZWQiPjIwMTgtMDUtMzA8L2RhdGU+DQogIDwvZGF0ZXM+DQogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YUZpbGU8L3Jlc291cmNlVHlwZT4NCiAgPHJlbGF0ZWRJZGVudGlmaWVycz4NCiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3UzwvcmVsYXRlZElkZW50aWZpZXI+DQogIDwvcmVsYXRlZElkZW50aWZpZXJzPg0KICA8c2l6ZXM+DQogICAgPHNpemU+MTggYnl0ZXM8L3NpemU+DQogIDwvc2l6ZXM+DQogIDxyaWdodHNMaXN0Pg0KICAgIDxyaWdodHM+QXQgdGhlIHJlcXVlc3Qgb2YgdGhlIGF1dGhvciwgdGhpcyBpdGVtIGlzIGVtYmFyZ29lZCB1bnRpbCB0aGUgYXNzb2NpYXRlZCBhcnRpY2xlIGlzIHB1Ymxpc2hlZC48L3JpZ2h0cz4NCiAgPC9yaWdodHNMaXN0Pg0KICA8ZGVzY3JpcHRpb25zPg0KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIiAvPg0KICA8L2Rlc2NyaXB0aW9ucz4NCjwvcmVzb3VyY2U+","event":"start"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
-      - application/vnd.api+json
+      - application/vnd.api+json;charset=UTF-8
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Authorization:
@@ -65,7 +67,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 31 May 2018 15:47:40 GMT
+      - Thu, 19 Jul 2018 21:29:34 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -79,56 +81,58 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 9e3561c1-9909-483b-8d7c-190c88531ffe
+      - fd13b29b-3aa2-4073-9900-0ccca3ddf255
       Location:
-      - https://app.test.datacite.org/dois/2219175
+      - https://api.test.datacite.org/dois/2238028
       Etag:
-      - W/"ec2367e17c035f8792b9682c7abb9553"
+      - W/"034d82c7ccb584b5fe17ef6c019da3aa"
       X-Runtime:
-      - '0.042840'
+      - '0.069287'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"data":{"id":"10.5072/dryad.b3b0t7s/1","type":"dois","attributes":{"doi":"10.5072/dryad.b3b0t7s/1","prefix":"10.5072","suffix":"dryad.b3b0t7s/1","identifier":"https://handle.test.datacite.org/10.5072/dryad.b3b0t7s/1","url":"http://ryan-vm.datadryad.org/resource/doi:10.5072/dryad.b3b0t7s/1","author":[{"type":"Person","name":"Ryanyyy
         Scherle","given-name":"Ryanyyy","family-name":"Scherle"}],"title":"aaaTextFile
-        (3)","publisher":"Dryad Digital Repository","resource-type-subtype":"DataFile","description":null,"version":"1","metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6ZHJ5YWQ9Imh0dHA6Ly9wdXJsLm9yZy9kcnlhZC90ZXJtcy8iIHhtbG5zOmRpbT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOmRzcGFjZT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOm1ldHM9Imh0dHA6Ly93d3cubG9jLmdvdi9NRVRTLyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9EUllBRC5CM0IwVDdTLzE8L2lkZW50aWZpZXI+CiAgPHZlcnNpb24+MTwvdmVyc2lvbj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPlNjaGVybGUsIFJ5YW55eXk8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5hYWFUZXh0RmlsZSAoMyk8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+RHJ5YWQgRGlnaXRhbCBSZXBvc2l0b3J5PC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE4PC9wdWJsaWNhdGlvblllYXI+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkFjY2VwdGVkIj4yMDE4LTA1LTMwPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5EYXRhRmlsZTwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3UzwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHNpemVzPgogICAgPHNpemU+MTggYnl0ZXM8L3NpemU+CiAgPC9zaXplcz4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHM+QXQgdGhlIHJlcXVlc3Qgb2YgdGhlIGF1dGhvciwgdGhpcyBpdGVtIGlzIGVtYmFyZ29lZCB1bnRpbCB0aGUgYXNzb2NpYXRlZCBhcnRpY2xlIGlzIHB1Ymxpc2hlZC48L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIi8+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+","published":"2018","registered":null,"updated":"2018-05-31T15:47:40.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+        (3)","publisher":"Dryad Digital Repository","resource-type-subtype":"DataFile","description":null,"version":"1","metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":false,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6ZHJ5YWQ9Imh0dHA6Ly9wdXJsLm9yZy9kcnlhZC90ZXJtcy8iIHhtbG5zOmRpbT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOmRzcGFjZT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOm1ldHM9Imh0dHA6Ly93d3cubG9jLmdvdi9NRVRTLyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9EUllBRC5CM0IwVDdTLzE8L2lkZW50aWZpZXI+CiAgPHZlcnNpb24+MTwvdmVyc2lvbj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPlNjaGVybGUsIFJ5YW55eXk8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5hYWFUZXh0RmlsZSAoMyk8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+RHJ5YWQgRGlnaXRhbCBSZXBvc2l0b3J5PC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE4PC9wdWJsaWNhdGlvblllYXI+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkFjY2VwdGVkIj4yMDE4LTA1LTMwPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5EYXRhRmlsZTwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3UzwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHNpemVzPgogICAgPHNpemU+MTggYnl0ZXM8L3NpemU+CiAgPC9zaXplcz4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHM+QXQgdGhlIHJlcXVlc3Qgb2YgdGhlIGF1dGhvciwgdGhpcyBpdGVtIGlzIGVtYmFyZ29lZCB1bnRpbCB0aGUgYXNzb2NpYXRlZCBhcnRpY2xlIGlzIHB1Ymxpc2hlZC48L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIi8+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+","published":"2018","created":"2018-07-19T21:29:34.000Z","registered":null,"updated":"2018-07-19T21:29:34.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
     http_version: 
-  recorded_at: Thu, 31 May 2018 15:47:45 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:40 GMT
 - request:
     method: get
-    uri: https://app.test.datacite.org/10.5072/dryad.b3b0t7s/1
+    uri: https://api.test.datacite.org/10.5072/dryad.b3b0t7s/1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Accept:
       - application/vnd.datacite.datacite+xml
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Thu, 31 May 2018 15:47:40 GMT
+      - Thu, 19 Jul 2018 21:29:35 GMT
       Content-Type:
       - application/vnd.datacite.datacite+xml
       Connection:
       - keep-alive
       Status:
       - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
       Cache-Control:
       - private
       Vary:
       - Accept-Encoding, Origin
+      X-Credential-Username:
+      - datacite.datacite
       X-Request-Id:
-      - e6fb86aa-00d9-4012-9553-20c0d11d3958
+      - c78d2ade-b728-4d18-a229-f709e297b519
       Content-Disposition:
       - attachment; filename=_10.5072_dryad.b3b0t7s_1.xml
       Content-Transfer-Encoding:
@@ -136,13 +140,13 @@ http_interactions:
       Etag:
       - W/"71a68025b552d379455963428c530c9a"
       X-Runtime:
-      - '0.007168'
+      - '0.012405'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <resource xmlns="http://datacite.org/schema/kernel-4" xmlns:dryad="http://purl.org/dryad/terms/" xmlns:dim="http://www.dspace.org/xmlns/dspace/dim" xmlns:dspace="http://www.dspace.org/xmlns/dspace/dim" xmlns:mets="http://www.loc.gov/METS/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
@@ -176,5 +180,5 @@ http_interactions:
           </descriptions>
         </resource>
     http_version: 
-  recorded_at: Thu, 31 May 2018 15:47:45 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:40 GMT
 recorded_with: VCR 3.0.3

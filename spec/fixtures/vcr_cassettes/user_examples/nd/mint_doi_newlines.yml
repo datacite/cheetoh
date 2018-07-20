@@ -2,24 +2,26 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.23725/fk2-3mg5-tm67
+    uri: https://api.test.datacite.org/dois/10.23725/fk2-3mg5-tm67
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.10; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <ADMIN_TOKEN>
   response:
     status:
       code: 404
       message: ''
     headers:
       Date:
-      - Tue, 26 Jun 2018 11:38:04 GMT
+      - Fri, 20 Jul 2018 17:44:52 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -30,29 +32,29 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
-      X-Runtime:
-      - '0.003559'
       X-Request-Id:
-      - 5cca252c-77f8-4e79-a178-cdbf008a3554
+      - b8df0bc0-78d6-451b-b3df-73ecd544e5cf
+      X-Runtime:
+      - '0.009086'
       X-Powered-By:
-      - Phusion Passenger 5.3.2
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Tue, 26 Jun 2018 11:38:07 GMT
+  recorded_at: Fri, 20 Jul 2018 17:44:53 GMT
 - request:
     method: post
-    uri: https://app.test.datacite.org/dois
+    uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
       string: '{"data":{"type":"dois","attributes":{"doi":"10.23725/fk2-3mg5-tm67","url":"http://library.nd.edu","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4=","event":"start"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.10; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json;charset=UTF-8
       Accept:
@@ -61,36 +63,101 @@ http_interactions:
       - Basic <MDS_TOKEN>
   response:
     status:
-      code: 422
+      code: 201
       message: ''
     headers:
       Date:
-      - Tue, 26 Jun 2018 11:38:06 GMT
+      - Fri, 20 Jul 2018 17:44:52 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
       - keep-alive
       Status:
-      - 422 Unprocessable Entity
+      - 201 Created
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      X-Runtime:
-      - '1.030152'
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 6a7db3ba-bf8a-43da-8748-29478b8e2974
+      - b0ad4cd9-ca87-4cca-9a26-b4030706a469
+      Location:
+      - https://api.test.datacite.org/dois/2238214
+      Etag:
+      - W/"1422217590685eae55217559b9aceafe"
+      X-Runtime:
+      - '0.120254'
       X-Powered-By:
-      - Phusion Passenger 5.3.2
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: ASCII-8BIT
-      string: '{"errors":[{"source":"creators","title":"Missing child element(s).
-        expected is ( {http://datacite.org/schema/kernel-4}creator ). at line 4, column
-        0"}]}'
+      string: '{"data":{"id":"10.23725/fk2-3mg5-tm67","type":"dois","attributes":{"doi":"10.23725/fk2-3mg5-tm67","prefix":"10.23725","suffix":"fk2-3mg5-tm67","identifier":"https://handle.test.datacite.org/10.23725/fk2-3mg5-tm67","url":"http://library.nd.edu","author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":false,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMjM3MjUvRksyLTNNRzUtVE02NzwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnMvPgogIDx0aXRsZXM+CiAgICA8dGl0bGUvPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXIvPgogIDxwdWJsaWNhdGlvblllYXIvPgogIDxkYXRlcy8+CiAgPHZlcnNpb24vPgo8L3Jlc291cmNlPgo=","published":null,"created":"2018-07-20T17:44:52.000Z","registered":null,"updated":"2018-07-20T17:44:52.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
     http_version: 
-  recorded_at: Tue, 26 Jun 2018 11:38:08 GMT
+  recorded_at: Fri, 20 Jul 2018 17:44:53 GMT
+- request:
+    method: get
+    uri: https://api.test.datacite.org/10.23725/fk2-3mg5-tm67
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
+      Accept:
+      - application/vnd.datacite.datacite+xml
+      Authorization:
+      - Basic <ADMIN_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 20 Jul 2018 17:44:52 GMT
+      Content-Type:
+      - application/vnd.datacite.datacite+xml
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - private
+      Vary:
+      - Accept-Encoding, Origin
+      X-Credential-Username:
+      - admin
+      X-Request-Id:
+      - 46476be8-b7f4-4d06-a465-f618aa8f1234
+      Content-Disposition:
+      - attachment; filename=_10.23725_fk2-3mg5-tm67.xml
+      Content-Transfer-Encoding:
+      - binary
+      Etag:
+      - W/"1c60c31a91139de3a188ce7bffd82604"
+      X-Runtime:
+      - '0.011402'
+      X-Powered-By:
+      - Phusion Passenger 5.3.3
+      Server:
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+          <identifier identifierType="DOI">10.23725/FK2-3MG5-TM67</identifier>
+          <creators/>
+          <titles>
+            <title/>
+          </titles>
+          <publisher/>
+          <publicationYear/>
+          <dates/>
+          <version/>
+        </resource>
+    http_version: 
+  recorded_at: Fri, 20 Jul 2018 17:44:53 GMT
 recorded_with: VCR 3.0.3

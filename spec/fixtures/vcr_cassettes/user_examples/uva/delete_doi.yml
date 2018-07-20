@@ -2,101 +2,105 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.5072/fk2-1-4gvq-zw33
+    uri: https://api.test.datacite.org/dois/10.5072/fk2-1-4gvq-zw33
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Thu, 31 May 2018 05:33:25 GMT
+      - Thu, 19 Jul 2018 21:29:34 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
       - keep-alive
       Status:
       - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      Etag:
-      - W/"9f1ab3c3d48f92ad6f46109aeae12e05"
-      X-Runtime:
-      - '0.019697'
+      X-Credential-Username:
+      - datacite.datacite
       X-Request-Id:
-      - 17dbb69b-7458-419d-8d81-173e9cbbfee2
+      - 1e57a864-60a7-49fd-aba2-3ff560c70b6a
+      Etag:
+      - W/"1642a75ac8c3a989e3ce2018c5f49394"
+      X-Runtime:
+      - '0.025797'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"data":{"id":"10.5072/fk2-1-4gvq-zw33","type":"dois","attributes":{"doi":"10.5072/fk2-1-4gvq-zw33","prefix":"10.5072","suffix":"fk2-1-4gvq-zw33","identifier":"https://handle.test.datacite.org/10.5072/fk2-1-4gvq-zw33","url":"http://google.com","author":[{"type":"Person","name":"Smith,
         John","given-name":"John","family-name":"Smith"}],"title":"my datacite title","publisher":"UVa
-        Press","resource-type-subtype":"Audio","description":"my interesting abstract","version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzItMS00R1ZRLVpXMzM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5TbWl0aCwgSm9objwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Sm9objwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5TbWl0aDwvZmFtaWx5TmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkJpb2xvZ3ksIFVWYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPm15IGRhdGFjaXRlIHRpdGxlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlVWYSBQcmVzczwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAwMjwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PmtleXdvcmQxPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+a2V5d29yZDI8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iT3RoZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPkJsb3csIEpvZTwvY29udHJpYnV0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkpvZTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5CbG93PC9mYW1pbHlOYW1lPgogICAgICA8YWZmaWxpYXRpb24+VVZhPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAwMi0wMi0wMjwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU291bmQiPkF1ZGlvPC9yZXNvdXJjZVR5cGU+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzPkFsbCByaWdodHMgcmVzZXJ2ZWQ8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5teSBpbnRlcmVzdGluZyBhYnN0cmFjdDwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CiAgPGZ1bmRpbmdSZWZlcmVuY2VzPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IxPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IyPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogIDwvZnVuZGluZ1JlZmVyZW5jZXM+CjwvcmVzb3VyY2U+","published":"2002-02-02","registered":null,"updated":"2018-05-31T05:33:24.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":{"id":"sound","type":"resource-types"}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
-        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-05-31T01:30:26Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
-        Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-05-31T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}},{"id":"sound","type":"resource-types","attributes":{"title":"Sound","updated":"2016-09-21T00:00:00Z"}}]}'
+        Press","resource-type-subtype":"Audio","description":"my interesting abstract","version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":false,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzItMS00R1ZRLVpXMzM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5TbWl0aCwgSm9objwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Sm9objwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5TbWl0aDwvZmFtaWx5TmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkJpb2xvZ3ksIFVWYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPm15IGRhdGFjaXRlIHRpdGxlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlVWYSBQcmVzczwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAwMjwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PmtleXdvcmQxPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+a2V5d29yZDI8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iT3RoZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPkJsb3csIEpvZTwvY29udHJpYnV0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkpvZTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5CbG93PC9mYW1pbHlOYW1lPgogICAgICA8YWZmaWxpYXRpb24+VVZhPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAwMi0wMi0wMjwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU291bmQiPkF1ZGlvPC9yZXNvdXJjZVR5cGU+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzPkFsbCByaWdodHMgcmVzZXJ2ZWQ8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5teSBpbnRlcmVzdGluZyBhYnN0cmFjdDwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CiAgPGZ1bmRpbmdSZWZlcmVuY2VzPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IxPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IyPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogIDwvZnVuZGluZ1JlZmVyZW5jZXM+CjwvcmVzb3VyY2U+","published":"2002-02-02","created":"2018-07-19T21:29:33.000Z","registered":null,"updated":"2018-07-19T21:29:33.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":{"id":"sound","type":"resource-types"}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-07-19T01:30:26Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
+        Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-07-19T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}},{"id":"sound","type":"resource-types","attributes":{"title":"Sound","updated":"2016-09-21T00:00:00Z"}}]}'
     http_version: 
-  recorded_at: Thu, 31 May 2018 05:33:31 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:40 GMT
 - request:
     method: get
-    uri: https://app.test.datacite.org/10.5072/fk2-1-4gvq-zw33
+    uri: https://api.test.datacite.org/10.5072/fk2-1-4gvq-zw33
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Accept:
       - application/vnd.datacite.datacite+xml
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Thu, 31 May 2018 05:33:25 GMT
+      - Thu, 19 Jul 2018 21:29:34 GMT
       Content-Type:
       - application/vnd.datacite.datacite+xml
       Connection:
       - keep-alive
       Status:
       - 200 OK
-      Content-Disposition:
-      - attachment; filename=_10.5072_fk2-1-4gvq-zw33.xml
-      X-Anonymous-Consumer:
-      - 'true'
       Cache-Control:
       - private
       Vary:
       - Accept-Encoding, Origin
+      X-Credential-Username:
+      - datacite.datacite
+      X-Request-Id:
+      - 5d984ce2-5b60-47ee-9b43-975b3d2e174e
+      Content-Disposition:
+      - attachment; filename=_10.5072_fk2-1-4gvq-zw33.xml
       Content-Transfer-Encoding:
       - binary
       Etag:
       - W/"3fa1531fa0ac54532e531ede63cab0e2"
       X-Runtime:
-      - '0.004698'
-      X-Request-Id:
-      - fbcdf830-97f6-41b6-a94d-d7bcd076061d
+      - '0.009169'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <resource xmlns="http://datacite.org/schema/kernel-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
@@ -146,16 +150,16 @@ http_interactions:
           </fundingReferences>
         </resource>
     http_version: 
-  recorded_at: Thu, 31 May 2018 05:33:31 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:40 GMT
 - request:
     method: delete
-    uri: https://app.test.datacite.org/dois/10.5072/fk2-1-4gvq-zw33
+    uri: https://api.test.datacite.org/dois/10.5072/fk2-1-4gvq-zw33
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -168,7 +172,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 31 May 2018 05:33:26 GMT
+      - Thu, 19 Jul 2018 21:29:34 GMT
       Connection:
       - keep-alive
       Status:
@@ -177,19 +181,19 @@ http_interactions:
       - no-cache
       Vary:
       - Origin
-      X-Runtime:
-      - '0.016145'
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 3160ebde-14c4-4416-b60e-0490300c2697
+      - 5a957281-2dd2-42d5-a061-db5855947e69
+      X-Runtime:
+      - '0.026201'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Thu, 31 May 2018 05:33:31 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:40 GMT
 recorded_with: VCR 3.0.3

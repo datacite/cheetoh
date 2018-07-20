@@ -2,24 +2,26 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.5072/bc11-cqw8
+    uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw8
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 404
       message: ''
     headers:
       Date:
-      - Wed, 30 May 2018 15:17:04 GMT
+      - Thu, 19 Jul 2018 21:29:26 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -31,30 +33,30 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 3b128243-cf0a-4a5c-a6e1-c4c5f784f861
+      - f9eda997-2007-4cc9-a0a9-1ca3d0404288
       X-Runtime:
-      - '0.003671'
+      - '0.006034'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Wed, 30 May 2018 15:17:19 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:32 GMT
 - request:
     method: post
-    uri: https://app.test.datacite.org/dois
+    uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/bc11-cqw8","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9CQzExLUNRVzg8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5GZW5uZXIsIE1hcnRpbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWFydGluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkZlbm5lcjwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+MDAwMC0wMDAzLTE0MTktMjQwNTwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRpZmZlcmVuY2VzIGJldHdlZW4gT1JDSUQgYW5kIERhdGFDaXRlIE1ldGFkYXRhPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlIEJsb2c8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTU8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPkJsb2dQb3N0aW5nPC9yZXNvdXJjZVR5cGU+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+dGhvcjwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pm9yY2lkPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iSG9zdGluZ0luc3RpdHV0aW9uIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZT5EYXRhQ2l0ZTwvY29udHJpYnV0b3JOYW1lPgogICAgPC9jb250cmlidXRvcj4KICA8L2NvbnRyaWJ1dG9ycz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE1LTA5LTE4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC41MjgxL1pFTk9ETy4zMDc5OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24+MS4wPC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAvIj5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+T25lIG9mIHRoZSBmaXJzdCB0YXNrcyBmb3IgRGF0YUNpdGUgaW4gdGhlIEV1cm9wZWFuIENvbW1pc3Npb24tZnVuZGVkIFRIT1IgcHJvamVjdCwgd2hpY2ggc3RhcnRlZCBpbiBKdW5lLCB3YXMgdG8gY29udHJpYnV0ZSB0byBhIGNvbXBhcmlzb24gb2YgdGhlIE9SQ0lEIGFuZCBEYXRhQ2l0ZSBtZXRhZGF0YSBzdGFuZGFyZHMuIFRvZ2V0aGVyIHdpdGggT1JDSUQsIENFUk4sIHRoZSBCcml0aXNoIExpYnJhcnkgYW5kIERyeWFkIHdlIGxvb2tlZC4uLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==","event":"start","reason":null},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
+      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/bc11-cqw8","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9CQzExLUNRVzg8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5GZW5uZXIsIE1hcnRpbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWFydGluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkZlbm5lcjwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+MDAwMC0wMDAzLTE0MTktMjQwNTwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRpZmZlcmVuY2VzIGJldHdlZW4gT1JDSUQgYW5kIERhdGFDaXRlIE1ldGFkYXRhPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlIEJsb2c8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTU8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPkJsb2dQb3N0aW5nPC9yZXNvdXJjZVR5cGU+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+dGhvcjwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pm9yY2lkPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iSG9zdGluZ0luc3RpdHV0aW9uIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZT5EYXRhQ2l0ZTwvY29udHJpYnV0b3JOYW1lPgogICAgPC9jb250cmlidXRvcj4KICA8L2NvbnRyaWJ1dG9ycz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE1LTA5LTE4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC41MjgxL1pFTk9ETy4zMDc5OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24+MS4wPC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAvIj5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+T25lIG9mIHRoZSBmaXJzdCB0YXNrcyBmb3IgRGF0YUNpdGUgaW4gdGhlIEV1cm9wZWFuIENvbW1pc3Npb24tZnVuZGVkIFRIT1IgcHJvamVjdCwgd2hpY2ggc3RhcnRlZCBpbiBKdW5lLCB3YXMgdG8gY29udHJpYnV0ZSB0byBhIGNvbXBhcmlzb24gb2YgdGhlIE9SQ0lEIGFuZCBEYXRhQ2l0ZSBtZXRhZGF0YSBzdGFuZGFyZHMuIFRvZ2V0aGVyIHdpdGggT1JDSUQsIENFUk4sIHRoZSBCcml0aXNoIExpYnJhcnkgYW5kIERyeWFkIHdlIGxvb2tlZC4uLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==","event":"start"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
-      - application/vnd.api+json
+      - application/vnd.api+json;charset=UTF-8
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Authorization:
@@ -65,7 +67,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 30 May 2018 15:17:05 GMT
+      - Thu, 19 Jul 2018 21:29:26 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -79,60 +81,62 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - bb94b8c6-f504-4d3c-9e64-1a17534b01b7
+      - c1b90e8d-7ca2-4187-851d-2fa7072d66aa
       Location:
-      - https://app.test.datacite.org/dois/2218770
+      - https://api.test.datacite.org/dois/2238025
       Etag:
-      - W/"55f06c2cede80d7ca4cbcd47a616bd1a"
+      - W/"9e119697fd59e96240083146bd99a452"
       X-Runtime:
-      - '0.051015'
+      - '0.101366'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"data":{"id":"10.5072/bc11-cqw8","type":"dois","attributes":{"doi":"10.5072/bc11-cqw8","prefix":"10.5072","suffix":"bc11-cqw8","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw8","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","author":[{"type":"Person","id":"https://orcid.org/0000-0003-1419-2405","name":"Fenner,
         Martin","given-name":"Martin","family-name":"Fenner"}],"title":"Differences
         between ORCID and DataCite Metadata","publisher":"DataCite Blog","resource-type-subtype":"BlogPosting","description":"One
         of the first tasks for DataCite in the European Commission-funded THOR project,
         which started in June, was to contribute to a comparison of the ORCID and
         DataCite metadata standards. Together with ORCID, CERN, the British Library
-        and Dryad we looked...","version":"1.0","metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9CQzExLUNRVzg8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5GZW5uZXIsIE1hcnRpbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWFydGluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkZlbm5lcjwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+MDAwMC0wMDAzLTE0MTktMjQwNTwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRpZmZlcmVuY2VzIGJldHdlZW4gT1JDSUQgYW5kIERhdGFDaXRlIE1ldGFkYXRhPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlIEJsb2c8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTU8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPkJsb2dQb3N0aW5nPC9yZXNvdXJjZVR5cGU+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+dGhvcjwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pm9yY2lkPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iSG9zdGluZ0luc3RpdHV0aW9uIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZT5EYXRhQ2l0ZTwvY29udHJpYnV0b3JOYW1lPgogICAgPC9jb250cmlidXRvcj4KICA8L2NvbnRyaWJ1dG9ycz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE1LTA5LTE4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC41MjgxL1pFTk9ETy4zMDc5OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24+MS4wPC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAvIj5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+T25lIG9mIHRoZSBmaXJzdCB0YXNrcyBmb3IgRGF0YUNpdGUgaW4gdGhlIEV1cm9wZWFuIENvbW1pc3Npb24tZnVuZGVkIFRIT1IgcHJvamVjdCwgd2hpY2ggc3RhcnRlZCBpbiBKdW5lLCB3YXMgdG8gY29udHJpYnV0ZSB0byBhIGNvbXBhcmlzb24gb2YgdGhlIE9SQ0lEIGFuZCBEYXRhQ2l0ZSBtZXRhZGF0YSBzdGFuZGFyZHMuIFRvZ2V0aGVyIHdpdGggT1JDSUQsIENFUk4sIHRoZSBCcml0aXNoIExpYnJhcnkgYW5kIERyeWFkIHdlIGxvb2tlZC4uLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+","published":"2015-09-18","registered":null,"updated":"2018-05-30T15:17:05.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+        and Dryad we looked...","version":"1.0","metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":false,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9CQzExLUNRVzg8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5GZW5uZXIsIE1hcnRpbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWFydGluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkZlbm5lcjwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+MDAwMC0wMDAzLTE0MTktMjQwNTwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRpZmZlcmVuY2VzIGJldHdlZW4gT1JDSUQgYW5kIERhdGFDaXRlIE1ldGFkYXRhPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlIEJsb2c8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTU8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPkJsb2dQb3N0aW5nPC9yZXNvdXJjZVR5cGU+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+dGhvcjwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pm9yY2lkPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iSG9zdGluZ0luc3RpdHV0aW9uIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZT5EYXRhQ2l0ZTwvY29udHJpYnV0b3JOYW1lPgogICAgPC9jb250cmlidXRvcj4KICA8L2NvbnRyaWJ1dG9ycz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE1LTA5LTE4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC41MjgxL1pFTk9ETy4zMDc5OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24+MS4wPC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAvIj5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+T25lIG9mIHRoZSBmaXJzdCB0YXNrcyBmb3IgRGF0YUNpdGUgaW4gdGhlIEV1cm9wZWFuIENvbW1pc3Npb24tZnVuZGVkIFRIT1IgcHJvamVjdCwgd2hpY2ggc3RhcnRlZCBpbiBKdW5lLCB3YXMgdG8gY29udHJpYnV0ZSB0byBhIGNvbXBhcmlzb24gb2YgdGhlIE9SQ0lEIGFuZCBEYXRhQ2l0ZSBtZXRhZGF0YSBzdGFuZGFyZHMuIFRvZ2V0aGVyIHdpdGggT1JDSUQsIENFUk4sIHRoZSBCcml0aXNoIExpYnJhcnkgYW5kIERyeWFkIHdlIGxvb2tlZC4uLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+","published":"2015-09-18","created":"2018-07-19T21:29:26.000Z","registered":null,"updated":"2018-07-19T21:29:26.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
     http_version: 
-  recorded_at: Wed, 30 May 2018 15:17:20 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:32 GMT
 - request:
     method: get
-    uri: https://app.test.datacite.org/10.5072/bc11-cqw8
+    uri: https://api.test.datacite.org/10.5072/bc11-cqw8
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - http://c9e23352b318
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Accept:
       - application/vnd.datacite.datacite+xml
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Wed, 30 May 2018 15:17:06 GMT
+      - Thu, 19 Jul 2018 21:29:26 GMT
       Content-Type:
       - application/vnd.datacite.datacite+xml
       Connection:
       - keep-alive
       Status:
       - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
       Cache-Control:
       - private
       Vary:
       - Accept-Encoding, Origin
+      X-Credential-Username:
+      - datacite.datacite
       X-Request-Id:
-      - '094e82eb-7a57-4e19-a420-f88ff376ac17'
+      - fc75a6fb-9f6a-44b8-96e8-72ef311d598d
       Content-Disposition:
       - attachment; filename=_10.5072_bc11-cqw8.xml
       Content-Transfer-Encoding:
@@ -140,13 +144,13 @@ http_interactions:
       Etag:
       - W/"5330fb44ec72c9dcc10f763421f506f4"
       X-Runtime:
-      - '0.007477'
+      - '0.011355'
       X-Powered-By:
-      - Phusion Passenger 5.3.1
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.1
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
@@ -190,5 +194,5 @@ http_interactions:
           </descriptions>
         </resource>
     http_version: 
-  recorded_at: Wed, 30 May 2018 15:17:21 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:32 GMT
 recorded_with: VCR 3.0.3

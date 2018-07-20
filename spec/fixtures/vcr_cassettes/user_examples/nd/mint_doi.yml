@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.23725/fk2-3mg5-tm67
+    uri: https://api.test.datacite.org/dois/10.23725/fk2-3mg5-tm67
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.10; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 26 Jun 2018 11:18:07 GMT
+      - Fri, 20 Jul 2018 17:34:46 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -30,29 +30,29 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
-      X-Runtime:
-      - '0.003327'
       X-Request-Id:
-      - dec36c0e-2325-46f4-8400-9822475dd7d2
+      - cfd8b619-6a02-490e-95ee-4f2109c1cbe6
+      X-Runtime:
+      - '0.003423'
       X-Powered-By:
-      - Phusion Passenger 5.3.2
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Tue, 26 Jun 2018 11:18:08 GMT
+  recorded_at: Fri, 20 Jul 2018 17:34:47 GMT
 - request:
     method: post
-    uri: https://app.test.datacite.org/dois
+    uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
       string: '{"data":{"type":"dois","attributes":{"doi":"10.23725/fk2-3mg5-tm67","url":"http://library.nd.edu","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVzb3VyY2UgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM9Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTQvbWV0YWRhdGEueHNkIj48aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIiAvPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iSW52YWxpZFJlc291cmNlVHlwZSI+Q3JlYXRpdmVXb3JrPC9yZXNvdXJjZVR5cGU+PGNyZWF0b3JzPjxjcmVhdG9yPjxjcmVhdG9yTmFtZT5DcmVhdG9yIE5hbWU8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48L2NyZWF0b3JzPjx0aXRsZXM+PHRpdGxlPlRpdGxlPC90aXRsZT48L3RpdGxlcz48cHVibGlzaGVyPlB1Ymxpc2hlcjwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxODwvcHVibGljYXRpb25ZZWFyPjxkYXRlcy8+PHZlcnNpb24vPjwvcmVzb3VyY2U+","event":"publish"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.10; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json;charset=UTF-8
       Accept:
@@ -65,7 +65,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 26 Jun 2018 11:18:08 GMT
+      - Fri, 20 Jul 2018 17:34:47 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -76,16 +76,16 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
-      X-Runtime:
-      - '0.798254'
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 64ffa84a-ddeb-48f4-872a-1e2f900111bc
+      - 245c2817-d4de-4977-9715-cd17e00bd4c0
+      X-Runtime:
+      - '0.767464'
       X-Powered-By:
-      - Phusion Passenger 5.3.2
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"source":"resourceType'', attribute ''resourceTypeGeneral","title":"[facet
@@ -97,5 +97,5 @@ http_interactions:
         is not a valid value of the atomic type ''{http://datacite.org/schema/kernel-4}resourcetype''.
         at line 4, column 0"}]}'
     http_version: 
-  recorded_at: Tue, 26 Jun 2018 11:18:09 GMT
+  recorded_at: Fri, 20 Jul 2018 17:34:48 GMT
 recorded_with: VCR 3.0.3

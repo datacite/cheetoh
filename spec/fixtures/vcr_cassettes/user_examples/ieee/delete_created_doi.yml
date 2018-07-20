@@ -2,46 +2,48 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.5072/3mg5-tm67
+    uri: https://api.test.datacite.org/dois/10.5072/3mg5-tm67
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.10; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Thu, 21 Jun 2018 21:24:11 GMT
+      - Thu, 19 Jul 2018 21:29:37 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
       - keep-alive
       Status:
       - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
+      X-Credential-Username:
+      - datacite.datacite
       X-Request-Id:
-      - 7c1eb9d8-a7fb-48a1-b433-a1344fdd3bef
+      - a8ef5bca-2ae8-41bc-81df-7462a7209774
       Etag:
-      - W/"a53b98a6e88fb2f9d339a8108453ec4c"
+      - W/"8e8ee83ea4b557dfcd8c4e322ac7ae94"
       X-Runtime:
-      - '0.025372'
+      - '0.027085'
       X-Powered-By:
-      - Phusion Passenger 5.3.2
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"id":"10.5072/3mg5-tm67","type":"dois","attributes":{"doi":"10.5072/3mg5-tm67","prefix":"10.5072","suffix":"3mg5-tm67","identifier":"https://handle.test.datacite.org/10.5072/3mg5-tm67","url":"https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients","author":[{"type":"Person","name":"Peter
@@ -50,43 +52,45 @@ http_interactions:
         Reyal","given-name":"Fabien","family-name":"Reyal"},{"type":"Person","name":"Thomas
         Walter","given-name":"Thomas","family-name":"Walter"}],"title":"A dataset
         for nuclei segmentation based on Tripple Negative Breast Cancer patients","publisher":"IEEE
-        Dataport","resource-type-subtype":"CreativeWork","description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUc1LVRNNjc8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5OYXlsb3IsIFBldGVyPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+TGFlLCBNYXJpY2s8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5SZXlhbCwgRmFiaWVuPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+V2FsdGVyLCBUaG9tYXM8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5BIGRhdGFzZXQgZm9yIG51Y2xlaSBzZWdtZW50YXRpb24gYmFzZWQgb24gVHJpcHBsZSBOZWdhdGl2ZSBCcmVhc3QgQ2FuY2VyIHBhdGllbnRzPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPklFRUUgRGF0YXBvcnQ8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTg8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkNyZWF0aXZlV29yazwvcmVzb3VyY2VUeXBlPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTg8L2RhdGU+CiAgPC9kYXRlcz4KICA8dmVyc2lvbi8+CjwvcmVzb3VyY2U+Cg==","published":"2018","registered":null,"updated":"2018-06-21T21:23:51.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":{"id":"dataset","type":"resource-types"}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
-        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-06-21T01:30:26Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
-        Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-06-21T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}},{"id":"dataset","type":"resource-types","attributes":{"title":"Dataset","updated":"2016-09-21T00:00:00Z"}}]}'
+        Dataport","resource-type-subtype":"CreativeWork","description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":false,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUc1LVRNNjc8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5OYXlsb3IsIFBldGVyPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+TGFlLCBNYXJpY2s8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5SZXlhbCwgRmFiaWVuPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+V2FsdGVyLCBUaG9tYXM8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5BIGRhdGFzZXQgZm9yIG51Y2xlaSBzZWdtZW50YXRpb24gYmFzZWQgb24gVHJpcHBsZSBOZWdhdGl2ZSBCcmVhc3QgQ2FuY2VyIHBhdGllbnRzPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPklFRUUgRGF0YXBvcnQ8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTg8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkNyZWF0aXZlV29yazwvcmVzb3VyY2VUeXBlPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTg8L2RhdGU+CiAgPC9kYXRlcz4KICA8dmVyc2lvbi8+CjwvcmVzb3VyY2U+Cg==","published":"2018","created":"2018-07-19T21:29:36.000Z","registered":null,"updated":"2018-07-19T21:29:36.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":{"id":"dataset","type":"resource-types"}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-07-19T01:30:26Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
+        Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-07-19T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}},{"id":"dataset","type":"resource-types","attributes":{"title":"Dataset","updated":"2016-09-21T00:00:00Z"}}]}'
     http_version: 
-  recorded_at: Thu, 21 Jun 2018 21:24:14 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:43 GMT
 - request:
     method: get
-    uri: https://app.test.datacite.org/10.5072/3mg5-tm67
+    uri: https://api.test.datacite.org/10.5072/3mg5-tm67
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.10; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Accept:
       - application/vnd.datacite.datacite+xml
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Thu, 21 Jun 2018 21:24:12 GMT
+      - Thu, 19 Jul 2018 21:29:37 GMT
       Content-Type:
       - application/vnd.datacite.datacite+xml
       Connection:
       - keep-alive
       Status:
       - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
       Cache-Control:
       - private
       Vary:
       - Accept-Encoding, Origin
+      X-Credential-Username:
+      - datacite.datacite
       X-Request-Id:
-      - 2726503f-1c89-4b90-87b4-fe584e7b166a
+      - c659e076-c623-40b3-b134-58a5398f12a3
       Content-Disposition:
       - attachment; filename=_10.5072_3mg5-tm67.xml
       Content-Transfer-Encoding:
@@ -94,11 +98,11 @@ http_interactions:
       Etag:
       - W/"9f00285fece2874cc70e04bccd96050f"
       X-Runtime:
-      - '0.005110'
+      - '0.008793'
       X-Powered-By:
-      - Phusion Passenger 5.3.2
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: ASCII-8BIT
       string: |
@@ -131,16 +135,16 @@ http_interactions:
           <version/>
         </resource>
     http_version: 
-  recorded_at: Thu, 21 Jun 2018 21:24:15 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:43 GMT
 - request:
     method: delete
-    uri: https://app.test.datacite.org/dois/10.5072/3mg5-tm67
+    uri: https://api.test.datacite.org/dois/10.5072/3mg5-tm67
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.10; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
@@ -153,7 +157,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 21 Jun 2018 21:24:13 GMT
+      - Thu, 19 Jul 2018 21:29:37 GMT
       Connection:
       - keep-alive
       Status:
@@ -165,16 +169,16 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - d4af1265-e9e7-4d96-8c6f-7cf0f768441a
+      - 38e45813-077c-4292-964a-3de457bb3a02
       X-Runtime:
-      - '0.017161'
+      - '0.024484'
       X-Powered-By:
-      - Phusion Passenger 5.3.2
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Thu, 21 Jun 2018 21:24:16 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:43 GMT
 recorded_with: VCR 3.0.3

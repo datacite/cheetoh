@@ -22,13 +22,13 @@ describe "random", :type => :api, vcr: true, :order => :defined do
     HEREDOC
 
     # stub API responses, as the DOI changes with every request
-    stub_request(:get, /app.test.datacite.org/)
+    stub_request(:get, /api.test.datacite.org/)
       .to_return(status: 404, body: '{"errors":[{"status":"404","title":"The resource you are looking for doesn''t exist."}]}')
     stub_request(:post, /mds.test.datacite.org\/metadata/)
       .to_return(status: 201, body: 'OK (10.5072/BC11-CQW1)')
     stub_request(:put, /mds.test.datacite.org\/doi/)
       .to_return(status: 201, body: 'OK')
-    stub_request(:patch, /app.test.datacite.org/)
+    stub_request(:patch, /api.test.datacite.org/)
       .to_return(status: 200, headers: { "Content-Type" => "application/vnd.api+json; charset=utf-8" }, body: body)
 
     post "/shoulder/doi:#{prefix}", params, headers

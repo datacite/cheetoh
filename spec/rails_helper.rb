@@ -22,6 +22,7 @@ WebMock.disable_net_connect!(
 
 VCR.configure do |c|
   mds_token = Base64.strict_encode64("#{ENV['MDS_USERNAME']}:#{ENV['MDS_PASSWORD']}")
+  admin_token = Base64.strict_encode64("#{ENV['ADMIN_USERNAME']}:#{ENV['ADMIN_PASSWORD']}")
 
   c.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   c.hook_into :webmock
@@ -29,6 +30,7 @@ VCR.configure do |c|
   c.ignore_hosts "codeclimate.com"
   # c.ignore_request { |request| URI(request.uri).path.start_with("shoulder") }
   c.filter_sensitive_data("<MDS_TOKEN>") { mds_token }
+  c.filter_sensitive_data("<ADMIN_TOKEN>") { admin_token }
   c.configure_rspec_metadata!
 end
 

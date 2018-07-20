@@ -34,8 +34,8 @@ module Findable
     end
 
     def get_doi(doi)
-      url = "#{ENV['APP_URL']}/dois/#{doi}"
-      Maremma.get(url, content_type: 'application/vnd.api+json')
+      url = "#{ENV['API_URL']}/dois/#{doi}"
+      Maremma.get(url, content_type: 'application/vnd.api+json', username: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'])
     end
 
     # use raw option to not automatically parse xml or json response
@@ -43,8 +43,12 @@ module Findable
       profile ||= "datacite"
       accept = SUPPORTED_PROFILES[profile.to_sym]
 
-      url = "#{ENV['APP_URL']}/#{doi}"
-      Maremma.get(url, accept: accept, raw: true)
+      url = "#{ENV['API_URL']}/#{doi}"
+      Maremma.get(url, accept: accept, username: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], raw: true)
+    end
+
+    def api_url
+      Rails.env.production? ? 'https://api.datacite.org' : 'https://api.test.datacite.org' 
     end
   end
 end

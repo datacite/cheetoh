@@ -2,24 +2,26 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.test.datacite.org/dois/10.5072/3mg5-tm67
+    uri: https://api.test.datacite.org/dois/10.5072/3mg5-tm67
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.10; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 404
       message: ''
     headers:
       Date:
-      - Thu, 21 Jun 2018 21:23:50 GMT
+      - Thu, 19 Jul 2018 21:29:36 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -31,22 +33,22 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 4e4fc8ef-7852-4eea-8721-2b8d7b34a4d3
+      - 2970e65b-5fcf-4b99-9de2-91d62280e257
       X-Runtime:
-      - '0.004594'
+      - '0.005522'
       X-Powered-By:
-      - Phusion Passenger 5.3.2
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Thu, 21 Jun 2018 21:23:54 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:42 GMT
 - request:
     method: post
-    uri: https://app.test.datacite.org/dois
+    uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
       string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/3mg5-tm67","url":"https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients","author":[{"name":"Naylor,
@@ -55,7 +57,7 @@ http_interactions:
         Dataport","published":"2018","event":"start"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}},"resource-type":{"data":{"type":"resource-types","id":"dataset"}}}}}'
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.10; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json;charset=UTF-8
       Accept:
@@ -68,7 +70,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 21 Jun 2018 21:23:51 GMT
+      - Thu, 19 Jul 2018 21:29:36 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -82,57 +84,59 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - d3d4d4a9-2b95-4b28-9cdc-db05a45c6236
+      - 9d55922c-756d-4555-b346-7b69f9a36871
       Location:
-      - https://app.test.datacite.org/dois/2224491
+      - https://api.test.datacite.org/dois/2238029
       Etag:
-      - W/"037106187ae158a9f9121cf40b80d02e"
+      - W/"f13eac5da73c9ff60d767b7b1f20ea80"
       X-Runtime:
-      - '0.075311'
+      - '0.067509'
       X-Powered-By:
-      - Phusion Passenger 5.3.2
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"id":"10.5072/3mg5-tm67","type":"dois","attributes":{"doi":"10.5072/3mg5-tm67","prefix":"10.5072","suffix":"3mg5-tm67","identifier":"https://handle.test.datacite.org/10.5072/3mg5-tm67","url":"https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients","author":[{"name":"Naylor,
         Peter"},{"name":"Lae, Marick"},{"name":"Reyal, Fabien"},{"name":"Walter, Thomas"}],"title":"A
         dataset for nuclei segmentation based on Tripple Negative Breast Cancer patients","publisher":"IEEE
-        Dataport","resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":true,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUc1LVRNNjc8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5OYXlsb3IsIFBldGVyPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+TGFlLCBNYXJpY2s8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5SZXlhbCwgRmFiaWVuPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+V2FsdGVyLCBUaG9tYXM8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5BIGRhdGFzZXQgZm9yIG51Y2xlaSBzZWdtZW50YXRpb24gYmFzZWQgb24gVHJpcHBsZSBOZWdhdGl2ZSBCcmVhc3QgQ2FuY2VyIHBhdGllbnRzPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPklFRUUgRGF0YXBvcnQ8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTg8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkNyZWF0aXZlV29yazwvcmVzb3VyY2VUeXBlPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTg8L2RhdGU+CiAgPC9kYXRlcz4KICA8dmVyc2lvbi8+CjwvcmVzb3VyY2U+Cg==","published":"2018","registered":null,"updated":"2018-06-21T21:23:51.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+        Dataport","resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":false,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUc1LVRNNjc8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5OYXlsb3IsIFBldGVyPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+TGFlLCBNYXJpY2s8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5SZXlhbCwgRmFiaWVuPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+V2FsdGVyLCBUaG9tYXM8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5BIGRhdGFzZXQgZm9yIG51Y2xlaSBzZWdtZW50YXRpb24gYmFzZWQgb24gVHJpcHBsZSBOZWdhdGl2ZSBCcmVhc3QgQ2FuY2VyIHBhdGllbnRzPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPklFRUUgRGF0YXBvcnQ8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTg8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkNyZWF0aXZlV29yazwvcmVzb3VyY2VUeXBlPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTg8L2RhdGU+CiAgPC9kYXRlcz4KICA8dmVyc2lvbi8+CjwvcmVzb3VyY2U+Cg==","published":"2018","created":"2018-07-19T21:29:36.000Z","registered":null,"updated":"2018-07-19T21:29:36.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
     http_version: 
-  recorded_at: Thu, 21 Jun 2018 21:23:54 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:42 GMT
 - request:
     method: get
-    uri: https://app.test.datacite.org/10.5072/3mg5-tm67
+    uri: https://api.test.datacite.org/10.5072/3mg5-tm67
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.10; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
       Accept:
       - application/vnd.datacite.datacite+xml
+      Authorization:
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Thu, 21 Jun 2018 21:23:52 GMT
+      - Thu, 19 Jul 2018 21:29:36 GMT
       Content-Type:
       - application/vnd.datacite.datacite+xml
       Connection:
       - keep-alive
       Status:
       - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
       Cache-Control:
       - private
       Vary:
       - Accept-Encoding, Origin
+      X-Credential-Username:
+      - datacite.datacite
       X-Request-Id:
-      - 82845ee0-b199-40f3-a652-c47721c0680b
+      - 8285d02f-c833-42dd-8d4f-c7797a74e5fb
       Content-Disposition:
       - attachment; filename=_10.5072_3mg5-tm67.xml
       Content-Transfer-Encoding:
@@ -140,11 +144,11 @@ http_interactions:
       Etag:
       - W/"9f00285fece2874cc70e04bccd96050f"
       X-Runtime:
-      - '0.007480'
+      - '0.011172'
       X-Powered-By:
-      - Phusion Passenger 5.3.2
+      - Phusion Passenger 5.3.3
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.2
+      - nginx/1.14.0 + Phusion Passenger 5.3.3
     body:
       encoding: ASCII-8BIT
       string: |
@@ -177,5 +181,5 @@ http_interactions:
           <version/>
         </resource>
     http_version: 
-  recorded_at: Thu, 21 Jun 2018 21:23:56 GMT
+  recorded_at: Thu, 19 Jul 2018 21:29:42 GMT
 recorded_with: VCR 3.0.3
