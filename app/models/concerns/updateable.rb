@@ -37,6 +37,7 @@ module Updateable
         publisher: publisher,
         published: published,
         event: event,
+        source: "ez",
         reason: reason }.compact
 
       attributes.except!("doi") if action == "update"
