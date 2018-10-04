@@ -2,24 +2,26 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.test.datacite.org/dois/10.23725/fk2-3mg5-tm67
+    uri: https://api.test.datacite.org/dois/10.23725/fk2-0vac-gk10
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <ADMIN_TOKEN>
   response:
     status:
       code: 404
       message: ''
     headers:
       Date:
-      - Fri, 20 Jul 2018 17:34:46 GMT
+      - Thu, 04 Oct 2018 22:31:13 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -31,30 +33,30 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - cfd8b619-6a02-490e-95ee-4f2109c1cbe6
+      - 29c23c57-b68a-4875-8263-11de5f552cec
       X-Runtime:
-      - '0.003423'
+      - '0.007380'
       X-Powered-By:
-      - Phusion Passenger 5.3.3
+      - Phusion Passenger 5.3.5
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.3
+      - nginx/1.14.0 + Phusion Passenger 5.3.5
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Fri, 20 Jul 2018 17:34:47 GMT
+  recorded_at: Thu, 04 Oct 2018 22:31:13 GMT
 - request:
     method: post
     uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"doi":"10.23725/fk2-3mg5-tm67","url":"http://library.nd.edu","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVzb3VyY2UgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM9Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTQvbWV0YWRhdGEueHNkIj48aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIiAvPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iSW52YWxpZFJlc291cmNlVHlwZSI+Q3JlYXRpdmVXb3JrPC9yZXNvdXJjZVR5cGU+PGNyZWF0b3JzPjxjcmVhdG9yPjxjcmVhdG9yTmFtZT5DcmVhdG9yIE5hbWU8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48L2NyZWF0b3JzPjx0aXRsZXM+PHRpdGxlPlRpdGxlPC90aXRsZT48L3RpdGxlcz48cHVibGlzaGVyPlB1Ymxpc2hlcjwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxODwvcHVibGljYXRpb25ZZWFyPjxkYXRlcy8+PHZlcnNpb24vPjwvcmVzb3VyY2U+","event":"publish"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
+      string: '{"data":{"type":"dois","attributes":{"doi":"10.23725/fk2-0vac-gk10","url":"http://library.nd.edu","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVzb3VyY2UgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM9Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTQvbWV0YWRhdGEueHNkIj48aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIiAvPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iSW52YWxpZFJlc291cmNlVHlwZSI+Q3JlYXRpdmVXb3JrPC9yZXNvdXJjZVR5cGU+PGNyZWF0b3JzPjxjcmVhdG9yPjxjcmVhdG9yTmFtZT5DcmVhdG9yIE5hbWU8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48L2NyZWF0b3JzPjx0aXRsZXM+PHRpdGxlPlRpdGxlPC90aXRsZT48L3RpdGxlcz48cHVibGlzaGVyPlB1Ymxpc2hlcjwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxODwvcHVibGljYXRpb25ZZWFyPjxkYXRlcy8+PHZlcnNpb24vPjwvcmVzb3VyY2U+Cl9udW1iZXI6IDEyMjE2NTA3Ng==","source":"ez","event":"publish"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
       Content-Type:
-      - application/vnd.api+json;charset=UTF-8
+      - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Authorization:
@@ -65,9 +67,9 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 20 Jul 2018 17:34:47 GMT
+      - Thu, 04 Oct 2018 22:31:13 GMT
       Content-Type:
-      - application/vnd.api+json; charset=utf-8
+      - application/json; charset=utf-8
       Connection:
       - keep-alive
       Status:
@@ -79,13 +81,13 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 245c2817-d4de-4977-9715-cd17e00bd4c0
+      - dc3b9b4e-8422-4a02-b65f-0cdf1ba5f6df
       X-Runtime:
-      - '0.767464'
+      - '0.032751'
       X-Powered-By:
-      - Phusion Passenger 5.3.3
+      - Phusion Passenger 5.3.5
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.3
+      - nginx/1.14.0 + Phusion Passenger 5.3.5
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"source":"resourceType'', attribute ''resourceTypeGeneral","title":"[facet
@@ -97,5 +99,5 @@ http_interactions:
         is not a valid value of the atomic type ''{http://datacite.org/schema/kernel-4}resourcetype''.
         at line 4, column 0"}]}'
     http_version: 
-  recorded_at: Fri, 20 Jul 2018 17:34:48 GMT
+  recorded_at: Thu, 04 Oct 2018 22:31:13 GMT
 recorded_with: VCR 3.0.3

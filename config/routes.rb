@@ -5,22 +5,22 @@ Rails.application.routes.draw do
   get 'login', :to => 'index#login'
 
   resources :index, path: '/', only: [:index]
-  resources :works, path: '/id', only: [:show], constraints: { :id => /.+/ }
+  resources :dois, path: '/id', only: [:show], constraints: { :id => /.+/ }
 
   # custom routes, as EZID's routes don't follow standard rails pattern
   # we need to add constraints, as the id may contain slashes
 
   # create identifier
-  put 'id/:id', :to => 'works#create', constraints: { :id => /.+/ }
+  put 'id/:id', :to => 'dois#create', constraints: { :id => /.+/ }
 
   # mint identifier
-  post 'shoulder/:id', :to => 'works#mint', constraints: { :id => /.+/ }
+  post 'shoulder/:id', :to => 'dois#mint', constraints: { :id => /.+/ }
 
   # update identifier
-  post 'id/:id', :to => 'works#update', constraints: { :id => /.+/ }
+  post 'id/:id', :to => 'dois#update', constraints: { :id => /.+/ }
 
   # delete identifier
-  delete 'id/:id', :to => 'works#delete', constraints: { :id => /.+/ }
+  delete 'id/:id', :to => 'dois#destroy', constraints: { :id => /.+/ }
 
   root :to => 'index#index'
 

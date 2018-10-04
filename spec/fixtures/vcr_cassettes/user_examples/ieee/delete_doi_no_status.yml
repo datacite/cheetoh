@@ -8,177 +8,42 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Authorization:
-      - Basic <MDS_TOKEN>
+      - Basic <ADMIN_TOKEN>
   response:
     status:
-      code: 200
+      code: 404
       message: ''
     headers:
       Date:
-      - Thu, 19 Jul 2018 21:29:38 GMT
+      - Thu, 04 Oct 2018 22:12:28 GMT
       Content-Type:
-      - application/vnd.api+json; charset=utf-8
+      - application/json; charset=utf-8
       Connection:
       - keep-alive
       Status:
-      - 200 OK
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      Vary:
-      - Accept-Encoding, Origin
-      X-Credential-Username:
-      - datacite.datacite
-      X-Request-Id:
-      - 7a5d7ac9-4bb0-4092-b6a7-5f5633aee946
-      Etag:
-      - W/"d386da946cc7b5432fee1c0e3bb224e4"
-      X-Runtime:
-      - '0.020798'
-      X-Powered-By:
-      - Phusion Passenger 5.3.3
-      Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.3
-    body:
-      encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.5072/3mg5-tm67","type":"dois","attributes":{"doi":"10.5072/3mg5-tm67","prefix":"10.5072","suffix":"3mg5-tm67","identifier":"https://handle.test.datacite.org/10.5072/3mg5-tm67","url":"https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients","author":[{"type":"Person","name":"Peter
-        Naylor","given-name":"Peter","family-name":"Naylor"},{"type":"Person","name":"Marick
-        Lae","given-name":"Marick","family-name":"Lae"},{"type":"Person","name":"Fabien
-        Reyal","given-name":"Fabien","family-name":"Reyal"},{"type":"Person","name":"Thomas
-        Walter","given-name":"Thomas","family-name":"Walter"}],"title":"A dataset
-        for nuclei segmentation based on Tripple Negative Breast Cancer patients","publisher":"IEEE
-        Dataport","resource-type-subtype":"CreativeWork","description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":false,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUc1LVRNNjc8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5OYXlsb3IsIFBldGVyPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+TGFlLCBNYXJpY2s8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5SZXlhbCwgRmFiaWVuPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+V2FsdGVyLCBUaG9tYXM8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5BIGRhdGFzZXQgZm9yIG51Y2xlaSBzZWdtZW50YXRpb24gYmFzZWQgb24gVHJpcHBsZSBOZWdhdGl2ZSBCcmVhc3QgQ2FuY2VyIHBhdGllbnRzPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPklFRUUgRGF0YXBvcnQ8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTg8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkNyZWF0aXZlV29yazwvcmVzb3VyY2VUeXBlPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTg8L2RhdGU+CiAgPC9kYXRlcz4KICA8dmVyc2lvbi8+CjwvcmVzb3VyY2U+Cg==","published":"2018","created":"2018-07-19T21:29:37.000Z","registered":null,"updated":"2018-07-19T21:29:37.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":{"id":"dataset","type":"resource-types"}},"media":{"meta":{}}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
-        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"is-active":true,"has-password":true,"created":"2011-12-07T13:43:39Z","updated":"2018-07-19T01:30:26Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
-        Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-07-19T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}},{"id":"dataset","type":"resource-types","attributes":{"title":"Dataset","updated":"2016-09-21T00:00:00Z"}}]}'
-    http_version: 
-  recorded_at: Thu, 19 Jul 2018 21:29:44 GMT
-- request:
-    method: get
-    uri: https://api.test.datacite.org/10.5072/3mg5-tm67
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
-      Accept:
-      - application/vnd.datacite.datacite+xml
-      Authorization:
-      - Basic <MDS_TOKEN>
-  response:
-    status:
-      code: 200
-      message: ''
-    headers:
-      Date:
-      - Thu, 19 Jul 2018 21:29:38 GMT
-      Content-Type:
-      - application/vnd.datacite.datacite+xml
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      Cache-Control:
-      - private
-      Vary:
-      - Accept-Encoding, Origin
-      X-Credential-Username:
-      - datacite.datacite
-      X-Request-Id:
-      - 9ef55cb2-57d0-4cff-a4fe-cfc872914184
-      Content-Disposition:
-      - attachment; filename=_10.5072_3mg5-tm67.xml
-      Content-Transfer-Encoding:
-      - binary
-      Etag:
-      - W/"9f00285fece2874cc70e04bccd96050f"
-      X-Runtime:
-      - '0.008779'
-      X-Powered-By:
-      - Phusion Passenger 5.3.3
-      Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.3
-    body:
-      encoding: ASCII-8BIT
-      string: |
-        <?xml version="1.0" encoding="UTF-8"?>
-        <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
-          <identifier identifierType="DOI">10.5072/3MG5-TM67</identifier>
-          <creators>
-            <creator>
-              <creatorName>Naylor, Peter</creatorName>
-            </creator>
-            <creator>
-              <creatorName>Lae, Marick</creatorName>
-            </creator>
-            <creator>
-              <creatorName>Reyal, Fabien</creatorName>
-            </creator>
-            <creator>
-              <creatorName>Walter, Thomas</creatorName>
-            </creator>
-          </creators>
-          <titles>
-            <title>A dataset for nuclei segmentation based on Tripple Negative Breast Cancer patients</title>
-          </titles>
-          <publisher>IEEE Dataport</publisher>
-          <publicationYear>2018</publicationYear>
-          <resourceType resourceTypeGeneral="Dataset">CreativeWork</resourceType>
-          <dates>
-            <date dateType="Issued">2018</date>
-          </dates>
-          <version/>
-        </resource>
-    http_version: 
-  recorded_at: Thu, 19 Jul 2018 21:29:44 GMT
-- request:
-    method: delete
-    uri: https://api.test.datacite.org/dois/10.5072/3mg5-tm67
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
-      Content-Type:
-      - application/vnd.api+json
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Authorization:
-      - Basic <MDS_TOKEN>
-  response:
-    status:
-      code: 204
-      message: ''
-    headers:
-      Date:
-      - Thu, 19 Jul 2018 21:29:38 GMT
-      Connection:
-      - keep-alive
-      Status:
-      - 204 No Content
+      - 404 Not Found
       Cache-Control:
       - no-cache
       Vary:
-      - Origin
-      X-Credential-Username:
-      - datacite.datacite
+      - Accept-Encoding, Origin
       X-Request-Id:
-      - 2e16f493-4ce9-4398-9b0d-dcc0ef29defd
+      - 7227164e-3c33-4411-9b81-abf7c93daae3
       X-Runtime:
-      - '0.025253'
+      - '0.006877'
       X-Powered-By:
-      - Phusion Passenger 5.3.3
+      - Phusion Passenger 5.3.5
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.3
+      - nginx/1.14.0 + Phusion Passenger 5.3.5
     body:
       encoding: ASCII-8BIT
-      string: ''
+      string: '{"errors":[{"status":"404","title":"The resource you are looking for
+        doesn''t exist."}]}'
     http_version: 
-  recorded_at: Thu, 19 Jul 2018 21:29:44 GMT
+  recorded_at: Thu, 04 Oct 2018 22:12:28 GMT
 recorded_with: VCR 3.0.3

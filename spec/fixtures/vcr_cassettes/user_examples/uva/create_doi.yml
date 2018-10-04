@@ -2,26 +2,26 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.test.datacite.org/dois/10.5072/fk2-1-4gvq-zw33
+    uri: https://api.test.datacite.org/dois/10.5072/fk2-074t-qf28
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Authorization:
-      - Basic <MDS_TOKEN>
+      - Basic <ADMIN_TOKEN>
   response:
     status:
       code: 404
       message: ''
     headers:
       Date:
-      - Thu, 19 Jul 2018 21:29:33 GMT
+      - Thu, 04 Oct 2018 22:28:40 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -33,30 +33,30 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 9648387d-0392-4bad-86a1-c819b4cde2aa
+      - 2f09771a-c4bc-448f-9721-9ea80ad5f577
       X-Runtime:
-      - '0.005976'
+      - '0.007093'
       X-Powered-By:
-      - Phusion Passenger 5.3.3
+      - Phusion Passenger 5.3.5
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.3
+      - nginx/1.14.0 + Phusion Passenger 5.3.5
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Thu, 19 Jul 2018 21:29:39 GMT
+  recorded_at: Thu, 04 Oct 2018 22:28:40 GMT
 - request:
     method: post
     uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/fk2-1-4gvq-zw33","url":"http://google.com","xml":"PHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIKICAgICAgICAgIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiCiAgICAgICAgICB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTQvbWV0YWRhdGEueHNkIj4KCiAgICAKICAgIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPig6dGJhKTwvaWRlbnRpZmllcj4KICAgIAoKICAgIAogICAgPGNyZWF0b3JzPgogICAgICAgCiAgICAgICAgICAgCiAgICAgICAgICAgPGNyZWF0b3I+CiAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgPGNyZWF0b3JOYW1lPlNtaXRoLCBKb2huPC9jcmVhdG9yTmFtZT4KICAgICAgICAgICAgICAKICAgICAgICAgICAgICAKICAgICAgICAgICAgICA8Z2l2ZW5OYW1lPkpvaG48L2dpdmVuTmFtZT4KICAgICAgICAgICAgICAKICAgICAgICAgICAgICAKICAgICAgICAgICAgICA8ZmFtaWx5TmFtZT5TbWl0aDwvZmFtaWx5TmFtZT4KICAgICAgICAgICAgICAKICAgICAgICAgICAgICAKICAgICAgICAgICAgICAKICAgICAgICAgICAgICA8YWZmaWxpYXRpb24+QmlvbG9neSwgVVZhPC9hZmZpbGlhdGlvbj4KICAgICAgICAgICAgICAKICAgICAgICAgICA8L2NyZWF0b3I+CiAgICAgICAgICAgCiAgICAgICAKICAgIDwvY3JlYXRvcnM+CiAgICAKCiAgICAKICAgIDx0aXRsZXM+CiAgICAgICA8dGl0bGU+bXkgZGF0YWNpdGUgdGl0bGU8L3RpdGxlPgogICAgPC90aXRsZXM+CiAgICAKCiAgICAKICAgIDxwdWJsaXNoZXI+VVZhIFByZXNzPC9wdWJsaXNoZXI+CiAgICAKCiAgICAKICAgIDxwdWJsaWNhdGlvblllYXI+MjAwMjwvcHVibGljYXRpb25ZZWFyPgogICAgCgogICAgCiAgICA8c3ViamVjdHM+CiAgICAgICAgCiAgICAgICAgICAgPHN1YmplY3Q+a2V5d29yZDE8L3N1YmplY3Q+CiAgICAgICAgCiAgICAgICAgICAgPHN1YmplY3Q+a2V5d29yZDI8L3N1YmplY3Q+CiAgICAgICAgCiAgICA8L3N1YmplY3RzPgogICAgCgogICAgCiAgICA8Y29udHJpYnV0b3JzPgogICAgICAKICAgICAgICAgIAogICAgICAgICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9Ik90aGVyIj4KICAgICAgICAgICAgICAKICAgICAgICAgICAgICA8Y29udHJpYnV0b3JOYW1lPkJsb3csIEpvZTwvY29udHJpYnV0b3JOYW1lPgogICAgICAgICAgICAgIAogICAgICAgICAgICAgIAogICAgICAgICAgICAgIDxnaXZlbk5hbWU+Sm9lPC9naXZlbk5hbWU+CiAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgPGZhbWlseU5hbWU+QmxvdzwvZmFtaWx5TmFtZT4KICAgICAgICAgICAgICAKICAgICAgICAgICAgICAKICAgICAgICAgICAgICA8YWZmaWxpYXRpb24+VVZhPC9hZmZpbGlhdGlvbj4KICAgICAgICAgICAgICAKICAgICAgICAgICA8L2NvbnRyaWJ1dG9yPgogICAgICAgICAgIAogICAgICAgCiAgICA8L2NvbnRyaWJ1dG9ycz4KICAgIAoKICAgIAogICAgPGRhdGVzPgogICAgICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAwMi0wMi0wMjwvZGF0ZT4KICAgIDwvZGF0ZXM+CiAgICAKCiAgICAKICAgIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU291bmQiPkF1ZGlvPC9yZXNvdXJjZVR5cGU+CiAgICAKCiAgICAKICAgIDxyaWdodHNMaXN0PgogICAgICAgPHJpZ2h0cz5BbGwgcmlnaHRzIHJlc2VydmVkPC9yaWdodHM+CiAgICA8L3JpZ2h0c0xpc3Q+CiAgICAKCiAgICAKICAgIDxkZXNjcmlwdGlvbnM+CiAgICAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+bXkgaW50ZXJlc3RpbmcgYWJzdHJhY3Q8L2Rlc2NyaXB0aW9uPgogICAgPC9kZXNjcmlwdGlvbnM+CiAgICAKCiAgICAKICAgIDxmdW5kaW5nUmVmZXJlbmNlcz4KICAgICAgCiAgICAgICA8ZnVuZGluZ1JlZmVyZW5jZT4KICAgICAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IxPC9mdW5kZXJOYW1lPgogICAgICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogICAgICAKICAgICAgIDxmdW5kaW5nUmVmZXJlbmNlPgogICAgICAgICAgPGZ1bmRlck5hbWU+c3BvbnNvcjI8L2Z1bmRlck5hbWU+CiAgICAgICA8L2Z1bmRpbmdSZWZlcmVuY2U+CiAgICAgIAogICAgPC9mdW5kaW5nUmVmZXJlbmNlcz4KICAgIAoKPC9yZXNvdXJjZT4=","event":"start"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
+      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/fk2-074t-qf28","url":"http://google.com","xml":"PHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIKICAgICAgICAgIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiCiAgICAgICAgICB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTQvbWV0YWRhdGEueHNkIj4KCiAgICAKICAgIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPig6dGJhKTwvaWRlbnRpZmllcj4KICAgIAoKICAgIAogICAgPGNyZWF0b3JzPgogICAgICAgCiAgICAgICAgICAgCiAgICAgICAgICAgPGNyZWF0b3I+CiAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgPGNyZWF0b3JOYW1lPlNtaXRoLCBKb2huPC9jcmVhdG9yTmFtZT4KICAgICAgICAgICAgICAKICAgICAgICAgICAgICAKICAgICAgICAgICAgICA8Z2l2ZW5OYW1lPkpvaG48L2dpdmVuTmFtZT4KICAgICAgICAgICAgICAKICAgICAgICAgICAgICAKICAgICAgICAgICAgICA8ZmFtaWx5TmFtZT5TbWl0aDwvZmFtaWx5TmFtZT4KICAgICAgICAgICAgICAKICAgICAgICAgICAgICAKICAgICAgICAgICAgICAKICAgICAgICAgICAgICA8YWZmaWxpYXRpb24+QmlvbG9neSwgVVZhPC9hZmZpbGlhdGlvbj4KICAgICAgICAgICAgICAKICAgICAgICAgICA8L2NyZWF0b3I+CiAgICAgICAgICAgCiAgICAgICAKICAgIDwvY3JlYXRvcnM+CiAgICAKCiAgICAKICAgIDx0aXRsZXM+CiAgICAgICA8dGl0bGU+bXkgZGF0YWNpdGUgdGl0bGU8L3RpdGxlPgogICAgPC90aXRsZXM+CiAgICAKCiAgICAKICAgIDxwdWJsaXNoZXI+VVZhIFByZXNzPC9wdWJsaXNoZXI+CiAgICAKCiAgICAKICAgIDxwdWJsaWNhdGlvblllYXI+MjAwMjwvcHVibGljYXRpb25ZZWFyPgogICAgCgogICAgCiAgICA8c3ViamVjdHM+CiAgICAgICAgCiAgICAgICAgICAgPHN1YmplY3Q+a2V5d29yZDE8L3N1YmplY3Q+CiAgICAgICAgCiAgICAgICAgICAgPHN1YmplY3Q+a2V5d29yZDI8L3N1YmplY3Q+CiAgICAgICAgCiAgICA8L3N1YmplY3RzPgogICAgCgogICAgCiAgICA8Y29udHJpYnV0b3JzPgogICAgICAKICAgICAgICAgIAogICAgICAgICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9Ik90aGVyIj4KICAgICAgICAgICAgICAKICAgICAgICAgICAgICA8Y29udHJpYnV0b3JOYW1lPkJsb3csIEpvZTwvY29udHJpYnV0b3JOYW1lPgogICAgICAgICAgICAgIAogICAgICAgICAgICAgIAogICAgICAgICAgICAgIDxnaXZlbk5hbWU+Sm9lPC9naXZlbk5hbWU+CiAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgPGZhbWlseU5hbWU+QmxvdzwvZmFtaWx5TmFtZT4KICAgICAgICAgICAgICAKICAgICAgICAgICAgICAKICAgICAgICAgICAgICA8YWZmaWxpYXRpb24+VVZhPC9hZmZpbGlhdGlvbj4KICAgICAgICAgICAgICAKICAgICAgICAgICA8L2NvbnRyaWJ1dG9yPgogICAgICAgICAgIAogICAgICAgCiAgICA8L2NvbnRyaWJ1dG9ycz4KICAgIAoKICAgIAogICAgPGRhdGVzPgogICAgICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAwMi0wMi0wMjwvZGF0ZT4KICAgIDwvZGF0ZXM+CiAgICAKCiAgICAKICAgIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU291bmQiPkF1ZGlvPC9yZXNvdXJjZVR5cGU+CiAgICAKCiAgICAKICAgIDxyaWdodHNMaXN0PgogICAgICAgPHJpZ2h0cz5BbGwgcmlnaHRzIHJlc2VydmVkPC9yaWdodHM+CiAgICA8L3JpZ2h0c0xpc3Q+CiAgICAKCiAgICAKICAgIDxkZXNjcmlwdGlvbnM+CiAgICAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+bXkgaW50ZXJlc3RpbmcgYWJzdHJhY3Q8L2Rlc2NyaXB0aW9uPgogICAgPC9kZXNjcmlwdGlvbnM+CiAgICAKCiAgICAKICAgIDxmdW5kaW5nUmVmZXJlbmNlcz4KICAgICAgCiAgICAgICA8ZnVuZGluZ1JlZmVyZW5jZT4KICAgICAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IxPC9mdW5kZXJOYW1lPgogICAgICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogICAgICAKICAgICAgIDxmdW5kaW5nUmVmZXJlbmNlPgogICAgICAgICAgPGZ1bmRlck5hbWU+c3BvbnNvcjI8L2Z1bmRlck5hbWU+CiAgICAgICA8L2Z1bmRpbmdSZWZlcmVuY2U+CiAgICAgIAogICAgPC9mdW5kaW5nUmVmZXJlbmNlcz4KICAgIAoKPC9yZXNvdXJjZT4=","source":"ez"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
       Content-Type:
-      - application/vnd.api+json;charset=UTF-8
+      - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Authorization:
@@ -67,9 +67,9 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 19 Jul 2018 21:29:33 GMT
+      - Thu, 04 Oct 2018 22:28:40 GMT
       Content-Type:
-      - application/vnd.api+json; charset=utf-8
+      - application/json; charset=utf-8
       Connection:
       - keep-alive
       Status:
@@ -81,120 +81,23 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - db7c55e4-b8a8-4ee8-bd63-443ebb64dbe4
+      - a39b4ecf-b00c-4c10-86f0-10391749e036
       Location:
-      - https://api.test.datacite.org/dois/2238027
+      - https://api.test.datacite.org/dois/2258513
       Etag:
-      - W/"c6e97f2fd70bd28d4b359848ceb30afd"
+      - W/"cbbfd689acfcd3066f6e0c2d9b9693dc"
       X-Runtime:
-      - '0.085062'
+      - '0.074905'
       X-Powered-By:
-      - Phusion Passenger 5.3.3
+      - Phusion Passenger 5.3.5
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.3
+      - nginx/1.14.0 + Phusion Passenger 5.3.5
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.5072/fk2-1-4gvq-zw33","type":"dois","attributes":{"doi":"10.5072/fk2-1-4gvq-zw33","prefix":"10.5072","suffix":"fk2-1-4gvq-zw33","identifier":"https://handle.test.datacite.org/10.5072/fk2-1-4gvq-zw33","url":"http://google.com","author":[{"type":"Person","name":"Smith,
-        John","given-name":"John","family-name":"Smith"}],"title":"my datacite title","publisher":"UVa
-        Press","resource-type-subtype":"Audio","description":"my interesting abstract","version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"draft","is-active":false,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzItMS00R1ZRLVpXMzM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5TbWl0aCwgSm9objwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Sm9objwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5TbWl0aDwvZmFtaWx5TmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkJpb2xvZ3ksIFVWYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPm15IGRhdGFjaXRlIHRpdGxlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlVWYSBQcmVzczwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAwMjwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PmtleXdvcmQxPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+a2V5d29yZDI8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iT3RoZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPkJsb3csIEpvZTwvY29udHJpYnV0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkpvZTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5CbG93PC9mYW1pbHlOYW1lPgogICAgICA8YWZmaWxpYXRpb24+VVZhPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAwMi0wMi0wMjwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU291bmQiPkF1ZGlvPC9yZXNvdXJjZVR5cGU+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzPkFsbCByaWdodHMgcmVzZXJ2ZWQ8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5teSBpbnRlcmVzdGluZyBhYnN0cmFjdDwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CiAgPGZ1bmRpbmdSZWZlcmVuY2VzPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IxPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IyPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogIDwvZnVuZGluZ1JlZmVyZW5jZXM+CjwvcmVzb3VyY2U+","published":"2002-02-02","created":"2018-07-19T21:29:33.000Z","registered":null,"updated":"2018-07-19T21:29:33.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}'
+      string: '{"data":{"id":"10.5072/fk2-074t-qf28","type":"dois","attributes":{"doi":"10.5072/fk2-074t-qf28","identifier":"https://handle.test.datacite.org/10.5072/fk2-074t-qf28","url":"http://google.com","prefix":"10.5072","suffix":"fk2-074t-qf28","author":[{"type":"Person","name":"Smith,
+        John","givenName":"John","familyName":"Smith"}],"title":"my datacite title","publisher":"UVa
+        Press","resource-type-subtype":"Audio","description":"my interesting abstract","version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":"ez","state":"draft","is-active":false,"landing-page":{"status":null,"content-type":null,"checked":null},"published":"2002-02-02","created":"2018-10-04T22:28:40.000Z","registered":null,"updated":"2018-10-04T22:28:40.000Z","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzItMDc0VC1RRjI4PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+U21pdGgsIEpvaG48L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkpvaG48L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+U21pdGg8L2ZhbWlseU5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5CaW9sb2d5LCBVVmE8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5teSBkYXRhY2l0ZSB0aXRsZTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5VVmEgUHJlc3M8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMDI8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD5rZXl3b3JkMTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PmtleXdvcmQyPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGNvbnRyaWJ1dG9ycz4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9Ik90aGVyIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZT5CbG93LCBKb2U8L2NvbnRyaWJ1dG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5Kb2U8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+QmxvdzwvZmFtaWx5TmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPlVWYTwvYWZmaWxpYXRpb24+CiAgICA8L2NvbnRyaWJ1dG9yPgogIDwvY29udHJpYnV0b3JzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMDItMDItMDI8L2RhdGU+CiAgPC9kYXRlcz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlNvdW5kIj5BdWRpbzwvcmVzb3VyY2VUeXBlPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cz5BbGwgcmlnaHRzIHJlc2VydmVkPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+bXkgaW50ZXJlc3RpbmcgYWJzdHJhY3Q8L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgogIDxmdW5kaW5nUmVmZXJlbmNlcz4KICAgIDxmdW5kaW5nUmVmZXJlbmNlPgogICAgICA8ZnVuZGVyTmFtZT5zcG9uc29yMTwvZnVuZGVyTmFtZT4KICAgIDwvZnVuZGluZ1JlZmVyZW5jZT4KICAgIDxmdW5kaW5nUmVmZXJlbmNlPgogICAgICA8ZnVuZGVyTmFtZT5zcG9uc29yMjwvZnVuZGVyTmFtZT4KICAgIDwvZnVuZGluZ1JlZmVyZW5jZT4KICA8L2Z1bmRpbmdSZWZlcmVuY2VzPgo8L3Jlc291cmNlPg==","cache-key":"dois/10.5072/fk2-074t-qf28-2018-10-04T22:28:40Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"resource-type":{"data":{"id":"sound","type":"resource_types"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","is-active":true,"has-password":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"}]}}},{"id":"sound","type":"resource-types","attributes":{"title":"Sound","updated":"2016-09-21T00:00:00Z"},"relationships":{}}]}'
     http_version: 
-  recorded_at: Thu, 19 Jul 2018 21:29:39 GMT
-- request:
-    method: get
-    uri: https://api.test.datacite.org/10.5072/fk2-1-4gvq-zw33
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
-      Accept:
-      - application/vnd.datacite.datacite+xml
-      Authorization:
-      - Basic <MDS_TOKEN>
-  response:
-    status:
-      code: 200
-      message: ''
-    headers:
-      Date:
-      - Thu, 19 Jul 2018 21:29:33 GMT
-      Content-Type:
-      - application/vnd.datacite.datacite+xml
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      Cache-Control:
-      - private
-      Vary:
-      - Accept-Encoding, Origin
-      X-Credential-Username:
-      - datacite.datacite
-      X-Request-Id:
-      - c6dfb636-6704-4a99-b9d3-38b22b5b9ce2
-      Content-Disposition:
-      - attachment; filename=_10.5072_fk2-1-4gvq-zw33.xml
-      Content-Transfer-Encoding:
-      - binary
-      Etag:
-      - W/"3fa1531fa0ac54532e531ede63cab0e2"
-      X-Runtime:
-      - '0.011613'
-      X-Powered-By:
-      - Phusion Passenger 5.3.3
-      Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.3
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?>
-        <resource xmlns="http://datacite.org/schema/kernel-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
-          <identifier identifierType="DOI">10.5072/FK2-1-4GVQ-ZW33</identifier>
-          <creators>
-            <creator>
-              <creatorName>Smith, John</creatorName>
-              <givenName>John</givenName>
-              <familyName>Smith</familyName>
-              <affiliation>Biology, UVa</affiliation>
-            </creator>
-          </creators>
-          <titles>
-            <title>my datacite title</title>
-          </titles>
-          <publisher>UVa Press</publisher>
-          <publicationYear>2002</publicationYear>
-          <subjects>
-            <subject>keyword1</subject>
-            <subject>keyword2</subject>
-          </subjects>
-          <contributors>
-            <contributor contributorType="Other">
-              <contributorName>Blow, Joe</contributorName>
-              <givenName>Joe</givenName>
-              <familyName>Blow</familyName>
-              <affiliation>UVa</affiliation>
-            </contributor>
-          </contributors>
-          <dates>
-            <date dateType="Issued">2002-02-02</date>
-          </dates>
-          <resourceType resourceTypeGeneral="Sound">Audio</resourceType>
-          <rightsList>
-            <rights>All rights reserved</rights>
-          </rightsList>
-          <descriptions>
-            <description descriptionType="Abstract">my interesting abstract</description>
-          </descriptions>
-          <fundingReferences>
-            <fundingReference>
-              <funderName>sponsor1</funderName>
-            </fundingReference>
-            <fundingReference>
-              <funderName>sponsor2</funderName>
-            </fundingReference>
-          </fundingReferences>
-        </resource>
-    http_version: 
-  recorded_at: Thu, 19 Jul 2018 21:29:39 GMT
+  recorded_at: Thu, 04 Oct 2018 22:28:40 GMT
 recorded_with: VCR 3.0.3

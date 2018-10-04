@@ -31,6 +31,7 @@ describe String do
 
       it "anvl file" do
         str = File.read(file_fixture('ieee.txt'))
+        expect(str.from_anvl["_target"]).to eq("https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients")
         expect(str.from_anvl["datacite.resourcetype"]).to eq("Dataset")
       end
     end

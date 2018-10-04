@@ -56,7 +56,7 @@ describe "status", :type => :api, vcr: true, :order => :defined do
   end
 
   context "normal prefix" do
-    let(:doi) { "10.23725/bc11-cqw8" }
+    let(:doi) { "10.5438/bc11-cqw8" }
 
     it "status public" do
       params = { "_status" => "public" }.to_anvl
@@ -73,6 +73,7 @@ describe "status", :type => :api, vcr: true, :order => :defined do
 
     it "status unavailable" do
       params = { "_status" => "unavailable | withdrawn by author" }.to_anvl
+      puts params
       post "/id/doi:#{doi}", params, headers
       expect(last_response.status).to eq(200)
       response = last_response.body.from_anvl

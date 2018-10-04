@@ -52,6 +52,7 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
     params = { "datacite" => datacite, "_target" => url, "_number" => "122149076" }.to_anvl
     doi = "10.5072"
     post "/shoulder/doi:#{doi}", params, headers
+    puts last_response.status
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/3mfp-6m52")

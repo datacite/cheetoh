@@ -65,10 +65,16 @@ module Cheetoh
     # Configure SSL options to enable HSTS with subdomains. Previous versions had false.
     config.ssl_options = { hsts: { subdomains: true } }
 
-    # compress responses with deflate or gzip
-    config.middleware.use Rack::Deflater
+    # secret_key_base is not used by Rails API, as there are no sessions
+    config.secret_key_base = 'blipblapblup'
 
     # Use memcached as cache store
-    Rails.application.config.cache_store = :dalli_store, nil, { expires_in: 7.days }
+    config.cache_store = :dalli_store, nil, { expires_in: 7.days }
+
+    # make sure all input is UTF-8
+    config.middleware.insert 0, Rack::UTF8Sanitizer, additional_content_types: ['application/vnd.api+json', 'application/xml']
+
+    # compress responses with deflate or gzip
+    config.middleware.use Rack::Deflater
   end
 end

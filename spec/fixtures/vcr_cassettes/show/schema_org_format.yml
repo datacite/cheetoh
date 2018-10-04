@@ -8,22 +8,22 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.api+json
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Authorization:
-      - Basic <MDS_TOKEN>
+      - Basic <ADMIN_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Thu, 19 Jul 2018 21:29:25 GMT
+      - Thu, 04 Oct 2018 22:12:23 GMT
       Content-Type:
-      - application/vnd.api+json; charset=utf-8
+      - application/json; charset=utf-8
       Connection:
       - keep-alive
       Status:
@@ -33,26 +33,25 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Credential-Username:
-      - datacite.datacite
+      - admin
       X-Request-Id:
-      - be203ad0-93a9-47f2-9fe1-dfe6935cbb13
+      - 653b3fc6-95f6-401b-afd4-7ca27b7d6d11
       Etag:
-      - W/"ccecb7d628cbc4f260e5c1c0f720ca62"
+      - W/"39697edbc68c05ef62a6d316a2cad22c"
       X-Runtime:
-      - '0.018420'
+      - '0.021469'
       X-Powered-By:
-      - Phusion Passenger 5.3.3
+      - Phusion Passenger 5.3.5
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.3
+      - nginx/1.14.0 + Phusion Passenger 5.3.5
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.24354/n296wz12m","type":"dois","attributes":{"doi":"10.24354/n296wz12m","prefix":"10.24354","suffix":"n296wz12m","identifier":"https://handle.test.datacite.org/10.24354/n296wz12m","url":"https://www.datacite.org","author":[{"type":"Person","name":"Tom
-        Johnson","given-name":"Tom","family-name":"Johnson"}],"title":"DOI Test","publisher":":unav","resource-type-subtype":"Dissertation","description":null,"version":"4.0","metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","state":"findable","is-active":true,"reason":null,"landing-page":{"status":null,"content-type":null,"checked":null},"xml":"PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxyZXNvdXJjZSB4bWxucz0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTQiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTQgaHR0cDovL3NjaGVtYS5kYXRhY2l0ZS5vcmcvbWV0YS9rZXJuZWwtNC9tZXRhZGF0YS54c2QiPgogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPjEwLjI0MzU0L24yOTZ3ejEybTwvaWRlbnRpZmllcj4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRPSSBUZXN0PC90aXRsZT4KICA8L3RpdGxlcz4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkpvaG5zb24sIFRvbTwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8cHVibGlzaGVyPjp1bmF2PC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE3PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5EaXNzZXJ0YXRpb248L3Jlc291cmNlVHlwZT4KICA8dmVyc2lvbj40LjA8L3ZlcnNpb24+CjwvcmVzb3VyY2U+Cg==","published":"2017","created":"2017-12-04T21:43:09.000Z","registered":"2017-12-04T21:43:09.000Z","updated":"2017-12-04T21:43:09.000Z"},"relationships":{"client":{"data":{"id":"datacite.test","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"resource-type":{"data":{"id":"text","type":"resource-types"}},"media":{"meta":{}}}},"included":[{"id":"datacite.test","type":"clients","attributes":{"name":"DataCite
+      string: '{"data":{"id":"10.24354/n296wz12m","type":"dois","attributes":{"doi":"10.24354/n296wz12m","identifier":"https://handle.test.datacite.org/10.24354/n296wz12m","url":"https://www.datacite.org","prefix":"10.24354","suffix":"n296wz12m","author":[{"type":"Person","name":"Tom
+        Johnson","givenName":"Tom","familyName":"Johnson"}],"title":"DOI Test","publisher":":unav","resource-type-subtype":"Dissertation","description":null,"version":"4.0","metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":null,"state":"findable","is-active":true,"landing-page":{"status":null,"content-type":null,"checked":null},"published":"2017","created":"2017-12-04T21:43:09.000Z","registered":"2017-12-04T21:43:09.000Z","updated":"2017-12-04T21:43:09.000Z","xml":"PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxyZXNvdXJjZSB4bWxucz0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTQiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTQgaHR0cDovL3NjaGVtYS5kYXRhY2l0ZS5vcmcvbWV0YS9rZXJuZWwtNC9tZXRhZGF0YS54c2QiPgogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPjEwLjI0MzU0L24yOTZ3ejEybTwvaWRlbnRpZmllcj4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRPSSBUZXN0PC90aXRsZT4KICA8L3RpdGxlcz4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkpvaG5zb24sIFRvbTwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8cHVibGlzaGVyPjp1bmF2PC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE3PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5EaXNzZXJ0YXRpb248L3Jlc291cmNlVHlwZT4KICA8dmVyc2lvbj40LjA8L3ZlcnNpb24+CjwvcmVzb3VyY2U+Cg==","cache-key":"dois/10.24354/n296wz12m-2017-12-04T21:43:09Z"},"relationships":{"client":{"data":{"id":"datacite.test","type":"clients"}},"resource-type":{"data":{"id":"text","type":"resource_types"}},"media":{"data":[]}}},"included":[{"id":"datacite.test","type":"clients","attributes":{"name":"DataCite
         Test Ra Ra Ra","symbol":"DATACITE.TEST","year":2017,"contact-name":"Martin
-        Fenner","contact-email":"support@datacite.org","domains":"*","url":null,"is-active":true,"has-password":true,"created":"2017-07-13T15:15:33Z","updated":"2018-07-19T01:30:48Z"},"relationships":{"prefixes":{"meta":{}},"provider":{"meta":{}},"repository":{"meta":{}}}},{"id":"datacite","type":"providers","attributes":{"name":"DataCite","symbol":"DATACITE","website":null,"contact-name":"DataCite
-        Support","contact-email":"support@datacite.org","phone":null,"description":null,"country":null,"logo-url":null,"institution-type":null,"is-active":true,"has-password":true,"joined":null,"created":"2011-12-07T13:41:07.000Z","updated":"2018-07-19T01:25:40.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}},{"id":"text","type":"resource-types","attributes":{"title":"Text","updated":"2016-09-21T00:00:00Z"}}]}'
+        Fenner","contact-email":"support@datacite.org","domains":"*","url":null,"created":"2017-07-13T15:15:33.000Z","updated":"2018-08-26T01:31:06.000Z","is-active":true,"has-password":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5072","type":"prefixes"},{"id":"10.23725","type":"prefixes"}]}}},{"id":"text","type":"resource-types","attributes":{"title":"Text","updated":"2016-09-21T00:00:00Z"},"relationships":{}}]}'
     http_version: 
-  recorded_at: Thu, 19 Jul 2018 21:29:31 GMT
+  recorded_at: Thu, 04 Oct 2018 22:12:23 GMT
 - request:
     method: get
     uri: https://api.test.datacite.org/10.24354/n296wz12m
@@ -61,40 +60,44 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.0.12; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
       Accept:
       - application/vnd.schemaorg.ld+json
       Authorization:
-      - Basic <MDS_TOKEN>
+      - Basic <ADMIN_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Thu, 19 Jul 2018 21:29:25 GMT
+      - Thu, 04 Oct 2018 22:12:23 GMT
       Content-Type:
-      - application/vnd.schemaorg.ld+json; charset=utf-8
+      - application/vnd.schemaorg.ld+json
       Connection:
       - keep-alive
       Status:
       - 200 OK
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - private
       Vary:
       - Accept-Encoding, Origin
       X-Credential-Username:
-      - datacite.datacite
+      - admin
       X-Request-Id:
-      - 17732f30-c93a-49a6-a05e-26f97dcc3d52
+      - de76c5c6-23b2-4069-8e4f-d4946135eb94
+      Content-Disposition:
+      - attachment; filename=_10.24354_n296wz12m.json
+      Content-Transfer-Encoding:
+      - binary
       Etag:
-      - W/"81b90e1704cfb562d11dd436663f4adc"
+      - W/"0e1dea756388f09694100f07b637c921"
       X-Runtime:
-      - '0.007478'
+      - '0.012346'
       X-Powered-By:
-      - Phusion Passenger 5.3.3
+      - Phusion Passenger 5.3.5
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.3
+      - nginx/1.14.0 + Phusion Passenger 5.3.5
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -102,7 +105,11 @@ http_interactions:
           "@context": "http://schema.org",
           "@type": "Thesis",
           "@id": "https://handle.test.datacite.org/10.24354/n296wz12m",
-          "identifier": "https://handle.test.datacite.org/10.24354/n296wz12m",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "doi",
+            "value": "https://handle.test.datacite.org/10.24354/n296wz12m"
+          },
           "additionalType": "Dissertation",
           "name": "DOI Test",
           "author": {
@@ -113,9 +120,6 @@ http_interactions:
           },
           "version": "4.0",
           "datePublished": "2017",
-          "isPartOf": {
-            "@type": "Periodical"
-          },
           "schemaVersion": "http://datacite.org/schema/kernel-4",
           "publisher": {
             "@type": "Organization",
@@ -127,5 +131,5 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Thu, 19 Jul 2018 21:29:31 GMT
+  recorded_at: Thu, 04 Oct 2018 22:12:23 GMT
 recorded_with: VCR 3.0.3

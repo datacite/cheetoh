@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::HttpAuthentication::Basic::ControllerMethods
 
-  include Helpable
-
   include Bolognese::DoiUtils
   include Bolognese::Utils
 
