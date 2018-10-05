@@ -49,11 +49,22 @@ after_success:
       export GIT_TAG=$(git describe --tags $(git rev-list --tags --max-count=1));
       git clone "https://${TRAVIS_SECURE_TOKEN}@github.com/datacite/mastino.git";
       ./dockerize -template vendor/docker/_cheetoh.auto.tfvars.tmpl:mastino/stage/services/cheetoh/_cheetoh.auto.tfvars;
+
+      if [ "${TRAVIS_TAG?}" ]; then
+        ./dockerize -template vendor/docker/_cheetoh.auto.tfvars.tmpl:mastino/prod-eu-west/services/cheetoh/_cheetoh.auto.tfvars;
+      fi
+      
       cd mastino;
       git remote;
       git config user.email ${DOCKER_EMAIL};
       git config user.name ${DOCKER_USERNAME};
-      git add stage/services/cheetoh/_cheetoh.auto.tfvars;
+      
+      if [ "${TRAVIS_TAG?}" ]; then
+        git add prod-eu-west/services/cheetoh/_cheetoh.auto.tfvars;
+      else
+        git add stage/services/cheetoh/_cheetoh.auto.tfvars;
+      fi
+
       git commit -m "Adding cheetoh git variables for latest commit";
       git push "https://${TRAVIS_SECURE_TOKEN}@github.com/datacite/mastino.git" master;
     fi
