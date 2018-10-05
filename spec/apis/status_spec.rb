@@ -63,12 +63,12 @@ describe "status", :type => :api, vcr: true, :order => :defined do
       post "/id/doi:#{doi}", params, headers
       expect(last_response.status).to eq(200)
       response = last_response.body.from_anvl
-      expect(response["success"]).to eq("doi:10.23725/bc11-cqw8")
+      expect(response["success"]).to eq("doi:10.5438/bc11-cqw8")
       #expect(response["_target"]).to eq(url)
       expect(response["_status"]).to eq("public")
 
       doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      expect(doc.at_css("identifier").content).to eq("10.23725/BC11-CQW8")
+      expect(doc.at_css("identifier").content).to eq("10.5438/BC11-CQW8")
     end
 
     it "status unavailable" do
@@ -77,12 +77,12 @@ describe "status", :type => :api, vcr: true, :order => :defined do
       post "/id/doi:#{doi}", params, headers
       expect(last_response.status).to eq(200)
       response = last_response.body.from_anvl
-      expect(response["success"]).to eq("doi:10.23725/bc11-cqw8")
+      expect(response["success"]).to eq("doi:10.5438/bc11-cqw8")
       #expect(response["_target"]).to eq(url)
       expect(response["_status"]).to eq("unavailable | withdrawn by author")
 
       doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      expect(doc.at_css("identifier").content).to eq("10.23725/BC11-CQW8")
+      expect(doc.at_css("identifier").content).to eq("10.5438/BC11-CQW8")
     end
   end
 end

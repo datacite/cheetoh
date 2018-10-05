@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe "regular prefix", :type => :api, vcr: true, :order => :defined do
-  let(:doi) { "10.23725/bc11-cqw8" }
+  let(:doi) { "10.5438/bc11-cqw8" }
   let(:username) { ENV['MDS_USERNAME'] }
   let(:password) { ENV['MDS_PASSWORD'] }
   let(:headers) do
@@ -17,12 +17,12 @@ describe "regular prefix", :type => :api, vcr: true, :order => :defined do
 
     expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
-    expect(response["success"]).to eq("doi:10.23725/bc11-cqw8")
+    expect(response["success"]).to eq("doi:10.5438/bc11-cqw8")
     expect(response["_target"]).to eq(url)
     expect(response["_status"]).to eq("reserved")
 
     doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-    expect(doc.at_css("identifier").content).to eq("10.23725/BC11-CQW8")
+    expect(doc.at_css("identifier").content).to eq("10.5438/BC11-CQW8")
   end
 
   it "wrong login credentials delete" do

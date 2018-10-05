@@ -15,12 +15,15 @@ class DoisController < ApplicationController
     elsif response.status == 404
       render plain: "error: bad request - no such identifier", status: :bad_request
     else
+      logger = Logger.new(STDOUT)
       logger.info response.inspect
       render plain: "error: " + response.body.dig("errors", 0, "title"), status: response.status
     end
   end
 
   def mint
+    logger = Logger.new(STDOUT)
+
     fail IdentifierError, "no _profile provided" unless profile_present?(safe_params)
     fail IdentifierError, "no _target provided" if (safe_params[:_target].blank? && safe_params[:_status] != "reserved")
 
@@ -63,13 +66,12 @@ class DoisController < ApplicationController
       render plain: "error: unauthorized", status: :unauthorized
     else
       logger.info response.inspect
-      render plain: response.body.dig("errors", 0, "title"), status: response.status
+      render plain: "error: " + response.body.dig("errors", 0, "title"), status: response.status
     end
   end
 
   def create
     logger = Logger.new(STDOUT)
-    logger.info safe_params.inspect
 
     doi = validate_doi(params[:id])
     fail IdentifierError, "ark identifiers are not supported by this service" if is_ark?(params[:id])
@@ -104,11 +106,13 @@ class DoisController < ApplicationController
       render plain: "error: unauthorized", status: :unauthorized
     else
       logger.info response.inspect
-      render plain: response.body.dig("errors", 0, "title"), status: response.status
+      render plain: "error: " + response.body.dig("errors", 0, "title"), status: response.status
     end
   end
 
   def update
+    logger = Logger.new(STDOUT)
+
     fail IdentifierError, "No _profile, _target or _status provided" unless
       safe_params[@profile].present? ||
       safe_params[:_target].present? ||
@@ -139,11 +143,13 @@ class DoisController < ApplicationController
       render plain: "error: unauthorized", status: :unauthorized
     else
       logger.info response.inspect
-      render plain: response.body.dig("errors", 0, "title"), status: response.status
+      render plain: "error: " + response.body.dig("errors", 0, "title"), status: response.status
     end
   end
 
   def destroy
+    logger = Logger.new(STDOUT)
+
     response = DoisController.get_doi(@doi)
     fail AbstractController::ActionNotFound unless response.status == 200
     fail IdentifierError, "#{params[:id]} is not a reserved DOI" unless response.body.dig("data", "attributes", "state") == "draft"
@@ -157,7 +163,7 @@ class DoisController < ApplicationController
       render plain: "error: unauthorized", status: :unauthorized
     else
       logger.info delete_response.inspect
-      render plain: delete_response.body.dig("errors", 0, "title"), status: response.status
+      render plain: "error: " + delete_response.body.dig("errors", 0, "title"), status: response.status
     end
   end
 
@@ -190,9 +196,9 @@ class DoisController < ApplicationController
 
   def safe_params
     # custom URL decoding because there is also ANVL encoding
-    data = request.raw_post.gsub(/%20/, " ").gsub(/%22/, "\"").gsub(/%3C/, "<").gsub(/%3E/, ">").gsub(/%0A(_profile|_status|_target|datacite|schema_org|ris|bibtex)/, "\n\\1")
-    
-    params.permit(:id, :_target, :_export, :_profile, :_status, :_number, :datacite, :bibtex, :ris, :schema_org, :citeproc).merge(data.from_anvl)
+    data = request.raw_post.gsub(/%20/, " ").gsub(/%22/, "\"").gsub(/%3C/, "<").gsub(/%3E/, ">").gsub(/%7B/, "{").gsub(/%7D/, "}").gsub(/%0A(_profile|_status|_target|_number|datacite|schema_org|ris|bibtex)/, "\n\\1").from_anvl
+
+    params.permit(:id, :_target, :_export, :_profile, :_status, :_number, :datacite, :bibtex, :ris, :schema_org, :citeproc).merge!(data)
   end
 
   def add_metadata_to_bugsnag(report)

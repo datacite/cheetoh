@@ -40,7 +40,7 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
   # end
 
   context "uva" do
-    it "create doi" do
+    it "mint doi" do
       str = File.read(file_fixture('10.5072_fk2_test.txt')).from_anvl
       params = { "datacite" => str[:datacite], "_target" => str[:_target], "_status" => "reserved", "_number" => "1225646076" }.to_anvl
       doi = "10.5072/fk2"
@@ -99,20 +99,20 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
 
   context "ieee" do
     let(:doi) { "10.5072/3mg5-tm67" }
-  #   it "mint doi" do
-  #     str = File.read(file_fixture('ieee.txt')).from_anvl
-  #     params = str.merge("_number" => "122165076").to_anvl
-  #     doi = "10.5072"
-  #     post "/shoulder/doi:#{doi}", params, headers
-  #     expect(last_response.status).to eq(200)
-  #     response = last_response.body.from_anvl
-  #     expect(response["success"]).to eq("doi:10.5072/3mg5-tm67")
-  #     expect(response["_target"]).to eq(str[:_target])
-  #     expect(response["_status"]).to eq("reserved")
+    it "mint doi" do
+      str = File.read(file_fixture('ieee.txt')).from_anvl
+      params = str.merge("_number" => "122165076").to_anvl
+      doi = "10.5072"
+      post "/shoulder/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.5072/3mg5-tm67")
+      expect(response["_target"]).to eq(str[:_target])
+      expect(response["_status"]).to eq("reserved")
 
-  #     doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-  #     expect(doc.at_css("identifier").content).to eq("10.5072/3MG5-TM67")
-  #   end
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/3MG5-TM67")
+    end
 
     it "delete minted doi" do
       delete "/id/doi:#{doi}", nil, headers
@@ -178,12 +178,12 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
   end
 
   context "nd" do
-    let(:doi) { "10.23725/fk2-3mg5-tm67" }
+    let(:doi) { "10.5438/fk2-3mg5-tm67" }
 
     it "mint doi" do
       str = File.read(file_fixture('nd.txt')).from_anvl
       params = str.merge("_number" => "122165076").to_anvl
-      doi = "10.23725/FK2"
+      doi = "10.5438/FK2"
       post "/shoulder/doi:#{doi}", params, headers
       expect(last_response.status).to eq(422)
       response = last_response.body.from_anvl

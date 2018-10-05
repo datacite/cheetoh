@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.test.datacite.org/dois/10.5072/3mfp-6m52
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      Content-Type:
+      - application/vnd.api+json
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <ADMIN_TOKEN>
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Date:
+      - Fri, 05 Oct 2018 09:06:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - b2b5fff8-4faa-46d3-b448-109d636f1631
+      X-Runtime:
+      - '0.007769'
+      X-Powered-By:
+      - Phusion Passenger 5.3.5
+      Server:
+      - nginx/1.14.0 + Phusion Passenger 5.3.5
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"status":"404","title":"The resource you are looking for
+        doesn''t exist."}]}'
+    http_version: 
+  recorded_at: Fri, 05 Oct 2018 09:06:33 GMT
+- request:
+    method: post
+    uri: https://api.test.datacite.org/dois
+    body:
+      encoding: UTF-8
+      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/3mfp-6m52","source":"ez"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      Content-Type:
+      - application/vnd.api+json
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Date:
+      - Fri, 05 Oct 2018 09:06:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Credential-Username:
+      - datacite.datacite
+      X-Request-Id:
+      - 12dda10c-3055-46b3-9693-f7b016ca1c32
+      Location:
+      - https://api.test.datacite.org/dois/2258652
+      Etag:
+      - W/"8e79aedf7fea01e933627e6c316c524d"
+      X-Runtime:
+      - '0.087920'
+      X-Powered-By:
+      - Phusion Passenger 5.3.5
+      Server:
+      - nginx/1.14.0 + Phusion Passenger 5.3.5
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":"10.5072/3mfp-6m52","type":"dois","attributes":{"doi":"10.5072/3mfp-6m52","identifier":"https://handle.test.datacite.org/10.5072/3mfp-6m52","url":null,"prefix":"10.5072","suffix":"3mfp-6m52","author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":"ez","state":"draft","is-active":false,"landing-page":{"status":null,"content-type":null,"checked":null},"published":null,"created":"2018-10-05T09:06:33.000Z","registered":null,"updated":"2018-10-05T09:06:33.000Z","xml":null,"cache-key":"dois/10.5072/3mfp-6m52-2018-10-05T09:06:33Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"resource-type":{"data":null},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","is-active":true,"has-password":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"}]}}}]}'
+    http_version: 
+  recorded_at: Fri, 05 Oct 2018 09:06:34 GMT
+recorded_with: VCR 3.0.3
