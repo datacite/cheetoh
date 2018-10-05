@@ -1,0 +1,5 @@
+_target: https://data.gulfresearchinitiative.org/data/R5.x287.000:0002
+datacite.creator: Test User
+datacite.title: RCYC Focus Groups
+datacite.publisher: Harte Research Institute
+datacite.publicationyear: 2018

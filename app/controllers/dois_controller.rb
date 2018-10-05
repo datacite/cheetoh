@@ -41,7 +41,7 @@ class DoisController < ApplicationController
       end
     end
 
-    data = safe_params[@profile].present? ? safe_params[@profile].anvlunesc : nil
+    data = safe_params[@profile].present? ? URI.decode(safe_params[@profile].anvlunesc) : nil
 
     options = {
       data: data,
@@ -51,11 +51,11 @@ class DoisController < ApplicationController
       password: @password }
 
     options = options.merge(
-      author: safe_params["datacite.creator"],
-      title: safe_params["datacite.title"],
-      publisher: safe_params["datacite.publisher"],
-      published: safe_params["datacite.publicationyear"],
-      resource_type_general: safe_params["datacite.resourcetype"]) if @profile.to_s == "datacite"
+      author: decode_param(safe_params["datacite.creator"]),
+      title: decode_param(safe_params["datacite.title"]),
+      publisher: decode_param(safe_params["datacite.publisher"]),
+      published: decode_param(safe_params["datacite.publicationyear"]),
+      resource_type_general: decode_param(safe_params["datacite.resourcetype"])) if @profile.to_s == "datacite"
 
     response = DoisController.post_doi(doi, options)
 
@@ -81,21 +81,21 @@ class DoisController < ApplicationController
       (safe_params[:_target].blank? && safe_params[:_status] != "reserved")
     fail IdentifierError, "doi:#{doi} has already been registered" if DoisController.get_doi(doi).status == 200
 
-    data = safe_params[@profile].present? ? safe_params[@profile].anvlunesc : nil
+    data = decode_param(safe_params[@profile])
 
     options = {
       data: data,
-      url: safe_params[:_target],
+      url: decode_param(safe_params[:_target]),
       target_status: safe_params[:_status],
       username: @username,
       password: @password }.compact
 
     options = options.merge(
-      author: safe_params["datacite.creator"],
-      title: safe_params["datacite.title"],
-      publisher: safe_params["datacite.publisher"],
-      published: safe_params["datacite.publicationyear"],
-      resource_type_general: safe_params["datacite.resourcetype"]) if @profile.to_s == "datacite"
+      author: decode_param(safe_params["datacite.creator"]),
+      title: decode_param(safe_params["datacite.title"]),
+      publisher: decode_param(safe_params["datacite.publisher"]),
+      published: decode_param(safe_params["datacite.publicationyear"]),
+      resource_type_general: decode_param(safe_params["datacite.resourcetype"])) if @profile.to_s == "datacite"
 
     response = DoisController.post_doi(doi, options)
 
@@ -118,21 +118,21 @@ class DoisController < ApplicationController
       safe_params[:_target].present? ||
       safe_params[:_status].present?
 
-    data = safe_params[@profile].present? ? safe_params[@profile].anvlunesc : nil
+    data = decode_param(safe_params[@profile])
 
     options = {
       data: data,
-      url: safe_params[:_target],
+      url: decode_param(safe_params[:_target]),
       target_status: safe_params[:_status],
       username: @username,
       password: @password }.compact
 
     options = options.merge(
-      author: safe_params["datacite.creator"],
-      title: safe_params["datacite.title"],
-      publisher: safe_params["datacite.publisher"],
-      published: safe_params["datacite.publicationyear"],
-      resource_type_general: safe_params["datacite.resourcetype"]) if @profile.to_s == "datacite"
+      author: decode_param(safe_params["datacite.creator"]),
+      title: decode_param(safe_params["datacite.title"]),
+      publisher: decode_param(safe_params["datacite.publisher"]),
+      published: decode_param(safe_params["datacite.publicationyear"]),
+      resource_type_general: decode_param(safe_params["datacite.resourcetype"])) if @profile.to_s == "datacite"
 
     response = DoisController.put_doi(@doi, options)
 
@@ -205,7 +205,7 @@ class DoisController < ApplicationController
     return nil unless safe_params[@profile].present?
 
     report.add_tab(:metadata, {
-      metadata: safe_params[@profile]
+      metadata: URI.escape(safe_params[@profile])
     })
   end
 end

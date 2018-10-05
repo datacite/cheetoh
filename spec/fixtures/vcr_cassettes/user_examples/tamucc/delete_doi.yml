@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.test.datacite.org/dois/10.5072/4h3j-wr25
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      Content-Type:
+      - application/vnd.api+json
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <ADMIN_TOKEN>
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 05 Oct 2018 20:39:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Credential-Username:
+      - admin
+      X-Request-Id:
+      - 4f7c4be0-83b4-44da-8051-c25505f39002
+      Etag:
+      - W/"b4e9f7f354730b11924f7c1d8edb0009"
+      X-Runtime:
+      - '0.021640'
+      X-Powered-By:
+      - Phusion Passenger 5.3.5
+      Server:
+      - nginx/1.14.0 + Phusion Passenger 5.3.5
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":"10.5072/4h3j-wr25","type":"dois","attributes":{"doi":"10.5072/4h3j-wr25","identifier":"https://handle.test.datacite.org/10.5072/4h3j-wr25","url":"https://data.gulfresearchinitiative.org/data/R6.x805.000:0056","prefix":"10.5072","suffix":"4h3j-wr25","author":[{"name":"Test
+        User"}],"title":"Aqueous geochemistry of Louisiana marshes, May 2015 %E2%80%93
+        October 2016","publisher":"Harte Research Institute","resource-type-subtype":"CreativeWork","description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":"ez","state":"draft","is-active":false,"landing-page":{"status":null,"content-type":null,"checked":null},"published":"2018","created":"2018-10-05T20:35:35.000Z","registered":null,"updated":"2018-10-05T20:35:35.000Z","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi80SDNKLVdSMjU8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5UZXN0IFVzZXI8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5BcXVlb3VzIGdlb2NoZW1pc3RyeSBvZiBMb3Vpc2lhbmEgbWFyc2hlcywgTWF5IDIwMTUgJUUyJTgwJTkzIE9jdG9iZXIgMjAxNjwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5IYXJ0ZSBSZXNlYXJjaCBJbnN0aXR1dGU8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTg8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkNyZWF0aXZlV29yazwvcmVzb3VyY2VUeXBlPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTg8L2RhdGU+CiAgPC9kYXRlcz4KICA8dmVyc2lvbi8+CjwvcmVzb3VyY2U+Cg==","cache-key":"dois/10.5072/4h3j-wr25-2018-10-05T20:35:35Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"resource-type":{"data":{"id":"dataset","type":"resource_types"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","is-active":true,"has-password":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"}]}}},{"id":"dataset","type":"resource-types","attributes":{"title":"Dataset","updated":"2016-09-21T00:00:00Z"},"relationships":{}}]}'
+    http_version: 
+  recorded_at: Fri, 05 Oct 2018 20:39:57 GMT
+- request:
+    method: delete
+    uri: https://api.test.datacite.org/dois/10.5072/4h3j-wr25
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
+  response:
+    status:
+      code: 204
+      message: ''
+    headers:
+      Date:
+      - Fri, 05 Oct 2018 20:39:57 GMT
+      Connection:
+      - keep-alive
+      Status:
+      - 204 No Content
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Credential-Username:
+      - datacite.datacite
+      X-Request-Id:
+      - dca0a993-0dd4-4176-b685-4f7c40a47100
+      X-Runtime:
+      - '0.068823'
+      X-Powered-By:
+      - Phusion Passenger 5.3.5
+      Server:
+      - nginx/1.14.0 + Phusion Passenger 5.3.5
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Fri, 05 Oct 2018 20:39:57 GMT
+recorded_with: VCR 3.0.3

@@ -200,4 +200,46 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
     #   expect(response["error"]).to eq("Missing child element(s). expected is ( {http://datacite.org/schema/kernel-4}creator ). at line 4, column 0")
     # end
   end
+
+  context "tamucc" do
+    let(:doi) { "10.5072/4h3j-wr25" }
+    it "mint doi" do
+      str = File.read(file_fixture('tamucc.txt')).from_anvl
+      params = str.merge("_number" => "152161176").to_anvl
+      doi = "10.5072"
+      post "/shoulder/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.5072/4h3j-wr25")
+      expect(response["_target"]).to eq(str[:_target])
+      expect(response["_status"]).to eq("reserved")
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
+    end
+
+    it "update doi" do
+      str = File.read(file_fixture('tamucc-update.txt')).from_anvl
+      params = str.to_anvl
+      post "/id/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.5072/4h3j-wr25")
+      expect(response["_target"]).to eq(str[:_target])
+      expect(response["_status"]).to eq("reserved")
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
+    end
+
+    it "delete doi" do
+      doi = "10.5072/4h3j-wr25"
+      delete "/id/doi:#{doi}", nil, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.5072/4h3j-wr25")
+      expect(response["_target"]).to eq("https://data.gulfresearchinitiative.org/data/R6.x805.000:0056")
+
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
+    end
+  end
 end

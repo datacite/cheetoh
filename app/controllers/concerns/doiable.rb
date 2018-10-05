@@ -73,6 +73,12 @@ module Doiable
       split = 4
       prefix.to_s + "/" + shoulder + Base32::URL.encode(number, split: split, length: length, checksum: true)
     end
+
+    def decode_param(str)
+      return nil unless str.present?
+
+      URI.decode(str)
+    end
   end
 
   module ClassMethods

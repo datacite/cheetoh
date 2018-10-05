@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 04 Oct 2018 22:12:26 GMT
+      - Fri, 05 Oct 2018 19:56:12 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -33,9 +33,9 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 0a37005a-8d61-4651-af02-258443052ec2
+      - fcf234de-4942-45fe-9760-378d25b2440f
       X-Runtime:
-      - '0.007222'
+      - '0.009668'
       X-Powered-By:
       - Phusion Passenger 5.3.5
       Server:
@@ -45,13 +45,13 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Thu, 04 Oct 2018 22:12:26 GMT
+  recorded_at: Fri, 05 Oct 2018 19:56:12 GMT
 - request:
     method: post
     uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/dryad.b3b0t7s/1","url":"http://ryan-vm.datadryad.org/resource/doi:10.5072/dryad.b3b0t7s/1","xml":"PHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6ZHJ5YWQ9Imh0dHA6Ly9wdXJsLm9yZy9kcnlhZC90ZXJtcy8iIHhtbG5zOmRpbT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOmRzcGFjZT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOm1ldHM9Imh0dHA6Ly93d3cubG9jLmdvdi9NRVRTLyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+DQogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3Uy8xPC9pZGVudGlmaWVyPg0KICA8dmVyc2lvbj4xPC92ZXJzaW9uPg0KICA8Y3JlYXRvcnM+DQogICAgPGNyZWF0b3I+DQogICAgICA8Y3JlYXRvck5hbWU+U2NoZXJsZSwgUnlhbnl5eTwvY3JlYXRvck5hbWU+DQogICAgPC9jcmVhdG9yPg0KICA8L2NyZWF0b3JzPg0KICA8dGl0bGVzPg0KICAgIDx0aXRsZT5hYWFUZXh0RmlsZSAoMyk8L3RpdGxlPg0KICA8L3RpdGxlcz4NCiAgPHB1Ymxpc2hlcj5EcnlhZCBEaWdpdGFsIFJlcG9zaXRvcnk8L3B1Ymxpc2hlcj4NCiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE4PC9wdWJsaWNhdGlvblllYXI+DQogIDxkYXRlcz4NCiAgICA8ZGF0ZSBkYXRlVHlwZT0iQWNjZXB0ZWQiPjIwMTgtMDUtMzA8L2RhdGU+DQogIDwvZGF0ZXM+DQogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YUZpbGU8L3Jlc291cmNlVHlwZT4NCiAgPHJlbGF0ZWRJZGVudGlmaWVycz4NCiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3UzwvcmVsYXRlZElkZW50aWZpZXI+DQogIDwvcmVsYXRlZElkZW50aWZpZXJzPg0KICA8c2l6ZXM+DQogICAgPHNpemU+MTggYnl0ZXM8L3NpemU+DQogIDwvc2l6ZXM+DQogIDxyaWdodHNMaXN0Pg0KICAgIDxyaWdodHM+QXQgdGhlIHJlcXVlc3Qgb2YgdGhlIGF1dGhvciwgdGhpcyBpdGVtIGlzIGVtYmFyZ29lZCB1bnRpbCB0aGUgYXNzb2NpYXRlZCBhcnRpY2xlIGlzIHB1Ymxpc2hlZC48L3JpZ2h0cz4NCiAgPC9yaWdodHNMaXN0Pg0KICA8ZGVzY3JpcHRpb25zPg0KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIiAvPg0KICA8L2Rlc2NyaXB0aW9ucz4NCjwvcmVzb3VyY2U+","source":"ez"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
+      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/dryad.b3b0t7s/1","url":"http://ryan-vm.datadryad.org/resource/doi:10.5072/dryad.b3b0t7s/1","xml":"PHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6ZHJ5YWQ9Imh0dHA6Ly9wdXJsLm9yZy9kcnlhZC90ZXJtcy8iIHhtbG5zOmRpbT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOmRzcGFjZT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOm1ldHM9Imh0dHA6Ly93d3cubG9jLmdvdi9NRVRTLyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+DQogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3Uy8xPC9pZGVudGlmaWVyPg0KICA8dmVyc2lvbj4xPC92ZXJzaW9uPg0KICA8Y3JlYXRvcnM+DQogICAgPGNyZWF0b3I+DQogICAgICA8Y3JlYXRvck5hbWU+U2NoZXJsZSwgUnlhbnl5eTwvY3JlYXRvck5hbWU+DQogICAgPC9jcmVhdG9yPg0KICA8L2NyZWF0b3JzPg0KICA8dGl0bGVzPg0KICAgIDx0aXRsZT5hYWFUZXh0RmlsZSAoMyk8L3RpdGxlPg0KICA8L3RpdGxlcz4NCiAgPHB1Ymxpc2hlcj5EcnlhZCBEaWdpdGFsIFJlcG9zaXRvcnk8L3B1Ymxpc2hlcj4NCiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE4PC9wdWJsaWNhdGlvblllYXI+DQogIDxkYXRlcz4NCiAgICA8ZGF0ZSBkYXRlVHlwZT0iQWNjZXB0ZWQiPjIwMTgtMDUtMzA8L2RhdGU+DQogIDwvZGF0ZXM+DQogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YUZpbGU8L3Jlc291cmNlVHlwZT4NCiAgPHJlbGF0ZWRJZGVudGlmaWVycz4NCiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3UzwvcmVsYXRlZElkZW50aWZpZXI+DQogIDwvcmVsYXRlZElkZW50aWZpZXJzPg0KICA8c2l6ZXM+DQogICAgPHNpemU+MTggYnl0ZXM8L3NpemU+DQogIDwvc2l6ZXM+DQogIDxyaWdodHNMaXN0Pg0KICAgIDxyaWdodHM+QXQgdGhlIHJlcXVlc3Qgb2YgdGhlIGF1dGhvciwgdGhpcyBpdGVtIGlzIGVtYmFyZ29lZCB1bnRpbCB0aGUgYXNzb2NpYXRlZCBhcnRpY2xlIGlzIHB1Ymxpc2hlZC48L3JpZ2h0cz4NCiAgPC9yaWdodHNMaXN0Pg0KICA8ZGVzY3JpcHRpb25zPg0KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIiAvPg0KICA8L2Rlc2NyaXB0aW9ucz4NCjwvcmVzb3VyY2U+","author":[],"source":"ez"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
       - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
@@ -67,7 +67,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 04 Oct 2018 22:12:26 GMT
+      - Fri, 05 Oct 2018 19:56:12 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -81,13 +81,13 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - f701f674-26d6-4525-bd20-74f4731e4398
+      - 2588e487-3b71-4aec-9bb0-3c7d7e3a83cb
       Location:
-      - https://api.test.datacite.org/dois/2258508
+      - https://api.test.datacite.org/dois/2258752
       Etag:
-      - W/"b7d1e3ddcb7e6dae5c32799dee4cbdcf"
+      - W/"7526eca794fa3813ca80f4d4d022a90b"
       X-Runtime:
-      - '0.090145'
+      - '0.103112'
       X-Powered-By:
       - Phusion Passenger 5.3.5
       Server:
@@ -96,8 +96,8 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"data":{"id":"10.5072/dryad.b3b0t7s/1","type":"dois","attributes":{"doi":"10.5072/dryad.b3b0t7s/1","identifier":"https://handle.test.datacite.org/10.5072/dryad.b3b0t7s/1","url":"http://ryan-vm.datadryad.org/resource/doi:10.5072/dryad.b3b0t7s/1","prefix":"10.5072","suffix":"dryad.b3b0t7s/1","author":[{"type":"Person","name":"Ryanyyy
         Scherle","givenName":"Ryanyyy","familyName":"Scherle"}],"title":"aaaTextFile
-        (3)","publisher":"Dryad Digital Repository","resource-type-subtype":"DataFile","description":null,"version":"1","metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":"ez","state":"draft","is-active":false,"landing-page":{"status":null,"content-type":null,"checked":null},"published":"2018","created":"2018-10-04T22:12:26.000Z","registered":null,"updated":"2018-10-04T22:12:26.000Z","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6ZHJ5YWQ9Imh0dHA6Ly9wdXJsLm9yZy9kcnlhZC90ZXJtcy8iIHhtbG5zOmRpbT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOmRzcGFjZT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOm1ldHM9Imh0dHA6Ly93d3cubG9jLmdvdi9NRVRTLyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9EUllBRC5CM0IwVDdTLzE8L2lkZW50aWZpZXI+CiAgPHZlcnNpb24+MTwvdmVyc2lvbj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPlNjaGVybGUsIFJ5YW55eXk8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5hYWFUZXh0RmlsZSAoMyk8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+RHJ5YWQgRGlnaXRhbCBSZXBvc2l0b3J5PC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE4PC9wdWJsaWNhdGlvblllYXI+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkFjY2VwdGVkIj4yMDE4LTA1LTMwPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5EYXRhRmlsZTwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3UzwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHNpemVzPgogICAgPHNpemU+MTggYnl0ZXM8L3NpemU+CiAgPC9zaXplcz4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHM+QXQgdGhlIHJlcXVlc3Qgb2YgdGhlIGF1dGhvciwgdGhpcyBpdGVtIGlzIGVtYmFyZ29lZCB1bnRpbCB0aGUgYXNzb2NpYXRlZCBhcnRpY2xlIGlzIHB1Ymxpc2hlZC48L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIi8+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+","cache-key":"dois/10.5072/dryad.b3b0t7s/1-2018-10-04T22:12:26Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"resource-type":{"data":{"id":"dataset","type":"resource_types"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
+        (3)","publisher":"Dryad Digital Repository","resource-type-subtype":"DataFile","description":null,"version":"1","metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":"ez","state":"draft","is-active":false,"landing-page":{"status":null,"content-type":null,"checked":null},"published":"2018","created":"2018-10-05T19:56:12.000Z","registered":null,"updated":"2018-10-05T19:56:12.000Z","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6ZHJ5YWQ9Imh0dHA6Ly9wdXJsLm9yZy9kcnlhZC90ZXJtcy8iIHhtbG5zOmRpbT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOmRzcGFjZT0iaHR0cDovL3d3dy5kc3BhY2Uub3JnL3htbG5zL2RzcGFjZS9kaW0iIHhtbG5zOm1ldHM9Imh0dHA6Ly93d3cubG9jLmdvdi9NRVRTLyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9EUllBRC5CM0IwVDdTLzE8L2lkZW50aWZpZXI+CiAgPHZlcnNpb24+MTwvdmVyc2lvbj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPlNjaGVybGUsIFJ5YW55eXk8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5hYWFUZXh0RmlsZSAoMyk8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+RHJ5YWQgRGlnaXRhbCBSZXBvc2l0b3J5PC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE4PC9wdWJsaWNhdGlvblllYXI+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkFjY2VwdGVkIj4yMDE4LTA1LTMwPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ij5EYXRhRmlsZTwvcmVzb3VyY2VUeXBlPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUwNzIvRFJZQUQuQjNCMFQ3UzwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHNpemVzPgogICAgPHNpemU+MTggYnl0ZXM8L3NpemU+CiAgPC9zaXplcz4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHM+QXQgdGhlIHJlcXVlc3Qgb2YgdGhlIGF1dGhvciwgdGhpcyBpdGVtIGlzIGVtYmFyZ29lZCB1bnRpbCB0aGUgYXNzb2NpYXRlZCBhcnRpY2xlIGlzIHB1Ymxpc2hlZC48L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIi8+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+","cache-key":"dois/10.5072/dryad.b3b0t7s/1-2018-10-05T19:56:12Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"resource-type":{"data":{"id":"dataset","type":"resource_types"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
         Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","is-active":true,"has-password":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"}]}}},{"id":"dataset","type":"resource-types","attributes":{"title":"Dataset","updated":"2016-09-21T00:00:00Z"},"relationships":{}}]}'
     http_version: 
-  recorded_at: Thu, 04 Oct 2018 22:12:26 GMT
+  recorded_at: Fri, 05 Oct 2018 19:56:12 GMT
 recorded_with: VCR 3.0.3

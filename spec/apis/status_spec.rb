@@ -73,7 +73,6 @@ describe "status", :type => :api, vcr: true, :order => :defined do
 
     it "status unavailable" do
       params = { "_status" => "unavailable | withdrawn by author" }.to_anvl
-      puts params
       post "/id/doi:#{doi}", params, headers
       expect(last_response.status).to eq(200)
       response = last_response.body.from_anvl
