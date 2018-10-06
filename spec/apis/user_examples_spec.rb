@@ -215,6 +215,7 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["_status"]).to eq("reserved")
       doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
       expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
+      expect(doc.at_css("title").content).to eq("Aqueous geochemistry of Louisiana marshes, May 2015 – October 2016")
     end
 
     it "update doi" do
@@ -228,6 +229,7 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["_status"]).to eq("reserved")
       doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
       expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
+      expect(doc.at_css("title").content).to eq("RCYC Focus Groups")
     end
 
     it "delete doi" do
