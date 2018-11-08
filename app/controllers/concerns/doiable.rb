@@ -95,7 +95,7 @@ module Doiable
         reason = nil
         event = nil
       elsif options[:target_status].to_s.start_with?("unavailable")
-        reason = options[:target_status].split("%7C", 2).map(&:strip).last
+        reason = options[:target_status].split("%7C", -1).map(&:strip).last
         event = "hide"
       else
         reason = nil
