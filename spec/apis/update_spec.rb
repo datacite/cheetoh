@@ -23,21 +23,4 @@ describe "update", :type => :api, vcr: true, :order => :defined do
       expect(last_response.body).to eq("HTTP Basic: Access denied.\n")
     end
   end
-
-  context "status change" do
-    it "adds reason correctly" do
-      datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
-      url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
-      params = { "datacite" => datacite, "_target" => url, "_status" => "unavailable | withdrawn by author" }.to_anvl
-      params_update = { "_status" => "unavailable | withdrawn by pulisher" }.to_anvl
-      doi = "10.5072/bc11-cqw7"
-      put "/id/doi:#{doi}", params, headers
-
-      post "/id/doi:#{doi}", params_update, headers
-      expect(last_response.status).to eq(200)
-      response = last_response.body.from_anvl
-      expect(response.fetch("_status")).to eq("unavailable | withdrawn by pulisher")
-    end
-  end
-
 end
