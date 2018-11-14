@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.test.datacite.org/dois/10.21967/fk2-qscw-y487
+    body:
+      encoding: UTF-8
+      string: '{"data":{"type":"dois","attributes":{"url":"http://localhost/items/9e15f53d-9e52-40b9-ab0f-307616b21e2d","author":[{"name":"Joe
+        Blow"}],"title":"Different Title","publisher":"University of Alberta Libraries","published":"2017","resource_type_general":"Text/Book","source":"ez","event":"publish"},"relationships":{"client":{"data":{"type":"clients","id":"CISTI.UAL"}},"resource-type":{"data":{"type":"resource-types","id":"text/book"}}}}}'
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      Content-Type:
+      - application/vnd.api+json
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Authorization:
+      - Basic <MDS_TOKEN>
+  response:
+    status:
+      code: 422
+      message: ''
+    headers:
+      Date:
+      - Wed, 14 Nov 2018 22:15:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 422 Unprocessable Entity
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - edcf5489-bd60-46c2-9c2e-077bb7dbb78e
+      X-Runtime:
+      - '0.050587'
+      X-Powered-By:
+      - Phusion Passenger 5.3.7
+      Server:
+      - nginx/1.14.0 + Phusion Passenger 5.3.7
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"status":"422","title":"found unpermitted parameter: :resource_type_general"}]}'
+    http_version: 
+  recorded_at: Wed, 14 Nov 2018 22:15:17 GMT
+recorded_with: VCR 3.0.3
