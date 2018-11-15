@@ -19,6 +19,7 @@ module Doiable
 
       status = STATES[attributes["state"]] || "public"
       status = [status, attributes["reason"]].join(" | ") if status == "unavailable" && attributes["reason"].present?
+      export_status = "no" unless status == "public"
 
       if options[:profile] == :datacite
         metadata = attributes["xml"].present? ? Base64.decode64(attributes["xml"]) : nil
@@ -31,7 +32,7 @@ module Doiable
         options[:profile] => metadata,
         "_profile" => options[:profile],
         "_datacenter" => response.dig("data", "relationships", "client", "data", "id").upcase,
-        "_export" => "yes",
+        "_export" => export_status || "yes",
         "_created" => Time.parse(attributes["created"]).to_i,
         "_updated" => Time.parse(attributes["updated"]).to_i,
         "_status" => status

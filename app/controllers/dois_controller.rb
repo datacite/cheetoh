@@ -196,8 +196,7 @@ class DoisController < ApplicationController
 
   def safe_params
     # custom URL decoding because there is also ANVL encoding
-    data = request.raw_post.gsub(/%20/, " ").gsub(/%22/, "\"").gsub(/%3C/, "<").gsub(/%3E/, ">").gsub(/%7B/, "{").gsub(/%7D/, "}").gsub(/%0A(_profile|_status|_target|_number|datacite|schema_org|ris|bibtex)/, "\n\\1").from_anvl
-
+    data = request.raw_post.gsub(/%20/, " ").gsub(/%22/, "\"").gsub(/%3C/, "<").gsub(/%3E/, ">").gsub(/%7B/, "{").gsub(/%7D/, "}").gsub(/%0A(_profile|_status|_target|_export|_number|datacite|schema_org|ris|bibtex)/, "\n\\1").from_anvl
     params.permit(:id, :_target, :_export, :_profile, :_status, :_number, :datacite, :bibtex, :ris, :schema_org, :citeproc).merge!(data)
   end
 
