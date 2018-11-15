@@ -105,6 +105,7 @@ module Doiable
 
       author = options[:author].to_s.split(";").map { |a| { "name" => a.strip }}
       
+      # https://github.com/datacite/lupo/blob/62b8ae4069be3418f8312265f015db5827eed2e8/app/controllers/dois_controller.rb#L414-L464
       attributes = {
         "url" => options[:url],
         "xml" => xml,
@@ -112,7 +113,7 @@ module Doiable
         "title" => options[:title],
         "publisher" => options[:publisher],
         "published" => options[:published],
-        "resource_type_general" => options[:resource_type_general],
+        "resource-type-subtype" => options[:resource_type],
         "source" => "ez",
         "event" => event,
         "reason" => reason }.compact

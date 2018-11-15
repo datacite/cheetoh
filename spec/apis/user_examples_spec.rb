@@ -285,7 +285,7 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       response = last_response.body.from_anvl
       expect(response["success"]).to eq("doi:10.21967/fk2-qscw-y487")
       doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      expect(doc.at_css("identifier").content).to eq("10.21967/fk2-qscw-y487")
+      expect(doc.at_css("identifier").content).to eq("10.21967/FK2-QSCW-Y487")
       expect(doc.at_css("title").content).to eq("Different Title")
     end
     
