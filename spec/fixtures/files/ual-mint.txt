@@ -1,5 +1,0 @@
-_status: public
-  _profile: datacite
-  _target: http://localhost/items/e9b3b7d3-046b-4d13-bb79-1deacb22ca3c
-  _export: yes
-  datacite: <?xml version="1.0" encoding="UTF-8"?><resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd"><identifier identifierType="DOI"></identifier><creators><creator><creatorName>Joe Blow</creatorName></creator></creators><titles><title>Test Title</title></titles><publisher>University of Alberta Libraries</publisher><publicationYear>2017</publicationYear><resourceType resourceTypeGeneral="Text">Text/Book</resourceType><descriptions><description descriptionType="Abstract"></description></descriptions></resource>%0A
