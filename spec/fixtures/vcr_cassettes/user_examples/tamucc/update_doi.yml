@@ -5,8 +5,9 @@ http_interactions:
     uri: https://api.test.datacite.org/dois/10.5072/4h3j-wr25
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"url":"https://data.gulfresearchinitiative.org/data/R5.x287.000:0002","author":[{"name":"Test
-        User"}],"title":"RCYC Focus Groups","publisher":"Harte Research Institute","published":"2018","source":"ez"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
+      string: '{"data":{"type":"dois","attributes":{"url":"https://data.gulfresearchinitiative.org/data/R5.x287.000:0002","creator":[{"name":"Test
+        User"}],"titles":[{"title":"RCYC Focus Groups"}],"publisher":"Harte Research
+        Institute","publicationYear":"2018","source":"ez"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
       - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
@@ -22,7 +23,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 05 Oct 2018 20:47:17 GMT
+      - Sun, 25 Nov 2018 18:20:52 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -36,20 +37,21 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - e1f3aa6b-ab09-4548-9cad-d4c0808ca815
+      - fbb17284-77d7-4b2f-bfd7-10b99305dc96
       Etag:
-      - W/"cd401d2965a69d4f4649ee7c5981fdce"
+      - W/"df8e5491a805a89f92ff3950b970c64b"
       X-Runtime:
-      - '0.101565'
+      - '0.144198'
       X-Powered-By:
-      - Phusion Passenger 5.3.5
+      - Phusion Passenger 5.3.7
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.5
+      - nginx/1.14.0 + Phusion Passenger 5.3.7
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.5072/4h3j-wr25","type":"dois","attributes":{"doi":"10.5072/4h3j-wr25","identifier":"https://handle.test.datacite.org/10.5072/4h3j-wr25","url":"https://data.gulfresearchinitiative.org/data/R5.x287.000:0002","prefix":"10.5072","suffix":"4h3j-wr25","author":[{"name":"Test
-        User"}],"title":"RCYC Focus Groups","publisher":"Harte Research Institute","resource-type-subtype":"CreativeWork","description":null,"version":null,"metadata-version":1,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":"ez","state":"draft","is-active":false,"landing-page":{"status":null,"content-type":null,"checked":null},"published":"2018","created":"2018-10-05T20:40:21.000Z","registered":null,"updated":"2018-10-05T20:47:17.000Z","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi80SDNKLVdSMjU8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5UZXN0IFVzZXI8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5SQ1lDIEZvY3VzIEdyb3VwczwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5IYXJ0ZSBSZXNlYXJjaCBJbnN0aXR1dGU8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTg8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkNyZWF0aXZlV29yazwvcmVzb3VyY2VUeXBlPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTg8L2RhdGU+CiAgPC9kYXRlcz4KICA8dmVyc2lvbi8+CjwvcmVzb3VyY2U+Cg==","cache-key":"dois/10.5072/4h3j-wr25-2018-10-05T20:47:17Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"resource-type":{"data":{"id":"dataset","type":"resource_types"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
-        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","is-active":true,"has-password":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"}]}}},{"id":"dataset","type":"resource-types","attributes":{"title":"Dataset","updated":"2016-09-21T00:00:00Z"},"relationships":{}}]}'
+      string: '{"data":{"id":"10.5072/4h3j-wr25","type":"dois","attributes":{"doi":"10.5072/4h3j-wr25","prefix":"10.5072","suffix":"4h3j-wr25","identifier":"https://handle.test.datacite.org/10.5072/4h3j-wr25","creator":[{"name":"Test
+        User"}],"titles":[{"title":"RCYC Focus Groups"}],"publisher":"Harte Research
+        Institute","periodical":null,"publicationYear":2018,"subjects":null,"contributor":null,"dates":null,"language":null,"types":{},"alternateIdentifiers":null,"relatedIdentifiers":null,"sizes":null,"formats":null,"version":null,"rightsList":null,"descriptions":null,"geoLocations":null,"fundingReferences":null,"xml":null,"url":"https://data.gulfresearchinitiative.org/data/R5.x287.000:0002","contentUrl":null,"metadataVersion":0,"schemaVersion":null,"source":"ez","isActive":false,"state":"draft","reason":null,"landingPage":{"status":null,"contentType":null,"checked":null,"result":null},"created":"2018-11-25T18:18:11.000Z","registered":null,"updated":"2018-11-25T18:20:52.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
+        Fenner","contactEmail":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Fri, 05 Oct 2018 20:47:17 GMT
+  recorded_at: Sun, 25 Nov 2018 18:20:52 GMT
 recorded_with: VCR 3.0.3

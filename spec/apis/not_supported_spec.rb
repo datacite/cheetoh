@@ -4,7 +4,7 @@ describe "login", :type => :api do
   let(:username) { ENV['MDS_USERNAME'] }
   let(:password) { ENV['MDS_PASSWORD'] }
   let(:headers) do
-    { "HTTP_ACCEPT" => "text/plain",
+    { "HTTP_CONTENT_TYPE" => "text/plain",
       "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password) }
   end
 

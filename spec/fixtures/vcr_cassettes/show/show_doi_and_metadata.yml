@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 04 Oct 2018 22:12:23 GMT
+      - Thu, 22 Nov 2018 22:28:48 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -35,21 +35,21 @@ http_interactions:
       X-Credential-Username:
       - admin
       X-Request-Id:
-      - 7d9b0a55-6c64-4543-877c-a45bda8d30a7
+      - 89bd0be2-f4cd-4b87-a2df-5c5a78a7852b
       Etag:
-      - W/"39697edbc68c05ef62a6d316a2cad22c"
+      - W/"3fe86ef5402ef60861e84ace19c5d257"
       X-Runtime:
-      - '0.020013'
+      - '0.021574'
       X-Powered-By:
-      - Phusion Passenger 5.3.5
+      - Phusion Passenger 5.3.7
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.5
+      - nginx/1.14.0 + Phusion Passenger 5.3.7
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.24354/n296wz12m","type":"dois","attributes":{"doi":"10.24354/n296wz12m","identifier":"https://handle.test.datacite.org/10.24354/n296wz12m","url":"https://www.datacite.org","prefix":"10.24354","suffix":"n296wz12m","author":[{"type":"Person","name":"Tom
-        Johnson","givenName":"Tom","familyName":"Johnson"}],"title":"DOI Test","publisher":":unav","resource-type-subtype":"Dissertation","description":null,"version":"4.0","metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":null,"state":"findable","is-active":true,"landing-page":{"status":null,"content-type":null,"checked":null},"published":"2017","created":"2017-12-04T21:43:09.000Z","registered":"2017-12-04T21:43:09.000Z","updated":"2017-12-04T21:43:09.000Z","xml":"PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxyZXNvdXJjZSB4bWxucz0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTQiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTQgaHR0cDovL3NjaGVtYS5kYXRhY2l0ZS5vcmcvbWV0YS9rZXJuZWwtNC9tZXRhZGF0YS54c2QiPgogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPjEwLjI0MzU0L24yOTZ3ejEybTwvaWRlbnRpZmllcj4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRPSSBUZXN0PC90aXRsZT4KICA8L3RpdGxlcz4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkpvaG5zb24sIFRvbTwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8cHVibGlzaGVyPjp1bmF2PC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE3PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5EaXNzZXJ0YXRpb248L3Jlc291cmNlVHlwZT4KICA8dmVyc2lvbj40LjA8L3ZlcnNpb24+CjwvcmVzb3VyY2U+Cg==","cache-key":"dois/10.24354/n296wz12m-2017-12-04T21:43:09Z"},"relationships":{"client":{"data":{"id":"datacite.test","type":"clients"}},"resource-type":{"data":{"id":"text","type":"resource_types"}},"media":{"data":[]}}},"included":[{"id":"datacite.test","type":"clients","attributes":{"name":"DataCite
-        Test Ra Ra Ra","symbol":"DATACITE.TEST","year":2017,"contact-name":"Martin
-        Fenner","contact-email":"support@datacite.org","domains":"*","url":null,"created":"2017-07-13T15:15:33.000Z","updated":"2018-08-26T01:31:06.000Z","is-active":true,"has-password":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5072","type":"prefixes"},{"id":"10.23725","type":"prefixes"}]}}},{"id":"text","type":"resource-types","attributes":{"title":"Text","updated":"2016-09-21T00:00:00Z"},"relationships":{}}]}'
+      string: '{"data":{"id":"10.24354/n296wz12m","type":"dois","attributes":{"doi":"10.24354/n296wz12m","prefix":"10.24354","suffix":"n296wz12m","identifier":"https://handle.test.datacite.org/10.24354/n296wz12m","creator":[{"name":"Tom
+        Johnson","type":"Person","givenName":"Tom","familyName":"Johnson"}],"titles":[{"title":"DOI
+        Test"}],"publisher":":unav","periodical":null,"publicationYear":2017,"subjects":[],"contributor":[],"dates":[{"date":"2017","dateType":"Issued"}],"language":null,"types":{"ris":"THES","bibtex":"phdthesis","citeproc":"thesis","schemaOrg":"Thesis","resourceType":"Dissertation","resourceTypeGeneral":"Text"},"alternateIdentifiers":[],"relatedIdentifiers":[],"sizes":[],"formats":[],"version":"4.0","rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxyZXNvdXJjZSB4bWxucz0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTQiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTQgaHR0cDovL3NjaGVtYS5kYXRhY2l0ZS5vcmcvbWV0YS9rZXJuZWwtNC9tZXRhZGF0YS54c2QiPgogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPjEwLjI0MzU0L24yOTZ3ejEybTwvaWRlbnRpZmllcj4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRPSSBUZXN0PC90aXRsZT4KICA8L3RpdGxlcz4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkpvaG5zb24sIFRvbTwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8cHVibGlzaGVyPjp1bmF2PC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE3PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5EaXNzZXJ0YXRpb248L3Jlc291cmNlVHlwZT4KICA8dmVyc2lvbj40LjA8L3ZlcnNpb24+CjwvcmVzb3VyY2U+Cg==","url":"https://www.datacite.org","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":null,"isActive":true,"state":"findable","reason":null,"landingPage":{"status":200,"contentType":"text/html","checked":"2018-11-06T01:42:31.000Z","result":{"error":"","bodyHasPid":false,"citationDoi":null,"schemaOrgId":null,"dcIdentifier":null,"hasSchemaOrg":false,"redirectUrls":[],"redirectCount":0,"downloadLatency":28.4554958343506}},"created":"2017-12-04T21:43:09.000Z","registered":"2017-12-04T21:43:09.000Z","updated":"2018-11-06T02:01:09.000Z"},"relationships":{"client":{"data":{"id":"datacite.test","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.test","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.TEST","year":2017,"contactName":"Martin
+        Fenner","contactEmail":"mfenner@datacite.org","domains":"*","url":null,"created":"2017-07-13T15:15:33.000Z","updated":"2018-11-14T23:52:55.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5072","type":"prefixes"},{"id":"10.23725","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Thu, 04 Oct 2018 22:12:23 GMT
+  recorded_at: Thu, 22 Nov 2018 22:28:48 GMT
 recorded_with: VCR 3.0.3

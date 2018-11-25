@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 04 Oct 2018 22:12:24 GMT
+      - Thu, 22 Nov 2018 22:28:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -33,17 +33,17 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 42e7e958-7b8e-48d0-ac2b-1f6d1b9ea914
+      - c97ec883-81b0-4e62-81eb-6c6ae5abee73
       X-Runtime:
-      - '0.006848'
+      - '0.007203'
       X-Powered-By:
-      - Phusion Passenger 5.3.5
+      - Phusion Passenger 5.3.7
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.5
+      - nginx/1.14.0 + Phusion Passenger 5.3.7
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Thu, 04 Oct 2018 22:12:24 GMT
+  recorded_at: Thu, 22 Nov 2018 22:28:49 GMT
 recorded_with: VCR 3.0.3

@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 05 Oct 2018 19:56:14 GMT
+      - Sun, 25 Nov 2018 18:29:41 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -33,28 +33,28 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 8da119c7-5e14-415f-93e1-2631850070c6
+      - 04d330fb-f613-4ff2-abd8-fbdda8bdd369
       X-Runtime:
-      - '0.007503'
+      - '0.007681'
       X-Powered-By:
-      - Phusion Passenger 5.3.5
+      - Phusion Passenger 5.3.7
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.5
+      - nginx/1.14.0 + Phusion Passenger 5.3.7
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Fri, 05 Oct 2018 19:56:14 GMT
+  recorded_at: Sun, 25 Nov 2018 18:29:41 GMT
 - request:
     method: post
     uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/3mg5-tm67","url":"https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients","author":[{"name":"Naylor,
-        Peter"},{"name":"Lae, Marick"},{"name":"Reyal, Fabien"},{"name":"Walter, Thomas"}],"title":"A
-        dataset for nuclei segmentation based on Tripple Negative Breast Cancer patients","publisher":"IEEE
-        Dataport","published":"2018","source":"ez"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}},"resource-type":{"data":{"type":"resource-types","id":"dataset"}}}}}'
+      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/3mg5-tm67","url":"https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients","creator":[{"name":"Naylor,
+        Peter"},{"name":"Lae, Marick"},{"name":"Reyal, Fabien"},{"name":"Walter, Thomas"}],"titles":[{"title":"A
+        dataset for nuclei segmentation based on Tripple Negative Breast Cancer patients"}],"types":{"resourceTypeGeneral":"Dataset"},"publisher":"IEEE
+        Dataport","publicationYear":"2018","source":"ez"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
       - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
@@ -70,7 +70,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 05 Oct 2018 19:56:15 GMT
+      - Sun, 25 Nov 2018 18:29:42 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -84,26 +84,26 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - cad1b3b8-ca9a-47f6-a24f-aaf228845bad
+      - 8b68b922-8df1-4a16-a021-1923c2ee58ba
       Location:
-      - https://api.test.datacite.org/dois/2258754
+      - https://api.test.datacite.org/dois/2285988
       Etag:
-      - W/"c2202cc3574325e9580a0d32167b21d0"
+      - W/"e35f408e02725f1859c8e238a96f663f"
       X-Runtime:
-      - '0.069238'
+      - '0.065828'
       X-Powered-By:
-      - Phusion Passenger 5.3.5
+      - Phusion Passenger 5.3.7
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.5
+      - nginx/1.14.0 + Phusion Passenger 5.3.7
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.5072/3mg5-tm67","type":"dois","attributes":{"doi":"10.5072/3mg5-tm67","identifier":"https://handle.test.datacite.org/10.5072/3mg5-tm67","url":"https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients","prefix":"10.5072","suffix":"3mg5-tm67","author":[{"name":"Naylor,
-        Peter"},{"name":"Lae, Marick"},{"name":"Reyal, Fabien"},{"name":"Walter, Thomas"}],"title":"A
-        dataset for nuclei segmentation based on Tripple Negative Breast Cancer patients","publisher":"IEEE
-        Dataport","resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":"ez","state":"draft","is-active":false,"landing-page":{"status":null,"content-type":null,"checked":null},"published":"2018","created":"2018-10-05T19:56:15.000Z","registered":null,"updated":"2018-10-05T19:56:15.000Z","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi8zTUc1LVRNNjc8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5OYXlsb3IsIFBldGVyPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+TGFlLCBNYXJpY2s8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5SZXlhbCwgRmFiaWVuPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+V2FsdGVyLCBUaG9tYXM8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5BIGRhdGFzZXQgZm9yIG51Y2xlaSBzZWdtZW50YXRpb24gYmFzZWQgb24gVHJpcHBsZSBOZWdhdGl2ZSBCcmVhc3QgQ2FuY2VyIHBhdGllbnRzPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPklFRUUgRGF0YXBvcnQ8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTg8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkNyZWF0aXZlV29yazwvcmVzb3VyY2VUeXBlPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTg8L2RhdGU+CiAgPC9kYXRlcz4KICA8dmVyc2lvbi8+CjwvcmVzb3VyY2U+Cg==","cache-key":"dois/10.5072/3mg5-tm67-2018-10-05T19:56:15Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"resource-type":{"data":{"id":"dataset","type":"resource_types"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
-        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","is-active":true,"has-password":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"}]}}},{"id":"dataset","type":"resource-types","attributes":{"title":"Dataset","updated":"2016-09-21T00:00:00Z"},"relationships":{}}]}'
+      string: '{"data":{"id":"10.5072/3mg5-tm67","type":"dois","attributes":{"doi":"10.5072/3mg5-tm67","prefix":"10.5072","suffix":"3mg5-tm67","identifier":"https://handle.test.datacite.org/10.5072/3mg5-tm67","creator":[{"name":"Naylor,
+        Peter"},{"name":"Lae, Marick"},{"name":"Reyal, Fabien"},{"name":"Walter, Thomas"}],"titles":[{"title":"A
+        dataset for nuclei segmentation based on Tripple Negative Breast Cancer patients"}],"publisher":"IEEE
+        Dataport","periodical":null,"publicationYear":2018,"subjects":null,"contributor":null,"dates":null,"language":null,"types":{"resourceTypeGeneral":"Dataset"},"alternateIdentifiers":null,"relatedIdentifiers":null,"sizes":null,"formats":null,"version":null,"rightsList":null,"descriptions":null,"geoLocations":null,"fundingReferences":null,"xml":null,"url":"https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients","contentUrl":null,"metadataVersion":0,"schemaVersion":null,"source":"ez","isActive":false,"state":"draft","reason":null,"landingPage":{"status":null,"contentType":null,"checked":null,"result":null},"created":"2018-11-25T18:29:42.000Z","registered":null,"updated":"2018-11-25T18:29:42.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
+        Fenner","contactEmail":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Fri, 05 Oct 2018 19:56:15 GMT
+  recorded_at: Sun, 25 Nov 2018 18:29:42 GMT
 - request:
     method: get
     uri: https://api.test.datacite.org/10.5072/3mg5-tm67
@@ -123,7 +123,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 05 Oct 2018 19:56:15 GMT
+      - Sun, 25 Nov 2018 18:29:42 GMT
       Content-Type:
       - application/vnd.datacite.datacite+xml
       Connection:
@@ -137,50 +137,20 @@ http_interactions:
       X-Credential-Username:
       - admin
       X-Request-Id:
-      - 69d81f14-89f6-41f9-a3bb-05b3192b9951
+      - cce8c24e-777c-482f-aa26-7f75ce55650a
       Content-Disposition:
       - attachment; filename=_10.5072_3mg5-tm67.xml
       Content-Transfer-Encoding:
       - binary
-      Etag:
-      - W/"9f00285fece2874cc70e04bccd96050f"
       X-Runtime:
-      - '0.015434'
+      - '0.012166'
       X-Powered-By:
-      - Phusion Passenger 5.3.5
+      - Phusion Passenger 5.3.7
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.5
+      - nginx/1.14.0 + Phusion Passenger 5.3.7
     body:
       encoding: ASCII-8BIT
-      string: |
-        <?xml version="1.0" encoding="UTF-8"?>
-        <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
-          <identifier identifierType="DOI">10.5072/3MG5-TM67</identifier>
-          <creators>
-            <creator>
-              <creatorName>Naylor, Peter</creatorName>
-            </creator>
-            <creator>
-              <creatorName>Lae, Marick</creatorName>
-            </creator>
-            <creator>
-              <creatorName>Reyal, Fabien</creatorName>
-            </creator>
-            <creator>
-              <creatorName>Walter, Thomas</creatorName>
-            </creator>
-          </creators>
-          <titles>
-            <title>A dataset for nuclei segmentation based on Tripple Negative Breast Cancer patients</title>
-          </titles>
-          <publisher>IEEE Dataport</publisher>
-          <publicationYear>2018</publicationYear>
-          <resourceType resourceTypeGeneral="Dataset">CreativeWork</resourceType>
-          <dates>
-            <date dateType="Issued">2018</date>
-          </dates>
-          <version/>
-        </resource>
+      string: ''
     http_version: 
-  recorded_at: Fri, 05 Oct 2018 19:56:15 GMT
+  recorded_at: Sun, 25 Nov 2018 18:29:42 GMT
 recorded_with: VCR 3.0.3

@@ -5,7 +5,7 @@ describe "regular prefix", :type => :api, vcr: true, :order => :defined do
   let(:username) { ENV['MDS_USERNAME'] }
   let(:password) { ENV['MDS_PASSWORD'] }
   let(:headers) do
-    { "HTTP_ACCEPT" => "text/plain",
+    { "HTTP_CONTENT_TYPE" => "text/plain",
       "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password) }
   end
 
@@ -15,11 +15,11 @@ describe "regular prefix", :type => :api, vcr: true, :order => :defined do
     params = { "datacite" => datacite, "_target" => url, "_status" => "reserved" }.to_anvl
     put "/id/doi:#{doi}", params, headers
 
-    expect(last_response.status).to eq(200)
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5438/bc11-cqw8")
     expect(response["_target"]).to eq(url)
     expect(response["_status"]).to eq("reserved")
+    expect(last_response.status).to eq(200)
 
     doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
     expect(doc.at_css("identifier").content).to eq("10.5438/BC11-CQW8")

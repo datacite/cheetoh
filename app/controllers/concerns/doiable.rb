@@ -102,16 +102,17 @@ module Doiable
         event = "publish"
       end
 
-      author = options[:author].to_s.split(";").map { |a| { "name" => a.strip }}
+      creator = options[:creator].to_s.split(";").map { |a| { "name" => a.strip }}
+      types = options[:resource_type_general].present? ? { "resourceTypeGeneral" => options[:resource_type_general] } : nil
       
       attributes = {
         "url" => options[:url],
         "xml" => xml,
-        "author" => author,
-        "title" => options[:title],
+        "creator" => creator,
+        "titles" => [{ "title" => options[:title] }],
         "publisher" => options[:publisher],
-        "published" => options[:published],
-        "resource_type_general" => options[:resource_type_general],
+        "publicationYear" => options[:publication_year],
+        "types" => types,
         "source" => "ez",
         "event" => event,
         "reason" => reason }.compact
@@ -130,8 +131,6 @@ module Doiable
           }
         }
       }
-
-      data["data"]["relationships"]["resource-type"] = { "data"=> { "type"=> "resource-types", "id"=> options[:resource_type_general].underscore.dasherize } } if options[:resource_type_general].present?
 
       url = "#{ENV['API_URL']}/dois/#{doi}"
       Maremma.put(url, content_type: 'application/vnd.api+json', data: data.to_json, username: options[:username], password: options[:password])
@@ -152,16 +151,17 @@ module Doiable
         event = "publish"
       end
 
-      author = options[:author].to_s.split(";").map { |a| { "name" => a.strip }}
+      creator = options[:creator].to_s.split(";").map { |a| { "name" => a.strip }}
       
       attributes = {
         "doi" => doi,
         "url" => options[:url],
         "xml" => xml,
-        "author" => author,
-        "title" => options[:title],
+        "creator" => creator,
+        "titles" => [{ "title"=> options[:title] }],
+        "types" => { "resourceTypeGeneral" => options[:resource_type_general] },
         "publisher" => options[:publisher],
-        "published" => options[:published],
+        "publicationYear" => options[:publication_year],
         "source" => "ez",
         "event" => event }.compact
 
@@ -179,8 +179,6 @@ module Doiable
           }
         }
       }
-
-      data["data"]["relationships"]["resource-type"] = { "data"=> { "type"=> "resource-types", "id"=> options[:resource_type_general].underscore.dasherize } } if options[:resource_type_general].present?
 
       url = "#{ENV['API_URL']}/dois"
       Maremma.post(url, content_type: 'application/vnd.api+json', data: data.to_json, username: options[:username], password: options[:password])

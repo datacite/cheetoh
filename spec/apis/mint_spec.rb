@@ -5,7 +5,7 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
   let(:username) { ENV['MDS_USERNAME'] }
   let(:password) { ENV['MDS_PASSWORD'] }
   let(:headers) do
-    { "HTTP_ACCEPT" => "text/plain",
+    { "HTTP_CONTENT_TYPE" => "text/plain",
       "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password) }
   end
 
@@ -27,12 +27,12 @@ describe "mint", :type => :api, vcr: true, :order => :defined do
   end
 
   it "wrong login credentials" do
-    headers = ({ "HTTP_ACCEPT" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials("name", "password") })
+    wrong_credentials = { "HTTP_CONTENT_TYPE" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, "123") }
     datacite = File.read(file_fixture('10.5072_tba.xml'))
     url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
     params = { "datacite" => datacite, "_target" => url, "_number" => "122149076" }.to_anvl
     doi = "10.5072"
-    post "/shoulder/doi:#{doi}", params, headers
+    post "/shoulder/doi:#{doi}", params, wrong_credentials
     expect(last_response.status).to eq(401)
     expect(last_response.body).to eq("error: unauthorized")
   end

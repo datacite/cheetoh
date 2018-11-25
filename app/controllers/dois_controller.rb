@@ -23,6 +23,7 @@ class DoisController < ApplicationController
 
   def mint
     logger = Logger.new(STDOUT)
+    # logger.info = safe_params.inspect
 
     fail IdentifierError, "no _profile provided" unless profile_present?(safe_params)
     fail IdentifierError, "no _target provided" if (safe_params[:_target].blank? && safe_params[:_status] != "reserved")
@@ -50,12 +51,14 @@ class DoisController < ApplicationController
       username: @username,
       password: @password }
 
-    options = options.merge(
-      author: decode_param(safe_params["datacite.creator"]),
+    datacite_options = {
+      creator: decode_param(safe_params["datacite.creator"]),
       title: decode_param(safe_params["datacite.title"]),
       publisher: decode_param(safe_params["datacite.publisher"]),
-      published: decode_param(safe_params["datacite.publicationyear"]),
-      resource_type_general: decode_param(safe_params["datacite.resourcetype"])) if @profile.to_s == "datacite"
+      publication_year: decode_param(safe_params["datacite.publicationyear"]),
+      resource_type_general: decode_param(safe_params["datacite.resourcetype"]) }.compact
+
+    options = options.merge(datacite_options) if @profile.to_s == "datacite"
 
     response = DoisController.post_doi(doi, options)
 
@@ -90,12 +93,14 @@ class DoisController < ApplicationController
       username: @username,
       password: @password }.compact
 
-    options = options.merge(
-      author: decode_param(safe_params["datacite.creator"]),
+    datacite_options = {
+      creator: decode_param(safe_params["datacite.creator"]),
       title: decode_param(safe_params["datacite.title"]),
       publisher: decode_param(safe_params["datacite.publisher"]),
-      published: decode_param(safe_params["datacite.publicationyear"]),
-      resource_type_general: decode_param(safe_params["datacite.resourcetype"])) if @profile.to_s == "datacite"
+      publication_year: decode_param(safe_params["datacite.publicationyear"]),
+      resource_type_general: decode_param(safe_params["datacite.resourcetype"]) }.compact
+
+    options = options.merge(datacite_options) if @profile.to_s == "datacite"
 
     response = DoisController.post_doi(doi, options)
 
@@ -127,12 +132,14 @@ class DoisController < ApplicationController
       username: @username,
       password: @password }.compact
 
-    options = options.merge(
-      author: decode_param(safe_params["datacite.creator"]),
+    datacite_options = {
+      creator: decode_param(safe_params["datacite.creator"]),
       title: decode_param(safe_params["datacite.title"]),
       publisher: decode_param(safe_params["datacite.publisher"]),
-      published: decode_param(safe_params["datacite.publicationyear"]),
-      resource_type_general: decode_param(safe_params["datacite.resourcetype"])) if @profile.to_s == "datacite"
+      publication_year: decode_param(safe_params["datacite.publicationyear"]),
+      resource_type_general: decode_param(safe_params["datacite.resourcetype"]) }.compact
+
+    options = options.merge(datacite_options) if @profile.to_s == "datacite"
 
     response = DoisController.put_doi(@doi, options)
 
@@ -195,10 +202,7 @@ class DoisController < ApplicationController
   private
 
   def safe_params
-    # custom URL decoding because there is also ANVL encoding
-    data = request.raw_post.gsub(/%20/, " ").gsub(/%22/, "\"").gsub(/%3C/, "<").gsub(/%3E/, ">").gsub(/%7B/, "{").gsub(/%7D/, "}").gsub(/%0A(_profile|_status|_target|_number|datacite|schema_org|ris|bibtex)/, "\n\\1").from_anvl
-
-    params.permit(:id, :_target, :_export, :_profile, :_status, :_number, :datacite, :bibtex, :ris, :schema_org, :citeproc).merge!(data)
+    params.permit(:id, :_target, :_export, :_profile, :_status, :_number, :datacite, :bibtex, :ris, :schema_org, :citeproc, "datacite.creator", "datacite.title", "datacite.publisher", "datacite.publicationyear", "datacite.resourcetype")
   end
 
   def add_metadata_to_bugsnag(report)

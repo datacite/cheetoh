@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 05 Oct 2018 19:56:17 GMT
+      - Thu, 22 Nov 2018 23:08:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -33,25 +33,25 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 31208274-c800-4970-94d0-8a6b14ced12c
+      - 98230216-18af-4a9f-9d11-6f8f06dca8f1
       X-Runtime:
-      - '0.007262'
+      - '0.007330'
       X-Powered-By:
-      - Phusion Passenger 5.3.5
+      - Phusion Passenger 5.3.7
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.5
+      - nginx/1.14.0 + Phusion Passenger 5.3.7
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Fri, 05 Oct 2018 19:56:17 GMT
+  recorded_at: Thu, 22 Nov 2018 23:08:49 GMT
 - request:
     method: post
     uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"doi":"10.5438/fk2-3mg5-tm67","url":"http://library.nd.edu","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVzb3VyY2UgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM9Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTQvbWV0YWRhdGEueHNkIj48aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIiAvPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iSW52YWxpZFJlc291cmNlVHlwZSI+Q3JlYXRpdmVXb3JrPC9yZXNvdXJjZVR5cGU+PGNyZWF0b3JzPjxjcmVhdG9yPjxjcmVhdG9yTmFtZT5DcmVhdG9yIE5hbWU8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48L2NyZWF0b3JzPjx0aXRsZXM+PHRpdGxlPlRpdGxlPC90aXRsZT48L3RpdGxlcz48cHVibGlzaGVyPlB1Ymxpc2hlcjwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxODwvcHVibGljYXRpb25ZZWFyPjxkYXRlcy8+PHZlcnNpb24vPjwvcmVzb3VyY2U+","author":[],"source":"ez","event":"publish"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
+      string: '{"data":{"type":"dois","attributes":{"doi":"10.5438/fk2-3mg5-tm67","url":"http://library.nd.edu","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVzb3VyY2UgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM9Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTQvbWV0YWRhdGEueHNkIj48aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIiAvPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iSW52YWxpZFJlc291cmNlVHlwZSI+Q3JlYXRpdmVXb3JrPC9yZXNvdXJjZVR5cGU+PGNyZWF0b3JzPjxjcmVhdG9yPjxjcmVhdG9yTmFtZT5DcmVhdG9yIE5hbWU8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48L2NyZWF0b3JzPjx0aXRsZXM+PHRpdGxlPlRpdGxlPC90aXRsZT48L3RpdGxlcz48cHVibGlzaGVyPlB1Ymxpc2hlcjwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxODwvcHVibGljYXRpb25ZZWFyPjxkYXRlcy8+PHZlcnNpb24vPjwvcmVzb3VyY2U+","creator":[],"titles":[{"title":null}],"types":{"resourceTypeGeneral":null},"source":"ez","event":"publish"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
       - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
@@ -67,7 +67,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Fri, 05 Oct 2018 19:56:17 GMT
+      - Thu, 22 Nov 2018 23:08:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -81,13 +81,13 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 5d98d985-8bc0-4c07-9c88-6581b7914630
+      - '0386590a-66d3-4891-8e8a-9a04cc8d9e27'
       X-Runtime:
-      - '0.035529'
+      - '0.039665'
       X-Powered-By:
-      - Phusion Passenger 5.3.5
+      - Phusion Passenger 5.3.7
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.5
+      - nginx/1.14.0 + Phusion Passenger 5.3.7
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"source":"resourceType'', attribute ''resourceTypeGeneral","title":"[facet
@@ -99,5 +99,5 @@ http_interactions:
         is not a valid value of the atomic type ''{http://datacite.org/schema/kernel-4}resourcetype''.
         at line 4, column 0"}]}'
     http_version: 
-  recorded_at: Fri, 05 Oct 2018 19:56:17 GMT
+  recorded_at: Thu, 22 Nov 2018 23:08:49 GMT
 recorded_with: VCR 3.0.3

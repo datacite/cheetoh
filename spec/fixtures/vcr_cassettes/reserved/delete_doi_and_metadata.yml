@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 04 Oct 2018 22:12:22 GMT
+      - Thu, 22 Nov 2018 22:28:48 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -35,21 +35,21 @@ http_interactions:
       X-Credential-Username:
       - admin
       X-Request-Id:
-      - faa50ec0-05eb-467b-bfc5-0ad794d3c94c
+      - 263d9cc7-2067-46d2-85e0-457584160b43
       Etag:
-      - W/"9b6c44f216a45783599770c055bd0da7"
+      - W/"209ed7bdb3256d3b5a016c0dd4e598d7"
       X-Runtime:
-      - '0.018497'
+      - '0.018836'
       X-Powered-By:
-      - Phusion Passenger 5.3.5
+      - Phusion Passenger 5.3.7
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.5
+      - nginx/1.14.0 + Phusion Passenger 5.3.7
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","url":null,"prefix":"10.5072","suffix":"bc11-cqw9","author":[],"title":null,"publisher":null,"resource-type-subtype":null,"description":null,"version":null,"metadata-version":0,"schema-version":"http://datacite.org/schema/kernel-4","reason":null,"source":"ez","state":"draft","is-active":false,"landing-page":{"status":null,"content-type":null,"checked":null},"published":null,"created":"2018-10-04T22:12:22.000Z","registered":null,"updated":"2018-10-04T22:12:22.000Z","xml":null,"cache-key":"dois/10.5072/bc11-cqw9-2018-10-04T22:12:22Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"resource-type":{"data":null},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contact-name":"Martin
-        Fenner","contact-email":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","is-active":true,"has-password":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"}]}}}]}'
+      string: '{"data":{"id":"10.5072/bc11-cqw9","type":"dois","attributes":{"doi":"10.5072/bc11-cqw9","prefix":"10.5072","suffix":"bc11-cqw9","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw9","creator":[],"titles":[{"title":null}],"publisher":null,"periodical":null,"publicationYear":null,"subjects":null,"contributor":null,"dates":null,"language":null,"types":{"resourceTypeGeneral":null},"alternateIdentifiers":null,"relatedIdentifiers":null,"sizes":null,"formats":null,"version":null,"rightsList":null,"descriptions":null,"geoLocations":null,"fundingReferences":null,"xml":null,"url":null,"contentUrl":null,"metadataVersion":0,"schemaVersion":null,"source":"ez","isActive":false,"state":"draft","reason":null,"landingPage":{"status":null,"contentType":null,"checked":null,"result":null},"created":"2018-11-22T22:28:47.000Z","registered":null,"updated":"2018-11-22T22:28:47.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
+        Fenner","contactEmail":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Thu, 04 Oct 2018 22:12:22 GMT
+  recorded_at: Thu, 22 Nov 2018 22:28:48 GMT
 - request:
     method: delete
     uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw9
@@ -69,7 +69,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 04 Oct 2018 22:12:22 GMT
+      - Thu, 22 Nov 2018 22:28:48 GMT
       Connection:
       - keep-alive
       Status:
@@ -81,16 +81,16 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - ca52e7f5-90c1-4923-8ff3-0562f4eb297b
+      - 18fac189-de3a-4f11-8c1c-29fce9885f3e
       X-Runtime:
-      - '0.030939'
+      - '0.028426'
       X-Powered-By:
-      - Phusion Passenger 5.3.5
+      - Phusion Passenger 5.3.7
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.5
+      - nginx/1.14.0 + Phusion Passenger 5.3.7
     body:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Thu, 04 Oct 2018 22:12:22 GMT
+  recorded_at: Thu, 22 Nov 2018 22:28:48 GMT
 recorded_with: VCR 3.0.3

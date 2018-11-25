@@ -1,5 +1,5 @@
 _target: https://data.gulfresearchinitiative.org/data/R6.x805.000:0056
-_profile:datacite
+_profile: datacite
 _status: reserved
 datacite.creator: Test User
 datacite.title: Aqueous geochemistry of Louisiana marshes, May 2015 – October 2016

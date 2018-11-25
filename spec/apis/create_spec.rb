@@ -5,31 +5,31 @@ describe "create", :type => :api, vcr: true, :order => :defined do
   let(:username) { ENV['MDS_USERNAME'] }
   let(:password) { ENV['MDS_PASSWORD'] }
   let(:headers) do
-    { "HTTP_ACCEPT" => "text/plain",
+    { "HTTP_CONTENT_TYPE" => "text/plain",
       "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password) }
   end
 
   it "missing valid doi parameter" do
     doi = "20.5072/0000-03vc"
     put "/id/doi:#{doi}", nil, headers
-    expect(last_response.status).to eq(400)
     expect(last_response.body).to eq("error: no doi provided")
+    expect(last_response.status).to eq(400)
   end
 
   it "missing login credentials" do
     put "/id/doi:#{doi}"
-    expect(last_response.status).to eq(401)
     expect(last_response.headers["WWW-Authenticate"]).to eq("Basic realm=\"ez.test.datacite.org\"")
     expect(last_response.body).to eq("HTTP Basic: Access denied.\n")
+    expect(last_response.status).to eq(401)
   end
 
   it "wrong login credentials" do
     doi = "10.5072/bc11-cqw70"
-    headers = ({ "HTTP_ACCEPT" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials("name", "password") })
+    wrong_credentials = { "HTTP_CONTENT_TYPE" => "text/plain", "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, "123") }
     datacite = File.read(file_fixture('10.5072_bc11-cqw7.xml'))
     url = "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/"
     params = { "datacite" => datacite, "_target" => url }.to_anvl
-    put "/id/doi:#{doi}", params, headers
+    put "/id/doi:#{doi}", params, wrong_credentials
     expect(last_response.status).to eq(401)
     expect(last_response.body).to eq("error: unauthorized")
   end
@@ -48,12 +48,13 @@ describe "create", :type => :api, vcr: true, :order => :defined do
     params = { "datacite" => datacite, "_target" => url }.to_anvl
     doi = "10.5072/bc11-cqw7"
     put "/id/doi:#{doi}", params, headers
-    expect(last_response.status).to eq(200)
+
     response = last_response.body.from_anvl
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
     expect(response["datacite"]).to eq(datacite.strip)
     expect(response["_target"]).to eq(url)
     expect(response["_status"]).to eq("reserved")
+    expect(last_response.status).to eq(200)
   end
 
   it "doi already exists" do
@@ -72,14 +73,16 @@ describe "create", :type => :api, vcr: true, :order => :defined do
     params = { "schema_org" => schema_org, "_profile" => "schema_org" }.to_anvl
     doi = "10.5072/bc11-cqw7"
     post "/id/doi:#{doi}", params, headers
-    expect(last_response.status).to eq(200)
+
     response = last_response.body.from_anvl
     input = JSON.parse(schema_org)
+    puts response
     output = JSON.parse(response["schema_org"])
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
     expect(response["_status"]).to eq("reserved")
     expect(output["author"]).to eq(input["author"])
     expect(response["datacite"]).to be_nil
+    expect(last_response.status).to eq(200)
   end
 
   it "change datacite xml" do

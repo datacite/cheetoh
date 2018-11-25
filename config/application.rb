@@ -74,6 +74,12 @@ module Cheetoh
     # make sure all input is UTF-8
     config.middleware.insert 0, Rack::UTF8Sanitizer, additional_content_types: ['application/vnd.api+json', 'application/xml']
 
+    # correctly parse request bodies encoded using ANVL, needs to handle UTF-8 sanitization
+    config.middleware.insert_after Rack::UTF8Sanitizer, Rack::Parser, :parsers => {
+      'application/x-www-form-urlencoded' => proc { |body| body.gsub(/%20/, " ").gsub(/%22/, "\"").gsub(/%3C/, "<").gsub(/%3E/, ">").gsub(/%7B/, "{").gsub(/%7D/, "}").gsub(/%0A(_profile|_status|_target|_number|datacite|schema_org|ris|bibtex)/, "\n\\1").from_anvl },
+      'text/plain' => proc { |body| body.gsub(/%20/, " ").gsub(/%22/, "\"").gsub(/%3C/, "<").gsub(/%3E/, ">").gsub(/%7B/, "{").gsub(/%7D/, "}").gsub(/%0A(_profile|_status|_target|_number|datacite|schema_org|ris|bibtex)/, "\n\\1").from_anvl }
+    }
+
     # compress responses with deflate or gzip
     config.middleware.use Rack::Deflater
   end
