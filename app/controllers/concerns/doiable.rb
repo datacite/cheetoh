@@ -87,8 +87,6 @@ module Doiable
     def put_doi(doi, options={})
       return OpenStruct.new(body: { "errors" => [{ "title" => "Username or password missing" }] }) unless options[:username].present? && options[:password].present?
       return OpenStruct.new(body: { "errors" => [{ "title" => "Not a valid HTTP(S) or FTP URL" }] }) unless options[:url].blank? || /\A(http|https|ftp):\/\/[\S]+/.match(options[:url])
-      
-      xml = options[:data].present? ? ::Base64.strict_encode64(options[:data]) : nil
 
       # update doi status
       if options[:target_status] == "reserved" || doi.start_with?("10.5072")
@@ -102,14 +100,16 @@ module Doiable
         event = "publish"
       end
 
-      creator = options[:creator].to_s.split(";").map { |a| { "name" => a.strip }}
+      xml = options[:data].present? ? ::Base64.strict_encode64(options[:data]) : nil
+      creator = options[:creator].present? ? options[:creator].to_s.split(";").map { |a| { "name" => a.strip }} : nil
+      titles = options[:title].present? ? [{ "title"=> options[:title] }] : nil
       types = options[:resource_type_general].present? ? { "resourceTypeGeneral" => options[:resource_type_general] } : nil
       
       attributes = {
         "url" => options[:url],
         "xml" => xml,
         "creator" => creator,
-        "titles" => [{ "title" => options[:title] }],
+        "titles" => titles,
         "publisher" => options[:publisher],
         "publicationYear" => options[:publication_year],
         "types" => types,
@@ -139,8 +139,6 @@ module Doiable
     def post_doi(doi, options={})
       return OpenStruct.new(body: { "errors" => [{ "title" => "Username or password missing" }] }) unless options[:username].present? && options[:password].present?
       return OpenStruct.new(body: { "errors" => [{ "title" => "Not a valid HTTP(S) or FTP URL" }] }) unless options[:url].blank? || /\A(http|https|ftp):\/\/[\S]+/.match(options[:url])
-      
-      xml = options[:data].present? ? ::Base64.strict_encode64(options[:data]) : nil
 
       # update doi status
       if options[:target_status] == "reserved" || doi.start_with?("10.5072") then
@@ -151,15 +149,18 @@ module Doiable
         event = "publish"
       end
 
-      creator = options[:creator].to_s.split(";").map { |a| { "name" => a.strip }}
-      
+      xml = options[:data].present? ? ::Base64.strict_encode64(options[:data]) : nil
+      creator = options[:creator].present? ? options[:creator].to_s.split(";").map { |a| { "name" => a.strip }} : nil
+      titles = options[:title].present? ? [{ "title"=> options[:title] }] : nil
+      types = options[:resource_type_general].present? ? { "resourceTypeGeneral" => options[:resource_type_general] } : nil
+
       attributes = {
         "doi" => doi,
         "url" => options[:url],
         "xml" => xml,
         "creator" => creator,
-        "titles" => [{ "title"=> options[:title] }],
-        "types" => { "resourceTypeGeneral" => options[:resource_type_general] },
+        "titles" => titles,
+        "types" => types,
         "publisher" => options[:publisher],
         "publicationYear" => options[:publication_year],
         "source" => "ez",
