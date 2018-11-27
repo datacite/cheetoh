@@ -110,9 +110,8 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["_target"]).to eq(str[:_target])
       expect(response["_status"]).to eq("reserved")
 
-      # TODO
-      # doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      # expect(doc.at_css("identifier").content).to eq("10.5072/3MG5-TM67")
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/3MG5-TM67")
     end
 
     it "delete minted doi" do
@@ -122,9 +121,8 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["success"]).to eq("doi:10.5072/3mg5-tm67")
       expect(response["_target"]).to eq("https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients")
 
-      # TODO
-      # doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      # expect(doc.at_css("identifier").content).to eq(doi.upcase)
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq(doi.upcase)
     end
 
     it "create doi" do
@@ -137,9 +135,8 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["_target"]).to eq(str[:_target])
       expect(response["_status"]).to eq("reserved")
 
-      # TODO
-      # doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      # expect(doc.at_css("identifier").content).to eq("10.5072/3MG5-TM67")
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/3MG5-TM67")
     end
 
     it "delete created doi" do
@@ -149,9 +146,8 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["success"]).to eq("doi:10.5072/3mg5-tm67")
       expect(response["_target"]).to eq("https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients")
 
-      # TODO
-      # doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      # expect(doc.at_css("identifier").content).to eq(doi.upcase)
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq(doi.upcase)
     end
 
     it "mint doi no status" do
@@ -165,9 +161,8 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["_target"]).to eq(str[:_target])
       expect(response["_status"]).to eq("reserved")
 
-      # TODO
-      # doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      # expect(doc.at_css("identifier").content).to eq("10.5072/3MG5-TM67")
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/3MG5-TM67")
     end
 
     it "delete doi no status" do
@@ -177,9 +172,8 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["success"]).to eq("doi:10.5072/3mg5-tm67")
       expect(response["_target"]).to eq("https://ieee-dataport.org/documents/dataset-nuclei-segmentation-based-tripple-negative-breast-cancer-patients")
 
-      # TODO
-      # doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      # expect(doc.at_css("identifier").content).to eq(doi.upcase)
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq(doi.upcase)
     end
   end
 
@@ -221,10 +215,9 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["_target"]).to eq(str[:_target])
       expect(response["_status"]).to eq("reserved")
 
-      # TODO
-      # doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      # expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
-      # expect(doc.at_css("title").content).to eq("Aqueous geochemistry of Louisiana marshes, May 2015 – October 2016")
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
+      expect(doc.at_css("title").content).to eq("Aqueous geochemistry of Louisiana marshes, May 2015 – October 2016")
     end
 
     it "update doi" do
@@ -238,10 +231,9 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["_status"]).to eq("reserved")
       expect(last_response.status).to eq(200)
 
-      # TODO
-      # doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      # expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
-      # expect(doc.at_css("title").content).to eq("RCYC Focus Groups")
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
+      expect(doc.at_css("title").content).to eq("RCYC Focus Groups")
     end
 
     it "delete doi" do
@@ -252,9 +244,8 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["success"]).to eq("doi:10.5072/4h3j-wr25")
       expect(response["_target"]).to eq("https://data.gulfresearchinitiative.org/data/R5.x287.000:0002")
 
-      # TODO
-      # doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
-      # expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
     end
   end
 end
