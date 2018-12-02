@@ -19,6 +19,7 @@ module Doiable
 
       status = STATES[attributes["state"]] || "public"
       status = [status, attributes["reason"]].join(" | ") if status == "unavailable" && attributes["reason"].present?
+      export_status = "no" unless status == "public"
 
       if options[:profile] == :datacite
         metadata = attributes["xml"].present? ? Base64.decode64(attributes["xml"]) : nil
@@ -31,7 +32,7 @@ module Doiable
         options[:profile] => metadata,
         "_profile" => options[:profile],
         "_datacenter" => response.dig("data", "relationships", "client", "data", "id").upcase,
-        "_export" => "yes",
+        "_export" => export_status || "yes",
         "_created" => Time.parse(attributes["created"]).to_i,
         "_updated" => Time.parse(attributes["updated"]).to_i,
         "_status" => status
@@ -104,6 +105,7 @@ module Doiable
 
       author = options[:author].to_s.split(";").map { |a| { "name" => a.strip }}
       
+      # https://github.com/datacite/lupo/blob/62b8ae4069be3418f8312265f015db5827eed2e8/app/controllers/dois_controller.rb#L414-L464
       attributes = {
         "url" => options[:url],
         "xml" => xml,
@@ -111,7 +113,7 @@ module Doiable
         "title" => options[:title],
         "publisher" => options[:publisher],
         "published" => options[:published],
-        "resource_type_general" => options[:resource_type_general],
+        "resource-type-subtype" => options[:resource_type],
         "source" => "ez",
         "event" => event,
         "reason" => reason }.compact

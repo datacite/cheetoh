@@ -244,4 +244,81 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")
     end
   end
+  
+  context "ual" do
+    let(:doi) { "10.21967/fk2-qscw-y487" }
+    
+    # see spec/fixtures/files/ual-update.txt#4 
+    # datacite.resourcetype: Text/Book
+    # This should be valid according to https://ezid.cdlib.org/doc/apidoc.html#profile-datacite
+    # 
+    # > The general type and, optionally, specific type of the data. The general type must be one of the controlled vocabulary terms defined in the DataCite Metadata Scheme:
+    # > ...
+    # > Specific types are unconstrained. If a specific type is given, it must be separated from the general type by a forward slash ("/")
+    # 
+    # It doesn't look like this is being parsed appropriately before being sent on to https://api.test.datacite.org/
+    # ```
+    # {
+    #   "data": {
+    #     "attributes": {
+    #       "resource_type_general": "Text/Book"
+    #     },
+    #     "relationships": {
+    #       "resource-type": {
+    #         "data": {
+    #           "type": "resource-types",
+    #           "id": "text/book"
+    #         }
+    #       }
+    #     }
+    #   }
+    # }
+    # ```
+    # so the response is 422
+    # with the error message 'found unpermitted parameter: :resource_type_general'
+    # more details in spec/files/vcr_cassettes/user_examples/ual/update_title_change.yml
+    it "update title change" do
+      str = File.read(file_fixture('ual-update.txt')).from_anvl
+      params = str.to_anvl
+      post "/id/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.21967/fk2-qscw-y487")
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.21967/FK2-QSCW-Y487")
+      expect(doc.at_css("title").content).to eq("Different Title")
+    end
+    
+    # The following two tests are similar
+    # see spec/fixtures/files/ual-remove.txt#2 
+    # _export: no
+    # https://support.datacite.org/v1.1/reference#modify-doi references Internal Metadata
+    # which I assume is https://ezid.cdlib.org/doc/apidoc.html#internal-metadata and includes `_export`
+    # From this failing test and https://github.com/datacite/cheetoh/blob/master/app/controllers/dois_controller.rb#L197-L210
+    # it looks like _export is not considered
+    # more details in spec/files/vcr_cassettes/user_examples/ual/update_for_removal.yml
+    it "update for removal" do
+      str = File.read(file_fixture('ual-remove.txt')).from_anvl
+      params = str.to_anvl
+      post "/id/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.21967/fk2-qscw-y487")
+      expect(response["_status"]).to eq("unavailable | withdrawn")
+      expect(response["_export"]).to eq("no")
+    end
+    
+    it "update for being made private" do
+      str = File.read(file_fixture('ual-private.txt')).from_anvl
+      params = str.to_anvl
+      post "/id/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.21967/fk2-qscw-y487")
+      expect(response["_target"]).to eq(str[:_target])
+      expect(response["_status"]).to eq("unavailable | not publicly released")
+      expect(response["_export"]).to eq("no")
+    end
+    
+  end
 end

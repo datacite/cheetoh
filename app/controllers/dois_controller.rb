@@ -50,13 +50,8 @@ class DoisController < ApplicationController
       username: @username,
       password: @password }
 
-    options = options.merge(
-      author: decode_param(safe_params["datacite.creator"]),
-      title: decode_param(safe_params["datacite.title"]),
-      publisher: decode_param(safe_params["datacite.publisher"]),
-      published: decode_param(safe_params["datacite.publicationyear"]),
-      resource_type_general: decode_param(safe_params["datacite.resourcetype"])) if @profile.to_s == "datacite"
-
+    options = datacite_options(options) if @profile.to_s == "datacite"
+    
     response = DoisController.post_doi(doi, options)
 
     if [200, 201].include?(response.status)
@@ -90,12 +85,7 @@ class DoisController < ApplicationController
       username: @username,
       password: @password }.compact
 
-    options = options.merge(
-      author: decode_param(safe_params["datacite.creator"]),
-      title: decode_param(safe_params["datacite.title"]),
-      publisher: decode_param(safe_params["datacite.publisher"]),
-      published: decode_param(safe_params["datacite.publicationyear"]),
-      resource_type_general: decode_param(safe_params["datacite.resourcetype"])) if @profile.to_s == "datacite"
+    options = datacite_options(options) if @profile.to_s == "datacite"
 
     response = DoisController.post_doi(doi, options)
 
@@ -127,12 +117,7 @@ class DoisController < ApplicationController
       username: @username,
       password: @password }.compact
 
-    options = options.merge(
-      author: decode_param(safe_params["datacite.creator"]),
-      title: decode_param(safe_params["datacite.title"]),
-      publisher: decode_param(safe_params["datacite.publisher"]),
-      published: decode_param(safe_params["datacite.publicationyear"]),
-      resource_type_general: decode_param(safe_params["datacite.resourcetype"])) if @profile.to_s == "datacite"
+    options = datacite_options(options) if @profile.to_s == "datacite"
 
     response = DoisController.put_doi(@doi, options)
 
@@ -196,8 +181,7 @@ class DoisController < ApplicationController
 
   def safe_params
     # custom URL decoding because there is also ANVL encoding
-    data = request.raw_post.gsub(/%20/, " ").gsub(/%22/, "\"").gsub(/%3C/, "<").gsub(/%3E/, ">").gsub(/%7B/, "{").gsub(/%7D/, "}").gsub(/%0A(_profile|_status|_target|_number|datacite|schema_org|ris|bibtex)/, "\n\\1").from_anvl
-
+    data = request.raw_post.gsub(/%20/, " ").gsub(/%22/, "\"").gsub(/%3C/, "<").gsub(/%3E/, ">").gsub(/%7B/, "{").gsub(/%7D/, "}").gsub(/%0A(_profile|_status|_target|_export|_number|datacite|schema_org|ris|bibtex)/, "\n\\1").from_anvl
     params.permit(:id, :_target, :_export, :_profile, :_status, :_number, :datacite, :bibtex, :ris, :schema_org, :citeproc).merge!(data)
   end
 
@@ -207,5 +191,17 @@ class DoisController < ApplicationController
     report.add_tab(:metadata, {
       metadata: URI.escape(safe_params[@profile])
     })
+  end
+  
+  def datacite_options(options)
+    resource_type_general, resource_type = decode_param(safe_params["datacite.resourcetype"])&.split('/')
+    options = options.merge(
+      author: decode_param(safe_params["datacite.creator"]),
+      title: decode_param(safe_params["datacite.title"]),
+      publisher: decode_param(safe_params["datacite.publisher"]),
+      published: decode_param(safe_params["datacite.publicationyear"]),
+      resource_type_general: resource_type_general,
+      resource_type: resource_type
+    ) 
   end
 end

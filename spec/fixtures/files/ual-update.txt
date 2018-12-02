@@ -1,0 +1,8 @@
+datacite.creator: Joe Blow
+datacite.publisher: University of Alberta Libraries
+datacite.publicationyear: 2017
+datacite.resourcetype: Text/Book
+datacite.title: Different Title
+_target: http://localhost/items/9e15f53d-9e52-40b9-ab0f-307616b21e2d
+_status: public
+_export: yes
