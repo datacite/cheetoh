@@ -19,7 +19,7 @@ module Doiable
 
       status = STATES[attributes["state"]] || "public"
       status = [status, attributes["reason"]].join(" | ") if status == "unavailable" && attributes["reason"].present?
-      export_status = "no" unless status == "public"
+      export = (status == "public") ? "yes" : "no"
 
       if options[:profile] == :datacite
         metadata = attributes["xml"].present? ? Base64.decode64(attributes["xml"]) : nil
@@ -32,7 +32,7 @@ module Doiable
         options[:profile] => metadata,
         "_profile" => options[:profile],
         "_datacenter" => response.dig("data", "relationships", "client", "data", "id").upcase,
-        "_export" => export_status || "yes",
+        "_export" => export,
         "_created" => Time.parse(attributes["created"]).to_i,
         "_updated" => Time.parse(attributes["updated"]).to_i,
         "_status" => status
@@ -102,15 +102,16 @@ module Doiable
       end
 
       xml = options[:data].present? ? ::Base64.strict_encode64(options[:data]) : nil
-      creator = options[:creator].present? ? options[:creator].to_s.split(";").map { |a| { "name" => a.strip }} : nil
+      creators = options[:creator].present? ? options[:creator].to_s.split(";").map { |a| { "name" => a.strip }} : nil
       titles = options[:title].present? ? [{ "title"=> options[:title] }] : nil
-      types = options[:resource_type_general].present? ? { "resourceTypeGeneral" => options[:resource_type_general] } : nil
+      types = options[:resource_type_general].present? ? { "resourceTypeGeneral" => options[:resource_type_general], 
+                                                           "resourceType" => options[:resource_type].presence }.compact : nil
       
       # https://github.com/datacite/lupo/blob/62b8ae4069be3418f8312265f015db5827eed2e8/app/controllers/dois_controller.rb#L414-L464
       attributes = {
         "url" => options[:url],
         "xml" => xml,
-        "creator" => creator,
+        "creators" => creators,
         "titles" => titles,
         "publisher" => options[:publisher],
         "publicationYear" => options[:publication_year],
@@ -152,15 +153,16 @@ module Doiable
       end
 
       xml = options[:data].present? ? ::Base64.strict_encode64(options[:data]) : nil
-      creator = options[:creator].present? ? options[:creator].to_s.split(";").map { |a| { "name" => a.strip }} : nil
+      creators = options[:creator].present? ? options[:creator].to_s.split(";").map { |a| { "name" => a.strip }} : nil
       titles = options[:title].present? ? [{ "title"=> options[:title] }] : nil
-      types = options[:resource_type_general].present? ? { "resourceTypeGeneral" => options[:resource_type_general] } : nil
+      types = options[:resource_type_general].present? ? { "resourceTypeGeneral" => options[:resource_type_general], 
+                                                           "resourceType" => options[:resource_type].presence }.compact : nil
 
       attributes = {
         "doi" => doi,
         "url" => options[:url],
         "xml" => xml,
-        "creator" => creator,
+        "creators" => creators,
         "titles" => titles,
         "types" => types,
         "publisher" => options[:publisher],

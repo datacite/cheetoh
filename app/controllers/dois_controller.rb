@@ -192,10 +192,10 @@ class DoisController < ApplicationController
   def datacite_options(options)
     resource_type_general, resource_type = decode_param(safe_params["datacite.resourcetype"])&.split('/')
     options = options.merge(
-      author: decode_param(safe_params["datacite.creator"]),
+      creator: decode_param(safe_params["datacite.creator"]),
       title: decode_param(safe_params["datacite.title"]),
       publisher: decode_param(safe_params["datacite.publisher"]),
-      published: decode_param(safe_params["datacite.publicationyear"]),
+      publication_year: decode_param(safe_params["datacite.publicationyear"]),
       resource_type_general: resource_type_general,
       resource_type: resource_type
     ) 

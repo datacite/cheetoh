@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api.test.datacite.org/dois/10.21967/fk2-qscw-y487
+    uri: https://api.test.datacite.org/dois/10.14454/fk2-4h3j-wr25
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"author":[],"source":"ez","event":"hide","reason":"withdrawn"},"relationships":{"client":{"data":{"type":"clients","id":"CISTI.UAL"}}}}}'
+      string: '{"data":{"type":"dois","attributes":{"source":"ez","event":"hide","reason":"withdrawn"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
       User-Agent:
       - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 15 Nov 2018 04:13:31 GMT
+      - Mon, 03 Dec 2018 19:41:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -32,25 +32,22 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      Etag:
-      - W/"aaa9dcf73d49ca070d66b976afc060fa"
-      X-Runtime:
-      - '0.100233'
       X-Credential-Username:
-      - cisti.ual
+      - datacite.datacite
       X-Request-Id:
-      - fb7ad8f6-0c7d-4424-916e-5badedb51d14
+      - ba4ef711-dcfa-487e-a66a-437d599ae756
+      Etag:
+      - W/"b633136ec4ce49f5c36326d404e9a522"
+      X-Runtime:
+      - '0.105383'
       X-Powered-By:
-      - Phusion Passenger 5.3.7
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.7
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.21967/fk2-qscw-y487","type":"dois","attributes":{"doi":"10.21967/fk2-qscw-y487","identifier":"https://handle.test.datacite.org/10.21967/fk2-qscw-y487","url":"http://localhost/items/e58cb0fd-cdee-4139-9ea4-488269e86717","prefix":"10.21967","suffix":"fk2-qscw-y487","author":[{"type":"Person","name":"Joe
-        Blow","givenName":"Joe","familyName":"Blow"}],"title":"Different Title","publisher":"University
-        of Alberta Libraries","resource-type-subtype":"Text/Book","description":null,"version":null,"metadata-version":7,"schema-version":"http://datacite.org/schema/kernel-4","reason":"withdrawn","source":"ez","state":"registered","is-active":false,"landing-page":{"status":null,"content-type":null,"checked":null,"result":null},"published":"2017","created":"2018-11-14T20:38:41.000Z","registered":"2018-11-14T20:38:43.000Z","updated":"2018-11-15T04:13:31.000Z","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMjE5NjcvRksyLVFTQ1ctWTQ4NzwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkpvZSBCbG93PC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RGlmZmVyZW50IFRpdGxlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlVuaXZlcnNpdHkgb2YgQWxiZXJ0YSBMaWJyYXJpZXM8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTc8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPlRleHQvQm9vazwvcmVzb3VyY2VUeXBlPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTc8L2RhdGU+CiAgPC9kYXRlcz4KICA8dmVyc2lvbi8+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ii8+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==","cache-key":"dois/10.21967/fk2-qscw-y487-2018-11-15T04:13:31Z"},"relationships":{"client":{"data":{"id":"cisti.ual","type":"clients"}},"resource-type":{"data":{"id":"text","type":"resource_types"}},"media":{"data":[]}}},"included":[{"id":"cisti.ual","type":"clients","attributes":{"name":"University
-        of Alberta Libraries","symbol":"CISTI.UAL","year":2018,"contact-name":"Peter
-        Binkley","contact-email":"peter.binkley@ualberta.ca","domains":"*","url":null,"created":"2018-11-02T20:52:32.000Z","updated":"2018-11-02T21:19:04.000Z","is-active":true,"has-password":true},"relationships":{"provider":{"data":{"id":"cisti","type":"providers"}},"prefixes":{"data":[{"id":"10.21967","type":"prefixes"}]}}},{"id":"text","type":"resource-types","attributes":{"title":"Text","updated":"2016-09-21T00:00:00Z"},"relationships":{}}]}'
+      string: '{"data":{"id":"10.14454/fk2-4h3j-wr25","type":"dois","attributes":{"doi":"10.14454/fk2-4h3j-wr25","prefix":"10.14454","suffix":"fk2-4h3j-wr25","identifier":"https://handle.test.datacite.org/10.14454/fk2-4h3j-wr25","creators":null,"titles":null,"publisher":null,"periodical":null,"publicationYear":null,"subjects":null,"contributors":null,"dates":null,"language":null,"types":null,"alternateIdentifiers":null,"relatedIdentifiers":null,"sizes":null,"formats":null,"version":null,"rightsList":null,"descriptions":null,"geoLocations":null,"fundingReferences":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMTQ0NTQvRksyLTRIM0otV1IyNTwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkpvZSBCbG93PC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RGlmZmVyZW50IFRpdGxlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlVuaXZlcnNpdHkgb2YgQWxiZXJ0YSBMaWJyYXJpZXM8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTc8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPkJvb2s8L3Jlc291cmNlVHlwZT4KICA8dmVyc2lvbi8+CjwvcmVzb3VyY2U+Cg==","url":"http://localhost/items/9e15f53d-9e52-40b9-ab0f-307616b21e2d","contentUrl":null,"metadataVersion":1,"schemaVersion":null,"source":"ez","isActive":false,"state":"registered","reason":"withdrawn","landingPage":null,"created":"2018-12-03T12:30:32.000Z","registered":"2018-12-03T12:30:34.000Z","updated":"2018-12-03T19:41:49.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
+        Fenner","contactEmail":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Thu, 15 Nov 2018 04:13:31 GMT
+  recorded_at: Mon, 03 Dec 2018 19:41:49 GMT
 recorded_with: VCR 3.0.3
