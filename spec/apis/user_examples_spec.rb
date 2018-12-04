@@ -302,16 +302,16 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(response["_export"]).to eq("yes")
     end
     
-    # it "update for being made private" do
-    #   str = File.read(file_fixture('ual-private.txt')).from_anvl
-    #   params = str.to_anvl
-    #   post "/id/doi:#{doi}", params, headers
-    #   expect(last_response.status).to eq(200)
-    #   response = last_response.body.from_anvl
-    #   expect(response["success"]).to eq("doi:10.14454/fk2-4h3j-wr25")
-    #   expect(response["_target"]).to eq(str[:_target])
-    #   expect(response["_status"]).to eq("unavailable | not publicly released")
-    #   expect(response["_export"]).to eq("no")
-    # end
+    it "update for being made private" do
+      str = File.read(file_fixture('ual-private.txt')).from_anvl
+      params = str.to_anvl
+      post "/id/doi:#{doi}", params, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.14454/fk2-4h3j-wr25")
+      expect(response["_target"]).to eq(str[:_target])
+      expect(response["_status"]).to eq("unavailable | not publicly released")
+      expect(response["_export"]).to eq("no")
+    end
   end
 end

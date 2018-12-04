@@ -20,35 +20,40 @@ http_interactions:
       - Basic <MDS_TOKEN>
   response:
     status:
-      code: 422
+      code: 200
       message: ''
     headers:
       Date:
-      - Mon, 03 Dec 2018 19:45:20 GMT
+      - Tue, 04 Dec 2018 13:32:37 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
       - keep-alive
       Status:
-      - 422 Unprocessable Entity
+      - 200 OK
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 32e3d3fe-b87b-4344-a552-126103feef2a
+      - 1ad14754-d39a-4a74-be15-de0e48ade998
+      Etag:
+      - W/"549ab15381121dfc8ede32660e288ae5"
       X-Runtime:
-      - '0.041689'
+      - '0.103969'
       X-Powered-By:
       - Phusion Passenger 6.0.0
       Server:
       - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
-      string: '{"errors":[{"source":"metadata","title":"Is invalid"},{"source":"metadata","title":"Is
-        invalid"}]}'
+      string: '{"data":{"id":"10.14454/fk2-4h3j-wr25","type":"dois","attributes":{"doi":"10.14454/fk2-4h3j-wr25","prefix":"10.14454","suffix":"fk2-4h3j-wr25","identifier":"https://handle.test.datacite.org/10.14454/fk2-4h3j-wr25","creators":[{"name":"Joe
+        Blow"}],"titles":[{"title":"Different Title"}],"publisher":"University of
+        Alberta Libraries","periodical":null,"publicationYear":2017,"subjects":null,"contributors":null,"dates":[{"date":"2017","dateType":"Issued"}],"language":null,"types":{"ris":"RPRT","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"Text/Book","resourceTypeGeneral":"Text"},"alternateIdentifiers":null,"relatedIdentifiers":null,"sizes":null,"formats":null,"version":null,"rightsList":null,"descriptions":[{"descriptionType":"Abstract"}],"geoLocations":null,"fundingReferences":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMTQ0NTQvRksyLTRIM0otV1IyNTwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkpvZSBCbG93PC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RGlmZmVyZW50IFRpdGxlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlVuaXZlcnNpdHkgb2YgQWxiZXJ0YSBMaWJyYXJpZXM8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTc8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPlRleHQvQm9vazwvcmVzb3VyY2VUeXBlPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTc8L2RhdGU+CiAgPC9kYXRlcz4KICA8dmVyc2lvbi8+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ii8+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==","url":"http://localhost/items/e58cb0fd-cdee-4139-9ea4-488269e86717","contentUrl":null,"metadataVersion":1,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"ez","isActive":false,"state":"registered","reason":"not
+        publicly released","landingPage":null,"created":"2018-12-04T13:32:15.000Z","registered":"2018-12-04T13:32:16.000Z","updated":"2018-12-04T13:32:37.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
+        Fenner","contactEmail":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Mon, 03 Dec 2018 19:45:20 GMT
+  recorded_at: Tue, 04 Dec 2018 13:32:37 GMT
 recorded_with: VCR 3.0.3
