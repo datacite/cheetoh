@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/datacite/cheetoh.svg?branch=master)](https://travis-ci.org/datacite/cheetoh) [![Maintainability](https://api.codeclimate.com/v1/badges/ddb2efcae1339a13bb51/maintainability)](https://codeclimate.com/github/datacite/cheetoh/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/ddb2efcae1339a13bb51/test_coverage)](https://codeclimate.com/github/datacite/cheetoh/test_coverage)
 
+
 Rails web application for providing a compatibility API layer for the DataCite MDS API,
 enabling [EZID API](https://ezid.cdlib.org/doc/apidoc.html) calls for DOI and
 metadata registration. The application does not store any data internally.
