@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.test.datacite.org/dois/10.5072/4h3j-wr25
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"url":"https://data.gulfresearchinitiative.org/data/R5.x287.000:0002","creator":[{"name":"Test
+      string: '{"data":{"type":"dois","attributes":{"url":"https://data.gulfresearchinitiative.org/data/R5.x287.000:0002","creators":[{"name":"Test
         User"}],"titles":[{"title":"RCYC Focus Groups"}],"publisher":"Harte Research
         Institute","publicationYear":"2018","source":"ez"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
     headers:
@@ -23,7 +23,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 27 Nov 2018 14:39:24 GMT
+      - Thu, 20 Dec 2018 18:56:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -37,21 +37,21 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - d4298574-6a17-4323-8d5b-7c7d9332f855
+      - 20b980c0-f630-4271-ac83-03bd1dc5c368
       Etag:
-      - W/"1d59c51bc36b43f3fd4bae2064e1a77d"
+      - W/"b9ead04a41dbf23583e8e07bc5c8f104"
       X-Runtime:
-      - '0.074503'
+      - '0.055859'
       X-Powered-By:
-      - Phusion Passenger 5.3.7
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.7
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.5072/4h3j-wr25","type":"dois","attributes":{"doi":"10.5072/4h3j-wr25","prefix":"10.5072","suffix":"4h3j-wr25","identifier":"https://handle.test.datacite.org/10.5072/4h3j-wr25","creator":[{"name":"Test
+      string: '{"data":{"id":"10.5072/4h3j-wr25","type":"dois","attributes":{"doi":"10.5072/4h3j-wr25","prefix":"10.5072","suffix":"4h3j-wr25","identifiers":[{"identifier":"https://handle.test.datacite.org/10.5072/4h3j-wr25","identifierType":"DOI"}],"creators":[{"name":"Test
         User"}],"titles":[{"title":"RCYC Focus Groups"}],"publisher":"Harte Research
-        Institute","periodical":null,"publicationYear":2018,"subjects":[],"contributor":[],"dates":[],"language":null,"types":{},"alternateIdentifiers":[],"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi80SDNKLVdSMjU8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5UZXN0IFVzZXI8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5SQ1lDIEZvY3VzIEdyb3VwczwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5IYXJ0ZSBSZXNlYXJjaCBJbnN0aXR1dGU8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTg8L3B1YmxpY2F0aW9uWWVhcj4KICA8dmVyc2lvbj4yPC92ZXJzaW9uPgo8L3Jlc291cmNlPgo=","url":"https://data.gulfresearchinitiative.org/data/R5.x287.000:0002","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"ez","isActive":false,"state":"draft","reason":null,"landingPage":{"status":null,"contentType":null,"checked":null,"result":null},"created":"2018-11-25T18:18:11.000Z","registered":null,"updated":"2018-11-27T14:39:24.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
-        Fenner","contactEmail":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
+        Institute","container":{},"publicationYear":2018,"subjects":[],"contributors":[],"dates":[{"date":"2018","dateType":"Issued"}],"language":null,"types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceTypeGeneral":"Dataset"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi80SDNKLVdSMjU8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5UZXN0IFVzZXI8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5SQ1lDIEZvY3VzIEdyb3VwczwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5IYXJ0ZSBSZXNlYXJjaCBJbnN0aXR1dGU8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTg8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkRhdGFzZXQ8L3Jlc291cmNlVHlwZT4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHZlcnNpb24vPgo8L3Jlc291cmNlPgo=","url":"https://data.gulfresearchinitiative.org/data/R5.x287.000:0002","contentUrl":null,"metadataVersion":1,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"ez","isActive":false,"state":"draft","reason":null,"landingPage":null,"created":"2018-11-27T14:39:47.000Z","registered":null,"updated":"2018-12-20T18:56:49.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
+        Fenner","contactEmail":"support@datacite.org","description":null,"domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-12-10T23:46:06.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Tue, 27 Nov 2018 14:39:24 GMT
+  recorded_at: Thu, 20 Dec 2018 18:56:49 GMT
 recorded_with: VCR 3.0.3

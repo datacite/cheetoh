@@ -43,8 +43,8 @@ module Doiable
       profile ||= "datacite"
       accept = SUPPORTED_PROFILES[profile.to_sym]
 
-      url = "#{ENV['API_URL']}/#{doi}"
-      response = Maremma.get(url, accept: accept, username: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], raw: true)
+      url = "#{ENV['API_URL']}/dois/#{doi}"
+      response = Maremma.get(url, accept: accept, username: ENV['MDS_USERNAME'], password: ENV['MDS_PASSWORD'], raw: true)
       return nil unless response.status == 200
 
       response.body["data"]

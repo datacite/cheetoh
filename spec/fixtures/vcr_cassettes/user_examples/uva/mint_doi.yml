@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 20 Dec 2018 15:46:46 GMT
+      - Thu, 20 Dec 2018 18:56:47 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -33,9 +33,9 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - dcb16561-de42-4ce6-ac41-d628e777611b
+      - 24fdbae3-ce47-4bf4-9144-bb04e23b638f
       X-Runtime:
-      - '0.007563'
+      - '0.007605'
       X-Powered-By:
       - Phusion Passenger 6.0.0
       Server:
@@ -45,7 +45,7 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Thu, 20 Dec 2018 15:46:46 GMT
+  recorded_at: Thu, 20 Dec 2018 18:56:47 GMT
 - request:
     method: post
     uri: https://api.test.datacite.org/dois
@@ -67,7 +67,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 20 Dec 2018 15:46:47 GMT
+      - Thu, 20 Dec 2018 18:56:47 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -81,13 +81,13 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 6e9606c0-a8ed-4c93-a36b-52ac6d19c631
+      - c0f05bcf-1d5c-4b5a-baf5-b21a696769f4
       Location:
-      - https://api.test.datacite.org/dois/2329614
+      - https://api.test.datacite.org/dois/2329646
       Etag:
-      - W/"ef1c5f90de465f09c38f783256aa06f1"
+      - W/"d19a4ff7349736890ff90ca9c70ab3f7"
       X-Runtime:
-      - '0.081232'
+      - '0.120354'
       X-Powered-By:
       - Phusion Passenger 6.0.0
       Server:
@@ -98,8 +98,8 @@ http_interactions:
         John","givenName":"John","familyName":"Smith","affiliation":"Biology, UVa"}],"titles":[{"title":"my
         datacite title"}],"publisher":"UVa Press","container":null,"publicationYear":2002,"subjects":[{"subject":"keyword1"},{"subject":"keyword2"}],"contributors":[{"nameType":"Personal","name":"Blow,
         Joe","givenName":"Joe","familyName":"Blow","affiliation":"UVa","contributorType":"Other"}],"dates":[{"date":"2002-02-02","dateType":"Issued"}],"language":null,"types":{"resourceTypeGeneral":"Sound","resourceType":"Audio","schemaOrg":"AudioObject","citeproc":"song","bibtex":"misc","ris":"SOUND"},"relatedIdentifiers":null,"sizes":null,"formats":null,"version":null,"rightsList":[{"rights":"All
-        rights reserved"}],"descriptions":[{"description":"my interesting abstract","descriptionType":"Abstract"}],"geoLocations":null,"fundingReferences":[{"funderName":"sponsor1"},{"funderName":"sponsor2"}],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzItMS00R1ZRLVpXMzM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5TbWl0aCwgSm9objwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Sm9objwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5TbWl0aDwvZmFtaWx5TmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkJpb2xvZ3ksIFVWYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPm15IGRhdGFjaXRlIHRpdGxlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlVWYSBQcmVzczwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAwMjwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PmtleXdvcmQxPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+a2V5d29yZDI8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iT3RoZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPkJsb3csIEpvZTwvY29udHJpYnV0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkpvZTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5CbG93PC9mYW1pbHlOYW1lPgogICAgICA8YWZmaWxpYXRpb24+VVZhPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAwMi0wMi0wMjwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU291bmQiPkF1ZGlvPC9yZXNvdXJjZVR5cGU+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzPkFsbCByaWdodHMgcmVzZXJ2ZWQ8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5teSBpbnRlcmVzdGluZyBhYnN0cmFjdDwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CiAgPGZ1bmRpbmdSZWZlcmVuY2VzPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IxPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IyPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogIDwvZnVuZGluZ1JlZmVyZW5jZXM+CjwvcmVzb3VyY2U+","url":"http://google.com","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"ez","isActive":false,"state":"draft","reason":null,"landingPage":null,"created":"2018-12-20T15:46:47.000Z","registered":null,"updated":"2018-12-20T15:46:47.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
+        rights reserved"}],"descriptions":[{"description":"my interesting abstract","descriptionType":"Abstract"}],"geoLocations":null,"fundingReferences":[{"funderName":"sponsor1"},{"funderName":"sponsor2"}],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9GSzItMS00R1ZRLVpXMzM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5TbWl0aCwgSm9objwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Sm9objwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5TbWl0aDwvZmFtaWx5TmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkJpb2xvZ3ksIFVWYTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPm15IGRhdGFjaXRlIHRpdGxlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlVWYSBQcmVzczwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAwMjwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PmtleXdvcmQxPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+a2V5d29yZDI8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iT3RoZXIiPgogICAgICA8Y29udHJpYnV0b3JOYW1lPkJsb3csIEpvZTwvY29udHJpYnV0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkpvZTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5CbG93PC9mYW1pbHlOYW1lPgogICAgICA8YWZmaWxpYXRpb24+VVZhPC9hZmZpbGlhdGlvbj4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAwMi0wMi0wMjwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU291bmQiPkF1ZGlvPC9yZXNvdXJjZVR5cGU+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzPkFsbCByaWdodHMgcmVzZXJ2ZWQ8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5teSBpbnRlcmVzdGluZyBhYnN0cmFjdDwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CiAgPGZ1bmRpbmdSZWZlcmVuY2VzPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IxPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPnNwb25zb3IyPC9mdW5kZXJOYW1lPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogIDwvZnVuZGluZ1JlZmVyZW5jZXM+CjwvcmVzb3VyY2U+","url":"http://google.com","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"ez","isActive":false,"state":"draft","reason":null,"landingPage":null,"created":"2018-12-20T18:56:47.000Z","registered":null,"updated":"2018-12-20T18:56:47.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
         Fenner","contactEmail":"support@datacite.org","description":null,"domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-12-10T23:46:06.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Thu, 20 Dec 2018 15:46:47 GMT
+  recorded_at: Thu, 20 Dec 2018 18:56:47 GMT
 recorded_with: VCR 3.0.3

@@ -242,7 +242,7 @@ describe "user examples", :type => :api, vcr: true, :order => :defined do
       expect(last_response.status).to eq(200)
       response = last_response.body.from_anvl
       expect(response["success"]).to eq("doi:10.5072/4h3j-wr25")
-      expect(response["_target"]).to eq("https://data.gulfresearchinitiative.org/data/R5.x287.000:0002")
+      expect(response["_target"]).to eq("https://data.gulfresearchinitiative.org/data/R6.x805.000:0056")
 
       doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
       expect(doc.at_css("identifier").content).to eq("10.5072/4H3J-WR25")

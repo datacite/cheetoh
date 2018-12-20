@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 25 Nov 2018 20:21:10 GMT
+      - Thu, 20 Dec 2018 18:53:09 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -35,30 +35,30 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - e17112f9-2057-476d-96e9-b082619f9321
+      - 551ca0ac-faa6-4a9d-86b9-fbf99cc63b0d
       Etag:
-      - W/"746d629bece4c5a99e927f2924261653"
+      - W/"b34554b429b93c657deb2bd286bf9a27"
       X-Runtime:
-      - '0.076733'
+      - '0.060019'
       X-Powered-By:
-      - Phusion Passenger 5.3.7
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.7
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.5072/bc11-cqw7","type":"dois","attributes":{"doi":"10.5072/bc11-cqw7","prefix":"10.5072","suffix":"bc11-cqw7","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw7","creator":[{"type":"Person","id":"https://orcid.org/0000-0003-1419-2405","name":"Fenner,
-        Martin","givenName":"Martin","familyName":"Fenner"}],"titles":[{"title":"Eating
-        your own Dog Food"}],"publisher":"DataCite","periodical":null,"publicationYear":null,"subjects":[{"subject":"datacite"},{"subject":"doi"},{"subject":"metadata"},{"subject":"featured"}],"contributor":[],"dates":[{"date":"2016-12-20","dateType":"Issued"},{"date":"2016-12-20","dateType":"Created"},{"date":"2016-12-20","dateType":"Updated"}],"language":null,"types":{"resourceTypeGeneral":"Text","schemaOrg":"BlogPosting","citeproc":"post-weblog","bibtex":"article","ris":"GEN"},"alternateIdentifiers":null,"relatedIdentifiers":null,"sizes":null,"formats":[],"version":null,"rightsList":null,"descriptions":[{"description":"Eating
+      string: '{"data":{"id":"10.5072/bc11-cqw7","type":"dois","attributes":{"doi":"10.5072/bc11-cqw7","prefix":"10.5072","suffix":"bc11-cqw7","identifiers":[{"identifierType":"DOI","identifier":"https://doi.org/10.5072/bc11-cqw7"}],"creators":[{"nameType":"Personal","name":"Fenner,
+        Martin","givenName":"Martin","familyName":"Fenner","nameIdentifiers":[{"nameIdentifier":"https://orcid.org/0000-0003-1419-2405","nameIdentifierScheme":"ORCID"}]}],"titles":[{"title":"Eating
+        your own Dog Food"}],"publisher":"DataCite","container":null,"publicationYear":2016,"subjects":[{"subject":"datacite"},{"subject":"doi"},{"subject":"metadata"},{"subject":"featured"}],"contributors":[{"name":"DataCite"}],"dates":[{"date":"2016-12-20","dateType":"Issued"},{"date":"2016-12-20","dateType":"Created"},{"date":"2016-12-20","dateType":"Updated"}],"language":null,"types":{"resourceTypeGeneral":"Text","schemaOrg":"BlogPosting","citeproc":"post-weblog","bibtex":"article","ris":"GEN"},"relatedIdentifiers":[{"relatedIdentifier":"10.5438/0000-00ss","relationType":"IsPartOf","relatedIdentifierType":"DOI","resourceTypeGeneral":"Text"},{"relatedIdentifier":"10.5438/0012","relationType":"References","relatedIdentifierType":"DOI"},{"relatedIdentifier":"10.5438/55e5-t5c0","relationType":"References","relatedIdentifierType":"DOI"}],"sizes":null,"formats":null,"version":"1.0","rightsList":{"rightsUri":null,"rights":null},"descriptions":[{"description":"Eating
         your own dog food is a slang term to describe that an organization should
         itself use the products and services it provides. For DataCite this means
         that we should use DOIs with appropriate metadata and strategies for long-term
-        preservation for...","descriptionType":"Abstract"}],"geoLocations":null,"fundingReferences":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9CQzExLUNRVzc8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkZlbm5lciwgTWFydGluPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5NYXJ0aW48L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+RmVubmVyPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgc2NoZW1lVVJJPSJodHRwOi8vb3JjaWQub3JnLyIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDMtMTQxOS0yNDA1PC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RWF0aW5nIHlvdXIgb3duIERvZyBGb29kPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE2PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5CbG9nUG9zdGluZzwvcmVzb3VyY2VUeXBlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PmRhdGFjaXRlPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+ZG9pPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5mZWF0dXJlZDwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTYtMTItMjA8L2RhdGU+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iQ3JlYXRlZCI+MjAxNi0xMi0yMDwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJVcGRhdGVkIj4yMDE2LTEyLTIwPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiIgcmVzb3VyY2VUeXBlR2VuZXJhbD0iVGV4dCI+MTAuNTQzOC8wMDAwLTAwc3M8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IlJlZmVyZW5jZXMiPjEwLjU0MzgvMDAxMjwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuNTQzOC81NWU1LXQ1YzA8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDx2ZXJzaW9uPjE8L3ZlcnNpb24+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LzQuMC8iPmh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAvPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+RWF0aW5nIHlvdXIgb3duIGRvZyBmb29kIGlzIGEgc2xhbmcgdGVybSB0byBkZXNjcmliZSB0aGF0IGFuIG9yZ2FuaXphdGlvbiBzaG91bGQgaXRzZWxmIHVzZSB0aGUgcHJvZHVjdHMgYW5kIHNlcnZpY2VzIGl0IHByb3ZpZGVzLiBGb3IgRGF0YUNpdGUgdGhpcyBtZWFucyB0aGF0IHdlIHNob3VsZCB1c2UgRE9JcyB3aXRoIGFwcHJvcHJpYXRlIG1ldGFkYXRhIGFuZCBzdHJhdGVnaWVzIGZvciBsb25nLXRlcm0gcHJlc2VydmF0aW9uIGZvci4uLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==","url":null,"contentUrl":[],"metadataVersion":2,"schemaVersion":null,"source":"ez","isActive":false,"state":"draft","reason":null,"landingPage":{"status":null,"contentType":null,"checked":null,"result":null},"created":"2018-11-25T18:54:36.000Z","registered":null,"updated":"2018-11-25T20:21:10.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
-        Fenner","contactEmail":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
+        preservation for...","descriptionType":"Abstract"}],"geoLocations":null,"fundingReferences":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9CQzExLUNRVzc8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkZlbm5lciwgTWFydGluPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5NYXJ0aW48L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+RmVubmVyPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDMtMTQxOS0yNDA1PC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RWF0aW5nIHlvdXIgb3duIERvZyBGb29kPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE2PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5CbG9nUG9zdGluZzwvcmVzb3VyY2VUeXBlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PmRhdGFjaXRlPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+ZG9pPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5mZWF0dXJlZDwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxjb250cmlidXRvcnM+CiAgICA8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJPdGhlciI+CiAgICAgIDxjb250cmlidXRvck5hbWU+RGF0YUNpdGU8L2NvbnRyaWJ1dG9yTmFtZT4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAxNi0xMi0yMDwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJDcmVhdGVkIj4yMDE2LTEyLTIwPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IlVwZGF0ZWQiPjIwMTYtMTItMjA8L2RhdGU+CiAgPC9kYXRlcz4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzUGFydE9mIiByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij4xMC41NDM4LzAwMDAtMDBzczwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuNTQzOC8wMDEyPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC41NDM4LzU1ZTUtdDVjMDwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24+MS4wPC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cy8+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+RWF0aW5nIHlvdXIgb3duIGRvZyBmb29kIGlzIGEgc2xhbmcgdGVybSB0byBkZXNjcmliZSB0aGF0IGFuIG9yZ2FuaXphdGlvbiBzaG91bGQgaXRzZWxmIHVzZSB0aGUgcHJvZHVjdHMgYW5kIHNlcnZpY2VzIGl0IHByb3ZpZGVzLiBGb3IgRGF0YUNpdGUgdGhpcyBtZWFucyB0aGF0IHdlIHNob3VsZCB1c2UgRE9JcyB3aXRoIGFwcHJvcHJpYXRlIG1ldGFkYXRhIGFuZCBzdHJhdGVnaWVzIGZvciBsb25nLXRlcm0gcHJlc2VydmF0aW9uIGZvci4uLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","contentUrl":null,"metadataVersion":1,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"ez","isActive":false,"state":"draft","reason":null,"landingPage":null,"created":"2018-12-20T18:49:24.000Z","registered":null,"updated":"2018-12-20T18:53:09.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
+        Fenner","contactEmail":"support@datacite.org","description":null,"domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-12-10T23:46:06.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Sun, 25 Nov 2018 20:21:10 GMT
+  recorded_at: Thu, 20 Dec 2018 18:53:09 GMT
 - request:
     method: get
-    uri: https://api.test.datacite.org/10.5072/bc11-cqw7
+    uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw7
     body:
       encoding: US-ASCII
       string: ''
@@ -68,75 +68,90 @@ http_interactions:
       Accept:
       - application/vnd.schemaorg.ld+json
       Authorization:
-      - Basic <ADMIN_TOKEN>
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Sun, 25 Nov 2018 20:21:10 GMT
+      - Thu, 20 Dec 2018 18:53:09 GMT
       Content-Type:
-      - application/vnd.schemaorg.ld+json
+      - application/vnd.schemaorg.ld+json; charset=utf-8
       Connection:
       - keep-alive
       Status:
       - 200 OK
       Cache-Control:
-      - private
+      - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
       X-Credential-Username:
-      - admin
+      - datacite.datacite
       X-Request-Id:
-      - fee38c28-0d0e-43f1-b2ca-4f912afaf833
-      Content-Disposition:
-      - attachment; filename=_10.5072_bc11-cqw7.json
-      Content-Transfer-Encoding:
-      - binary
+      - d1c6a6b0-0fd3-4f11-9039-02fc07ab3d1e
       Etag:
-      - W/"96c5c8cfe64275c8bb36080b738aa49e"
+      - W/"4ef88db6e470dd3bba50d3f00bde2b91"
       X-Runtime:
-      - '0.012160'
+      - '0.015426'
       X-Powered-By:
-      - Phusion Passenger 5.3.7
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.7
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
       string: |-
         {
           "@context": "http://schema.org",
           "@type": "BlogPosting",
-          "@id": "https://handle.test.datacite.org/10.5072/bc11-cqw7",
+          "@id": 2329645,
           "identifier": {
             "@type": "PropertyValue",
-            "propertyID": "doi",
-            "value": "https://handle.test.datacite.org/10.5072/bc11-cqw7"
+            "propertyID": "DOI",
+            "value": "https://doi.org/10.5072/bc11-cqw7"
           },
+          "url": "https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/",
           "name": "Eating your own Dog Food",
           "author": {
-            "@id": "https://orcid.org/0000-0003-1419-2405",
-            "name": "Fenner, Martin",
-            "@type": "Person",
+            "name": "Martin Fenner",
             "givenName": "Martin",
-            "familyName": "Fenner"
+            "familyName": "Fenner",
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0003-1419-2405"
+          },
+          "editor": {
+            "name": "DataCite"
           },
           "description": "Eating your own dog food is a slang term to describe that an organization should itself use the products and services it provides. For DataCite this means that we should use DOIs with appropriate metadata and strategies for long-term preservation for...",
-          "version": 2,
+          "version": "1.0",
           "keywords": "datacite, doi, metadata, featured",
           "dateCreated": "2016-12-20",
           "datePublished": "2016-12-20",
           "dateModified": "2016-12-20",
+          "isPartOf": {
+            "@id": "https://doi.org/10.5438/0000-00ss",
+            "@type": "ScholarlyArticle"
+          },
+          "citation": [
+            {
+              "@id": "https://doi.org/10.5438/0012",
+              "@type": "CreativeWork"
+            },
+            {
+              "@id": "https://doi.org/10.5438/55e5-t5c0",
+              "@type": "CreativeWork"
+            }
+          ],
+          "schemaVersion": "http://datacite.org/schema/kernel-4",
           "publisher": {
             "@type": "Organization",
             "name": "DataCite"
           },
           "provider": {
             "@type": "Organization",
-            "name": "ez"
+            "name": "DataCite"
           }
         }
     http_version: 
-  recorded_at: Sun, 25 Nov 2018 20:21:10 GMT
+  recorded_at: Thu, 20 Dec 2018 18:53:09 GMT
 recorded_with: VCR 3.0.3

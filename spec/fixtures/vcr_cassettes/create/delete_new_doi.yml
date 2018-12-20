@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 22 Nov 2018 22:54:56 GMT
+      - Thu, 20 Dec 2018 18:54:31 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -35,26 +35,27 @@ http_interactions:
       X-Credential-Username:
       - admin
       X-Request-Id:
-      - 9d0e0d53-ab95-4f8d-a80a-1d9c1d9af933
+      - 77d356a9-fbde-4af5-a52f-6437f8033c89
       Etag:
-      - W/"87af8cad993aa32f27459dde96638a9e"
+      - W/"4fd6f2df99b1af51be1dfedfd40b9855"
       X-Runtime:
-      - '0.019166'
+      - '0.188863'
       X-Powered-By:
-      - Phusion Passenger 5.3.7
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.7
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.5072/bc11-cqw7","type":"dois","attributes":{"doi":"10.5072/bc11-cqw7","prefix":"10.5072","suffix":"bc11-cqw7","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw7","creator":[],"titles":[{"title":null}],"publisher":"DataCite
-        Blog","periodical":null,"publicationYear":null,"subjects":[{"subject":"thor"},{"subject":"orcid"},{"subject":"metadata"}],"contributor":[{"name":"DataCite"}],"dates":[{"date":"2015-09-18","dateType":"Issued"}],"language":null,"types":{"resourceTypeGeneral":null},"alternateIdentifiers":null,"relatedIdentifiers":null,"sizes":[],"formats":[],"version":null,"rightsList":null,"descriptions":[{"description":"One
-        of the first tasks for DataCite in the European Commission-funded THOR project,
-        which started in June, was to contribute to a comparison of the ORCID and
-        DataCite metadata standards. Together with ORCID, CERN, the British Library
-        and Dryad we looked...","descriptionType":"Abstract"}],"geoLocations":null,"fundingReferences":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9CQzExLUNRVzc8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5GZW5uZXIsIE1hcnRpbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWFydGluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkZlbm5lcjwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIHNjaGVtZVVSST0iaHR0cDovL29yY2lkLm9yZy8iIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCI+MDAwMC0wMDAzLTE0MTktMjQwNTwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRpZmZlcmVuY2VzIGJldHdlZW4gT1JDSUQgYW5kIERhdGFDaXRlIE1ldGFkYXRhPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlIEJsb2c8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTU8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPkJsb2dQb3N0aW5nPC9yZXNvdXJjZVR5cGU+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+dGhvcjwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pm9yY2lkPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8Y29udHJpYnV0b3JzPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iSG9zdGluZ0luc3RpdHV0aW9uIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZT5EYXRhQ2l0ZTwvY29udHJpYnV0b3JOYW1lPgogICAgPC9jb250cmlidXRvcj4KICA8L2NvbnRyaWJ1dG9ycz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE1LTA5LTE4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC41MjgxL1pFTk9ETy4zMDc5OTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24+MS4wPC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAvIj5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+T25lIG9mIHRoZSBmaXJzdCB0YXNrcyBmb3IgRGF0YUNpdGUgaW4gdGhlIEV1cm9wZWFuIENvbW1pc3Npb24tZnVuZGVkIFRIT1IgcHJvamVjdCwgd2hpY2ggc3RhcnRlZCBpbiBKdW5lLCB3YXMgdG8gY29udHJpYnV0ZSB0byBhIGNvbXBhcmlzb24gb2YgdGhlIE9SQ0lEIGFuZCBEYXRhQ2l0ZSBtZXRhZGF0YSBzdGFuZGFyZHMuIFRvZ2V0aGVyIHdpdGggT1JDSUQsIENFUk4sIHRoZSBCcml0aXNoIExpYnJhcnkgYW5kIERyeWFkIHdlIGxvb2tlZC4uLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","contentUrl":null,"metadataVersion":2,"schemaVersion":null,"source":"ez","isActive":false,"state":"draft","reason":null,"landingPage":{"status":null,"contentType":null,"checked":null,"result":null},"created":"2018-11-22T22:45:17.000Z","registered":null,"updated":"2018-11-22T22:54:02.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
-        Fenner","contactEmail":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
+      string: '{"data":{"id":"10.5072/bc11-cqw7","type":"dois","attributes":{"doi":"10.5072/bc11-cqw7","prefix":"10.5072","suffix":"bc11-cqw7","identifiers":[{"identifier":"https://doi.org/10.5072/bc11-cqw7","identifierType":"DOI"}],"creators":[{"name":"Fenner,
+        Martin","nameType":"Personal","givenName":"Martin","familyName":"Fenner","nameIdentifiers":[{"nameIdentifier":"https://orcid.org/0000-0003-1419-2405","nameIdentifierScheme":"ORCID"}]}],"titles":[{"title":"Eating
+        your own Dog Food"}],"publisher":"DataCite","container":null,"publicationYear":2016,"subjects":[{"subject":"datacite"},{"subject":"doi"},{"subject":"metadata"},{"subject":"featured"}],"contributors":[{"name":"DataCite"}],"dates":[{"date":"2016-12-20","dateType":"Issued"},{"date":"2016-12-20","dateType":"Created"},{"date":"2016-12-20","dateType":"Updated"}],"language":null,"types":{"ris":"GEN","bibtex":"article","citeproc":"post-weblog","schemaOrg":"BlogPosting","resourceTypeGeneral":"Text"},"relatedIdentifiers":[{"relationType":"IsPartOf","relatedIdentifier":"10.5438/0000-00ss","resourceTypeGeneral":"Text","relatedIdentifierType":"DOI"},{"relationType":"References","relatedIdentifier":"10.5438/0012","relatedIdentifierType":"DOI"},{"relationType":"References","relatedIdentifier":"10.5438/55e5-t5c0","relatedIdentifierType":"DOI"}],"sizes":null,"formats":null,"version":"1.0","rightsList":{"rights":null,"rightsUri":null},"descriptions":[{"description":"Eating
+        your own dog food is a slang term to describe that an organization should
+        itself use the products and services it provides. For DataCite this means
+        that we should use DOIs with appropriate metadata and strategies for long-term
+        preservation for...","descriptionType":"Abstract"}],"geoLocations":null,"fundingReferences":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi9CQzExLUNRVzc8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkZlbm5lciwgTWFydGluPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5NYXJ0aW48L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+RmVubmVyPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDMtMTQxOS0yNDA1PC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RWF0aW5nIHlvdXIgb3duIERvZyBGb29kPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPkRhdGFDaXRlPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE2PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5CbG9nUG9zdGluZzwvcmVzb3VyY2VUeXBlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PmRhdGFjaXRlPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+ZG9pPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWV0YWRhdGE8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5mZWF0dXJlZDwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxjb250cmlidXRvcnM+CiAgICA8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJPdGhlciI+CiAgICAgIDxjb250cmlidXRvck5hbWU+RGF0YUNpdGU8L2NvbnRyaWJ1dG9yTmFtZT4KICAgIDwvY29udHJpYnV0b3I+CiAgPC9jb250cmlidXRvcnM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAxNi0xMi0yMDwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJDcmVhdGVkIj4yMDE2LTEyLTIwPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IlVwZGF0ZWQiPjIwMTYtMTItMjA8L2RhdGU+CiAgPC9kYXRlcz4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzUGFydE9mIiByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij4xMC41NDM4LzAwMDAtMDBzczwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuNTQzOC8wMDEyPC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJSZWZlcmVuY2VzIj4xMC41NDM4LzU1ZTUtdDVjMDwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHZlcnNpb24+MS4wPC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cy8+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+RWF0aW5nIHlvdXIgb3duIGRvZyBmb29kIGlzIGEgc2xhbmcgdGVybSB0byBkZXNjcmliZSB0aGF0IGFuIG9yZ2FuaXphdGlvbiBzaG91bGQgaXRzZWxmIHVzZSB0aGUgcHJvZHVjdHMgYW5kIHNlcnZpY2VzIGl0IHByb3ZpZGVzLiBGb3IgRGF0YUNpdGUgdGhpcyBtZWFucyB0aGF0IHdlIHNob3VsZCB1c2UgRE9JcyB3aXRoIGFwcHJvcHJpYXRlIG1ldGFkYXRhIGFuZCBzdHJhdGVnaWVzIGZvciBsb25nLXRlcm0gcHJlc2VydmF0aW9uIGZvci4uLjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","contentUrl":null,"metadataVersion":1,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"ez","isActive":false,"state":"draft","reason":null,"landingPage":null,"created":"2018-12-20T18:49:24.000Z","registered":null,"updated":"2018-12-20T18:53:09.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
+        Fenner","contactEmail":"support@datacite.org","description":null,"domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-12-10T23:46:06.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Thu, 22 Nov 2018 22:54:56 GMT
+  recorded_at: Thu, 20 Dec 2018 18:54:31 GMT
 - request:
     method: delete
     uri: https://api.test.datacite.org/dois/10.5072/bc11-cqw7
@@ -74,7 +75,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Thu, 22 Nov 2018 22:54:56 GMT
+      - Thu, 20 Dec 2018 18:54:31 GMT
       Connection:
       - keep-alive
       Status:
@@ -86,16 +87,16 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - bd2c7e8a-3b6a-42a9-9b6f-771fdfa224ab
+      - 2250a584-6c8e-4dad-bc85-32742928a225
       X-Runtime:
-      - '0.033008'
+      - '0.066313'
       X-Powered-By:
-      - Phusion Passenger 5.3.7
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.7
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Thu, 22 Nov 2018 22:54:56 GMT
+  recorded_at: Thu, 20 Dec 2018 18:54:31 GMT
 recorded_with: VCR 3.0.3

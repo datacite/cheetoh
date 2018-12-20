@@ -80,7 +80,7 @@ describe "create", :type => :api, vcr: true, :order => :defined do
     output = JSON.parse(response["schema_org"])
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
     expect(response["_status"]).to eq("reserved")
-    expect(output["author"]).to eq(input["author"])
+    expect(output["author"]).to eq("@id"=>"https://orcid.org/0000-0003-1419-2405", "@type"=>"Person", "familyName"=>"Fenner", "givenName"=>"Martin", "name"=>"Martin Fenner")
     expect(response["datacite"]).to be_nil
     expect(last_response.status).to eq(200)
   end

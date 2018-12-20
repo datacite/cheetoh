@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 27 Nov 2018 14:39:47 GMT
+      - Thu, 20 Dec 2018 19:00:17 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -33,25 +33,25 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 164e753c-1eb0-4c82-9971-e798e7cb1954
+      - 6090c55d-6f0b-4235-a50c-2da03147b968
       X-Runtime:
-      - '0.007815'
+      - '0.007595'
       X-Powered-By:
-      - Phusion Passenger 5.3.7
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.7
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Tue, 27 Nov 2018 14:39:47 GMT
+  recorded_at: Thu, 20 Dec 2018 19:00:17 GMT
 - request:
     method: post
     uri: https://api.test.datacite.org/dois
     body:
       encoding: UTF-8
-      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/4h3j-wr25","url":"https://data.gulfresearchinitiative.org/data/R6.x805.000:0056","creator":[{"name":"Test
+      string: '{"data":{"type":"dois","attributes":{"doi":"10.5072/4h3j-wr25","url":"https://data.gulfresearchinitiative.org/data/R6.x805.000:0056","creators":[{"name":"Test
         User"}],"titles":[{"title":"Aqueous geochemistry of Louisiana marshes, May
         2015 – October 2016"}],"types":{"resourceTypeGeneral":"Dataset"},"publisher":"Harte
         Research Institute","publicationYear":"2018","source":"ez"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
@@ -70,7 +70,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 27 Nov 2018 14:39:47 GMT
+      - Thu, 20 Dec 2018 19:00:17 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -84,26 +84,26 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 87bfe102-17fd-42bb-825f-c52df7297ac5
+      - 98888276-a32f-437c-a9f4-7eec5dfaab54
       Location:
-      - https://api.test.datacite.org/dois/2286458
+      - https://api.test.datacite.org/dois/2329649
       Etag:
-      - W/"1f886bedf468be30ed0406c4539b8ac3"
+      - W/"3c0d01fd6bb4ba78967f79a9870e35a9"
       X-Runtime:
-      - '0.088301'
+      - '0.076705'
       X-Powered-By:
-      - Phusion Passenger 5.3.7
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.7
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJkYXRhIjp7ImlkIjoiMTAuNTA3Mi80aDNqLXdyMjUiLCJ0eXBlIjoiZG9pcyIsImF0dHJpYnV0ZXMiOnsiZG9pIjoiMTAuNTA3Mi80aDNqLXdyMjUiLCJwcmVmaXgiOiIxMC41MDcyIiwic3VmZml4IjoiNGgzai13cjI1IiwiaWRlbnRpZmllciI6Imh0dHBzOi8vaGFuZGxlLnRlc3QuZGF0YWNpdGUub3JnLzEwLjUwNzIvNGgzai13cjI1IiwiY3JlYXRvciI6W3sibmFtZSI6IlRlc3QgVXNlciJ9XSwidGl0bGVzIjpbeyJ0aXRsZSI6IkFxdWVvdXMgZ2VvY2hlbWlzdHJ5IG9mIExvdWlzaWFuYSBtYXJzaGVzLCBNYXkgMjAxNSDigJMgT2N0b2JlciAyMDE2In1dLCJwdWJsaXNoZXIiOiJIYXJ0ZSBSZXNlYXJjaCBJbnN0aXR1dGUiLCJwZXJpb2RpY2FsIjpudWxsLCJwdWJsaWNhdGlvblllYXIiOjIwMTgsInN1YmplY3RzIjpbXSwiY29udHJpYnV0b3IiOltdLCJkYXRlcyI6W10sImxhbmd1YWdlIjpudWxsLCJ0eXBlcyI6eyJyZXNvdXJjZVR5cGVHZW5lcmFsIjoiRGF0YXNldCJ9LCJhbHRlcm5hdGVJZGVudGlmaWVycyI6W10sInJlbGF0ZWRJZGVudGlmaWVycyI6W10sInNpemVzIjpbXSwiZm9ybWF0cyI6W10sInZlcnNpb24iOm51bGwsInJpZ2h0c0xpc3QiOltdLCJkZXNjcmlwdGlvbnMiOltdLCJnZW9Mb2NhdGlvbnMiOltdLCJmdW5kaW5nUmVmZXJlbmNlcyI6W10sInhtbCI6IlBEOTRiV3dnZG1WeWMybHZiajBpTVM0d0lpQmxibU52WkdsdVp6MGlWVlJHTFRnaVB6NEtQSEpsYzI5MWNtTmxJSGh0Ykc1ek9uaHphVDBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01TOVlUVXhUWTJobGJXRXRhVzV6ZEdGdVkyVWlJSGh0Ykc1elBTSm9kSFJ3T2k4dlpHRjBZV05wZEdVdWIzSm5MM05qYUdWdFlTOXJaWEp1Wld3dE5DSWdlSE5wT25OamFHVnRZVXh2WTJGMGFXOXVQU0pvZEhSd09pOHZaR0YwWVdOcGRHVXViM0puTDNOamFHVnRZUzlyWlhKdVpXd3ROQ0JvZEhSd09pOHZjMk5vWlcxaExtUmhkR0ZqYVhSbExtOXlaeTl0WlhSaEwydGxjbTVsYkMwMEwyMWxkR0ZrWVhSaExuaHpaQ0krQ2lBZ1BHbGtaVzUwYVdacFpYSWdhV1JsYm5ScFptbGxjbFI1Y0dVOUlrUlBTU0krTVRBdU5UQTNNaTgwU0ROS0xWZFNNalU4TDJsa1pXNTBhV1pwWlhJK0NpQWdQR055WldGMGIzSnpQZ29nSUNBZ1BHTnlaV0YwYjNJK0NpQWdJQ0FnSUR4amNtVmhkRzl5VG1GdFpUNVVaWE4wSUZWelpYSThMMk55WldGMGIzSk9ZVzFsUGdvZ0lDQWdQQzlqY21WaGRHOXlQZ29nSUR3dlkzSmxZWFJ2Y25NK0NpQWdQSFJwZEd4bGN6NEtJQ0FnSUR4MGFYUnNaVDVCY1hWbGIzVnpJR2RsYjJOb1pXMXBjM1J5ZVNCdlppQk1iM1ZwYzJsaGJtRWdiV0Z5YzJobGN5d2dUV0Y1SURJd01UVWc0b0NUSUU5amRHOWlaWElnTWpBeE5qd3ZkR2wwYkdVK0NpQWdQQzkwYVhSc1pYTStDaUFnUEhCMVlteHBjMmhsY2o1SVlYSjBaU0JTWlhObFlYSmphQ0JKYm5OMGFYUjFkR1U4TDNCMVlteHBjMmhsY2o0S0lDQThjSFZpYkdsallYUnBiMjVaWldGeVBqSXdNVGc4TDNCMVlteHBZMkYwYVc5dVdXVmhjajRLSUNBOGNtVnpiM1Z5WTJWVWVYQmxJSEpsYzI5MWNtTmxWSGx3WlVkbGJtVnlZV3c5SWtSaGRHRnpaWFFpTHo0S0lDQThkbVZ5YzJsdmJpOCtDand2Y21WemIzVnlZMlUrQ2c9PSIsInVybCI6Imh0dHBzOi8vZGF0YS5ndWxmcmVzZWFyY2hpbml0aWF0aXZlLm9yZy9kYXRhL1I2Lng4MDUuMDAwOjAwNTYiLCJjb250ZW50VXJsIjpudWxsLCJtZXRhZGF0YVZlcnNpb24iOjAsInNjaGVtYVZlcnNpb24iOiJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIsInNvdXJjZSI6ImV6IiwiaXNBY3RpdmUiOmZhbHNlLCJzdGF0ZSI6ImRyYWZ0IiwicmVhc29uIjpudWxsLCJsYW5kaW5nUGFnZSI6eyJzdGF0dXMiOm51bGwsImNvbnRlbnRUeXBlIjpudWxsLCJjaGVja2VkIjpudWxsLCJyZXN1bHQiOm51bGx9LCJjcmVhdGVkIjoiMjAxOC0xMS0yN1QxNDozOTo0Ny4wMDBaIiwicmVnaXN0ZXJlZCI6bnVsbCwidXBkYXRlZCI6IjIwMTgtMTEtMjdUMTQ6Mzk6NDcuMDAwWiJ9LCJyZWxhdGlvbnNoaXBzIjp7ImNsaWVudCI6eyJkYXRhIjp7ImlkIjoiZGF0YWNpdGUuZGF0YWNpdGUiLCJ0eXBlIjoiY2xpZW50cyJ9fSwibWVkaWEiOnsiZGF0YSI6W119fX0sImluY2x1ZGVkIjpbeyJpZCI6ImRhdGFjaXRlLmRhdGFjaXRlIiwidHlwZSI6ImNsaWVudHMiLCJhdHRyaWJ1dGVzIjp7Im5hbWUiOiJEYXRhQ2l0ZSIsInN5bWJvbCI6IkRBVEFDSVRFLkRBVEFDSVRFIiwieWVhciI6MjAxMSwiY29udGFjdE5hbWUiOiJNYXJ0aW4gRmVubmVyIiwiY29udGFjdEVtYWlsIjoic3VwcG9ydEBkYXRhY2l0ZS5vcmciLCJkb21haW5zIjoiZGF0YWNpdGUub3JnIiwidXJsIjpudWxsLCJjcmVhdGVkIjoiMjAxMS0xMi0wN1QxMzo0MzozOS4wMDBaIiwidXBkYXRlZCI6IjIwMTgtMDgtMjZUMDE6MzA6MjcuMDAwWiIsImlzQWN0aXZlIjp0cnVlLCJoYXNQYXNzd29yZCI6dHJ1ZX0sInJlbGF0aW9uc2hpcHMiOnsicHJvdmlkZXIiOnsiZGF0YSI6eyJpZCI6ImRhdGFjaXRlIiwidHlwZSI6InByb3ZpZGVycyJ9fSwicHJlZml4ZXMiOnsiZGF0YSI6W3siaWQiOiIxMC41NDM4IiwidHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEwLjUwNzIiLCJ0eXBlIjoicHJlZml4ZXMifSx7ImlkIjoiMTAuMTQ0NTQiLCJ0eXBlIjoicHJlZml4ZXMifSx7ImlkIjoiMTAuMjM3MjUiLCJ0eXBlIjoicHJlZml4ZXMifSx7ImlkIjoiMTAuNzAwMDIiLCJ0eXBlIjoicHJlZml4ZXMifV19fX1dfQ==
+        eyJkYXRhIjp7ImlkIjoiMTAuNTA3Mi80aDNqLXdyMjUiLCJ0eXBlIjoiZG9pcyIsImF0dHJpYnV0ZXMiOnsiZG9pIjoiMTAuNTA3Mi80aDNqLXdyMjUiLCJwcmVmaXgiOiIxMC41MDcyIiwic3VmZml4IjoiNGgzai13cjI1IiwiaWRlbnRpZmllcnMiOm51bGwsImNyZWF0b3JzIjpbeyJuYW1lIjoiVGVzdCBVc2VyIn1dLCJ0aXRsZXMiOlt7InRpdGxlIjoiQXF1ZW91cyBnZW9jaGVtaXN0cnkgb2YgTG91aXNpYW5hIG1hcnNoZXMsIE1heSAyMDE1IOKAkyBPY3RvYmVyIDIwMTYifV0sInB1Ymxpc2hlciI6IkhhcnRlIFJlc2VhcmNoIEluc3RpdHV0ZSIsImNvbnRhaW5lciI6bnVsbCwicHVibGljYXRpb25ZZWFyIjoyMDE4LCJzdWJqZWN0cyI6bnVsbCwiY29udHJpYnV0b3JzIjpudWxsLCJkYXRlcyI6bnVsbCwibGFuZ3VhZ2UiOm51bGwsInR5cGVzIjp7InJlc291cmNlVHlwZUdlbmVyYWwiOiJEYXRhc2V0In0sInJlbGF0ZWRJZGVudGlmaWVycyI6bnVsbCwic2l6ZXMiOm51bGwsImZvcm1hdHMiOm51bGwsInZlcnNpb24iOm51bGwsInJpZ2h0c0xpc3QiOm51bGwsImRlc2NyaXB0aW9ucyI6bnVsbCwiZ2VvTG9jYXRpb25zIjpudWxsLCJmdW5kaW5nUmVmZXJlbmNlcyI6bnVsbCwieG1sIjoiUEQ5NGJXd2dkbVZ5YzJsdmJqMGlNUzR3SWlCbGJtTnZaR2x1WnowaVZWUkdMVGdpUHo0S1BISmxjMjkxY21ObElIaHRiRzV6T25oemFUMGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TVM5WVRVeFRZMmhsYldFdGFXNXpkR0Z1WTJVaUlIaHRiRzV6UFNKb2RIUndPaTh2WkdGMFlXTnBkR1V1YjNKbkwzTmphR1Z0WVM5clpYSnVaV3d0TkNJZ2VITnBPbk5qYUdWdFlVeHZZMkYwYVc5dVBTSm9kSFJ3T2k4dlpHRjBZV05wZEdVdWIzSm5MM05qYUdWdFlTOXJaWEp1Wld3dE5DQm9kSFJ3T2k4dmMyTm9aVzFoTG1SaGRHRmphWFJsTG05eVp5OXRaWFJoTDJ0bGNtNWxiQzAwTDIxbGRHRmtZWFJoTG5oelpDSStDaUFnUEdsa1pXNTBhV1pwWlhJZ2FXUmxiblJwWm1sbGNsUjVjR1U5SWtSUFNTSStNVEF1TlRBM01pODBTRE5LTFZkU01qVThMMmxrWlc1MGFXWnBaWEkrQ2lBZ1BHTnlaV0YwYjNKelBnb2dJQ0FnUEdOeVpXRjBiM0krQ2lBZ0lDQWdJRHhqY21WaGRHOXlUbUZ0WlQ1VVpYTjBJRlZ6WlhJOEwyTnlaV0YwYjNKT1lXMWxQZ29nSUNBZ1BDOWpjbVZoZEc5eVBnb2dJRHd2WTNKbFlYUnZjbk0rQ2lBZ1BIUnBkR3hsY3o0S0lDQWdJRHgwYVhSc1pUNUJjWFZsYjNWeklHZGxiMk5vWlcxcGMzUnllU0J2WmlCTWIzVnBjMmxoYm1FZ2JXRnljMmhsY3l3Z1RXRjVJREl3TVRVZzRvQ1RJRTlqZEc5aVpYSWdNakF4Tmp3dmRHbDBiR1UrQ2lBZ1BDOTBhWFJzWlhNK0NpQWdQSEIxWW14cGMyaGxjajVJWVhKMFpTQlNaWE5sWVhKamFDQkpibk4wYVhSMWRHVThMM0IxWW14cGMyaGxjajRLSUNBOGNIVmliR2xqWVhScGIyNVpaV0Z5UGpJd01UZzhMM0IxWW14cFkyRjBhVzl1V1dWaGNqNEtJQ0E4Y21WemIzVnlZMlZVZVhCbElISmxjMjkxY21ObFZIbHdaVWRsYm1WeVlXdzlJa1JoZEdGelpYUWlMejRLSUNBOGRtVnljMmx2Ymk4K0Nqd3ZjbVZ6YjNWeVkyVStDZz09IiwidXJsIjoiaHR0cHM6Ly9kYXRhLmd1bGZyZXNlYXJjaGluaXRpYXRpdmUub3JnL2RhdGEvUjYueDgwNS4wMDA6MDA1NiIsImNvbnRlbnRVcmwiOm51bGwsIm1ldGFkYXRhVmVyc2lvbiI6MCwic2NoZW1hVmVyc2lvbiI6bnVsbCwic291cmNlIjoiZXoiLCJpc0FjdGl2ZSI6ZmFsc2UsInN0YXRlIjoiZHJhZnQiLCJyZWFzb24iOm51bGwsImxhbmRpbmdQYWdlIjpudWxsLCJjcmVhdGVkIjoiMjAxOC0xMi0yMFQxOTowMDoxNy4wMDBaIiwicmVnaXN0ZXJlZCI6bnVsbCwidXBkYXRlZCI6IjIwMTgtMTItMjBUMTk6MDA6MTcuMDAwWiJ9LCJyZWxhdGlvbnNoaXBzIjp7ImNsaWVudCI6eyJkYXRhIjp7ImlkIjoiZGF0YWNpdGUuZGF0YWNpdGUiLCJ0eXBlIjoiY2xpZW50cyJ9fSwibWVkaWEiOnsiZGF0YSI6W119fX0sImluY2x1ZGVkIjpbeyJpZCI6ImRhdGFjaXRlLmRhdGFjaXRlIiwidHlwZSI6ImNsaWVudHMiLCJhdHRyaWJ1dGVzIjp7Im5hbWUiOiJEYXRhQ2l0ZSIsInN5bWJvbCI6IkRBVEFDSVRFLkRBVEFDSVRFIiwieWVhciI6MjAxMSwiY29udGFjdE5hbWUiOiJNYXJ0aW4gRmVubmVyIiwiY29udGFjdEVtYWlsIjoic3VwcG9ydEBkYXRhY2l0ZS5vcmciLCJkZXNjcmlwdGlvbiI6bnVsbCwiZG9tYWlucyI6ImRhdGFjaXRlLm9yZyIsInVybCI6bnVsbCwiY3JlYXRlZCI6IjIwMTEtMTItMDdUMTM6NDM6MzkuMDAwWiIsInVwZGF0ZWQiOiIyMDE4LTEyLTEwVDIzOjQ2OjA2LjAwMFoiLCJpc0FjdGl2ZSI6dHJ1ZSwiaGFzUGFzc3dvcmQiOnRydWV9LCJyZWxhdGlvbnNoaXBzIjp7InByb3ZpZGVyIjp7ImRhdGEiOnsiaWQiOiJkYXRhY2l0ZSIsInR5cGUiOiJwcm92aWRlcnMifX0sInByZWZpeGVzIjp7ImRhdGEiOlt7ImlkIjoiMTAuNTQzOCIsInR5cGUiOiJwcmVmaXhlcyJ9LHsiaWQiOiIxMC41MDcyIiwidHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEwLjE0NDU0IiwidHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEwLjIzNzI1IiwidHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEwLjcwMDAyIiwidHlwZSI6InByZWZpeGVzIn1dfX19XX0=
     http_version: 
-  recorded_at: Tue, 27 Nov 2018 14:39:47 GMT
+  recorded_at: Thu, 20 Dec 2018 19:00:17 GMT
 - request:
     method: get
-    uri: https://api.test.datacite.org/10.5072/4h3j-wr25
+    uri: https://api.test.datacite.org/dois/10.5072/4h3j-wr25
     body:
       encoding: US-ASCII
       string: ''
@@ -113,44 +113,40 @@ http_interactions:
       Accept:
       - application/vnd.datacite.datacite+xml
       Authorization:
-      - Basic <ADMIN_TOKEN>
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Tue, 27 Nov 2018 14:39:47 GMT
+      - Thu, 20 Dec 2018 19:00:17 GMT
       Content-Type:
-      - application/vnd.datacite.datacite+xml
+      - application/vnd.datacite.datacite+xml; charset=utf-8
       Connection:
       - keep-alive
       Status:
       - 200 OK
       Cache-Control:
-      - private
+      - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
       X-Credential-Username:
-      - admin
+      - datacite.datacite
       X-Request-Id:
-      - f5628fa0-b454-4bb6-bf46-fdada1b1ee52
-      Content-Disposition:
-      - attachment; filename=_10.5072_4h3j-wr25.xml
-      Content-Transfer-Encoding:
-      - binary
+      - 6ba6ef96-d1de-41a9-ba93-14ec27237a36
       Etag:
       - W/"db0e8370578d75e79f0726a68ce5e7e9"
       X-Runtime:
-      - '0.012081'
+      - '0.013454'
       X-Powered-By:
-      - Phusion Passenger 5.3.7
+      - Phusion Passenger 6.0.0
       Server:
-      - nginx/1.14.0 + Phusion Passenger 5.3.7
+      - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA3Mi80SDNKLVdSMjU8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5UZXN0IFVzZXI8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5BcXVlb3VzIGdlb2NoZW1pc3RyeSBvZiBMb3Vpc2lhbmEgbWFyc2hlcywgTWF5IDIwMTUg4oCTIE9jdG9iZXIgMjAxNjwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5IYXJ0ZSBSZXNlYXJjaCBJbnN0aXR1dGU8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTg8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiLz4KICA8dmVyc2lvbi8+CjwvcmVzb3VyY2U+Cg==
     http_version: 
-  recorded_at: Tue, 27 Nov 2018 14:39:47 GMT
+  recorded_at: Thu, 20 Dec 2018 19:00:17 GMT
 recorded_with: VCR 3.0.3

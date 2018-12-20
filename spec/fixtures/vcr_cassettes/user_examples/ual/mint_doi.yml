@@ -21,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 04 Dec 2018 13:32:15 GMT
+      - Thu, 20 Dec 2018 19:02:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -32,10 +32,10 @@ http_interactions:
       - no-cache
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - 229fec11-b7a1-46d9-9469-60544b72e7f7
       X-Runtime:
-      - '0.007170'
+      - '0.006821'
+      X-Request-Id:
+      - 1412cc57-2de7-4bc1-a25b-124d61e388ae
       X-Powered-By:
       - Phusion Passenger 6.0.0
       Server:
@@ -45,7 +45,7 @@ http_interactions:
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
     http_version: 
-  recorded_at: Tue, 04 Dec 2018 13:32:15 GMT
+  recorded_at: Thu, 20 Dec 2018 19:02:22 GMT
 - request:
     method: post
     uri: https://api.test.datacite.org/dois
@@ -67,7 +67,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 04 Dec 2018 13:32:15 GMT
+      - Thu, 20 Dec 2018 19:02:23 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -81,28 +81,28 @@ http_interactions:
       X-Credential-Username:
       - datacite.datacite
       X-Request-Id:
-      - 24fe2d8d-5600-42c6-9d31-b22709f14cb0
+      - 843b4b01-ea39-46f9-a924-1b9f6e1b4f6f
       Location:
-      - https://api.test.datacite.org/dois/2288072
+      - https://api.test.datacite.org/dois/2329650
       Etag:
-      - W/"438176c371dcca0e8c38ffddb36d0cdf"
+      - W/"e589958fc841b702c3bc660b9830b66b"
       X-Runtime:
-      - '0.110987'
+      - '0.101297'
       X-Powered-By:
       - Phusion Passenger 6.0.0
       Server:
       - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.14454/fk2-4h3j-wr25","type":"dois","attributes":{"doi":"10.14454/fk2-4h3j-wr25","prefix":"10.14454","suffix":"fk2-4h3j-wr25","identifier":"https://handle.test.datacite.org/10.14454/fk2-4h3j-wr25","creators":[{"type":"Person","name":"Joe
-        Blow","givenName":"Joe","familyName":"Blow"}],"titles":[{"title":"Test Title"}],"publisher":"University
-        of Alberta Libraries","periodical":null,"publicationYear":2017,"subjects":null,"contributors":null,"dates":[{"date":"2017","dateType":"Issued"}],"language":null,"types":{"resourceTypeGeneral":"Text","resourceType":"Text/Book","schemaOrg":"ScholarlyArticle","citeproc":"article-journal","bibtex":"article","ris":"RPRT"},"alternateIdentifiers":null,"relatedIdentifiers":null,"sizes":null,"formats":null,"version":null,"rightsList":null,"descriptions":[{"descriptionType":"Abstract"}],"geoLocations":null,"fundingReferences":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMTQ0NTQvRksyLTRIM0otV1IyNTwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkpvZSBCbG93PC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+VGVzdCBUaXRsZTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5Vbml2ZXJzaXR5IG9mIEFsYmVydGEgTGlicmFyaWVzPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE3PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5UZXh0L0Jvb2s8L3Jlc291cmNlVHlwZT4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiLz4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=","url":"http://localhost/items/2d880b8c-e3b7-4d99-a0ce-c56361dfc126","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"ez","isActive":true,"state":"findable","reason":null,"landingPage":null,"created":"2018-12-04T13:32:15.000Z","registered":null,"updated":"2018-12-04T13:32:15.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
-        Fenner","contactEmail":"support@datacite.org","domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-08-26T01:30:27.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
+      string: '{"data":{"id":"10.14454/fk2-4h3j-wr25","type":"dois","attributes":{"doi":"10.14454/fk2-4h3j-wr25","prefix":"10.14454","suffix":"fk2-4h3j-wr25","identifiers":[{"identifierType":"DOI","identifier":"https://handle.test.datacite.org/10.14454/fk2-4h3j-wr25"}],"creators":[{"nameType":"Personal","name":"Blow,
+        Joe","givenName":"Joe","familyName":"Blow"}],"titles":[{"title":"Test Title"}],"publisher":"University
+        of Alberta Libraries","container":null,"publicationYear":2017,"subjects":null,"contributors":null,"dates":[{"date":"2017","dateType":"Issued"}],"language":null,"types":{"resourceTypeGeneral":"Text","resourceType":"Text/Book","schemaOrg":"ScholarlyArticle","citeproc":"article-journal","bibtex":"article","ris":"RPRT"},"relatedIdentifiers":null,"sizes":null,"formats":null,"version":null,"rightsList":null,"descriptions":[{"descriptionType":"Abstract"}],"geoLocations":null,"fundingReferences":null,"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMTQ0NTQvRksyLTRIM0otV1IyNTwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkpvZSBCbG93PC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+VGVzdCBUaXRsZTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5Vbml2ZXJzaXR5IG9mIEFsYmVydGEgTGlicmFyaWVzPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE3PC9wdWJsaWNhdGlvblllYXI+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij5UZXh0L0Jvb2s8L3Jlc291cmNlVHlwZT4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiLz4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=","url":"http://localhost/items/2d880b8c-e3b7-4d99-a0ce-c56361dfc126","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"ez","isActive":true,"state":"findable","reason":null,"landingPage":null,"created":"2018-12-20T19:02:23.000Z","registered":null,"updated":"2018-12-20T19:02:23.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"contactName":"Martin
+        Fenner","contactEmail":"support@datacite.org","description":null,"domains":"datacite.org","url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2018-12-10T23:46:06.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.14454","type":"prefixes"},{"id":"10.23725","type":"prefixes"},{"id":"10.70002","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Tue, 04 Dec 2018 13:32:15 GMT
+  recorded_at: Thu, 20 Dec 2018 19:02:23 GMT
 - request:
     method: get
-    uri: https://api.test.datacite.org/10.14454/fk2-4h3j-wr25
+    uri: https://api.test.datacite.org/dois/10.14454/fk2-4h3j-wr25
     body:
       encoding: US-ASCII
       string: ''
@@ -112,36 +112,32 @@ http_interactions:
       Accept:
       - application/vnd.datacite.datacite+xml
       Authorization:
-      - Basic <ADMIN_TOKEN>
+      - Basic <MDS_TOKEN>
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Tue, 04 Dec 2018 13:32:16 GMT
+      - Thu, 20 Dec 2018 19:02:23 GMT
       Content-Type:
-      - application/vnd.datacite.datacite+xml
+      - application/vnd.datacite.datacite+xml; charset=utf-8
       Connection:
       - keep-alive
       Status:
       - 200 OK
       Cache-Control:
-      - private
+      - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
       X-Credential-Username:
-      - admin
+      - datacite.datacite
       X-Request-Id:
-      - 17de8bca-c1ae-4c44-94fd-fe180c4f4e05
-      Content-Disposition:
-      - attachment; filename=_10.14454_fk2-4h3j-wr25.xml
-      Content-Transfer-Encoding:
-      - binary
+      - 944859bf-b085-4b65-81a5-c9e2d15a6e54
       Etag:
       - W/"52df5f0ac5a5ddcd43f1c27c5ba2d747"
       X-Runtime:
-      - '0.011793'
+      - '0.011070'
       X-Powered-By:
       - Phusion Passenger 6.0.0
       Server:
@@ -168,5 +164,5 @@ http_interactions:
           </descriptions>
         </resource>
     http_version: 
-  recorded_at: Tue, 04 Dec 2018 13:32:15 GMT
+  recorded_at: Thu, 20 Dec 2018 19:02:23 GMT
 recorded_with: VCR 3.0.3
