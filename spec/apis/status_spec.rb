@@ -89,8 +89,8 @@ describe "status", :type => :api, vcr: true, :order => :defined do
     let(:doi) { "10.5438/bc11-cqw8" }
 
     it "status unavailable" do
-      params = { "_status" => "unavailable | withdrawn by author" }.to_anvl
-      params_update = { "_status" => "unavailable | withdrawn by publisher" }.to_anvl
+      params = { "_status" => "unavailable | withdrawn by author", "datacite" => datacite }.to_anvl
+      params_update = { "_status" => "unavailable | withdrawn by publisher", "datacite" => datacite }.to_anvl
       post "/id/doi:#{doi}", params, headers
       post "/id/doi:#{doi}", params_update, headers
       expect(last_response.status).to eq(200)
