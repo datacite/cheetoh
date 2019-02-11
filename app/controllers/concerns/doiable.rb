@@ -93,8 +93,8 @@ module Doiable
       if options[:target_status] == "reserved" || doi.start_with?("10.5072")
         reason = nil
         event = nil
-      elsif options[:target_status].to_s.start_with?("unavailable")
-        reason = options[:target_status].split("%7C", -1).map(&:strip).last
+      elsif options[:target_status].to_s.start_with?("unavailable") 
+        reason = options[:target_status].split("%7C", -1).map(&:strip).last if options[:target_status].to_s.include?("%7C")
         event = "hide"
       else
         reason = nil
@@ -148,7 +148,7 @@ module Doiable
         reason = nil
         event = nil
       elsif options[:target_status].to_s.start_with?("unavailable")
-        reason = options[:target_status].split("%7C", -1).map(&:strip).last
+        reason = options[:target_status].split("%7C", -1).map(&:strip).last if options[:target_status].to_s.include?("%7C")
         event = "hide"
       else
         reason = nil
