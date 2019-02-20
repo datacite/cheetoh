@@ -94,7 +94,7 @@ module Doiable
         reason = nil
         event = nil
       elsif options[:target_status].to_s.start_with?("unavailable") 
-        reason = options[:target_status].split("%7C", -1).map(&:strip).last if options[:target_status].to_s.include?("%7C")
+        reason = options[:target_status].to_s.include?("%7C") ? options[:target_status].split("%7C", -1).map(&:strip).last : ""
         event = "hide"
       else
         reason = nil
@@ -148,7 +148,7 @@ module Doiable
         reason = nil
         event = nil
       elsif options[:target_status].to_s.start_with?("unavailable")
-        reason = options[:target_status].split("%7C", -1).map(&:strip).last if options[:target_status].to_s.include?("%7C")
+        reason = options[:target_status].to_s.include?("%7C") ? options[:target_status].split("%7C", -1).map(&:strip).last : ""
         event = "hide"
       else
         reason = nil
@@ -160,7 +160,7 @@ module Doiable
       titles = options[:title].present? ? [{ "title"=> options[:title] }] : nil
       types = options[:resource_type_general].present? ? { "resourceTypeGeneral" => options[:resource_type_general], 
                                                            "resourceType" => options[:resource_type].presence }.compact : nil
-
+      
       attributes = {
         "doi" => doi,
         "url" => options[:url],

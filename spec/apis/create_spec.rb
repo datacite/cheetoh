@@ -76,7 +76,6 @@ describe "create", :type => :api, vcr: true, :order => :defined do
 
     response = last_response.body.from_anvl
     input = JSON.parse(schema_org)
-    puts response
     output = JSON.parse(response["schema_org"])
     expect(response["success"]).to eq("doi:10.5072/bc11-cqw7")
     expect(response["_status"]).to eq("reserved")
