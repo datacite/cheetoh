@@ -57,6 +57,8 @@ describe "status", :type => :api, vcr: true, :order => :defined do
 
   context "normal prefix" do
     let(:doi) { "10.5438/bc11-cqw8" }
+    let(:datacite) { File.read(file_fixture('10.5438_bc11-cqw8.xml')) }
+
 
     it "status public" do
       params = { "_status" => "public" }.to_anvl
@@ -87,17 +89,34 @@ describe "status", :type => :api, vcr: true, :order => :defined do
 
   context "status change" do
     let(:doi) { "10.5438/bc11-cqw8" }
+    let(:datacite) { File.read(file_fixture('10.5438_bc11-cqw8.xml')) }
+
 
     it "status unavailable" do
-      params = { "_status" => "unavailable | withdrawn by author" }.to_anvl
-      params_update = { "_status" => "unavailable | withdrawn by publisher" }.to_anvl
+      params = { "_status" => "ready", "datacite" => datacite }.to_anvl
+      params_update = { "_status" => "unavailable | withdrawn by magic", "datacite" => datacite }.to_anvl
       post "/id/doi:#{doi}", params, headers
       post "/id/doi:#{doi}", params_update, headers
       expect(last_response.status).to eq(200)
       response = last_response.body.from_anvl
       expect(response["success"]).to eq("doi:10.5438/bc11-cqw8")
       #expect(response["_target"]).to eq(url)
-      expect(response["_status"]).to eq("unavailable | withdrawn by publisher")
+      expect(response["_status"]).to eq("unavailable | withdrawn by magic")
+
+      doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
+      expect(doc.at_css("identifier").content).to eq("10.5438/BC11-CQW8")
+    end
+
+    it "status unavailable with reason" do
+      params = { "_status" => "unavailable | withdrawn by author", "datacite" => datacite }.to_anvl
+      params_update = { "_status" => "unavailable", "datacite" => datacite }.to_anvl
+      post "/id/doi:#{doi}", params, headers
+      post "/id/doi:#{doi}", params_update, headers
+      expect(last_response.status).to eq(200)
+      response = last_response.body.from_anvl
+      expect(response["success"]).to eq("doi:10.5438/bc11-cqw8")
+      #expect(response["_target"]).to eq(url)
+      expect(response["_status"]).to eq("unavailable")
 
       doc = Nokogiri::XML(response["datacite"], nil, 'UTF-8', &:noblanks)
       expect(doc.at_css("identifier").content).to eq("10.5438/BC11-CQW8")

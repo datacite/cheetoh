@@ -93,8 +93,8 @@ module Doiable
       if options[:target_status] == "reserved" || doi.start_with?("10.5072")
         reason = nil
         event = nil
-      elsif options[:target_status].to_s.start_with?("unavailable")
-        reason = options[:target_status].split("%7C", -1).map(&:strip).last
+      elsif options[:target_status].to_s.start_with?("unavailable") 
+        reason = separate_reason(options[:target_status].to_s)
         event = "hide"
       else
         reason = nil
@@ -139,6 +139,17 @@ module Doiable
       Maremma.put(url, content_type: 'application/vnd.api+json', data: data.to_json, username: options[:username], password: options[:password])
     end
 
+
+    def separate_reason string
+      if string.include?("%7C")
+       string.split("%7C", -1).map(&:strip).last 
+      elsif string.include?("|")
+       string.split("|", -1).map(&:strip).last
+      else
+        ""
+      end
+    end
+
     def post_doi(doi, options={})
       return OpenStruct.new(body: { "errors" => [{ "title" => "Username or password missing" }] }) unless options[:username].present? && options[:password].present?
       return OpenStruct.new(body: { "errors" => [{ "title" => "Not a valid HTTP(S) or FTP URL" }] }) unless options[:url].blank? || /\A(http|https|ftp):\/\/[\S]+/.match(options[:url])
@@ -148,7 +159,7 @@ module Doiable
         reason = nil
         event = nil
       elsif options[:target_status].to_s.start_with?("unavailable")
-        reason = options[:target_status].split("%7C", -1).map(&:strip).last
+        reason = separate_reason(options[:target_status].to_s)
         event = "hide"
       else
         reason = nil
@@ -160,7 +171,7 @@ module Doiable
       titles = options[:title].present? ? [{ "title"=> options[:title] }] : nil
       types = options[:resource_type_general].present? ? { "resourceTypeGeneral" => options[:resource_type_general], 
                                                            "resourceType" => options[:resource_type].presence }.compact : nil
-
+      
       attributes = {
         "doi" => doi,
         "url" => options[:url],
