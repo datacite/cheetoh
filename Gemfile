@@ -14,7 +14,7 @@ gem "dalli", "~> 2.7.6"
 gem 'lograge', '~> 0.10.0'
 gem 'logstash-event', '~> 1.2', '>= 1.2.02'
 gem 'logstash-logger', '~> 0.26.1'
-gem 'bugsnag', '~> 6.10'
+gem 'sentry-raven', '~> 2.9'
 gem 'jwt', '~> 1.5', '>= 1.5.4'
 gem 'cancancan', '~> 1.9.2'
 gem 'gender_detector', '~> 0.1.2'
@@ -25,6 +25,7 @@ gem 'rack-parser', '~> 0.7.0', :require => 'rack/parser'
 gem 'rack-utf8_sanitizer', '~> 1.6'
 gem 'rack-cors', '~> 1.0', '>= 1.0.2', :require => 'rack/cors'
 gem 'oj_mimic_json', '~> 1.0', '>= 1.0.1'
+gem 'git', '~> 1.5'
 
 group :development, :test do
   gem "better_errors"

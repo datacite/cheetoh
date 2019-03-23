@@ -6,8 +6,7 @@ class ApplicationController < ActionController::API
 
   attr_accessor :username, :password
 
-  before_bugsnag_notify :add_user_info_to_bugsnag
-
+  before_action :set_raven_context
   after_action :set_consumer_header
 
   # check that username and password exist
@@ -48,6 +47,8 @@ class ApplicationController < ActionController::API
       elsif status == 401
         message = "unauthorized"
       else
+        Raven.capture_exception(exception)
+        
         message = exception.message
       end
 
@@ -63,11 +64,16 @@ class ApplicationController < ActionController::API
     payload[:data] = request.raw_post.from_anvl if request.raw_post.present?
   end
 
-  def add_user_info_to_bugsnag(report)
-    return nil unless username.present?
-    
-    report.user = {
-      id: username.downcase
-    }
+  def set_raven_context
+    if username.present?
+      Raven.user_context(
+        id: username.downcase,
+        ip_address: request.ip
+      )
+    else
+      Raven.user_context(
+        ip_address: request.ip
+      ) 
+    end
   end
 end

@@ -4,8 +4,7 @@ class DoisController < ApplicationController
   prepend_before_action :authenticate_user_with_basic_auth!, except: [:show]
   before_action :set_profile
   before_action :set_doi, only: [:show, :update, :destroy]
-
-  before_bugsnag_notify :add_metadata_to_bugsnag
+  before_action :set_raven_context, only: [:mint, :create, :update]
 
   def show
     response = DoisController.get_doi(@doi)
@@ -181,12 +180,10 @@ class DoisController < ApplicationController
     params.permit(:id, :_target, :_export, :_profile, :_status, :_number, :datacite, :bibtex, :ris, :schema_org, :citeproc, "datacite.creator", "datacite.title", "datacite.publisher", "datacite.publicationyear", "datacite.resourcetype")
   end
 
-  def add_metadata_to_bugsnag(report)
+  def set_raven_context
     return nil unless safe_params[@profile].present?
 
-    report.add_tab(:metadata, {
-      metadata: URI.escape(safe_params[@profile])
-    })
+    Raven.extra_context metadata: URI.escape(safe_params[@profile])
   end
   
   def datacite_options(options)
