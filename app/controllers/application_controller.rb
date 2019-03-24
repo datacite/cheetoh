@@ -47,7 +47,9 @@ class ApplicationController < ActionController::API
         status = 400
       elsif status == 401
         message = "unauthorized"
-      elsif status == 501
+      elsif status == 501 || exception.class.to_s == "IdentifierError"
+        # don't raise Sentry error
+        
         message = exception.message
       else
         Raven.capture_exception(exception)
