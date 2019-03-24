@@ -35,6 +35,7 @@ class ApplicationController < ActionController::API
                when "CanCan::AccessDenied", "JWT::DecodeError" then 401
                when "AbstractController::ActionNotFound", "ActionController::RoutingError" then 404
                when "ActiveModel::ForbiddenAttributesError", "ActionController::UnpermittedParameters", "NoMethodError" then 422
+               when "NotImplementedError" then 501
                else 400
                end
 
@@ -46,9 +47,11 @@ class ApplicationController < ActionController::API
         status = 400
       elsif status == 401
         message = "unauthorized"
+      elsif status == 501
+        message = exception.message
       else
         Raven.capture_exception(exception)
-        
+
         message = exception.message
       end
 
