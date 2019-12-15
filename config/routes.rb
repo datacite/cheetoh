@@ -25,5 +25,5 @@ Rails.application.routes.draw do
   root :to => 'index#index'
 
   # rescue routing errors
-  match "*path", to: "index#routing_error", via: :all
+  match "*path", to: "application#route_not_found", via: :all
 end

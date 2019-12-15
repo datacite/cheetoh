@@ -14,16 +14,12 @@ class DoisController < ApplicationController
     elsif response.status == 404
       render plain: "error: bad request - no such identifier", status: :bad_request
     else
-      logger = Logger.new(STDOUT)
-      logger.info response.inspect
+      logger.error response.body.dig("errors", 0, "title")
       render plain: "error: " + response.body.dig("errors", 0, "title"), status: response.status
     end
   end
 
   def mint
-    logger = Logger.new(STDOUT)
-    # logger.info = safe_params.inspect
-
     fail IdentifierError, "no _profile provided" unless profile_present?(safe_params)
     fail IdentifierError, "no _target provided" if (safe_params[:_target].blank? && safe_params[:_status] != "reserved")
 
@@ -59,14 +55,12 @@ class DoisController < ApplicationController
       response.headers.delete_if { |key| key == 'X-Credential-Username' }
       render plain: "error: unauthorized", status: :unauthorized
     else
-      logger.info response.inspect
+      logger.error response.body.dig("errors", 0, "title")
       render plain: "error: " + response.body.dig("errors", 0, "title"), status: response.status
     end
   end
 
   def create
-    logger = Logger.new(STDOUT)
-
     doi = validate_doi(params[:id])
     fail IdentifierError, "ark identifiers are not supported by this service" if is_ark?(params[:id])
     fail IdentifierError, "no doi provided" unless doi.present?
@@ -93,14 +87,12 @@ class DoisController < ApplicationController
       response.headers.delete_if { |key| key == 'X-Credential-Username' }
       render plain: "error: unauthorized", status: :unauthorized
     else
-      logger.info response.inspect
+      logger.error response.body.dig("errors", 0, "title")
       render plain: "error: " + response.body.dig("errors", 0, "title"), status: response.status
     end
   end
 
   def update
-    logger = Logger.new(STDOUT)
-
     fail IdentifierError, "No _profile, _target or _status provided" unless
       safe_params[@profile].present? ||
       safe_params[:_target].present? ||
@@ -124,14 +116,12 @@ class DoisController < ApplicationController
       response.headers.delete_if { |key| key == 'X-Credential-Username' }
       render plain: "error: unauthorized", status: :unauthorized
     else
-      logger.info response.inspect
+      logger.error response.body.dig("errors", 0, "title")
       render plain: "error: " + response.body.dig("errors", 0, "title"), status: response.status
     end
   end
 
   def destroy
-    logger = Logger.new(STDOUT)
-
     response = DoisController.get_doi(@doi)
     fail AbstractController::ActionNotFound unless response.status == 200
     fail IdentifierError, "#{params[:id]} is not a reserved DOI" unless response.body.dig("data", "attributes", "state") == "draft"
@@ -144,7 +134,7 @@ class DoisController < ApplicationController
       delete_response.headers.delete_if { |key| key == 'X-Credential-Username' }
       render plain: "error: unauthorized", status: :unauthorized
     else
-      logger.info delete_response.inspect
+      logger.error delete_response.body.dig("errors", 0, "title")
       render plain: "error: " + delete_response.body.dig("errors", 0, "title"), status: response.status
     end
   end

@@ -25,8 +25,8 @@ class ApplicationController < ActionController::API
     end
   end
 
-  def routing_error
-    fail AbstractController::ActionNotFound
+  def route_not_found
+    render plain: "error:resource not found", status: :not_found
   end
 
   unless Rails.env.development?
@@ -57,7 +57,7 @@ class ApplicationController < ActionController::API
         message = exception.message
       end
 
-      Rails.logger.error "[#{status}]: " + message
+      logger.error "[#{status}]: " + message
 
       render plain: "error: " + message, status: status
     end
