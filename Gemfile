@@ -23,7 +23,7 @@ gem 'anvl-converter', '~> 0.2'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rack-parser', '~> 0.7.0', :require => 'rack/parser'
 gem 'rack-utf8_sanitizer', '~> 1.6'
-gem 'rack-cors', '~> 1.0', '>= 1.0.2', :require => 'rack/cors'
+gem 'rack-cors', '~> 1.0', :require => 'rack/cors'
 gem 'oj_mimic_json', '~> 1.0', '>= 1.0.1'
 gem 'git', '~> 1.5'
 
