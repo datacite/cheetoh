@@ -18,7 +18,7 @@ describe "create", :type => :api, vcr: true, :order => :defined do
 
   it "missing login credentials" do
     put "/id/doi:#{doi}"
-    expect(last_response.headers["WWW-Authenticate"]).to eq("Basic realm=\"ez.test.datacite.org\"")
+    expect(last_response.headers["WWW-Authenticate"]).to eq("Basic realm=\"ez.stage.datacite.org\"")
     expect(last_response.body).to eq("HTTP Basic: Access denied.\n")
     expect(last_response.status).to eq(401)
   end

@@ -16,19 +16,19 @@ describe "random", :type => :api, vcr: true, :order => :defined do
     prefix = "10.5072"
     body =
     <<~HEREDOC
-      {"data":{"id":"10.5072/bc11-cqw1","type":"dois","attributes":{"doi":"10.5072/bc11-cqw1","identifier":"https://handle.test.datacite.org/10.5072/bc11-cqw1","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","author":{"type":"Person","id":"https://orcid.org/0000-0003-1419-2405", "name":"Fenner, Martin", "given-name":"Martin","family-name":"Fenner"},"title":"Differences between ORCID and DataCite Metadata","container-title":"DataCite Blog",
+      {"data":{"id":"10.5072/bc11-cqw1","type":"dois","attributes":{"doi":"10.5072/bc11-cqw1","identifier":"https://handle.stage.datacite.org/10.5072/bc11-cqw1","url":"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/","author":{"type":"Person","id":"https://orcid.org/0000-0003-1419-2405", "name":"Fenner, Martin", "given-name":"Martin","family-name":"Fenner"},"title":"Differences between ORCID and DataCite Metadata","container-title":"DataCite Blog",
       "description":{"type":"Abstract","text":"One of the first tasks for DataCite in the European Commission-funded THOR project, which started in June, was to contribute to a comparison of the ORCID and DataCite metadata standards. Together with ORCID, CERN, the British Library and Dryad we looked..."},
       "resource-type-subtype":"BlogPosting","license":"https://creativecommons.org/licenses/by/4.0","version":1,"related-identifier":[{"type":"CreativeWork","id":"https://doi.org/10.5281/zenodo.30799","relation-type":"References"}],"schema-version":"http://datacite.org/schema/kernel-4","state":"draft", "published":"2015-09-18","registered":null,"updated":"2018-01-18T22:21:27.000Z"},"relationships":{"client":{"meta":{}},"provider":{"meta":{}},"resource-type":{"meta":{}},"media":{"meta":{}}}}}
     HEREDOC
 
     # stub API responses, as the DOI changes with every request
-    stub_request(:get, /api.test.datacite.org/)
+    stub_request(:get, /api.stage.datacite.org/)
       .to_return(status: 404, body: '{"errors":[{"status":"404","title":"The resource you are looking for doesn''t exist."}]}')
-    stub_request(:post, /mds.test.datacite.org\/metadata/)
+    stub_request(:post, /mds.stage.datacite.org\/metadata/)
       .to_return(status: 201, body: 'OK (10.5072/BC11-CQW1)')
-    stub_request(:put, /mds.test.datacite.org\/doi/)
+    stub_request(:put, /mds.stage.datacite.org\/doi/)
       .to_return(status: 201, body: 'OK')
-    stub_request(:patch, /api.test.datacite.org/)
+    stub_request(:patch, /api.stage.datacite.org/)
       .to_return(status: 200, headers: { "Content-Type" => "application/vnd.api+json; charset=utf-8" }, body: body)
 
     post "/shoulder/doi:#{prefix}", params, headers

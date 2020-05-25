@@ -34,8 +34,8 @@ end
 # default values for some ENV variables
 ENV['APPLICATION'] ||= "cheetoh"
 ENV['HOSTNAME'] ||= "cheetoh.local"
-ENV['API_URL'] ||= "https://api.test.datacite.org"
-ENV['REALM'] ||= "ez.test.datacite.org"
+ENV['API_URL'] ||= "https://api.stage.datacite.org"
+ENV['REALM'] ||= "ez.stage.datacite.org"
 ENV['MEMCACHE_SERVERS'] ||= "memcached:11211"
 ENV['SITE_TITLE'] ||= "EZ API"
 ENV['LOG_LEVEL'] ||= "info"
