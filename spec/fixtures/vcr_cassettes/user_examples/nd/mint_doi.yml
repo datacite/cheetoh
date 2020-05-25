@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.test.datacite.org/dois/10.5438/fk2-3mg5-tm67
+    uri: https://api.stage.datacite.org/dois/10.5438/fk2-3mg5-tm67
     body:
       encoding: US-ASCII
       string: ''
@@ -44,11 +44,11 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"errors":[{"status":"404","title":"The resource you are looking for
         doesn''t exist."}]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 22 Nov 2018 23:08:49 GMT
 - request:
     method: post
-    uri: https://api.test.datacite.org/dois
+    uri: https://api.stage.datacite.org/dois
     body:
       encoding: UTF-8
       string: '{"data":{"type":"dois","attributes":{"doi":"10.5438/fk2-3mg5-tm67","url":"http://library.nd.edu","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVzb3VyY2UgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM9Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTQvbWV0YWRhdGEueHNkIj48aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIiAvPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iSW52YWxpZFJlc291cmNlVHlwZSI+Q3JlYXRpdmVXb3JrPC9yZXNvdXJjZVR5cGU+PGNyZWF0b3JzPjxjcmVhdG9yPjxjcmVhdG9yTmFtZT5DcmVhdG9yIE5hbWU8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48L2NyZWF0b3JzPjx0aXRsZXM+PHRpdGxlPlRpdGxlPC90aXRsZT48L3RpdGxlcz48cHVibGlzaGVyPlB1Ymxpc2hlcjwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxODwvcHVibGljYXRpb25ZZWFyPjxkYXRlcy8+PHZlcnNpb24vPjwvcmVzb3VyY2U+","creator":[],"titles":[{"title":null}],"types":{"resourceTypeGeneral":null},"source":"ez","event":"publish"},"relationships":{"client":{"data":{"type":"clients","id":"DATACITE.DATACITE"}}}}}'
@@ -98,6 +98,6 @@ http_interactions:
         0"},{"source":"resourceType'', attribute ''resourceTypeGeneral","title":"''invalidresourcetype''
         is not a valid value of the atomic type ''{http://datacite.org/schema/kernel-4}resourcetype''.
         at line 4, column 0"}]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 22 Nov 2018 23:08:49 GMT
 recorded_with: VCR 3.0.3
