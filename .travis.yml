@@ -57,6 +57,7 @@ after_success:
 
       if [ "${TRAVIS_TAG?}" ]; then
         ./dockerize -template vendor/docker/_cheetoh.auto.tfvars.tmpl:mastino/prod-eu-west/services/cheetoh/_cheetoh.auto.tfvars;
+        ./dockerize -template vendor/docker/_cheetoh.auto.tfvars.tmpl:mastino/test/services/cheetoh/_cheetoh.auto.tfvars;
         sentry-cli releases deploys cheetoh:${GIT_TAG} new -e production;
       else
         sentry-cli releases deploys cheetoh:${GIT_TAG} new -e stage;
@@ -71,6 +72,7 @@ after_success:
       
       if [ "${TRAVIS_TAG?}" ]; then
         git add prod-eu-west/services/cheetoh/_cheetoh.auto.tfvars;
+        git add test/services/cheetoh/_cheetoh.auto.tfvars;
         git commit -m "Adding cheetoh git variables for commit tagged ${TRAVIS_TAG?}";
         git push "https://${TRAVIS_SECURE_TOKEN}@github.com/datacite/mastino.git" master;
       else
