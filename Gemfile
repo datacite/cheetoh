@@ -24,7 +24,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "rack-parser", "~> 0.7.0", :require => "rack/parser"
 gem "rack-utf8_sanitizer", "~> 1.6"
 gem "rack-cors", "~> 1.0", ">= 1.0.2", :require => "rack/cors"
-gem "git", "~> 1.5"
+gem "git", "~> 1.11"
 gem "sprockets", "~> 3.7", ">= 3.7.2"
 
 group :development, :test do
